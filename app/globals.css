@@ -43,6 +43,14 @@ body {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Futura";
+  src: url("/fonts/FUTURA BOOK.TTF") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 .font-heading {
   font-family: var(--font-heading), system-ui, sans-serif;

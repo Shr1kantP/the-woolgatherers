@@ -34,6 +34,16 @@ body {
   font-display: swap;
 }
 
+/* Jersey 15 display font used for large headings */
+@font-face {
+  font-family: "Jersey 15";
+  src: url("/fonts/Jersey15-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 .font-heading {
   font-family: var(--font-heading), system-ui, sans-serif;
 }

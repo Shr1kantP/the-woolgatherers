@@ -2,14 +2,19 @@ import Hero from "./components/hero";
 import Residency from "./components/Residency";
 import Guests from "./components/Guests";
 import Services from "./components/Services";
+import Resident_stories from "./components/Resident_stories";
+import SmoothScroll from "./components/smoothscroll";
 
 export default function Home() {
   return (
-    <>
-      <Hero />
-      <Residency />
-      <Guests />
-      <Services />
-    </>
+    <SmoothScroll>
+      <>
+        <Hero />
+        <Residency />
+        <Guests />
+        <Services />
+        <Resident_stories />
+      </>
+    </SmoothScroll>
   );
 }

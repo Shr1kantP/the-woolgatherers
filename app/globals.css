@@ -51,9 +51,65 @@ body {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("/fonts/INSTRUMENTSERIF-ITALIC.TTF") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("/fonts/INSTRUMENTSERIF-REGULAR.TTF") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 .font-heading {
   font-family: var(--font-heading), system-ui, sans-serif;
+}
+
+.host-card {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.panel {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.panel.stick {
+  opacity: 1;
+  transform: scale(1.01);
+}
+
+@media (max-width: 767px) {
+  .hosts-section {
+    height: auto;
+    overflow: visible;
+  }
+
+  .hosts-container {
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+
+  .host-track {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .host-card {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+  }
 }
 
 .wavy-card {

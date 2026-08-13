@@ -91,109 +91,111 @@ export default function Resident_stories() {
     <section
       ref={sectionRef}
       style={{ background: "#2E0A38" }}
-      className="w-full overflow-hidden py-16 text-white md:py-20"
+      className="resident-stories relative w-full overflow-hidden py-16 text-white md:py-20"
     >
-      <div className="mx-auto max-w-6xl px-6 lg:px-12">
-        <h2
-          style={{
-            fontFamily: "var(--font-jersey-15), system-ui, sans-serif",
-            color: "#f5f3f6",
-            fontSize: "80px",
-			textAlign:"center",
-            lineHeight: 1.02,
-            letterSpacing: "0.02em",
-          }}
-          className="mb-10 text-left uppercase font-extrabold"
-        >
-          OVER 100 BRANDS
-          <br />
-          HAVE PASSED THROUGH
-          <br />
-          THESE HALLS.
-        </h2>
-
-        <div className="relative pb-12">
-          <div
-            ref={(el) => {
-              cardsRef.current[0] = el;
-            }}
-            className="relative mx-auto overflow-hidden border-0 bg-transparent"
-            style={{
-              width: "min(68vw, 330px)",
-              height: "min(68vw, 330px)",
-              transform: "rotate(-2deg)",
-              marginTop: 0,
-              border: "none",
-              boxShadow: "none",
-              borderRadius: 0,
-              flexShrink: 0,
-            }}
-          >
-            <img src={images[0]} alt="studio car" className="block h-full w-full object-cover rounded-[4px]" />
-          </div>
-
-          <div
-            ref={(el) => {
-              cardsRef.current[1] = el;
-            }}
-            className="relative overflow-hidden border-0 bg-transparent"
-            style={{
-             width: "min(68vw, 330px)",
-              height: "min(68vw, 330px)",
-              transform: "rotate(-7deg)",
-              marginTop: "440px",
-              marginLeft: "clamp(0px, 3vw, 28px)",
-              border: "none",
-              boxShadow: "none",
-              borderRadius: 0,
-              flexShrink: 0,
-            }}
-          >
-            <img src={images[1]} alt="fashion trio" className="block h-full w-full object-cover rounded-[4px]" />
-          </div>
-
-          <div
-            ref={(el) => {
-              cardsRef.current[2] = el;
-            }}
-            className="relative ml-auto overflow-hidden border-0 bg-transparent"
-            style={{
-             width: "min(68vw, 330px)",
-              height: "min(68vw, 330px)",
-              transform: "rotate(7deg)",
-              marginTop: "440px",
-              marginRight: "clamp(0px, 3vw, 28px)",
-              border: "none",
-              boxShadow: "none",
-              borderRadius: 0,
-              flexShrink: 0,
-            }}
-          >
-            <img src={images[2]} alt="food overhead" className="block h-full w-full object-cover rounded-[4px]" />
-          </div>
-        </div>
-
-        <div className="mt-12 text-right md:mt-20">
-          <h3
+      <div className="relative mx-auto max-w-6xl px-6 lg:px-12 md:min-h-[320vh]">
+        <div className="md:sticky md:top-0 md:min-h-screen md:pt-10">
+          <h2
             style={{
               fontFamily: "var(--font-jersey-15), system-ui, sans-serif",
+              color: "#f5f3f6",
+              fontSize: "80px",
+              textAlign: "center",
+              lineHeight: 1.02,
               letterSpacing: "0.02em",
-              fontSize: "68px",
             }}
-            className="mb-4 uppercase font-bold"
+            className="mb-10 text-left uppercase font-extrabold"
           >
-            RESIDENT STORIES
-          </h3>
-
-          <p
-            className="ml-auto max-w-2xl text-[14px] uppercase tracking-[0.02em] md:text-[14px]"
-            style={{ fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif", textAlign: "right" }}
-          >
-            <span style={{ fontWeight: 400, fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif" }}>A SELECTION OF </span>
-            <strong style={{ fontWeight: 700, fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif" }}>BRANDS, IDEAS, AND TRANSFORMATIONS</strong>
+            OVER 100 BRANDS
             <br />
-            <span style={{ fontWeight: 400, fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif" }}>THAT HAVE PASSED THROUGH THESE HALLS.</span>
-          </p>
+            HAVE PASSED THROUGH
+            <br />
+            THESE HALLS.
+          </h2>
+
+          <div className="relative pb-12">
+            <div
+              ref={(el) => {
+                cardsRef.current[0] = el;
+              }}
+              className="relative mx-auto overflow-hidden border-0 bg-transparent"
+              style={{
+                width: "min(68vw, 330px)",
+                height: "min(68vw, 330px)",
+                transform: "rotate(-2deg)",
+                marginTop: 0,
+                border: "none",
+                boxShadow: "none",
+                borderRadius: 0,
+                flexShrink: 0,
+              }}
+            >
+              <img src={images[0]} alt="studio car" className="block h-full w-full object-cover rounded-[4px]" />
+            </div>
+
+            <div
+              ref={(el) => {
+                cardsRef.current[1] = el;
+              }}
+              className="relative overflow-hidden border-0 bg-transparent"
+              style={{
+                width: "min(68vw, 330px)",
+                height: "min(68vw, 330px)",
+                transform: "rotate(-7deg)",
+                marginTop: "440px",
+                marginLeft: "clamp(0px, 3vw, 28px)",
+                border: "none",
+                boxShadow: "none",
+                borderRadius: 0,
+                flexShrink: 0,
+              }}
+            >
+              <img src={images[1]} alt="fashion trio" className="block h-full w-full object-cover rounded-[4px]" />
+            </div>
+
+            <div
+              ref={(el) => {
+                cardsRef.current[2] = el;
+              }}
+              className="relative ml-auto overflow-hidden border-0 bg-transparent"
+              style={{
+                width: "min(68vw, 330px)",
+                height: "min(68vw, 330px)",
+                transform: "rotate(7deg)",
+                marginTop: "440px",
+                marginRight: "clamp(0px, 3vw, 28px)",
+                border: "none",
+                boxShadow: "none",
+                borderRadius: 0,
+                flexShrink: 0,
+              }}
+            >
+              <img src={images[2]} alt="food overhead" className="block h-full w-full object-cover rounded-[4px]" />
+            </div>
+          </div>
+
+          <div className="mt-12 text-right md:mt-20">
+            <h3
+              style={{
+                fontFamily: "var(--font-jersey-15), system-ui, sans-serif",
+                letterSpacing: "0.02em",
+                fontSize: "68px",
+              }}
+              className="mb-4 uppercase font-bold"
+            >
+              RESIDENT STORIES
+            </h3>
+
+            <p
+              className="ml-auto max-w-2xl text-[14px] uppercase tracking-[0.02em] md:text-[14px]"
+              style={{ fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif", textAlign: "right" }}
+            >
+              <span style={{ fontWeight: 400, fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif" }}>A SELECTION OF </span>
+              <strong style={{ fontWeight: 700, fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif" }}>BRANDS, IDEAS, AND TRANSFORMATIONS</strong>
+              <br />
+              <span style={{ fontWeight: 400, fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif" }}>THAT HAVE PASSED THROUGH THESE HALLS.</span>
+            </p>
+          </div>
         </div>
       </div>
     </section>

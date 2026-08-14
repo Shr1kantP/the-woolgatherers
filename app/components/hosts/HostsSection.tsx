@@ -23,7 +23,8 @@ export default function HostsSection() {
 
         const totalScroll = () => {
           const containerWidth = section.querySelector(".hosts-container")?.clientWidth ?? window.innerWidth;
-          return Math.max(containerWidth * (panels.length - 1), 0);
+          const scrollDistance = Math.max(containerWidth * (panels.length - 1), 0);
+          return Math.min(scrollDistance, containerWidth * 2.3);
         };
 
         const scrollTween = gsap.to(panels, {
@@ -62,11 +63,11 @@ export default function HostsSection() {
   return (
     <section
       ref={sectionRef}
-      className="hosts-section relative z-20 w-full overflow-hidden md:h-[420vh]"
+      className="hosts-section relative z-10 w-full overflow-hidden bg-[#3F022F] h-screen"
       aria-label="The Hosts"
     >
-      <div className="hosts-container sticky top-0 h-screen w-full overflow-hidden md:block">
-        <div className="host-track flex h-screen w-max md:flex">
+      <div className="hosts-container sticky top-0 h-screen w-full overflow-hidden bg-[#3F022F] md:block">
+        <div className="host-track flex h-screen w-max bg-[#3F022F] md:flex">
           <HostCard1 />
           <HostCard2 />
           <HostCard3 />

@@ -6,67 +6,53 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const CARDS = [
+  { src: "/images/Res_stories/mtr_res_stories.jpg",  alt: "MTR brand work",     rotate: "-2deg"  },
+  { src: "/images/Res_stories/wing_res_stories.jpg", alt: "Wing brand work",    rotate: "-7deg"  },
+  { src: "/images/Res_stories/sie_res_stories.jpg",  alt: "Sievert brand work", rotate:  "7deg"  },
+];
+
 export default function Resident_stories() {
   const sectionRef = useRef<HTMLElement | null>(null);
-  const cardsRef = useRef<Array<HTMLDivElement | null>>([]);
-
-  const images = [
-    "/images/Res_stories/mtr_res_stories.jpg",
-    "/images/Res_stories/wing_res_stories.jpg",
-    "/images/Res_stories/sie_res_stories.jpg",
-      ];
+  const cardsRef   = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
 
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) return;
+
     const cards = cardsRef.current.filter(Boolean) as HTMLDivElement[];
     if (!cards.length) return;
 
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    if (reduceMotion) {
-      ScrollTrigger.getAll().forEach((st) => {
-        const trigger = st.vars.trigger as Element | undefined;
-        if (trigger && section.contains(trigger)) st.kill();
-      });
-      return;
-    }
-
-    const loadImages = () => {
-      const allLoaded = Array.from(section.querySelectorAll("img")).every((img) => (img as HTMLImageElement).complete);
-      if (allLoaded) {
-        ScrollTrigger.refresh();
-      }
+    // Refresh once all images inside the section have loaded
+    const tryRefresh = () => {
+      const allLoaded = Array.from(section.querySelectorAll("img"))
+        .every((img) => (img as HTMLImageElement).complete);
+      if (allLoaded) ScrollTrigger.refresh();
     };
 
     const ctx = gsap.context(() => {
-      cards.forEach((card, index) => {
-        card.style.zIndex = String(index + 1);
-        card.style.position = "relative";
+      cards.forEach((card, i) => {
+        card.style.zIndex         = String(i + 1);
+        card.style.position       = "relative";
         card.style.transformOrigin = "center top";
-        card.style.willChange = "transform, filter";
+        card.style.willChange     = "transform";
       });
 
-      cards.forEach((card, index) => {
-        const start = window.innerWidth < 768 ? "top 20%" : "top 15%";
-        const pinDistance = Math.max(window.innerHeight * 6.2, 700);
+      // Pin distance scales with screen height so it works on both mobile and desktop
+      const pinDistance = () => Math.max(window.innerHeight * 3.5, 500);
 
+      cards.forEach((card) => {
         ScrollTrigger.create({
-          trigger: card,
-          start,
-          end: () => `+=${pinDistance}`,
-          pin: true,
-          pinSpacing: false,
-          scrub: false,
+          trigger        : card,
+          start          : "top 15%",
+          end            : () => `+=${pinDistance()}`,
+          pin            : true,
+          pinSpacing     : false,
           invalidateOnRefresh: true,
         });
-
-        if (index > 0) {
-          card.style.transform = "translateY(0)";
-          card.style.opacity = "1";
-          card.style.filter = "none";
-        }
       });
 
       ScrollTrigger.refresh();
@@ -74,16 +60,12 @@ export default function Resident_stories() {
 
     Array.from(section.querySelectorAll("img")).forEach((img) => {
       if ((img as HTMLImageElement).complete) return;
-      img.addEventListener("load", loadImages, { once: true });
-      img.addEventListener("error", loadImages, { once: true });
+      img.addEventListener("load",  tryRefresh, { once: true });
+      img.addEventListener("error", tryRefresh, { once: true });
     });
 
     return () => {
       ctx.revert();
-      ScrollTrigger.getAll().forEach((st) => {
-        const trigger = st.vars.trigger as Element | undefined;
-        if (trigger && section.contains(trigger)) st.kill();
-      });
     };
   }, []);
 
@@ -91,20 +73,28 @@ export default function Resident_stories() {
     <section
       ref={sectionRef}
       style={{ background: "#2E0A38" }}
-      className="resident-stories relative w-full overflow-hidden py-16 text-white md:py-20"
+      className="resident-stories relative w-full overflow-hidden text-white"
     >
-      <div className="relative mx-auto max-w-6xl px-6 lg:px-12 md:min-h-[320vh]">
-        <div className="md:sticky md:top-0 md:min-h-screen md:pt-10">
+      {/*
+        The outer div gives the section enough scroll height for all three pins.
+        On mobile it's ~240vh (3 cards × ~80vh), on desktop stays at 320vh.
+      */}
+      <div
+        className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-12"
+        style={{ minHeight: "clamp(240vh, 320vh, 320vh)" }}
+      >
+        <div className="sticky top-0 min-h-screen pt-8 sm:pt-10">
+
+          {/* ── Heading ──────────────────────────────────────────────────── */}
           <h2
+            className="mb-8 sm:mb-10 uppercase font-extrabold"
             style={{
-              fontFamily: "var(--font-jersey-15), system-ui, sans-serif",
-              color: "#f5f3f6",
-              fontSize: "clamp(42px, 10vw, 80px)",
-              textAlign: "center",
-              lineHeight: 1.02,
+              fontFamily   : "var(--font-jersey-15), system-ui, sans-serif",
+              color        : "#f5f3f6",
+              fontSize     : "clamp(28px, 8vw, 80px)",
+              lineHeight   : 1.02,
               letterSpacing: "0.02em",
             }}
-            className="mb-6 md:mb-10 text-left uppercase font-extrabold"
           >
             OVER 100 BRANDS
             <br />
@@ -113,89 +103,70 @@ export default function Resident_stories() {
             THESE HALLS.
           </h2>
 
+          {/* ── Cards — one per row, centered, stacked vertically ────────── */}
           <div className="relative pb-12">
-            <div
-              ref={(el) => {
-                cardsRef.current[0] = el;
-              }}
-              className="relative mx-auto overflow-hidden border-0 bg-transparent"
-              style={{
-                width: "min(68vw, 330px)",
-                height: "min(68vw, 330px)",
-                transform: "rotate(-2deg)",
-                marginTop: 0,
-                border: "none",
-                boxShadow: "none",
-                borderRadius: 0,
-                flexShrink: 0,
-              }}
-            >
-              <img src={images[0]} alt="studio car" className="block h-full w-full object-cover rounded-[4px]" />
-            </div>
+            {CARDS.map((card, i) => (
+              <div
+                key={card.src}
+                ref={(el) => { cardsRef.current[i] = el; }}
+                className="relative overflow-hidden"
+                style={{
+                  /*
+                   * Size: large on desktop, proportional on mobile.
+                   * Expressed as min(viewport %, max-px) so it always fits.
+                   */
+                  width      : "min(72vw, 330px)",
+                  height     : "min(72vw, 330px)",
+                  transform  : `rotate(${card.rotate})`,
+                  border     : "none",
+                  boxShadow  : "none",
+                  borderRadius: 0,
+                  flexShrink : 0,
 
-            <div
-              ref={(el) => {
-                cardsRef.current[1] = el;
-              }}
-              className="relative overflow-hidden border-0 bg-transparent"
-              style={{
-                width: "min(68vw, 330px)",
-                height: "min(68vw, 330px)",
-                transform: "rotate(-7deg)",
-                marginTop: "clamp(280px, 55vw, 440px)",
-                marginLeft: "clamp(0px, 3vw, 28px)",
-                border: "none",
-                boxShadow: "none",
-                borderRadius: 0,
-                flexShrink: 0,
-              }}
-            >
-              <img src={images[1]} alt="fashion trio" className="block h-full w-full object-cover rounded-[4px]" />
-            </div>
-
-            <div
-              ref={(el) => {
-                cardsRef.current[2] = el;
-              }}
-              className="relative ml-auto overflow-hidden border-0 bg-transparent"
-              style={{
-                width: "min(68vw, 330px)",
-                height: "min(68vw, 330px)",
-                transform: "rotate(7deg)",
-                marginTop: "clamp(280px, 55vw, 440px)",
-                marginRight: "clamp(0px, 3vw, 28px)",
-                border: "none",
-                boxShadow: "none",
-                borderRadius: 0,
-                flexShrink: 0,
-              }}
-            >
-              <img src={images[2]} alt="food overhead" className="block h-full w-full object-cover rounded-[4px]" />
-            </div>
+                  /* Alternate left / centre / right to keep the desktop stagger */
+                  marginTop   : i === 0 ? 0 : "clamp(200px, 40vw, 440px)",
+                  marginLeft  : i === 1 ? "clamp(0px, 3vw, 28px)"  : i === 2 ? "auto" : "auto",
+                  marginRight : i === 2 ? "clamp(0px, 3vw, 28px)"  : i === 1 ? "auto" : "auto",
+                }}
+              >
+                <img
+                  src={card.src}
+                  alt={card.alt}
+                  className="block h-full w-full object-cover rounded-[4px]"
+                />
+              </div>
+            ))}
           </div>
 
-          <div className="mt-8 md:mt-12 text-right md:mt-20">
+          {/* ── Footer text ──────────────────────────────────────────────── */}
+          <div className="mt-8 sm:mt-12 text-right">
             <h3
+              className="mb-3 uppercase font-bold"
               style={{
-                fontFamily: "var(--font-jersey-15), system-ui, sans-serif",
+                fontFamily   : "var(--font-jersey-15), system-ui, sans-serif",
                 letterSpacing: "0.02em",
-                fontSize: "clamp(36px, 8vw, 68px)",
+                fontSize     : "clamp(24px, 7vw, 68px)",
               }}
-              className="mb-4 uppercase font-bold"
             >
               RESIDENT STORIES
             </h3>
 
             <p
-              className="ml-auto max-w-2xl text-[14px] uppercase tracking-[0.02em] md:text-[14px]"
-              style={{ fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif", textAlign: "right" }}
+              className="ml-auto uppercase tracking-[0.02em]"
+              style={{
+                fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif",
+                textAlign : "right",
+                fontSize  : "clamp(10px, 2vw, 14px)",
+                maxWidth  : "min(90vw, 640px)",
+              }}
             >
-              <span style={{ fontWeight: 400, fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif" }}>A SELECTION OF </span>
-              <strong style={{ fontWeight: 700, fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif" }}>BRANDS, IDEAS, AND TRANSFORMATIONS</strong>
+              <span style={{ fontWeight: 400 }}>A SELECTION OF </span>
+              <strong style={{ fontWeight: 700 }}>BRANDS, IDEAS, AND TRANSFORMATIONS</strong>
               <br />
-              <span style={{ fontWeight: 400, fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif" }}>THAT HAVE PASSED THROUGH THESE HALLS.</span>
+              <span style={{ fontWeight: 400 }}>THAT HAVE PASSED THROUGH THESE HALLS.</span>
             </p>
           </div>
+
         </div>
       </div>
     </section>

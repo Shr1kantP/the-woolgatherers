@@ -292,8 +292,16 @@ export default function Guests() {
 
   return (
     <section ref={sectionRef} className="relative w-full h-[70vh] md:h-[90vh] bg-[#2E0A38] overflow-hidden select-none">
-      <div className="relative z-0 mx-auto flex h-full w-full max-w-7xl items-center justify-center px-6 py-10 md:px-10 md:py-20">
-        <h2 className="font-semibold uppercase tracking-[0.35em] text-white text-center" style={{ letterSpacing: "0.02em", fontFamily: '"Jersey 15", serif', fontSize: "98px", lineHeight: 1.05 }}>
+      <div className="relative z-0 mx-auto flex h-full w-full max-w-7xl items-center justify-center px-4 py-8 md:px-10 md:py-20">
+        <h2
+          className="font-semibold uppercase text-white text-center"
+          style={{
+            letterSpacing: "0.02em",
+            fontFamily: '"Jersey 15", serif',
+            fontSize: "clamp(40px, 12vw, 98px)",
+            lineHeight: 1.05,
+          }}
+        >
           Selected Residents
         </h2>
       </div>

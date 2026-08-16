@@ -12,7 +12,7 @@ export default function Hero() {
         className="object-cover"
       />
 
-      <div className="absolute right-[60%] top-10 z-25 h-[220px] sm:h-[250px] w-[45%]">
+      <div className="absolute right-[55%] xs:right-[60%] top-6 sm:top-10 z-25 h-[160px] xs:h-[200px] sm:h-[250px] w-[48%] sm:w-[45%]">
         <Image
           src="/images/hero/upper-frame.png"
           alt="Decorative upper frame"
@@ -27,7 +27,7 @@ export default function Hero() {
       <div
         id="hero-key"
         className="absolute z-30"
-        style={{ left: "25%", top: "2%", width: "450px" }}
+        style={{ left: "15%", top: "2%", width: "clamp(220px, 35vw, 450px)" }}
       >
         <Image
           src="/images/floating_key.svg"

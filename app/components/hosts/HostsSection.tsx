@@ -10,37 +10,39 @@ import HostCard4 from "./HostCard4";
 
 export default function HostsSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const section = sectionRef.current;
-    if (!section) return;
+    const container = containerRef.current;
+    const track = trackRef.current;
+    if (!section || !container || !track) return;
+
+    // The single source of truth: how far the track actually needs to travel.
+    const getScrollDistance = () =>
+      track.scrollWidth - container.clientWidth;
 
     const mm = gsap.matchMedia();
     const ctx = gsap.context(() => {
       mm.add("(min-width: 768px)", () => {
-        const panels = gsap.utils.toArray<HTMLElement>(".panel");
-        if (!panels.length) return;
-
-        const totalScroll = () => {
-          const containerWidth = section.querySelector(".hosts-container")?.clientWidth ?? window.innerWidth;
-          const scrollDistance = Math.max(containerWidth * (panels.length - 1), 0);
-          return Math.min(scrollDistance, containerWidth * 2.3);
-        };
-
-        const scrollTween = gsap.to(panels, {
-          xPercent: (i) => -100 * i,
+        // Tween the track as one unit — x end matches the ScrollTrigger end exactly.
+        const scrollTween = gsap.to(track, {
+          x: () => -getScrollDistance(),
           ease: "none",
-          duration: (i) => 0.5 * i,
           scrollTrigger: {
             trigger: section,
             start: "top top",
-            end: () => "+=" + totalScroll(),
+            // Derived from the same measurement — can never drift out of sync.
+            end: () => "+=" + getScrollDistance(),
             pin: true,
             scrub: 0.1,
             invalidateOnRefresh: true,
           },
         });
 
+        // Per-panel "stick" class toggle driven by the horizontal scroll animation.
+        const panels = gsap.utils.toArray<HTMLElement>(".panel");
         panels.forEach((panel) => {
           ScrollTrigger.create({
             trigger: panel,
@@ -50,6 +52,22 @@ export default function HostsSection() {
             toggleClass: "stick",
           });
         });
+
+        // Debounced resize handler — recalculates all distances and refreshes.
+        let resizeTimer: ReturnType<typeof setTimeout>;
+        const onResize = () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(() => {
+            ScrollTrigger.refresh();
+          }, 150);
+        };
+        window.addEventListener("resize", onResize);
+
+        // Return cleanup so matchMedia tears it down when the breakpoint exits.
+        return () => {
+          window.removeEventListener("resize", onResize);
+          clearTimeout(resizeTimer);
+        };
       });
     }, section);
 
@@ -63,11 +81,26 @@ export default function HostsSection() {
   return (
     <section
       ref={sectionRef}
-      className="hosts-section relative z-10 w-full overflow-hidden bg-[#3F022F] h-screen"
+      className="hosts-section relative z-10 w-full overflow-hidden bg-[#3F022F] h-auto md:h-screen"
       aria-label="The Hosts"
     >
-      <div className="hosts-container sticky top-0 h-screen w-full overflow-hidden bg-[#3F022F] md:block">
-        <div className="host-track flex h-screen w-max bg-[#3F022F] md:flex">
+      {/* Mobile: simple vertical stack */}
+      <div className="md:hidden flex flex-col w-full bg-[#3F022F]">
+        <HostCard1 />
+        <HostCard2 />
+        <HostCard3 />
+        <HostCard4 />
+      </div>
+
+      {/* Desktop: pinned horizontal scroll */}
+      <div
+        ref={containerRef}
+        className="hosts-container hidden md:flex sticky top-0 h-screen w-full overflow-hidden bg-[#3F022F]"
+      >
+        <div
+          ref={trackRef}
+          className="host-track flex h-screen w-max bg-[#3F022F]"
+        >
           <HostCard1 />
           <HostCard2 />
           <HostCard3 />

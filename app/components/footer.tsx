@@ -52,17 +52,20 @@ export default function Footer() {
           />
         </div>
 
-        <div className="mt-3 flex flex-col items-center justify-center gap-6 lg:flex-row lg:items-center lg:justify-center lg:gap-6 xl:gap-10">
-          <nav aria-label="Footer services" className="w-full max-w-[320px] text-left text-[0.8rem] font-medium uppercase leading-relaxed tracking-[0.12em] text-[#F5E9D0] lg:mr-2 xl:mr-6">
-            {navItems.map((item) => (
-              <div key={item} className="py-[2px]">
-                {item}
-              </div>
-            ))}
+        <div className="mt-3 flex flex-col items-center justify-center gap-4">
+          <nav aria-label="Footer services" className="w-full text-center text-[0.8rem] font-medium uppercase leading-relaxed tracking-[0.12em] text-[#F5E9D0]">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+              {navItems.map((item) => (
+                <div key={item} className="py-[2px]">
+                  {item}
+                </div>
+              ))}
+            </div>
           </nav>
 
           <div
-            className={`relative flex h-[500px] w-[500px] max-w-[90vw] items-center justify-center transition-transform duration-200 ${isPressed ? "scale-[0.98]" : "scale-100"}`}
+            className={`relative flex items-center justify-center transition-transform duration-200 ${isPressed ? "scale-[0.98]" : "scale-100"}`}
+            style={{ width: "min(580px, 72vw)", height: "min(380px, 72vw)" }}
             onMouseDown={() => setIsPressed(true)}
             onMouseUp={() => setIsPressed(false)}
             onMouseLeave={() => setIsPressed(false)}
@@ -72,20 +75,20 @@ export default function Footer() {
             <Image
               src="/images/footer/bell/bell_not_clicked.png"
               alt="Concierge bell"
-              width={500}
-              height={500}
+              width={300}
+              height={300}
               className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-150 ${isPressed ? "opacity-0" : "opacity-100"}`}
             />
             <Image
               src="/images/footer/bell/bell_pressed.png"
               alt="Concierge bell pressed"
-              width={500}
-              height={500}
+              width={300}
+              height={300}
               className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-150 ${isPressed ? "opacity-100" : "opacity-0"}`}
             />
           </div>
 
-          <div className="flex w-full max-w-[120px] flex-col items-center gap-4 lg:ml-2 xl:ml-6">
+          <div className="flex items-center justify-center gap-8">
             <SocialLink href="https://instagram.com" label="Instagram">
               <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-none stroke-current stroke-[1.7]">
                 <rect x="3.5" y="3.5" width="17" height="17" rx="5" />

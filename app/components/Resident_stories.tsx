@@ -99,12 +99,12 @@ export default function Resident_stories() {
             style={{
               fontFamily: "var(--font-jersey-15), system-ui, sans-serif",
               color: "#f5f3f6",
-              fontSize: "80px",
+              fontSize: "clamp(42px, 10vw, 80px)",
               textAlign: "center",
               lineHeight: 1.02,
               letterSpacing: "0.02em",
             }}
-            className="mb-10 text-left uppercase font-extrabold"
+            className="mb-6 md:mb-10 text-left uppercase font-extrabold"
           >
             OVER 100 BRANDS
             <br />
@@ -142,7 +142,7 @@ export default function Resident_stories() {
                 width: "min(68vw, 330px)",
                 height: "min(68vw, 330px)",
                 transform: "rotate(-7deg)",
-                marginTop: "440px",
+                marginTop: "clamp(280px, 55vw, 440px)",
                 marginLeft: "clamp(0px, 3vw, 28px)",
                 border: "none",
                 boxShadow: "none",
@@ -162,7 +162,7 @@ export default function Resident_stories() {
                 width: "min(68vw, 330px)",
                 height: "min(68vw, 330px)",
                 transform: "rotate(7deg)",
-                marginTop: "440px",
+                marginTop: "clamp(280px, 55vw, 440px)",
                 marginRight: "clamp(0px, 3vw, 28px)",
                 border: "none",
                 boxShadow: "none",
@@ -174,12 +174,12 @@ export default function Resident_stories() {
             </div>
           </div>
 
-          <div className="mt-12 text-right md:mt-20">
+          <div className="mt-8 md:mt-12 text-right md:mt-20">
             <h3
               style={{
                 fontFamily: "var(--font-jersey-15), system-ui, sans-serif",
                 letterSpacing: "0.02em",
-                fontSize: "68px",
+                fontSize: "clamp(36px, 8vw, 68px)",
               }}
               className="mb-4 uppercase font-bold"
             >

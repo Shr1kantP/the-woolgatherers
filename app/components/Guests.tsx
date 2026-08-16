@@ -177,9 +177,9 @@ export default function Guests() {
       const body: Matter.Body = logos[index].shape === "circle"
         ? Matter.Bodies.circle(spawnX, spawnY, Math.max(width, height) / 2, bodyOptions)
         : Matter.Bodies.rectangle(spawnX, spawnY, width, height, {
-            ...bodyOptions,
-            chamfer: { radius: Math.min(width, height) / 2 },
-          });
+          ...bodyOptions,
+          chamfer: { radius: Math.min(width, height) / 2 },
+        });
 
       Matter.Body.setAngle(body, randomBetween(-0.24, 0.24));
       Matter.Body.setAngularVelocity(body, randomBetween(-0.08, 0.08));
@@ -293,7 +293,7 @@ export default function Guests() {
   return (
     <section ref={sectionRef} className="relative w-full h-[70vh] md:h-[90vh] bg-[#2E0A38] overflow-hidden select-none">
       <div className="relative z-0 mx-auto flex h-full w-full max-w-7xl items-center justify-center px-6 py-10 md:px-10 md:py-20">
-        <h2 className="font-semibold uppercase tracking-[0.35em] text-white text-center" style={{letterSpacing: "0.02em", fontFamily: '"Jersey 15", serif', fontSize: "98px", lineHeight: 1.05 }}>
+        <h2 className="font-semibold uppercase tracking-[0.35em] text-white text-center" style={{ letterSpacing: "0.02em", fontFamily: '"Jersey 15", serif', fontSize: "98px", lineHeight: 1.05 }}>
           Selected Residents
         </h2>
       </div>

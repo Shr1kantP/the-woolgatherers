@@ -11,16 +11,16 @@ export default function Services() {
   return (
     <section className="relative bg-[#1A0D26] text-[#F5F0E8] overflow-hidden">
       <div className="w-full py-0">
-        <div className="bg-[#C35A2A] px-10 py-16 shadow-[0_0_0_1px_rgba(255,255,255,0.05)]">
-          <h2 className="w-full font-bold tracking-tight" style={{ fontFamily: "Futura, sans-serif", fontSize: "32px", lineHeight: 1.1 }}>
-            Brand Building, Design & Management
+        <div className="bg-[#C35A2A] px-6 sm:px-10 py-10 sm:py-16 shadow-[0_0_0_1px_rgba(255,255,255,0.05)]">
+          <h2 className="w-full font-bold tracking-tight" style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(22px, 5vw, 32px)", lineHeight: 1.1 }}>
+            Brand Building, Design &amp; Management
           </h2>
         </div>
 
         <div className="mt-0 space-y-0">
           {services.map((service) => (
-            <div key={service.label} className={`${service.bg} px-10 py-16 shadow-[0_0_0_1px_rgba(255,255,255,0.05)]`}>
-              <h3 className="font-semibold leading-tight" style={{ fontFamily: "Futura, sans-serif", fontSize: "32px" }}>
+            <div key={service.label} className={`${service.bg} px-6 sm:px-10 py-10 sm:py-16 shadow-[0_0_0_1px_rgba(255,255,255,0.05)]`}>
+              <h3 className="font-semibold leading-tight" style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(22px, 5vw, 32px)" }}>
                 {service.label}
               </h3>
             </div>

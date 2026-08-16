@@ -10,7 +10,7 @@ export default function HostCard4() {
             alt="Geometric host collage"
             width={1200}
             height={900}
-            className="h-[450px] w-full object-cover"
+            className="h-[clamp(200px,42vh,450px)] w-full object-cover"
             priority
           />
         </div>
@@ -24,7 +24,7 @@ export default function HostCard4() {
             fontFamily: '"Inter", "Segoe UI", sans-serif',
             fontStyle: "italic",
             fontWeight: 300,
-            fontSize: "43px",
+            fontSize: "clamp(22px, 4vw, 43px)",
           }}
         >
           Behind every stay is a different perspective.

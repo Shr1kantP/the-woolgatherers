@@ -93,9 +93,42 @@ export default function Residency() {
   }, []);
 
   return (
-    <section className="relative bg-[#30093f] text-[#F5F0E8] py-24 px-6 sm:px-10 lg:py-40">
+    <section className="relative bg-[#30093f] text-[#F5F0E8] py-16 px-6 sm:px-10 lg:py-40">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-12 gap-8 items-start">
+        {/* Mobile: stacked layout */}
+        <div className="flex flex-col lg:hidden gap-8">
+          <div ref={para1Ref} className="text-[#F5F0E8]">
+            <p style={{ fontFamily: "Inter, sans-serif", fontSize: 18, lineHeight: 1.45 }}>
+              We help brands find clarity, build distinct identities, and grow through thoughtful strategy, design, content, and digital experiences.
+            </p>
+          </div>
+
+          <h2
+            ref={headingRef}
+            className="w-full text-center uppercase tracking-tight"
+            style={{
+              fontSize: "clamp(40px, 12vw, 120px)",
+              lineHeight: 1,
+              letterSpacing: "-1px",
+              fontFamily: '"Jersey 15", serif',
+            }}
+          >
+            THE RESIDENCY
+          </h2>
+
+          <div ref={para2Ref} className="text-[#F5F0E8]" style={{ fontFamily: "Inter, sans-serif", fontSize: 17, lineHeight: 1.45 }}>
+            <p>
+              Over the years, we&apos;ve worked with startups, family businesses, challenger brands, and category leaders alike.
+            </p>
+          </div>
+
+          <div className="text-[#F5F0E8]" style={{ fontFamily: "Inter, sans-serif", fontSize: 17, lineHeight: 1.45 }}>
+            <p>Every brand&apos;s journey is different. Every stay is thoughtfully designed.</p>
+          </div>
+        </div>
+
+        {/* Desktop: original 12-col grid */}
+        <div className="hidden lg:grid grid-cols-12 gap-8 items-start">
           <div className="col-span-12 md:col-span-4 lg:col-span-3" />
 
           <div className="col-span-4 md:col-span-8 lg:col-span-3 flex items-start">
@@ -135,7 +168,7 @@ export default function Residency() {
 
           <div className="col-span-12 lg:col-span-4 lg:col-start-1 mt-10 lg:mt-0">
             <div className="max-w-xs text-left text-[#F5F0E8]" style={{ fontFamily: "Inter, sans-serif", fontSize: 18, lineHeight: 1.45 }}>
-              <p>Every brand's journey is different. Every stay is thoughtfully designed.</p>
+              <p>Every brand&apos;s journey is different. Every stay is thoughtfully designed.</p>
             </div>
           </div>
         </div>

@@ -3,11 +3,11 @@ export default function HostCard3() {
     <div className="panel host-card w-screen h-screen flex-shrink-0 relative overflow-hidden bg-[#5D1515] ease-out">
       <div className="absolute inset-0 flex items-center justify-center">
         <blockquote
-          className="text-hosts-mustard text-center uppercase leading-[0.82] tracking-[-0.05em]"
+          className="text-hosts-mustard text-center uppercase leading-[0.82] tracking-[-0.05em] px-6"
           style={{
             fontFamily: '"Instrument Serif", "Times New Roman", serif',
             fontStyle: "italic",
-            fontSize: "99px",
+            fontSize: "clamp(36px, 8vw, 99px)",
             lineHeight: 0.88,
             color: "#FBCE6E",
           }}

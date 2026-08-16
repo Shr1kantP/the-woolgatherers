@@ -10,7 +10,7 @@ export default function HostCard2() {
           width={900}
           height={300}
           priority
-          className="h-auto w-[min(62vw,860px)] object-contain"
+          className="h-auto w-[min(88vw,860px)] object-contain"
         />
       </div>
     </div>

@@ -1,0 +1,189 @@
+"use client";
+
+import Link from "next/link";
+import React from "react";
+
+// ── Types ──────────────────────────────────────────────────────────────────
+
+type NavItem = {
+  label: string;
+  href: string;
+  glyphOverride?: {
+    charIndex: number;
+    icon: React.ReactNode;
+  };
+};
+
+type NavbarProps = {
+  items: NavItem[];
+  ctaLabel: string;
+  ctaHref: string;
+  logoHref: string;
+};
+
+// ── Lightning bolt SVG (replaces "K" in LINKS) ────────────────────────────
+
+const BoltGlyph = () => (
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    viewBox="0 0 10 16"
+    className="inline-block"
+    style={{
+      width: "0.55em",
+      height: "1em",
+      verticalAlign: "-0.1em",
+      fill: "#D72F2F",
+    }}
+  >
+    <path d="M7 0 L1 9 h4 L3 16 L10 6 H6 Z" />
+  </svg>
+);
+
+// ── Sub-components ─────────────────────────────────────────────────────────
+
+function NavChip({ item }: { item: NavItem }) {
+  const { label, href, glyphOverride } = item;
+
+  let content: React.ReactNode;
+
+  if (glyphOverride) {
+    const before = label.slice(0, glyphOverride.charIndex).toUpperCase();
+    const after = label.slice(glyphOverride.charIndex + 1).toUpperCase();
+    content = (
+      <>
+        {before}
+        {glyphOverride.icon}
+        {after}
+      </>
+    );
+  } else {
+    content = label.toUpperCase();
+  }
+
+  return (
+    <a
+      href={href}
+      aria-label={label}
+      className={[
+        // shape
+        "rounded-full",
+        // background — pale pink, no border
+        "bg-[#FFF8F4]",
+        // text
+        "text-[#D72F2F] font-bold uppercase tracking-wider",
+        "text-[0.8rem] leading-none whitespace-nowrap",
+        // padding — wide pill, not a circle
+        "px-6 py-2.5",
+        // interaction
+        "transition-opacity duration-150 hover:opacity-75",
+        "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D72F2F]/60 focus-visible:ring-offset-2",
+      ].join(" ")}
+    >
+      {content}
+    </a>
+  );
+}
+
+function NavCta({
+  label,
+  href,
+}: {
+  label: string;
+  href: string;
+}) {
+  return (
+    <a
+      href={href}
+      className={[
+        // shape
+        "rounded-full",
+        // background
+        "bg-[#D72F2F]",
+        // text
+        "text-white font-bold uppercase tracking-wider",
+        "text-[0.8rem] leading-none whitespace-nowrap",
+        // padding — dominant element, larger than chips
+        "px-8 py-2.5",
+        // interaction
+        "transition-all duration-150 hover:bg-[#B82626] hover:scale-[1.02]",
+        "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D72F2F]/60 focus-visible:ring-offset-2",
+      ].join(" ")}
+    >
+      {label.toUpperCase()}
+    </a>
+  );
+}
+
+// ── Navbar ─────────────────────────────────────────────────────────────────
+
+export default function Navbar({
+  items,
+  ctaLabel,
+  ctaHref,
+  logoHref,
+}: NavbarProps) {
+  return (
+    <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+      <nav
+        aria-label="Main navigation"
+        className="pointer-events-auto flex items-center gap-3"
+      >
+        {/* Left: circular home button */}
+        <Link
+          href={logoHref}
+          aria-label="Home"
+          className={[
+            "flex items-center justify-center",
+            "w-9 h-9 rounded-full",
+            "bg-[#D72F2F] text-white",
+            "transition-opacity duration-150 hover:opacity-80",
+            "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D72F2F]/60 focus-visible:ring-offset-2",
+            "flex-shrink-0",
+          ].join(" ")}
+        >
+          <HomeIcon />
+        </Link>
+
+        {/* Center: individual nav chips — each its own pill */}
+        <ul className="flex items-center gap-3 list-none m-0 p-0">
+          {items.map((item) => (
+            <li key={item.label}>
+              <NavChip item={item} />
+            </li>
+          ))}
+        </ul>
+
+        {/* Right: CTA */}
+        <NavCta label={ctaLabel} href={ctaHref} />
+      </nav>
+    </header>
+  );
+}
+
+// ── Default export with hardcoded data for the app ─────────────────────────
+
+const defaultItems: NavItem[] = [
+  { label: "Services", href: "#services" },
+  { label: "Residents", href: "#residents" },
+  { label: "Hosts", href: "#hosts" },
+  {
+    label: "Links",
+    href: "#links",
+    glyphOverride: {
+      charIndex: 3, // replaces "K"
+      icon: <BoltGlyph />,
+    },
+  },
+];
+
+export function AppNavbar() {
+  return (
+    <Navbar
+      items={defaultItems}
+      ctaLabel="Reservations"
+      ctaHref="#reservations"
+      logoHref="/"
+    />
+  );
+}

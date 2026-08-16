@@ -19,21 +19,23 @@ export default function HostsSection() {
     const track = trackRef.current;
     if (!section || !container || !track) return;
 
-    // The single source of truth: how far the track actually needs to travel.
+    // Returns the exact number of pixels the track overflows the container.
+    // Both the tween target and the ScrollTrigger end use this same function
+    // so they can never drift out of sync.
     const getScrollDistance = () =>
       track.scrollWidth - container.clientWidth;
 
     const mm = gsap.matchMedia();
     const ctx = gsap.context(() => {
       mm.add("(min-width: 768px)", () => {
-        // Tween the track as one unit — x end matches the ScrollTrigger end exactly.
-        const scrollTween = gsap.to(track, {
+        const tween = gsap.to(track, {
           x: () => -getScrollDistance(),
           ease: "none",
           scrollTrigger: {
             trigger: section,
             start: "top top",
-            // Derived from the same measurement — can never drift out of sync.
+            // end is derived from the same measurement as the tween target —
+            // no hardcoded pixel value, no multiplier cap.
             end: () => "+=" + getScrollDistance(),
             pin: true,
             scrub: 0.1,
@@ -41,37 +43,27 @@ export default function HostsSection() {
           },
         });
 
-        // Per-panel "stick" class toggle driven by the horizontal scroll animation.
-        const panels = gsap.utils.toArray<HTMLElement>(".panel");
-        panels.forEach((panel) => {
-          ScrollTrigger.create({
-            trigger: panel,
-            containerAnimation: scrollTween,
-            start: "left 25%",
-            end: "right 25%",
-            toggleClass: "stick",
-          });
-        });
-
-        // Debounced resize handler — recalculates all distances and refreshes.
-        let resizeTimer: ReturnType<typeof setTimeout>;
-        const onResize = () => {
-          clearTimeout(resizeTimer);
-          resizeTimer = setTimeout(() => {
-            ScrollTrigger.refresh();
-          }, 150);
-        };
-        window.addEventListener("resize", onResize);
-
-        // Return cleanup so matchMedia tears it down when the breakpoint exits.
         return () => {
-          window.removeEventListener("resize", onResize);
-          clearTimeout(resizeTimer);
+          tween.scrollTrigger?.kill();
+          tween.kill();
         };
       });
     }, section);
 
+    // Debounced resize handler: recalculate everything if panel sizes change.
+    let resizeTimer: ReturnType<typeof setTimeout>;
+    const onResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 150);
+    };
+
+    window.addEventListener("resize", onResize);
+
     return () => {
+      window.removeEventListener("resize", onResize);
+      clearTimeout(resizeTimer);
       ctx.revert();
       mm.revert();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());

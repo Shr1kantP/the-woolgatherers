@@ -18,16 +18,11 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
 
     lenis.on("scroll", ScrollTrigger.update);
 
-    // gsap.ticker passes elapsed time in milliseconds — pass it directly.
-    // The previous `time * 1000` was multiplying ms × 1000, giving Lenis
-    // wildly inflated timestamps and causing erratic / choppy scroll behaviour.
     const raf = (time: number) => {
-      lenis.raf(time);
+      lenis.raf(time * 1000);
     };
 
     gsap.ticker.add(raf);
-    // lagSmoothing(0) disables GSAP's built-in lag compensation so Lenis
-    // handles its own timing — keeps scroll feeling consistent.
     gsap.ticker.lagSmoothing(0);
 
     return () => {

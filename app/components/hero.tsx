@@ -24,6 +24,20 @@ export default function Hero() {
 
       <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent z-[5]" />
 
+      <div
+        id="hero-key"
+        className="absolute z-30"
+        style={{ left: "15%", top: "2%", width: "clamp(220px, 35vw, 450px)" }}
+      >
+        <Image
+          src="/images/floating_key.svg"
+          alt="The Woolgatherers key"
+          width={400}
+          height={800}
+          className="w-full h-auto drop-shadow-2xl"
+        />
+      </div>
+
       <div className="absolute bottom-0 left-0 right-0 z-10 flex justify-center px-4 sm:px-8 pb-[60px]">
         <h1 className="font-heading text-white uppercase leading-[0.85] text-[14vw] md:text-[10vw] tracking-tight text-center">
           THE WOOLGATHERERS

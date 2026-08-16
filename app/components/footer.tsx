@@ -52,7 +52,7 @@ export default function Footer() {
           />
         </div>
 
-        <div className="mt-3 flex flex-col items-center justify-center gap-4">
+        <div className="mt-10 flex flex-col items-center justify-center gap-4">
           <nav aria-label="Footer services" className="w-full text-center text-[0.8rem] font-medium uppercase leading-relaxed tracking-[0.12em] text-[#F5E9D0]">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
               {navItems.map((item) => (
@@ -65,7 +65,7 @@ export default function Footer() {
 
           <div
             className={`relative flex items-center justify-center transition-transform duration-200 ${isPressed ? "scale-[0.98]" : "scale-100"}`}
-            style={{ width: "min(580px, 72vw)", height: "min(380px, 72vw)" }}
+            style={{ width: "min(520px, 88vw)", height: "min(340px, 60vw)" }}
             onMouseDown={() => setIsPressed(true)}
             onMouseUp={() => setIsPressed(false)}
             onMouseLeave={() => setIsPressed(false)}

@@ -102,14 +102,7 @@ export default function ConciergePopup({ isOpen, onClose }: ConciergePopupProps)
         }}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Close Button X */}
-        <button
-          onClick={onClose}
-          className="absolute top-5 right-7 md:top-6 md:right-8 text-[#FDF3E7]/70 hover:text-[#FDF3E7] transition-colors focus:outline-none text-2xl font-bold cursor-pointer z-10"
-          aria-label="Close modal"
-        >
-          &times;
-        </button>
+
 
         {submitSuccess ? (
           <div className="flex flex-col items-center justify-center text-center h-full w-full py-8">

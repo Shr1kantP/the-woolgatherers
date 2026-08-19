@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import ConciergeModalWrapper from "./components/ConciergeModalWrapper";
+import CustomCursor from "./components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${jersey15.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <CustomCursor />
         <Navbar />
         {children}
         <ConciergeModalWrapper />

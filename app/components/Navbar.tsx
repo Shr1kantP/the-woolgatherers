@@ -320,10 +320,11 @@ const PillNav: React.FC<PillNavProps> = ({
           >
             {items.map((item, i) => {
               const isActive = activeHref === item.href;
+              const isReservations = item.label === "Reservations";
 
               const pillStyle: React.CSSProperties = {
-                background: 'transparent',
-                color: 'var(--pill-text, var(--base, #000))',
+                background: isReservations ? 'var(--pill-bg, #000)' : 'transparent',
+                color: isReservations ? 'var(--hover-text, #fff)' : 'var(--pill-text, var(--base, #000))',
                 paddingLeft: 'var(--pill-pad-x)',
                 paddingRight: 'var(--pill-pad-x)'
               };
@@ -456,15 +457,18 @@ const PillNav: React.FC<PillNavProps> = ({
       >
         <ul className="list-none m-0 p-[3px] flex flex-col gap-[3px]">
           {items.map(item => {
+            const isReservations = item.label === "Reservations";
             const defaultStyle: React.CSSProperties = {
-              background: 'transparent',
-              color: 'var(--pill-text, #fff)'
+              background: isReservations ? 'var(--pill-bg)' : 'transparent',
+              color: isReservations ? 'var(--hover-text, #fff)' : 'var(--pill-text, #fff)'
             };
             const hoverIn = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
+              if (isReservations) return; // Keep red background
               e.currentTarget.style.background = 'var(--pill-bg)';
               e.currentTarget.style.color = 'var(--hover-text, #fff)';
             };
             const hoverOut = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
+              if (isReservations) return;
               e.currentTarget.style.background = 'transparent';
               e.currentTarget.style.color = 'var(--pill-text, #fff)';
             };

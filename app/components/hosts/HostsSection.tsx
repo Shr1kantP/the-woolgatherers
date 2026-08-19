@@ -106,6 +106,7 @@ export default function HostsSection() {
      */
     <section
       ref={sectionRef}
+      id="hosts"
       className="hosts-section relative z-10 w-full overflow-hidden bg-[#3F022F]"
       style={{
         // Mobile/tablet: tall enough for all 4 pin slots

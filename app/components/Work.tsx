@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 /* ─── Types ──────────────────────────────────────────────────────────────── */
@@ -81,8 +82,8 @@ function Tag({ label }: { label: string }) {
 /* ─── Standard card (photo top, meta bottom) ─────────────────────────────── */
 
 function StandardCard({ project }: { project: Project }) {
-  return (
-    <article className="flex flex-col">
+  const cardContent = (
+    <article className="flex flex-col h-full">
       {/* Photo */}
       <div className="relative w-full overflow-hidden" style={{ aspectRatio: "4/3" }}>
         {project.image ? (
@@ -90,7 +91,7 @@ function StandardCard({ project }: { project: Project }) {
             src={project.image}
             alt={project.name}
             fill
-            className="object-cover"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width: 767px) 100vw, 50vw"
           />
         ) : (
@@ -101,7 +102,7 @@ function StandardCard({ project }: { project: Project }) {
       {/* Meta */}
       <div className="pt-4 pb-2">
         <h3
-          className="font-bold uppercase leading-none text-[#F5F0E8] mb-1"
+          className="font-bold uppercase leading-none text-[#F5F0E8] mb-1 transition-colors group-hover:text-[#C9A84C]"
           style={{ fontFamily: "Oswald, sans-serif", fontSize: "clamp(16px, 3.5vw, 22px)" }}
         >
           {project.name}
@@ -120,6 +121,16 @@ function StandardCard({ project }: { project: Project }) {
       </div>
     </article>
   );
+
+  if (project.id === "kumbaya") {
+    return (
+      <Link href="/work/kumbaya" className="group block h-full">
+        {cardContent}
+      </Link>
+    );
+  }
+
+  return cardContent;
 }
 
 /* ─── Text card (Kumbaya first-slot logo + description variant) ──────────── */

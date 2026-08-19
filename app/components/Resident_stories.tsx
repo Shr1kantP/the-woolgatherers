@@ -42,7 +42,7 @@ export default function Resident_stories() {
       });
 
       // Pin distance scales with screen height so it works on both mobile and desktop
-      const pinDistance = () => Math.max(window.innerHeight * 3.5, 500);
+      const pinDistance = () => window.innerWidth < 768 ? window.innerHeight * 0.65 : Math.max(window.innerHeight * 3.5, 500);
 
       cards.forEach((card) => {
         ScrollTrigger.create({
@@ -77,17 +77,16 @@ export default function Resident_stories() {
     >
       {/*
         The outer div gives the section enough scroll height for all three pins.
-        On mobile it's ~240vh (3 cards × ~80vh), on desktop stays at 320vh.
+        On mobile it's ~140vh, on desktop stays at 320vh.
       */}
       <div
-        className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-12"
-        style={{ minHeight: "clamp(240vh, 320vh, 320vh)" }}
+        className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-12 min-h-[140vh] md:min-h-[320vh]"
       >
         <div className="sticky top-0 min-h-screen pt-8 sm:pt-10">
 
           {/* ── Heading ──────────────────────────────────────────────────── */}
           <h2
-            className="mb-8 sm:mb-10 uppercase font-extrabold"
+            className="mb-6 sm:mb-10 uppercase font-extrabold"
             style={{
               fontFamily   : "var(--font-jersey-15), system-ui, sans-serif",
               color        : "#f5f3f6",

@@ -9,7 +9,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="relative bg-[#1A0D26] text-[#F5F0E8] overflow-hidden">
+    <section id="services" className="relative bg-[#1A0D26] text-[#F5F0E8] overflow-hidden">
       <div className="w-full py-0">
         <div className="bg-[#C35A2A] px-4 sm:px-8 md:px-10 py-8 sm:py-12 md:py-16 shadow-[0_0_0_1px_rgba(255,255,255,0.05)]">
           <h2

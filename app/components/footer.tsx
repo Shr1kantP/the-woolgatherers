@@ -37,7 +37,7 @@ export default function Footer() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <footer className="relative z-30 min-h-screen w-full overflow-x-hidden bg-[#5D1515] text-[#F5E9D0]">
+    <footer id="footer" className="relative z-30 min-h-screen w-full overflow-x-hidden bg-[#5D1515] text-[#F5E9D0]">
       <div className="mx-auto max-w-[2600px] px-4 sm:px-8 lg:px-10 pb-8 pt-10 sm:pt-12">
 
         {/* "Ready to Check in" SVG heading */}
@@ -73,7 +73,8 @@ export default function Footer() {
 
           {/* Concierge bell */}
           <div
-            className="flex flex-col items-center"
+            className="flex flex-col items-center cursor-pointer"
+            onClick={() => window.dispatchEvent(new CustomEvent("open-concierge"))}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => { setIsHovered(false); setIsPressed(false); }}
           >
@@ -137,7 +138,8 @@ export default function Footer() {
         <div className="mt-8 flex justify-center">
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-full border border-[#F5DFA0]/65 bg-[#F0C766] px-6 sm:px-7 py-3 font-semibold uppercase text-[#5D1515] transition-all duration-200 hover:scale-[1.03] hover:brightness-105 focus:outline-none focus:ring-2 focus:ring-[#F5E9D0]/70"
+            onClick={() => window.dispatchEvent(new CustomEvent("open-concierge"))}
+            className="inline-flex items-center justify-center rounded-full border border-[#F5DFA0]/65 bg-[#F0C766] px-6 sm:px-7 py-3 font-semibold uppercase text-[#5D1515] transition-all duration-200 hover:scale-[1.03] hover:brightness-105 focus:outline-none focus:ring-2 focus:ring-[#F5E9D0]/70 cursor-pointer"
             style={{
               fontSize: "clamp(0.7rem, 2vw, 0.875rem)",
               letterSpacing: "0.18em",

@@ -79,52 +79,62 @@ export default function Residency() {
       {/* ══════════════════════════════════════════════════════════════════════
           MOBILE + TABLET  (< lg) — matches the reference screenshot exactly
       ══════════════════════════════════════════════════════════════════════ */}
-      <div className="lg:hidden px-5 sm:px-8 md:px-10">
+      <div className="lg:hidden px-5 sm:px-8 md:px-10 flex flex-col gap-6">
 
-        {/* 1. Heading — left-aligned, two-line, large */}
-        <h2
-          ref={headingRef}
-          className="uppercase font-bold leading-none mb-8 sm:mb-10"
-          style={{
-            fontFamily: '"Jersey 15", system-ui, serif',
-            fontSize: "clamp(48px, 14vw, 96px)",
-            letterSpacing: "-0.02em",
-            color: "#F5F0E8",
-          }}
-        >
-          THE<br />RESIDENCY
-        </h2>
+        {/* 1. Top Header: THE RESIDENTS */}
+        <div className="w-full pt-2 pb-4">
+          <h2
+            ref={headingRef}
+            className="uppercase font-bold leading-none text-left"
+            style={{
+              fontFamily: '"Jersey 15", system-ui, serif',
+              letterSpacing: "-0.02em",
+              color: "#F5F0E8",
+            }}
+          >
+            <span className="block text-[clamp(24px,6vw,32px)] leading-none mb-1">THE</span>
+            <span className="block text-[clamp(48px,11vw,64px)] leading-none">RESIDENTS</span>
+          </h2>
+        </div>
 
-        {/* 2. Two-column zone: tall stamp left | text + rotated stamp right */}
-        <div className="grid grid-cols-2 gap-4 sm:gap-6 items-start">
-
-          {/* Left col — tall portrait stamp image */}
-          <div ref={leftImgRef} className="w-full">
+        {/* 2. Top Row: Landscape Stamp on Left, Paragraph 1 on Right */}
+        <div className="grid grid-cols-12 gap-4 items-center">
+          <div ref={leftImgRef} className="col-span-6">
             <Image
               src="/images/resident-image-topleft.png"
               alt="Landscape stamp"
-              width={200}
-              height={380}
-              className="w-full h-auto object-cover"
+              width={160}
+              height={300}
+              className="w-[90%] h-auto object-cover"
               style={{ display: "block" }}
             />
           </div>
+          <div ref={para1Ref} className="col-span-6 pl-1">
+            <p style={bodyFont}>
+              We help brands find clarity, build distinct identities, and grow through
+              thoughtful strategy, design, content, and digital experiences.
+            </p>
+          </div>
+        </div>
 
-          {/* Right col — para1 text on top, rotated stamp below */}
-          <div className="flex flex-col gap-5 sm:gap-7 pt-1">
-            <div ref={para1Ref}>
-              <p style={bodyFont}>
-                We help brands find clarity, build distinct identities, and grow through
-                thoughtful strategy, design, content, and digital experiences.
-              </p>
-            </div>
+        {/* 3. Bottom Row: Left Paragraph and Right Rotated Ticket */}
+        <div className="grid grid-cols-12 gap-4 items-center">
+          {/* Bottom Left Column */}
+          <div ref={para2Ref} className="col-span-6 pr-1">
+            <p style={bodyFont}>
+              Over the years, we&apos;ve worked with startups, family businesses,
+              challenger brands, and category leaders alike.
+            </p>
+          </div>
 
-            <div ref={rightImgRef} style={{ transform: "rotate(3deg)", transformOrigin: "center center" }}>
+          {/* Bottom Right Column */}
+          <div className="col-span-6 flex justify-end">
+            <div ref={rightImgRef} style={{ transform: "rotate(6deg)", transformOrigin: "center center" }} className="w-[85%]">
               <Image
                 src="/images/resident-image-bottomright.png"
                 alt="The Woolgatherers stamp"
-                width={160}
-                height={280}
+                width={140}
+                height={245}
                 className="w-full h-auto object-cover"
                 style={{ display: "block" }}
               />
@@ -132,127 +142,95 @@ export default function Residency() {
           </div>
         </div>
 
-        {/* 3. Para 2 — below the image row, left-aligned */}
-        <div ref={para2Ref} className="mt-6 sm:mt-8" style={{ maxWidth: "55%" }}>
-          <p style={bodyFont}>
-            Over the years, we&apos;ve worked with startups, family businesses,
-            challenger brands, and category leaders alike.
-          </p>
-        </div>
-
-        {/* 4. Full-width italic quote at the bottom */}
-        <div className="mt-10 sm:mt-14 border-t border-[#F5F0E8]/20 pt-8 sm:pt-10">
+        {/* 4. Bottom Full-Width Quote */}
+        <div className="w-full text-center pt-8 pb-4">
           <p
-            className="text-center"
+            className="leading-snug"
             style={{
-              fontFamily: '"Instrument Serif", "Times New Roman", serif',
-              fontStyle: "italic",
-              fontSize: "clamp(20px, 5.5vw, 36px)",
-              lineHeight: 1.25,
-              color: "#F5F0E8",
+              ...bodyFont,
+              fontSize: "clamp(18px, 5vw, 24px)",
+              textAlign: "center",
             }}
           >
-            Every brand&apos;s journey is different.<br />
+            Every brand&apos;s journey is different.
+            <br />
             Every stay is thoughtfully designed.
           </p>
         </div>
+
       </div>
 
       {/* ══════════════════════════════════════════════════════════════════════
           DESKTOP  (lg+) — original layout, completely untouched
       ══════════════════════════════════════════════════════════════════════ */}
       <div className="hidden lg:block px-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-12 gap-8 items-start mt-16">
+        <div className="max-w-7xl mx-auto flex flex-col gap-16 py-12">
+          
+          {/* 1. Top Row: Landscape stamp on the left, paragraph 1 on the right */}
+          <div className="grid grid-cols-12 gap-8 items-center">
+            <div ref={leftImgRef} className="col-span-5 col-start-2">
+              <Image
+                src="/images/resident-image-topleft.png"
+                alt="Landscape stamp"
+                width={240}
+                height={150}
+                className="w-[60%] h-auto object-cover"
+                style={{ display: "block", transform: "rotate(-2deg)" }}
+              />
+            </div>
+            <div ref={para1Ref} className="col-span-4 col-start-8">
+              <p style={{ fontFamily: "Inter, sans-serif", fontSize: 20, lineHeight: 1.5, color: "#F5F0E8" }}>
+                We help brands find clarity, build distinct identities, and grow through thoughtful
+                strategy, design, content, and digital experiences.
+              </p>
+            </div>
+          </div>
 
-            <div className="col-span-3" />
+          {/* 2. Middle Row: Centered "THE RESIDENCY" heading */}
+          <div className="py-6 text-center">
+            <h2
+              ref={headingRef}
+              className="uppercase font-bold leading-none tracking-tight"
+              style={{
+                fontSize: "clamp(64px, 8vw, 120px)",
+                fontFamily: '"Jersey 15", serif',
+                color: "#F5F0E8",
+              }}
+            >
+              THE RESIDENCY
+            </h2>
+          </div>
 
-            <div className="col-span-3 flex items-start">
-              <div className="w-full">
-                <div ref={para1Ref} className="prose prose-lg max-w-prose ml-auto text-left text-[#F5F0E8]">
-                  <p style={{ fontFamily: "Inter, sans-serif", fontSize: 20, lineHeight: 1.45 }}>
-                    We help brands find clarity, build distinct identities, and grow through thoughtful
-                    strategy, design, content, and digital experiences.
-                  </p>
-                </div>
+          {/* 3. Bottom Row: Left paragraph and right rotated ticket + quote */}
+          <div className="grid grid-cols-12 gap-8 items-start">
+            {/* Bottom Left Column */}
+            <div ref={para2Ref} className="col-span-4 col-start-2 pt-8">
+              <p style={{ fontFamily: "Inter, sans-serif", fontSize: 18, lineHeight: 1.5, color: "#F5F0E8" }}>
+                Over the years, we&apos;ve worked with startups, family businesses, challenger brands,
+                and category leaders alike.
+              </p>
+            </div>
+
+            {/* Bottom Right Column */}
+            <div className="col-span-4 col-start-8 flex flex-col gap-6 items-end text-right">
+              <div ref={rightImgRef} style={{ transform: "rotate(6deg)", transformOrigin: "center center" }} className="w-[60%]">
+                <Image
+                  src="/images/resident-image-bottomright.png"
+                  alt="The Woolgatherers stamp"
+                  width={180}
+                  height={210}
+                  className="w-full h-auto object-cover"
+                  style={{ display: "block" }}
+                />
               </div>
-            </div>
-
-            <div className="col-span-12">
-              <h2
-                ref={headingRef}
-                className="w-full text-center uppercase tracking-tight"
-                style={{
-                  fontSize: "clamp(48px, 8vw, 120px)",
-                  lineHeight: 1,
-                  letterSpacing: "-1px",
-                  fontFamily: '"Jersey 15", serif',
-                }}
-              >
-                THE RESIDENCY
-              </h2>
-            </div>
-
-            <div className="col-span-4 mt-0 lg:mt-32">
-              <div ref={para2Ref} className="max-w-md text-left text-[#F5F0E8]"
-                style={{ fontFamily: "Inter, sans-serif", fontSize: 18, lineHeight: 1.45 }}>
-                <p>
-                  Over the years, we&apos;ve worked with startups, family businesses, challenger brands,
-                  and category leaders alike.
+              <div className="w-[60%] pr-1">
+                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 16, lineHeight: 1.5, color: "#F5F0E8" }}>
+                  Every brand&apos;s journey is different. Every stay is thoughtfully designed.
                 </p>
               </div>
             </div>
-
-            <div className="col-span-4 col-start-9" />
-
-            <div className="col-span-4 col-start-1 mt-10 lg:mt-0">
-              <div className="max-w-xs text-left text-[#F5F0E8]"
-                style={{ fontFamily: "Inter, sans-serif", fontSize: 18, lineHeight: 1.45 }}>
-                <p>Every brand&apos;s journey is different. Every stay is thoughtfully designed.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Desktop decorative stamps — absolutely positioned as before */}
-        <div aria-hidden className="pointer-events-none">
-          <div
-            ref={leftImgRef}
-            className="absolute"
-            style={{
-              left: "clamp(8px, 4vw, 120px)",
-              top: "clamp(1.5rem, 5vh, 5rem)",
-              transform: "rotate(-2deg)",
-              zIndex: 20,
-            }}
-          >
-            <Image
-              src="/images/resident-image-topleft.png"
-              alt=""
-              width={250}
-              height={300}
-              style={{ objectFit: "cover", display: "block", width: "clamp(160px, 16vw, 250px)", height: "auto" }}
-            />
           </div>
 
-          <div
-            ref={rightImgRef}
-            className="absolute"
-            style={{
-              right: "clamp(8px, 4vw, 120px)",
-              bottom: "clamp(1.5rem, 5vh, 5rem)",
-              transform: "rotate(12deg)",
-              zIndex: 20,
-            }}
-          >
-            <Image
-              src="/images/resident-image-bottomright.png"
-              alt=""
-              width={250}
-              height={300}
-              style={{ objectFit: "cover", display: "block", width: "clamp(160px, 16vw, 250px)", height: "auto" }}
-            />
-          </div>
         </div>
       </div>
 

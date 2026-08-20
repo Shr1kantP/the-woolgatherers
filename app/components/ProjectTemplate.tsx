@@ -1,6 +1,22 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+
+/* ─── Helper for Related Project Link ───────────────────────────────────── */
+
+const getProjectLink = (title: string) => {
+  const cleanTitle = title.toLowerCase().replace(/[^a-z0-9\s-]/g, "").trim();
+  if (cleanTitle.includes("kumbaya") || cleanTitle.includes("kumabaya")) return "/work/kumbaya";
+  if (cleanTitle.includes("mtr") || cleanTitle.includes("foods")) return "/work/mtr-foods";
+  if (cleanTitle.includes("peps")) return "/work/peps";
+  if (cleanTitle.includes("wingreens")) return "/work/wingreens";
+  if (cleanTitle.includes("tavana")) return "/work/tavana";
+  if (cleanTitle.includes("santhi")) return "/work/santhi";
+  if (cleanTitle.includes("motion")) return "/work/motion";
+  if (cleanTitle.includes("sie")) return "/work/sie";
+  return "/work";
+};
 
 /* ─── Types ──────────────────────────────────────────────────────────────── */
 
@@ -269,41 +285,43 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
           Related Projects
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+        <div className="flex flex-row overflow-x-auto gap-6 sm:gap-8 pb-6 snap-x snap-mandatory scrollbar-none">
           {relatedProjects.map((rp) => (
-            <article key={rp.title} className="flex flex-col">
-              {/* Thumbnail */}
-              <div className="relative w-full overflow-hidden" style={{ aspectRatio: "4/3" }}>
-                <Image
-                  src={rp.thumbnail}
-                  alt={rp.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 767px) 100vw, 33vw"
-                />
-              </div>
-
-              {/* Meta */}
-              <div className="pt-4 pb-2">
-                <h3
-                  className="font-bold uppercase leading-none text-[#F5F0E8] mb-1"
-                  style={{ fontFamily: "Oswald, sans-serif", fontSize: "clamp(14px, 2.5vw, 18px)" }}
-                >
-                  {rp.title}
-                </h3>
-                <p
-                  className="text-[#F5F0E8]/60 mb-3"
-                  style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(10px, 1.8vw, 12px)" }}
-                >
-                  Industry: {rp.industry}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {rp.tags.map((t) => (
-                    <PillBadge key={t} label={t} />
-                  ))}
+            <Link key={rp.title} href={getProjectLink(rp.title)} className="group block flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] snap-start">
+              <article className="flex flex-col">
+                {/* Thumbnail */}
+                <div className="relative w-full overflow-hidden" style={{ aspectRatio: "4/3" }}>
+                  <Image
+                    src={rp.thumbnail}
+                    alt={rp.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 767px) 280px, 340px"
+                  />
                 </div>
-              </div>
-            </article>
+
+                {/* Meta */}
+                <div className="pt-4 pb-2">
+                  <h3
+                    className="font-bold uppercase leading-none text-[#F5F0E8] mb-1 transition-colors group-hover:text-[#C9A84C]"
+                    style={{ fontFamily: "Oswald, sans-serif", fontSize: "clamp(14px, 2.5vw, 18px)" }}
+                  >
+                    {rp.title}
+                  </h3>
+                  <p
+                    className="text-[#F5F0E8]/60 mb-3"
+                    style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(10px, 1.8vw, 12px)" }}
+                  >
+                    Industry: {rp.industry}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {rp.tags.map((t) => (
+                      <PillBadge key={t} label={t} />
+                    ))}
+                  </div>
+                </div>
+              </article>
+            </Link>
           ))}
         </div>
       </div>

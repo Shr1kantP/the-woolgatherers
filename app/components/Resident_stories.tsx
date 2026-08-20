@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import gsap from "../lib/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const CARDS = [
   { src: "/images/Res_stories/mtr_res_stories.jpg",  alt: "MTR brand work",     rotate: "-2deg"  },

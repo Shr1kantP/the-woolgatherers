@@ -122,97 +122,49 @@ function StandardCard({ project }: { project: Project }) {
     </article>
   );
 
-  if (project.id === "kumbaya") {
-    return (
-      <Link href="/work/kumbaya" className="group block h-full">
-        {cardContent}
-      </Link>
-    );
-  }
-
-  return cardContent;
+  return (
+    <Link href={`/work/${project.id}`} className="group block h-full">
+      {cardContent}
+    </Link>
+  );
 }
 
 /* ─── Text card (Kumbaya first-slot logo + description variant) ──────────── */
 
 function TextCard({ project }: { project: Project }) {
   return (
-    <article className="flex flex-col">
-      {/* Cream box mimicking the design screenshot */}
-      <div
-        className="relative w-full flex flex-col justify-between p-6 sm:p-8"
-        style={{ aspectRatio: "4/3", background: "#F5F0E8" }}
-      >
-        {project.logo && (
-          <div className="flex justify-center items-start pt-2">
-            <Image
-              src={project.logo}
-              alt={`${project.name} logo`}
-              width={80}
-              height={80}
-              className="object-contain"
-            />
-          </div>
-        )}
-        {project.description && (
-          <div
-            className="text-[#1A0D26] text-center"
-            style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(11px, 2.2vw, 13px)", lineHeight: 1.6 }}
-          >
-            <p>{project.description}</p>
-          </div>
-        )}
-      </div>
-
-      {/* Meta */}
-      <div className="pt-4 pb-2">
-        <h3
-          className="font-bold uppercase leading-none text-[#F5F0E8] mb-1"
-          style={{ fontFamily: "Oswald, sans-serif", fontSize: "clamp(16px, 3.5vw, 22px)" }}
+    <Link href={`/work/${project.id}`} className="group block">
+      <article className="flex flex-col">
+        {/* Cream box mimicking the design screenshot */}
+        <div
+          className="relative w-full flex flex-col justify-between p-6 sm:p-8"
+          style={{ aspectRatio: "4/3", background: "#F5F0E8" }}
         >
-          {project.name}
-        </h3>
-        <p
-          className="text-[#F5F0E8]/60 mb-3"
-          style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(10px, 2vw, 13px)" }}
-        >
-          Industry: {project.industry}
-        </p>
-        <div className="flex flex-wrap gap-2">
-          {project.tags.map((t) => (
-            <Tag key={t} label={t} />
-          ))}
+          {project.logo && (
+            <div className="flex justify-center items-start pt-2">
+              <Image
+                src={project.logo}
+                alt={`${project.name} logo`}
+                width={80}
+                height={80}
+                className="object-contain"
+              />
+            </div>
+          )}
+          {project.description && (
+            <div
+              className="text-[#1A0D26] text-center"
+              style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(11px, 2.2vw, 13px)", lineHeight: 1.65 }}
+            >
+              <p>{project.description}</p>
+            </div>
+          )}
         </div>
-      </div>
-    </article>
-  );
-}
 
-/* ─── Full-width card (Motion Design) ───────────────────────────────────── */
-
-function FullWidthCard({ project }: { project: Project }) {
-  return (
-    <article className="col-span-1 sm:col-span-2">
-      {/* Image — full width, shorter aspect ratio */}
-      <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/7" }}>
-        {project.image ? (
-          <Image
-            src={project.image}
-            alt={project.name}
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-        ) : (
-          <div className="h-full w-full bg-[#2a1a3a]" />
-        )}
-      </div>
-
-      {/* Meta: name+industry+tags on left, description on right */}
-      <div className="pt-4 pb-2 flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-10">
-        <div className="flex-shrink-0">
+        {/* Meta */}
+        <div className="pt-4 pb-2">
           <h3
-            className="font-bold uppercase leading-none text-[#F5F0E8] mb-1"
+            className="font-bold uppercase leading-none text-[#F5F0E8] mb-1 transition-colors group-hover:text-[#C9A84C]"
             style={{ fontFamily: "Oswald, sans-serif", fontSize: "clamp(16px, 3.5vw, 22px)" }}
           >
             {project.name}
@@ -229,20 +181,67 @@ function FullWidthCard({ project }: { project: Project }) {
             ))}
           </div>
         </div>
-
-        {project.sideDescription && (
-          <p
-            className="text-[#F5F0E8]/70 max-w-xl"
-            style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(11px, 2vw, 13px)", lineHeight: 1.65 }}
-          >
-            {project.sideDescription}
-          </p>
-        )}
-      </div>
-    </article>
+      </article>
+    </Link>
   );
 }
 
+/* ─── Full-width card (Motion Design) ───────────────────────────────────── */
+
+function FullWidthCard({ project }: { project: Project }) {
+  return (
+    <Link href={`/work/${project.id}`} className="group block col-span-1 sm:col-span-2">
+      <article>
+        {/* Image — full width, shorter aspect ratio */}
+        <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/7" }}>
+          {project.image ? (
+            <Image
+              src={project.image}
+              alt={project.name}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+              sizes="100vw"
+            />
+          ) : (
+            <div className="h-full w-full bg-[#2a1a3a]" />
+          )}
+        </div>
+
+        {/* Meta: name+industry+tags on left, description on right */}
+        <div className="pt-4 pb-2 flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-10">
+          <div className="flex-shrink-0">
+            <h3
+              className="font-bold uppercase leading-none text-[#F5F0E8] mb-1 transition-colors group-hover:text-[#C9A84C]"
+              style={{ fontFamily: "Oswald, sans-serif", fontSize: "clamp(16px, 3.5vw, 22px)" }}
+            >
+              {project.name}
+            </h3>
+            <p
+              className="text-[#F5F0E8]/60 mb-3"
+              style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(10px, 2vw, 13px)" }}
+            >
+              Industry: {project.industry}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {project.tags.map((t) => (
+                <Tag key={t} label={t} />
+              ))}
+            </div>
+          </div>
+
+          {project.sideDescription && (
+            <p
+              className="text-[#F5F0E8]/70 max-w-xl transition-colors group-hover:text-[#F5F0E8]"
+              style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(11px, 2vw, 13px)", lineHeight: 1.65 }}
+            >
+              {project.sideDescription}
+            </p>
+          )}
+        </div>
+      </article>
+    </Link>
+  );
+}
 /* ─── Section ────────────────────────────────────────────────────────────── */
 
 export default function Work() {

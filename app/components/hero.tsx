@@ -4,23 +4,37 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      <Image
-        src="/images/hero-bg.jpg"
-        alt="Meadow with tree and mountains"
-        fill
-        priority
-        className="object-cover"
-      />
+      {/* Desktop background */}
+      <div className="hidden sm:block absolute inset-0">
+        <Image
+          src="/images/hero-bg.jpg"
+          alt="Meadow with tree and mountains"
+          fill
+          priority
+          className="object-cover"
+        />
+      </div>
+
+      {/* Mobile background */}
+      <div className="block sm:hidden absolute inset-0">
+        <Image
+          src="/images/hero/mobile-bg.png"
+          alt="Meadow with tree and mountains"
+          fill
+          priority
+          className="object-cover"
+        />
+      </div>
 
       {/* Decorative upper frame */}
-      <div className="absolute left-[95%] top-1/2 -translate-x-1/2 -translate-y-[70%] sm:translate-y-0 sm:left-auto sm:right-[45%] sm:top-20 z-[25] w-[85vw] max-w-[500px] sm:w-[clamp(160px,80vw,600px)] aspect-[1.62] sm:aspect-auto sm:h-[clamp(140px,38vw,320px)]"
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 sm:translate-y-0 sm:left-auto sm:right-[45%] sm:top-20 z-[25] w-[85vw] max-w-[500px] sm:w-[clamp(160px,80vw,600px)] aspect-[1.62] sm:aspect-auto sm:h-[clamp(140px,38vw,320px)]"
            style={{ position: "absolute" }}>
         <Image
           src="/images/hero/upper-frame.png"
           alt="Decorative upper frame"
           fill
           priority
-          className="object-contain object-right"
+          className="object-contain object-center sm:object-right"
         />
       </div>
 

@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const CARDS = [
   { src: "/images/Res_stories/mtr_res_stories.jpg",  alt: "MTR brand work",     rotate: "-2deg"  },
   { src: "/images/Res_stories/wing_res_stories.jpg", alt: "Wing brand work",    rotate: "-7deg"  },
-  { src: "/images/Res_stories/sie_res_stories.jpg",  alt: "Sievert brand work", rotate:  "7deg"  },
+  { src: "/images/Res_stories/sie_res_stories.jpg",  alt: "Sie brand work", rotate:  "7deg"  },
 ];
 
 export default function Resident_stories() {

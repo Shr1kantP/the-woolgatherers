@@ -16,7 +16,7 @@ const serviceData: ServiceItem[] = [
   {
     title: "Brand Building, Design & Management",
     collapsedColor: "#C1652F", // burnt orange
-    expandedColor: "#D68458", // lightened burnt orange (~25-30%)
+    expandedColor: "#C1652F", // lightened burnt orange (~25-30%)
     image: "/images/service/tab-1-image.png",
     subServices: [
       "Brand Strategy",
@@ -29,7 +29,7 @@ const serviceData: ServiceItem[] = [
   {
     title: "Social Media",
     collapsedColor: "#4A2A5C", // deep purple
-    expandedColor: "#6F4B82", // lightened mauve
+    expandedColor: "#4A2A5C", // lightened mauve
     image: "/images/service/tab-2-image.png",
     subServices: [
       "Social Media Strategy",
@@ -42,7 +42,7 @@ const serviceData: ServiceItem[] = [
   {
     title: "Websites",
     collapsedColor: "#6E6B3A", // olive
-    expandedColor: "#938F5F", // lightened olive
+    expandedColor: "#6E6B3A", // lightened olive
     image: "/images/service/tab-3-image.png",
     subServices: [
       "UI/UX Design",
@@ -56,7 +56,7 @@ const serviceData: ServiceItem[] = [
   {
     title: "Photography & Videography",
     collapsedColor: "#7A1F1F", // maroon
-    expandedColor: "#A14242", // lightened maroon
+    expandedColor: "#7A1F1F", // lightened maroon
     image: "/images/host_4thslide.jpg",
     subServices: [
       "Commercial Photography",
@@ -217,7 +217,7 @@ export default function ServicesAccordion() {
               className="relative w-full h-[120px] md:h-[200px] flex items-center p-6 sm:p-8 md:p-10"
             >
               <h3
-                className="text-[#F5EDE4] font-normal leading-none"
+                className="text-white font-normal leading-none"
                 style={{
                   fontFamily: '"Futura", system-ui, sans-serif',
                   fontSize: "clamp(28px, 5vw, 40px)",
@@ -238,7 +238,7 @@ export default function ServicesAccordion() {
               >
                 {/* Large Title */}
                 <h4
-                  className="w-full text-[#1A1208] font-bold tracking-tight mb-8 sm:mb-12 text-left"
+                  className="w-full text-white font-bold tracking-tight mb-8 sm:mb-12 text-left"
                   style={{
                     fontFamily: "var(--font-sans), sans-serif",
                     fontSize: "clamp(32px, 6vw, 56px)",
@@ -256,7 +256,7 @@ export default function ServicesAccordion() {
                       {service.subServices.map((sub, i) => (
                         <li
                           key={i}
-                          className="text-[#1A1208] font-normal leading-relaxed"
+                          className="text-white font-normal leading-relaxed"
                           style={{
                             fontFamily: "var(--font-sans), sans-serif",
                             fontSize: "clamp(14px, 2vw, 15px)",

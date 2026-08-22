@@ -128,13 +128,13 @@ export default function Residency() {
           </div>
 
           {/* Bottom Right Column */}
-          <div className="col-span-6 flex justify-end">
-            <div ref={rightImgRef} style={{ transform: "rotate(6deg)", transformOrigin: "center center" }} className="w-[85%]">
+          <div className="col-span-6 flex justify-end overflow-visible">
+            <div ref={rightImgRef} style={{ transform: "rotate(-18deg)", transformOrigin: "center center" }} className="w-[140%] translate-x-[-15%] origin-center">
               <Image
                 src="/images/resident-image-bottomright.png"
                 alt="The Woolgatherers stamp"
-                width={140}
-                height={245}
+               width={160}
+              height={300}
                 className="w-full h-auto object-cover"
                 style={{ display: "block" }}
               />
@@ -172,13 +172,13 @@ export default function Residency() {
               <Image
                 src="/images/resident-image-topleft.png"
                 alt="Landscape stamp"
-                width={240}
-                height={150}
-                className="w-[60%] h-auto object-cover"
+                width={160}
+                height={300}
+                className="w-[70%] h-auto object-cover"
                 style={{ display: "block", transform: "rotate(-2deg)" }}
               />
             </div>
-            <div ref={para1Ref} className="col-span-4 col-start-8">
+            <div ref={para1Ref} className="col-span-4 col-start-7">
               <p style={{ fontFamily: "Inter, sans-serif", fontSize: 20, lineHeight: 1.5, color: "#F5F0E8" }}>
                 We help brands find clarity, build distinct identities, and grow through thoughtful
                 strategy, design, content, and digital experiences.
@@ -212,19 +212,19 @@ export default function Residency() {
             </div>
 
             {/* Bottom Right Column */}
-            <div className="col-span-4 col-start-8 flex flex-col gap-6 items-end text-right">
-              <div ref={rightImgRef} style={{ transform: "rotate(6deg)", transformOrigin: "center center" }} className="w-[60%]">
+            <div className="col-span-4 col-start-8 flex flex-col gap-6 items-end text-right overflow-visible">
+              <div ref={rightImgRef} style={{ transform: "rotate(4deg)", transformOrigin: "center center" }} className="w-[90%] translate-x-0 origin-center">
                 <Image
                   src="/images/resident-image-bottomright.png"
                   alt="The Woolgatherers stamp"
-                  width={180}
-                  height={210}
+                  width={160}
+                  height={300}
                   className="w-full h-auto object-cover"
                   style={{ display: "block" }}
                 />
               </div>
-              <div className="w-[60%] pr-1">
-                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 16, lineHeight: 1.5, color: "#F5F0E8" }}>
+              <div className="w-[90%] translate-x-[-120%] -translate-y-[200px]">
+                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 18, lineHeight: 1.5, color: "#F5F0E8" }}>
                   Every brand&apos;s journey is different. Every stay is thoughtfully designed.
                 </p>
               </div>

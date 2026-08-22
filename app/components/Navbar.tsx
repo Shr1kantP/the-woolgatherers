@@ -42,7 +42,7 @@ export default function Navbar() {
     <Link
       href="/"
       aria-label="Home"
-      className="rounded-full w-10 h-10 bg-[#E8291C] text-[#F5E9D0] hover:opacity-85 transition-opacity flex items-center justify-center"
+      className="rounded-full w-10 h-10 bg-[#D72F2F] text-[#F5E9D0] hover:opacity-85 transition-opacity flex items-center justify-center"
     >
       <HomeIcon />
     </Link>
@@ -56,10 +56,10 @@ export default function Navbar() {
       displaySocials={true}
       displayItemNumbering={true}
       menuButtonColor="#F5E9D0"
-      openMenuButtonColor="#E8291C"
+      openMenuButtonColor="#D72F2F"
       changeMenuColorOnOpen={true}
-      colors={['#E8291C', '#F5E9D0', '#120F17']}
-      accentColor="#E8291C"
+      colors={['#D72F2F', '#F5E9D0', '#120F17']}
+      accentColor="#D72F2F"
       logoElement={logoElement}
       isFixed={true}
     />

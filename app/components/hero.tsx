@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Desktop background */}
       <div className="hidden sm:block absolute inset-0">
         <Image
-          src="/images/hero-bg.jpg"
+          src="/images/hero/hero-bg-desktop.png"
           alt="Meadow with tree and mountains"
           fill
           priority

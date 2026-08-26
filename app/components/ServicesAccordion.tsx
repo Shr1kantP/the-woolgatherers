@@ -15,8 +15,8 @@ interface ServiceItem {
 const serviceData: ServiceItem[] = [
   {
     title: "Brand Building, Design & Management",
-    collapsedColor: "#C1652F", // burnt orange
-    expandedColor: "#C1652F", // lightened burnt orange (~25-30%)
+    collapsedColor: "#912A02", // burnt orange
+    expandedColor: "#912A02", // lightened burnt orange (~25-30%)
     image: "/images/service/tab-1-image.png",
     subServices: [
       "Brand Strategy",
@@ -28,8 +28,8 @@ const serviceData: ServiceItem[] = [
   },
   {
     title: "Social Media",
-    collapsedColor: "#4A2A5C", // deep purple
-    expandedColor: "#4A2A5C", // lightened mauve
+    collapsedColor: "#052446", // deep purple
+    expandedColor: "#052446", // lightened mauve
     image: "/images/service/tab-2-image.png",
     subServices: [
       "Social Media Strategy",
@@ -41,8 +41,8 @@ const serviceData: ServiceItem[] = [
   },
   {
     title: "Websites",
-    collapsedColor: "#6E6B3A", // olive
-    expandedColor: "#6E6B3A", // lightened olive
+    collapsedColor: "#4E0000", // olive
+    expandedColor: "#4E0000", // lightened olive
     image: "/images/service/tab-3-image.png",
     subServices: [
       "UI/UX Design",
@@ -55,8 +55,8 @@ const serviceData: ServiceItem[] = [
   },
   {
     title: "Photography & Videography",
-    collapsedColor: "#7A1F1F", // maroon
-    expandedColor: "#7A1F1F", // lightened maroon
+    collapsedColor: "#0C3800", // maroon
+    expandedColor: "#0C3800", // lightened maroon
     image: "/images/host_4thslide.jpg",
     subServices: [
       "Commercial Photography",
@@ -108,7 +108,7 @@ export default function ServicesAccordion() {
             ease: "power2.inOut",
           });
         } else {
-          const targetHeight = window.innerWidth < 768 ? 120 : 200;
+          const targetHeight = window.innerWidth < 768 ? 90 : 140;
           gsap.to(header, {
             height: targetHeight,
             opacity: 1,
@@ -214,7 +214,7 @@ export default function ServicesAccordion() {
             {/* Collapsed Header / Label */}
             <div
               ref={(el) => { headerRefs.current[index] = el; }}
-              className="relative w-full h-[120px] md:h-[200px] flex items-center p-6 sm:p-8 md:p-10"
+              className="relative w-full h-[90px] md:h-[140px] flex items-center p-6 sm:p-8 md:p-10"
             >
               <h3
                 className="text-white font-normal leading-none"

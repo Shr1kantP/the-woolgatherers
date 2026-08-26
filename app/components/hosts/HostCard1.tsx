@@ -5,7 +5,7 @@ export default function HostCard1() {
         <h2
           className="text-center leading-[0.8] tracking-[-0.09em]"
           style={{
-            fontFamily: '"OSWALD-REGULAR", "Arial Narrow", sans-serif',
+            fontFamily: 'var(--font-jersey-15), "Jersey 15", sans-serif',
             fontSize: "clamp(3rem, 14vw, 12rem)",
             fontWeight: 700,
             color: "#FBCE6E",

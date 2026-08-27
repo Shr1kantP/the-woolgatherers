@@ -7,11 +7,11 @@ export default function HostCard1() {
           style={{
             fontFamily: 'var(--font-jersey-15), "Jersey 15", sans-serif',
             fontSize: "clamp(3rem, 14vw, 12rem)",
-            fontWeight: 700,
+            fontWeight: 200,
             color: "#FBCE6E",
           }}
         >
-          THE HOSTS
+          <span className="inline-block ml-4 sm:ml-6 md:ml-10 tracking-normal">THE HOSTS</span>
         </h2>
       </div>
     </div>

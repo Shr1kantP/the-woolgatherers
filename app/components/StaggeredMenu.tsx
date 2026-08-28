@@ -8,6 +8,7 @@ export interface StaggeredMenuItem {
   ariaLabel: string;
   link: string;
   onClick?: (e: React.MouseEvent) => void;
+  badge?: string;
 }
 
 export interface StaggeredMenuSocialItem {
@@ -37,7 +38,7 @@ export interface StaggeredMenuProps {
 
 export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   position = 'right',
-  colors = ['#E8291C', '#F5E9D0', '#120F17'],
+  colors = ['#912A02', '#F5E9D0', '#120F17'],
   items = [],
   socialItems = [],
   displaySocials = true,
@@ -46,9 +47,9 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   logoUrl,
   logoElement,
   menuButtonColor = '#F5E9D0',
-  openMenuButtonColor = '#E8291C',
+  openMenuButtonColor = '#912A02',
   changeMenuColorOnOpen = true,
-  accentColor = '#E8291C',
+  accentColor = '#912A02',
   isFixed = true,
   closeOnClickAway = true,
   onMenuOpen,
@@ -407,7 +408,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
   return (
     <div
-      className={`sm-scope z-40 ${isFixed ? 'fixed top-0 left-0 w-screen h-screen overflow-hidden pointer-events-none' : 'w-full h-full'}`}
+      className={`sm-scope z-40 ${isFixed ? 'fixed top-0 left-0 w-screen h-[100dvh] overflow-hidden pointer-events-none' : 'w-full h-full'}`}
     >
       <div
         className={
@@ -423,7 +424,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
           aria-hidden="true"
         >
           {(() => {
-            const raw = colors && colors.length ? colors.slice(0, 4) : ['#E8291C', '#F5E9D0'];
+            const raw = colors && colors.length ? colors.slice(0, 4) : ['#912A02', '#F5E9D0'];
             let arr = [...raw];
             if (arr.length >= 3) {
               const mid = Math.floor(arr.length / 2);
@@ -501,7 +502,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         <aside
           id="staggered-menu-panel"
           ref={panelRef}
-          className="staggered-menu-panel absolute top-0 right-0 h-full bg-[#120F17] flex flex-col p-[7em_2em_3em_2em] overflow-y-auto z-10 pointer-events-auto w-full md:w-[650px] shadow-[0_0_50px_rgba(0,0,0,0.8)]"
+          className="staggered-menu-panel absolute top-0 right-0 h-full bg-[#120F17] flex flex-col p-[7em_2em_6em_2em] overflow-y-auto z-10 pointer-events-auto w-full md:w-[650px] shadow-[0_0_50px_rgba(0,0,0,0.8)]"
           aria-hidden={!open}
         >
           <div className="sm-panel-inner flex-1 flex flex-col justify-between">
@@ -511,7 +512,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             >
               {items && items.length ? (
                 items.map((it, idx) => {
-                  const numStr = (idx + 1).toString().padStart(2, '0');
+                  const numStr = it.badge || (idx + 1).toString().padStart(2, '0');
                   
                   const handleClick = (e: React.MouseEvent) => {
                     if (it.onClick) {
@@ -524,7 +525,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                     <li className="sm-panel-itemWrap relative overflow-hidden py-1 border-b border-white/5" key={it.label + idx}>
                       <div className="flex items-center justify-between w-full">
                         <a
-                          className="sm-panel-item relative text-[#F5E9D0] font-heading font-bold text-[3rem] md:text-[4.5rem] cursor-pointer leading-none tracking-tight uppercase transition-all duration-200 no-underline hover:text-[#E8291C] flex items-baseline gap-4"
+                          className="sm-panel-item relative text-[#F5E9D0] font-heading font-bold text-[3rem] md:text-[4.5rem] cursor-pointer leading-none tracking-tight uppercase transition-all duration-200 no-underline hover:text-[#912A02] flex items-baseline gap-4"
                           href={it.onClick ? undefined : it.link}
                           onClick={it.onClick ? handleClick : closeMenu}
                           aria-label={it.ariaLabel}
@@ -534,19 +535,12 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                           </span>
                           
                           {displayItemNumbering && (
-                            <span className="sm-panel-item-num text-[1.2rem] md:text-[1.5rem] font-sans font-medium text-[#E8291C] opacity-0 self-center">
+                            <span className="sm-panel-item-num text-[1.2rem] md:text-[1.5rem] font-sans font-medium text-[#912A02] opacity-0 self-center">
                               ({numStr})
                             </span>
                           )}
                         </a>
 
-                        {/* Arrow Icon inside circular border matching reference image */}
-                        <div className="sm-panel-item-arrow w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/20 flex items-center justify-center text-[#F5E9D0] hover:border-[#E8291C] hover:bg-[#E8291C] hover:text-[#120F17] transition-all duration-300 pointer-events-none opacity-0">
-                          <svg className="w-5 h-5 md:w-6 md:h-6 stroke-current fill-none" viewBox="0 0 24 24" strokeWidth="2.5">
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <polyline points="12 5 19 12 12 19" />
-                          </svg>
-                        </div>
                       </div>
                     </li>
                   );
@@ -575,7 +569,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                         href={s.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="sm-socials-link text-[0.8rem] md:text-[0.9rem] font-semibold text-[#F5E9D0] hover:text-[#E8291C] no-underline flex items-center gap-1 transition-colors duration-200 font-sans uppercase"
+                        className="sm-socials-link text-[0.8rem] md:text-[0.9rem] font-semibold text-[#F5E9D0] hover:text-[#912A02] no-underline flex items-center gap-1 transition-colors duration-200 font-sans uppercase"
                       >
                         {s.label}
                         <span className="text-[0.8em]">↗</span>

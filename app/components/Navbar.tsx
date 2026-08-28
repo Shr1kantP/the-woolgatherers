@@ -26,15 +26,15 @@ export default function Navbar() {
   };
 
   const menuItems = [
-    { label: "Services", ariaLabel: "Services Section", link: "/#services" },
-    { label: "Residents", ariaLabel: "View Residents", link: "/work" },
-    { label: "Hosts", ariaLabel: "Hosts Section", link: "/#hosts" },
-    { label: "Links", ariaLabel: "Footer Links", link: "/#footer" },
-    { label: "Reservations", ariaLabel: "Make a Reservation", link: "#", onClick: handleReservationsClick }
+    { label: "Home", ariaLabel: "Home Page", link: "/#hero" },
+    { label: "Residents", ariaLabel: "View Residents", link: "/work", badge: "Work" },
+    /* { label: "Hosts", ariaLabel: "Hosts Section", link: "/#hosts" , onClick: handleReservationsClick, badge: "Contact" }, */
+    { label: "Concierge", ariaLabel: "Make a Reservation", link: "#", badge: "Contact" },
+    { label: "Stories", ariaLabel: "Stories", link: "/blog", badge: "Blog" }
   ];
 
   const socialItems = [
-    { label: "[Instagram]", link: "https://instagram.com/thewoolgatherers" },
+    { label: "[Instagram]", link: "https://instagram.com/thewoolgatherers.co" },
     { label: "[LinkedIn]", link: "https://linkedin.com/company/thewoolgatherers" }
   ];
 

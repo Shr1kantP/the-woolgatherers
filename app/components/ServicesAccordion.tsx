@@ -27,7 +27,7 @@ const serviceData: ServiceItem[] = [
     ],
   },
   {
-    title: "Social Media",
+    title: "Social Media & Creative Marketing",
     collapsedColor: "#052446", // deep purple
     expandedColor: "#052446", // lightened mauve
     image: "/images/service/tab-2-image.png",
@@ -40,7 +40,7 @@ const serviceData: ServiceItem[] = [
     ],
   },
   {
-    title: "Websites",
+    title: "Website Design & Build",
     collapsedColor: "#4E0000", // olive
     expandedColor: "#4E0000", // lightened olive
     image: "/images/service/tab-3-image.png",
@@ -57,7 +57,7 @@ const serviceData: ServiceItem[] = [
     title: "Photography & Videography",
     collapsedColor: "#0C3800", // maroon
     expandedColor: "#0C3800", // lightened maroon
-    image: "/images/host_4thslide.jpg",
+    image: "/images/service/tab-4-image.png",
     subServices: [
       "Commercial Photography",
       "Brand Films & Video Production",
@@ -219,7 +219,7 @@ export default function ServicesAccordion() {
               <h3
                 className="text-white font-normal leading-none"
                 style={{
-                  fontFamily: '"Futura", system-ui, sans-serif',
+                  fontFamily: '"Inter", system-ui, sans-serif',
                   fontSize: "clamp(28px, 5vw, 40px)",
                 }}
               >
@@ -238,10 +238,10 @@ export default function ServicesAccordion() {
               >
                 {/* Large Title */}
                 <h4
-                  className="w-full text-white font-bold tracking-tight mb-8 sm:mb-12 text-left"
+                  className="w-full text-white font-medium tracking-normal mb-10 sm:mb-16 text-center"
                   style={{
-                    fontFamily: "var(--font-sans), sans-serif",
-                    fontSize: "clamp(32px, 6vw, 56px)",
+                    fontFamily: '"Inter", system-ui, sans-serif',
+                    fontSize: "clamp(32px, 5vw, 56px)",
                     lineHeight: 1.1,
                   }}
                 >
@@ -249,34 +249,34 @@ export default function ServicesAccordion() {
                 </h4>
 
                 {/* Sub-services and Image Layout */}
-                <div className="w-full flex flex-col md:flex-row gap-8 items-end justify-between">
+                <div className="w-full flex flex-col md:flex-row gap-8 items-center justify-between">
                   {/* Left Column: Sub-services List */}
-                  <div className="w-full md:w-[35%] flex flex-col justify-end pb-2 pl-6 sm:pl-16 md:pl-24">
-                    <ul className="list-none p-0 m-0 text-left flex flex-col gap-2">
+                  <div className="w-full md:w-[40%] flex flex-col justify-center pb-2 pl-6 sm:pl-16 md:pl-24">
+                    <ul className="list-none p-0 m-0 text-left flex flex-col gap-1">
                       {service.subServices.map((sub, i) => (
                         <li
                           key={i}
-                          className="text-white font-normal leading-relaxed"
+                          className="text-white font-medium leading-relaxed"
                           style={{
-                            fontFamily: "var(--font-sans), sans-serif",
-                            fontSize: "clamp(14px, 2vw, 15px)",
+                            fontFamily: '"Inter", system-ui, sans-serif',
+                            fontSize: "clamp(16px, 2.5vw, 22px)",
                           }}
                         >
-                          {sub}
+                          ~{sub}
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   {/* Right Column: Representative Image */}
-                  <div className="w-full md:w-[65%] flex justify-end">
+                  <div className="w-full md:w-[60%] flex justify-end">
                     <div className="relative w-full max-w-3xl aspect-[16/6] bg-black/10 overflow-hidden">
                       <Image
                         src={service.image}
                         alt={service.title}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 1200px) 65vw, 800px"
+                        sizes="(max-width: 1200px) 60vw, 800px"
                       />
                     </div>
                   </div>

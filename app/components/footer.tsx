@@ -12,36 +12,34 @@ const navItems = [
 
 export default function Footer() {
   const [isPressed, setIsPressed] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [buttonVisible, setButtonVisible] = useState(false);
 
   return (
     <footer id="footer" className="relative z-30 min-h-screen w-full overflow-x-hidden bg-[#5D1515] text-[#F5E9D0] flex flex-col">
       <div className="mx-auto w-full max-w-[2600px] px-4 sm:px-8 lg:px-10 pb-8 pt-10 sm:pt-12 flex-grow flex flex-col justify-center">
 
-        {/* "Ready to Check in" SVG heading */}
-        <div className="flex justify-center mb-8 md:mb-12">
+        <div className="flex justify-center mb-2 md:mb-4">
           <Image
             src="/images/footer/readytext.svg"
             alt="Ready to Check in"
-            width={500}
-            height={220}
+            width={350}
+            height={154}
             priority
             className="h-auto object-contain"
-            style={{ width: "min(600px, 88vw)" }}
+            style={{ width: "min(350px, 70vw)" }}
           />
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 lg:gap-32 w-full max-w-6xl mx-auto ">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 lg:gap-32 w-full max-w-6xl mx-auto  md:translate-x-1 lg:translate-x-0">
 
-          {/* Left: Service nav list */}
-          <div className="hidden md:flex flex-1 justify-start md:translate-x-8 lg:translate-x-16">
+          <div className="hidden md:flex flex-1 justify-end md:translate-x-8 lg:translate-x-16">
             <nav
               aria-label="Footer services"
-              className="flex flex-col gap-3 font-medium text-left text-[#F5E9D0]"
+              className="flex flex-col gap-1 font-medium text-left text-[#F5E9D0] whitespace-nowrap"
               style={{ fontSize: "clamp(0.9rem, 1.5vw, 1.25rem)" }}
             >
               {navItems.map((item) => (
-                <div key={item} className="py-[2px] transition-colors hover:text-[#F0C766] cursor-pointer">
+                <div key={item} className="transition-colors hover:text-[#F0C766] cursor-pointer">
                   {item}
                 </div>
               ))}
@@ -50,21 +48,21 @@ export default function Footer() {
 
           {/* Center: Concierge bell */}
           <div
-            className="flex flex-col items-center cursor-pointer shrink-0 md:translate-x-8 lg:translate-x-5"
+            className="flex flex-col items-center cursor-pointer shrink-0 md:translate-x-1 lg:translate-x-1"
             onClick={() => window.dispatchEvent(new CustomEvent("open-concierge"))}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => { setIsHovered(false); setIsPressed(false); }}
+            onMouseEnter={() => setButtonVisible(true)}
+            onMouseLeave={() => { setIsPressed(false); }}
           >
             <div
               className={`relative flex items-center justify-center transition-transform duration-200 ${isPressed ? "scale-[0.98]" : "scale-100"}`}
               style={{
-                width: "min(480px, 80vw)",
-                height: "min(320px, 54vw)",
+                width: "min(600px, 90vw)",
+                height: "min(400px, 60vw)",
               }}
               onMouseDown={() => setIsPressed(true)}
               onMouseUp={() => setIsPressed(false)}
-              onTouchStart={() => { setIsPressed(true); setIsHovered(true); }}
-              onTouchEnd={() => { setIsPressed(false); setIsHovered(false); }}
+              onTouchStart={() => { setIsPressed(true); setButtonVisible(true); }}
+              onTouchEnd={() => { setIsPressed(false); }}
             >
               <Image
                 src="/images/footer/bell/bell_not_clicked.png"
@@ -81,21 +79,9 @@ export default function Footer() {
                 className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-150 ${isPressed ? "opacity-100" : "opacity-0"}`}
               />
             </div>
-
-            {/* Hover / tap label */}
-            <p
-              aria-hidden="true"
-              className={`-mt-4 sm:-mt-6 uppercase tracking-[0.28em] text-[#F5E9D0]/80 transition-all duration-300 ${
-                isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"
-              }`}
-              style={{ fontSize: "clamp(0.6rem, 1.5vw, 0.75rem)" }}
-            >
-              CLICK TO CHECK IN
-            </p>
           </div>
 
-          {/* Right: Social links */}
-          <div className="hidden md:flex flex-1 justify-start pl-4 md:pl-2 lg:pl-8">
+          <div className="hidden md:flex flex-1 justify-start md:-translate-x-1 lg:-translate-x- 2">
             <div className="flex flex-col items-center gap-6">
               <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noreferrer" className="text-[#F5E9D0] transition-colors hover:text-[#F0C766]">
                 <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[27px] w-[27px] lg:h-[31px] lg:w-[31px] fill-none stroke-current stroke-[1.5]">
@@ -113,14 +99,14 @@ export default function Footer() {
           </div>
 
           {/* Mobile only: Nav and Social links (below bell on small screens) */}
-          <div className="flex md:hidden w-full justify-between items-start px-4">
+          <div className="flex md:hidden w-full justify-between items-start px-4 ">
             <nav
               aria-label="Footer services"
-              className="flex flex-col gap-2 text-left font-medium text-[#F5E9D0]"
+              className="flex flex-col gap-0 text-left font-medium text-[#F5E9D0] whitespace-nowrap"
               style={{ fontSize: "clamp(0.8rem, 4vw, 1rem)" }}
             >
               {navItems.map((item) => (
-                <div key={item} className="py-[2px]">
+                <div key={item} className="py-[1px]">
                   {item}
                 </div>
               ))}
@@ -142,24 +128,21 @@ export default function Footer() {
           </div>
         </div>
 
-       
-        {/* 
-        <div className="mt-8 sm:mt-12 mb-4 flex justify-center">
+        <div className={`-mt-6 sm:-mt-10 mb-4 flex justify-center transition-all duration-500 ${buttonVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}>
           <button
             type="button"
             onClick={() => window.dispatchEvent(new CustomEvent("open-concierge"))}
-            className="transition-transform duration-200 hover:scale-[1.03] focus:outline-none cursor-pointer"
+            className="transition-transform duration-200 hover:scale-[1.03] focus:outline-none cursor-pointer relative z-10"
           >
             <Image
               src="/images/footer/footer-button.png"
               alt="Request A Stay"
-              width={260}
-              height={80}
+              width={440}
+              height={136}
               className="h-auto w-auto object-contain drop-shadow-md"
             />
           </button>
         </div>
-        */}
       </div>
 
       {/* Full-bleed decorative ribbon */}
@@ -167,8 +150,8 @@ export default function Footer() {
         <Image
           src="/images/footer/bottom_x.svg"
           alt=""
-          width={1440}
-          height={60}
+          width={1920}
+          height={100}
           className="w-full h-auto object-cover opacity-95"
           style={{ minWidth: "100%" }}
         />

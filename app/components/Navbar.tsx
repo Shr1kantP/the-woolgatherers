@@ -5,17 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import StaggeredMenu from './StaggeredMenu';
 
-function HomeIcon() {
-  return (
-    <svg
-      viewBox="0 0 20 20"
-      aria-hidden="true"
-      className="h-5 w-5 fill-current"
-    >
-      <path d="M10 2.5 2 9h2v8.5h5v-5h2v5h5V9h2L10 2.5Z" />
-    </svg>
-  );
-}
+
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -38,13 +28,20 @@ export default function Navbar() {
     { label: "[LinkedIn]", link: "https://linkedin.com/company/thewoolgatherers" }
   ];
 
+  const isLightPage = pathname.match(/^\/blog\/.+/);
+  const currentMenuColor = isLightPage ? '#120F17' : '#F5E9D0';
+
   const logoElement = (
     <Link
       href="/"
       aria-label="Home"
-      className="rounded-full w-10 h-10 bg-[#D72F2F] text-[#F5E9D0] hover:opacity-85 transition-opacity flex items-center justify-center"
+      className=" hover:opacity-85 transition-opacity flex items-center justify-center"
     >
-      <HomeIcon />
+      <img 
+        src="/images/logo/keyhole-white.svg" 
+        alt="The Woolgatherers Logo" 
+        className={`w-10 h-10 ${isLightPage ? 'invert' : ''}`} 
+      />
     </Link>
   );
 
@@ -55,7 +52,7 @@ export default function Navbar() {
       socialItems={socialItems}
       displaySocials={true}
       displayItemNumbering={true}
-      menuButtonColor="#F5E9D0"
+      menuButtonColor={currentMenuColor}
       openMenuButtonColor="#D72F2F"
       changeMenuColorOnOpen={true}
       colors={['#D72F2F', '#F5E9D0', '#120F17']}

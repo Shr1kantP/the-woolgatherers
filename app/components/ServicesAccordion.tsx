@@ -17,7 +17,7 @@ const serviceData: ServiceItem[] = [
     title: "Brand Building, Design & Management",
     collapsedColor: "#912A02", // burnt orange
     expandedColor: "#912A02", // lightened burnt orange (~25-30%)
-    image: "public/images/service/tab-1-image.png",
+    image: "/images/service/tab-1-image.jpg",
     subServices: [
       "Brand Strategy",
       "Visual Identity & Packaging",
@@ -30,7 +30,7 @@ const serviceData: ServiceItem[] = [
     title: "Social Media & Creative Marketing",
     collapsedColor: "#052446", // deep purple
     expandedColor: "#052446", // lightened mauve
-    image: "public/images/service/tab-2-image.png",
+    image: "/images/service/tab-2-image.jpg",
     subServices: [
       "Social Media Strategy",
       "Content Creation & Curation",
@@ -43,7 +43,7 @@ const serviceData: ServiceItem[] = [
     title: "Website Design & Build",
     collapsedColor: "#4E0000", // olive
     expandedColor: "#4E0000", // lightened olive
-    image: "public/images/service/tab-3-image.png",
+    image: "/images/service/tab-3-image.jpg",
     subServices: [
       "UI/UX Design",
       "Responsive Web Development",

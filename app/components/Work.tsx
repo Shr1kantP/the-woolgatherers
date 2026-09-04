@@ -64,6 +64,20 @@ const projects: Project[] = [
     tags: ["Brand Communication", "Corporate Films", "Motion Design"],
     image: "/images/detailed_page/Wingreens/wingreens 3.jpg",
   },
+  {
+    id: "sie-branding",
+    name: "SIE BRANDING",
+    industry: "Design & Visual Identity",
+    tags: ["Brand Building", "Brand Identity", "Design"],
+    image: "/images/detailed_page/SIE_BRANDING/SIE MOCK 3.JPG",
+  },
+  {
+    id: "sie-website",
+    name: "SIE WEBSITE",
+    industry: "Web Design & Development",
+    tags: ["Web Design", "UI/UX", "Digital Experience"],
+    image: "/images/detailed_page/SIE/SIE 8.png",
+  },
 ];
 
 /* ─── Tag pill ───────────────────────────────────────────────────────────── */
@@ -245,10 +259,9 @@ function FullWidthCard({ project }: { project: Project }) {
 /* ─── Section ────────────────────────────────────────────────────────────── */
 
 export default function Work() {
-  // Separate out the full-width item; render remaining in a 2-col grid
   const topPair = projects.slice(0, 2);       // Kumbaya + Peps
   const motionCard = projects[2];             // Motion Design (full-width)
-  const bottomPair = projects.slice(3, 5);   // Tavana + Santhi Textiles
+  const restProjects = projects.slice(3);     // All remaining projects
 
   return (
     <section
@@ -289,9 +302,9 @@ export default function Work() {
         <FullWidthCard project={motionCard} />
       </div>
 
-      {/* ── Bottom 2-col row: Tavana + Santhi Textiles ── */}
+      {/* ── Bottom rows: Remaining projects ── */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-        {bottomPair.map((project) => (
+        {restProjects.map((project) => (
           <StandardCard key={project.id} project={project} />
         ))}
       </div>

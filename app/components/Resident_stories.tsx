@@ -5,9 +5,9 @@ import gsap from "../lib/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const CARDS = [
-  { src: "/images/Res_stories/mtr_res_stories.jpg",  alt: "MTR brand work",     rotate: "-2deg"  },
-  { src: "/images/Res_stories/wing_res_stories.jpg", alt: "Wing brand work",    rotate: "-7deg"  },
-  { src: "/images/Res_stories/studio-inside-eye.jpg",  alt: "Sie brand work", rotate:  "7deg"  },
+  { src: "/images/Res_stories/mtr_res_stories.jpg",  alt: "MTR brand work",     rotate: -4, yOffset: 40  },
+  { src: "/images/Res_stories/wing_res_stories.jpg", alt: "Wing brand work",    rotate: 2,  yOffset: 0   },
+  { src: "/images/Res_stories/studio-inside-eye.jpg",  alt: "Sie brand work", rotate: 6,  yOffset: -40 },
 ];
 
 export default function Resident_stories() {
@@ -19,7 +19,14 @@ export default function Resident_stories() {
     if (!section) return;
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduceMotion) return;
+    if (reduceMotion) {
+       cardsRef.current.forEach(c => {
+         if (c) {
+           gsap.set(c, { y: 0, opacity: 1, scale: 1 });
+         }
+       });
+       return;
+    }
 
     const cards = cardsRef.current.filter(Boolean) as HTMLDivElement[];
     if (!cards.length) return;
@@ -32,25 +39,36 @@ export default function Resident_stories() {
     };
 
     const ctx = gsap.context(() => {
-      cards.forEach((card, i) => {
-        card.style.zIndex         = String(i + 1);
-        card.style.position       = "relative";
-        card.style.transformOrigin = "center top";
-        card.style.willChange     = "transform";
+      // Hide cards initially, positioned below the divider
+      gsap.set(cards, {
+        y: 200, // starting below the divider line
+        opacity: 0,
+        scale: 0.9,
+        transformOrigin: "bottom center"
       });
 
-      // Pin distance scales with screen height so it works on both mobile and desktop
-      const pinDistance = () => window.innerWidth < 768 ? window.innerHeight * 0.65 : Math.max(window.innerHeight * 3.5, 500);
-
-      cards.forEach((card) => {
-        ScrollTrigger.create({
-          trigger        : card,
-          start          : "top 15%",
-          end            : () => `+=${pinDistance()}`,
-          pin            : true,
-          pinSpacing     : false,
+      // Pin the entire section
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: "+=1500", // Tune for scroll duration
+          pin: true,
+          scrub: 0.5, // slightly smooth scrubbing
           invalidateOnRefresh: true,
-        });
+        }
+      });
+
+      // Animate cards up one by one
+      cards.forEach((card, index) => {
+        const targetYOffset = CARDS[index].yOffset;
+        tl.to(card, {
+          y: targetYOffset, // End at the specific staggered Y offset
+          opacity: 1,
+          scale: 1,
+          duration: 1,
+          ease: "power2.out",
+        }, index * 0.7); // Stagger
       });
 
       ScrollTrigger.refresh();
@@ -70,101 +88,94 @@ export default function Resident_stories() {
   return (
     <section
       ref={sectionRef}
-      style={{ background: "#2E0A38" }}
-      className="resident-stories relative w-full overflow-hidden text-white"
+      style={{ backgroundColor: "#220319" }}
+      className="relative w-full min-h-screen text-[#f5f3f6] flex flex-col overflow-hidden"
     >
-      {/*
-        The outer div gives the section enough scroll height for all three pins.
-        On mobile it's ~140vh, on desktop stays at 320vh.
-      */}
-      <div
-        className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-12 min-h-[140vh] md:min-h-[320vh]"
-      >
-        <div className="sticky top-0 min-h-screen pt-8 sm:pt-10">
+      
+      <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-12 pt-32 pb-12 flex-1 flex flex-col justify-center h-full relative">
+        
+        {/* Main Content Area (Two Columns on Desktop) */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between w-full relative z-10 flex-1 gap-12 lg:gap-8">
+          
+          {/* Left Column (Headline) */}
+          <div className="w-full lg:w-[45%] flex flex-col justify-center z-20">
+            <h2
+              className="uppercase m-0 font-extrabold"
+              style={{
+                fontFamily: "var(--font-jersey-15), system-ui, sans-serif",
+                fontSize: "clamp(36px, 5vw, 76px)",
+                lineHeight: "1",
+                color: "#f5f3f6",
+                letterSpacing: "0.02em"
+              }}
+            >
+              OVER <span style={{ color: "#D4A24E" }}>100</span> BRANDS HAVE PASSED
+              <br />
+              THROUGH THESE HALLS.
+            </h2>
+          </div>
 
-          {/* ── Heading ──────────────────────────────────────────────────── */}
-          <h2
-            className="mb-6 sm:mb-10 uppercase font-extrabold"
-            style={{
-              fontFamily   : "var(--font-jersey-15), system-ui, sans-serif",
-              color        : "#f5f3f6",
-              fontSize     : "clamp(28px, 8vw, 80px)",
-              lineHeight   : 1.02,
-              letterSpacing: "0.02em",
-            }}
-          >
-            OVER 100 BRANDS
-            <br />
-            HAVE PASSED THROUGH
-            <br />
-            THESE HALLS.
-          </h2>
-
-          {/* ── Cards — one per row, centered, stacked vertically ────────── */}
-          <div className="relative pb-12">
+          {/* Right Column (Cards) */}
+          <div className="w-full lg:w-[50%] flex flex-row items-center justify-center lg:justify-end z-10 pb-12">
             {CARDS.map((card, i) => (
               <div
                 key={card.src}
                 ref={(el) => { cardsRef.current[i] = el; }}
-                className="relative overflow-hidden"
+                className="relative rounded-[6px] shadow-[0_15px_35px_rgba(0,0,0,0.6)]"
                 style={{
-                  /*
-                   * Size: large on desktop, proportional on mobile.
-                   * Expressed as min(viewport %, max-px) so it always fits.
-                   */
-                  width      : "min(72vw, 330px)",
-                  height     : "min(72vw, 330px)",
-                  transform  : `rotate(${card.rotate})`,
-                  border     : "none",
-                  boxShadow  : "none",
-                  borderRadius: 0,
-                  flexShrink : 0,
-
-                  /* Alternate left / centre / right to keep the desktop stagger */
-                  marginTop   : i === 0 ? 0 : "clamp(200px, 40vw, 440px)",
-                  marginLeft  : i === 1 ? "clamp(0px, 3vw, 28px)"  : i === 2 ? "auto" : "auto",
-                  marginRight : i === 2 ? "clamp(0px, 3vw, 28px)"  : i === 1 ? "auto" : "auto",
+                  width: "clamp(120px, 20vw, 260px)",
+                  aspectRatio: "1/1",
+                  transform: `rotate(${card.rotate}deg)`,
+                  // Stagger horizontally: negative margin to overlap
+                  marginLeft: i === 0 ? "0" : "clamp(-20px, -3vw, -40px)",
+                  zIndex: i + 1,
+                  willChange: "transform, opacity",
                 }}
               >
                 <img
                   src={card.src}
                   alt={card.alt}
-                  className="block h-full w-full object-cover rounded-[4px]"
+                  className="block w-full h-full object-cover rounded-[6px]"
                 />
               </div>
             ))}
           </div>
+        </div>
 
-          {/* ── Footer text ──────────────────────────────────────────────── */}
-          <div className="mt-8 sm:mt-12 text-right">
+        {/* Footer Area (Divider + Text) */}
+        {/* We give this a background and z-20 so cards can animate from behind it. */}
+        <div className="w-full mt-8 lg:mt-auto pt-8 z-20 relative bg-[#220319]">
+          <hr className="border-t border-[#D4A24E] opacity-40 mb-6 sm:mb-8" />
+          
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 pb-8">
             <h3
-              className="mb-3 uppercase font-bold"
+              className="uppercase font-bold m-0 shrink-0"
               style={{
-                fontFamily   : "var(--font-jersey-15), system-ui, sans-serif",
-                letterSpacing: "0.02em",
-                fontSize     : "clamp(24px, 7vw, 68px)",
+                fontFamily: "var(--font-jersey-15), system-ui, sans-serif",
+                letterSpacing: "0.04em",
+                fontSize: "clamp(24px, 4vw, 42px)",
+                color: "#f5f3f6",
               }}
             >
               RESIDENT STORIES
             </h3>
 
             <p
-              className="ml-auto uppercase tracking-[0.02em]"
+              className="m-0 uppercase"
               style={{
                 fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif",
-                textAlign : "right",
-                fontSize  : "clamp(10px, 2vw, 14px)",
-                maxWidth  : "min(90vw, 640px)",
+                fontSize: "clamp(10px, 1vw, 13px)",
+                color: "#d1c9d3",
+                letterSpacing: "0.04em",
+                lineHeight: "1.5",
+                maxWidth: "600px",
               }}
             >
-              <span style={{ fontWeight: 400 }}>A SELECTION OF </span>
-              <strong style={{ fontWeight: 700 }}>BRANDS, IDEAS, AND TRANSFORMATIONS</strong>
-              <br />
-              <span style={{ fontWeight: 400 }}>THAT HAVE PASSED THROUGH THESE HALLS.</span>
+              A selection of brands, ideas, and transformations that have passed through these halls.
             </p>
           </div>
-
         </div>
+
       </div>
     </section>
   );

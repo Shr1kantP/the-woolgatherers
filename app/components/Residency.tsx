@@ -72,7 +72,7 @@ export default function Residency() {
 
   return (
     <section
-      className="relative bg-[#30093f] text-[#F5F0E8] overflow-hidden"
+      className="relative bg-[#210026] text-[#F5F0E8] overflow-hidden"
       style={{ paddingTop: "clamp(3rem, 8vw, 6rem)", paddingBottom: "clamp(3rem, 8vw, 6rem)" }}
     >
 
@@ -99,7 +99,7 @@ export default function Residency() {
 
         {/* 2. Top Row: Landscape Stamp on Left, Paragraph 1 on Right */}
         <div className="grid grid-cols-12 gap-4 items-center">
-          <div ref={leftImgRef} className="col-span-6">
+          <div ref={leftImgRef} className="col-span-5">
             <Image
               src="/images/resident-image-topleft.png"
               alt="Landscape stamp"
@@ -109,8 +109,8 @@ export default function Residency() {
               style={{ display: "block" }}
             />
           </div>
-          <div ref={para1Ref} className="col-span-6 pl-1">
-            <p style={bodyFont}>
+          <div ref={para1Ref} className="col-span-7 -ml-4 md:-ml-8 lg:-ml-12">
+            <p style={{ ...bodyFont, fontSize: "clamp(13px, 3.5vw, 21px)" }}>
               We help brands find clarity, build distinct identities, and grow through
               thoughtful strategy, design, content, and digital experiences.
             </p>
@@ -168,20 +168,22 @@ export default function Residency() {
           
           {/* 1. Top Row: Landscape stamp on the left, paragraph 1 on the right */}
           <div className="grid grid-cols-12 gap-8 items-center">
-            <div ref={leftImgRef} className="col-span-5 col-start-2">
+            <div ref={leftImgRef} className="col-span-4 col-start-2">
               <Image
                 src="/images/resident-image-topleft.png"
                 alt="Landscape stamp"
                 width={160}
                 height={300}
-                className="w-[70%] h-auto object-cover"
+                className="w-[90%] h-auto object-cover"
                 style={{ display: "block", transform: "rotate(-2deg)" }}
               />
             </div>
-            <div ref={para1Ref} className="col-span-4 col-start-7">
-              <p style={{ fontFamily: "Inter, sans-serif", fontSize: 20, lineHeight: 1.5, color: "#F5F0E8" }}>
-                We help brands find clarity, build distinct identities, and grow through thoughtful
-                strategy, design, content, and digital experiences.
+            <div ref={para1Ref} className="col-span-6 col-start-6 -ml-4">
+              <p style={{ fontFamily: "Inter, sans-serif", fontSize: 21, lineHeight: 1.5, color: "#F5F0E8" }}>
+                We help brands find clarity, build distinct<br />
+                identities, and grow through thoughtful<br />
+                strategy, design, content, and digital<br />
+                experiences.
               </p>
             </div>
           </div>

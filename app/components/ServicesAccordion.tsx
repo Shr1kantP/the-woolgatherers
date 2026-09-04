@@ -15,8 +15,8 @@ interface ServiceItem {
 const serviceData: ServiceItem[] = [
   {
     title: "Brand Building, Design & Management",
-    collapsedColor: "#912A02", // burnt orange
-    expandedColor: "#912A02", // lightened burnt orange (~25-30%)
+    collapsedColor: "#471303", // burnt orange
+    expandedColor: "#471303", // lightened burnt orange (~25-30%)
     image: "/images/service/tab-1-image.jpg",
     subServices: [
       "Brand Strategy",
@@ -28,8 +28,8 @@ const serviceData: ServiceItem[] = [
   },
   {
     title: "Social Media & Creative Marketing",
-    collapsedColor: "#052446", // deep purple
-    expandedColor: "#052446", // lightened mauve
+    collapsedColor: "#521006", // deep purple
+    expandedColor: "#521006", // lightened mauve
     image: "/images/service/tab-2-image.jpg",
     subServices: [
       "Social Media Strategy",
@@ -41,8 +41,8 @@ const serviceData: ServiceItem[] = [
   },
   {
     title: "Website Design & Build",
-    collapsedColor: "#4E0000", // olive
-    expandedColor: "#4E0000", // lightened olive
+    collapsedColor: "#5D1515", // olive
+    expandedColor: "#5D1515", // lightened olive
     image: "/images/service/tab-3-image.jpg",
     subServices: [
       "UI/UX Design",
@@ -55,8 +55,8 @@ const serviceData: ServiceItem[] = [
   },
   {
     title: "Photography & Videography",
-    collapsedColor: "#0C3800", // maroon
-    expandedColor: "#0C3800", // lightened maroon
+    collapsedColor: "#6B1A1A", // maroon
+    expandedColor: "#6B1A1A", // lightened maroon
     image: "/images/service/tab-4-image.png",
     subServices: [
       "Commercial Photography",

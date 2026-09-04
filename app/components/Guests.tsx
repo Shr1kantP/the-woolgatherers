@@ -22,7 +22,7 @@ const logos = [
 
 export default function Guests() {
   return (
-    <section className="relative w-full h-[70vh] md:h-[90vh] bg-[#2E0A38] overflow-hidden select-none">
+    <section className="relative w-full h-[70vh] md:h-[90vh] bg-[#220319] overflow-hidden select-none">
       <div className="absolute inset-0 z-10 pointer-events-none">
         <h2
           className="font-semibold uppercase text-white text-center flex items-center justify-center h-full w-full mx-auto max-w-7xl px-4 py-8 md:px-10 md:py-20"

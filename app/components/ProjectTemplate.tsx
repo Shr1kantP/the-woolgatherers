@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 /* ─── Media Renderer Helper ─────────────────────────────────────────────── */
 
@@ -24,16 +25,7 @@ function MediaRenderer({
   const isVideo = /\.(mp4|webm|ogg|mov)$/i.test(src);
 
   if (isVideo) {
-    return (
-      <video
-        src={src}
-        className={`${className || ""} ${fill ? "absolute inset-0 w-full h-full object-cover" : ""}`}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-    );
+    return <LazyVideo src={src} className={className} fill={fill} />;
   }
 
   return (
@@ -48,6 +40,53 @@ function MediaRenderer({
   );
 }
 
+function LazyVideo({
+  src,
+  className,
+  fill,
+}: {
+  src: string;
+  className?: string;
+  fill?: boolean;
+}) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isNearViewport, setIsNearViewport] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsNearViewport(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          void video.play().catch(() => undefined);
+        } else {
+          video.pause();
+        }
+      },
+      { rootMargin: "300px 0px" }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <video
+      ref={videoRef}
+      src={isNearViewport ? src : undefined}
+      className={`${className || ""} ${fill ? "absolute inset-0 w-full h-full object-cover" : ""}`}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="none"
+      aria-label="Project video"
+    />
+  );
+}
+
 /* ─── Helper for Related Project Link ───────────────────────────────────── */
 
 const getProjectLink = (title: string) => {
@@ -56,6 +95,8 @@ const getProjectLink = (title: string) => {
   if (cleanTitle.includes("mtr") || cleanTitle.includes("foods")) return "/work/mtr-foods";
   if (cleanTitle.includes("peps")) return "/work/peps";
   if (cleanTitle.includes("wingreens")) return "/work/wingreens";
+  if (cleanTitle.includes("cureveda")) return "/work/cureveda";
+  if (cleanTitle.includes("vahdam")) return "/work/vahdam";
   if (cleanTitle.includes("tavana")) return "/work/tavana";
   if (cleanTitle.includes("santhi")) return "/work/santhi";
   if (cleanTitle.includes("motion")) return "/work/motion";
@@ -81,6 +122,7 @@ export interface ProjectData {
   heroImage: string;
   overview: string;
   gallery: string[];
+  galleryLayout?: "motion-four";
   relatedProjects: RelatedProject[];
 }
 
@@ -112,6 +154,7 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
     heroImage,
     overview,
     gallery,
+    galleryLayout,
     relatedProjects,
   } = project;
 
@@ -240,6 +283,18 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
           paddingTop: "clamp(2rem, 5vw, 4rem)",
         }}
       >
+        {galleryLayout === "motion-four" ? (
+          <div className="flex flex-col gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <GalleryImage src={gallery[0]} alt={`${title} horizontal video 1`} aspectRatio="16/9" />
+              <GalleryImage src={gallery[1]} alt={`${title} horizontal video 2`} aspectRatio="16/9" />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[760px] mx-auto w-full">
+              <GalleryImage src={gallery[2]} alt={`${title} vertical video 1`} aspectRatio="9/16" />
+              <GalleryImage src={gallery[3]} alt={`${title} vertical video 2`} aspectRatio="9/16" />
+            </div>
+          </div>
+        ) : (
         <div className="flex flex-col gap-4">
 
           {/* ── Row 1: 2 equal columns, medium height ── */}
@@ -324,6 +379,7 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
           )}
 
         </div>
+        )}
       </div>
 
       {/* ════════════════════════════════════════════════════════════════════

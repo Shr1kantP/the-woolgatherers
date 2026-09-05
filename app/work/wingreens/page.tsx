@@ -23,11 +23,20 @@ const wingreensProject: ProjectData = {
     "/images/detailed_page/Wingreens/wingreens gluten.png",
     "/images/detailed_page/Wingreens/wingreens.png",
     "/images/detailed_page/Wingreens/wingrrens.jpg",
-    "/images/detailed_page/Wingreens/wingreens 3.jpg",
-    "/images/detailed_page/Wingreens/wingreens 4.jpg",
-    "/images/detailed_page/Wingreens/wingreens.png",
   ],
   relatedProjects: [
+    {
+      thumbnail: "/images/detailed_page/Cureveda/cureveda_1.jpg",
+      title: "CUREVEDA",
+      industry: "Wellness & Personal Care",
+      tags: ["Content Production", "Brand Communication"],
+    },
+    {
+      thumbnail: "/images/detailed_page/Vahdam/vahdam_1.jpg",
+      title: "VAHDAM",
+      industry: "Food & Beverage (Tea)",
+      tags: ["Content Production", "Brand Communication"],
+    },
     {
       thumbnail: "/images/detailed_page/Kumbaya/DSCF9683.jpg",
       title: "KUMBAYA",

@@ -38,7 +38,7 @@ const projects: Project[] = [
     name: "PEPS",
     industry: "Mattress & Sleep Products",
     tags: ["Content Marketing", "Social Media"],
-    image: "/images/detailed_page/Peps/Peps Dream makers playlist.jpg",
+    image: "/images/detailed_page/Peps/peps post 5.jpg",
   },
   {
     id: "motion",
@@ -49,6 +49,34 @@ const projects: Project[] = [
     fullWidth: true,
     sideDescription:
       "A curated body of motion work created for brands across textiles, FMCG, food, and lifestyle. Combining animation, typography, transitions, and storytelling to elevate presentations, corporate films, product launches, and digital campaigns.",
+  },
+  {
+    id: "mtr-foods",
+    name: "MTR FOODS",
+    industry: "Food & Beverage",
+    tags: ["Photography & Video Production"],
+    image: "/images/detailed_page/MTR/MTR COUPLE DINING 1.jpg",
+  },
+  {
+    id: "wingreens",
+    name: "WINGREENS",
+    industry: "Food & Beverage (Snacks)",
+    tags: ["Brand Building", "Brand Identity"],
+    image: "/images/detailed_page/Wingreens/wingreens 3.jpg",
+  },
+  {
+    id: "cureveda",
+    name: "CUREVEDA",
+    industry: "Wellness & Personal Care",
+    tags: ["Content Production", "Brand Communication"],
+    image: "/images/detailed_page/Cureveda/cureveda_1.jpg",
+  },
+  {
+    id: "vahdam",
+    name: "VAHDAM",
+    industry: "Food & Beverage (Tea)",
+    tags: ["Content Production", "Brand Communication"],
+    image: "/images/detailed_page/Vahdam/vahdam_1.jpg",
   },
   {
     id: "tavana",
@@ -97,7 +125,7 @@ function Tag({ label }: { label: string }) {
 
 function StandardCard({ project }: { project: Project }) {
   const cardContent = (
-    <article className="flex flex-col h-full">
+    <article className="flex flex-col h-full" style={{ contentVisibility: "auto", containIntrinsicSize: "0 420px" }}>
       {/* Photo */}
       <div className="relative w-full overflow-hidden" style={{ aspectRatio: "4/3" }}>
         {project.image ? (
@@ -105,6 +133,7 @@ function StandardCard({ project }: { project: Project }) {
             src={project.image}
             alt={project.name}
             fill
+            loading="lazy"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width: 767px) 100vw, 50vw"
           />
@@ -205,7 +234,7 @@ function TextCard({ project }: { project: Project }) {
 function FullWidthCard({ project }: { project: Project }) {
   return (
     <Link href={`/work/${project.id}`} className="group block col-span-1 sm:col-span-2">
-      <article>
+      <article style={{ contentVisibility: "auto", containIntrinsicSize: "0 360px" }}>
         {/* Image — full width, shorter aspect ratio */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/7" }}>
           {project.image ? (
@@ -213,6 +242,7 @@ function FullWidthCard({ project }: { project: Project }) {
               src={project.image}
               alt={project.name}
               fill
+              loading="lazy"
               className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
               sizes="100vw"
             />

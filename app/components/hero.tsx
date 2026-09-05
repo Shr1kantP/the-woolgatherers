@@ -26,20 +26,36 @@ export default function Hero() {
         />
       </div>
 
-      {/* Decorative upper frame */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 sm:translate-y-0 sm:left-auto sm:right-[45%] sm:top-20 z-[25] w-[85vw] max-w-[500px] sm:w-[clamp(160px,80vw,600px)] aspect-[1.62] sm:aspect-auto sm:h-[clamp(140px,38vw,320px)]"
-           style={{ position: "absolute" }}>
+      {/* Stacked frame cards */}
+      <div className="absolute z-[25] left-1/2 -translate-x-1/2 top-[10%] w-[min(94vw,560px)] sm:left-[4vw] sm:translate-x-0 sm:top-[14%] sm:w-[clamp(280px,32vw,380px)]">
         <Image
-          src="/images/hero/upper-frame.png"
-          alt="Decorative upper frame"
-          fill
+          src="/images/hero/upper-frame-1.png"
+          alt="A residency for brands"
+          width={520}
+          height={278}
           priority
-          className="object-contain object-center sm:object-right"
+          className="h-auto w-full"
         />
       </div>
 
+      {/* Check-in frame opens the concierge form. */}
+      <button
+        type="button"
+        aria-label="Open concierge check-in form"
+        onClick={() => window.dispatchEvent(new CustomEvent("open-concierge"))}
+        className="absolute z-[26] left-1/2 -translate-x-1/2 top-[39%] w-[min(94vw,560px)] cursor-pointer transition-transform duration-300 hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-black sm:left-[4vw] sm:translate-x-0 sm:top-[42%] sm:w-[clamp(280px,32vw,380px)]"
+      >
+        <Image
+          src="/images/hero/lower-frame-1.png"
+          alt="Your room is ready. Check in below."
+          width={520}
+          height={278}
+          className="h-auto w-full"
+        />
+      </button>
+
       {/* Bottom gradient for text contrast */}
-      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent z-[5]" />
+      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/25 to-transparent z-[5]" />
 
       {/* Floating key 
       <div
@@ -56,10 +72,10 @@ export default function Hero() {
       </div> */}
 
       {/* Main heading — kept at the bottom but pushed up slightly on mobile */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 flex justify-center px-2 sm:px-6 pb-[110px] sm:pb-[60px]">
+      <div className="absolute bottom-0 left-0 right-0 z-10 flex justify-center px-2 sm:px-6 pb-[3vh] sm:pb-[1.5vh]">
         <h1
           className="font-heading text-white uppercase leading-[0.85] tracking-tight text-center w-full"
-          style={{ fontSize: "clamp(32px, 12vw, 140px)" }}
+          style={{ fontSize: "clamp(94px, 48vw, 132px)" }}
         >
           THE WOOLGATHERERS
         </h1>

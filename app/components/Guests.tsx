@@ -3,21 +3,17 @@ import React from "react";
 import ImageTrail from "./ImageTrail";
 
 const logos = [
-  "/images/Guests/Ellipse 45.png",
-  "/images/Guests/Ellipse 47.png",
-  "/images/Guests/Ellipse 49.png",
-  "/images/Guests/icon_512x512.6461e0 1.png",
-  "/images/Guests/image 42.png",
-  "/images/Guests/image 43.png",
-  "/images/Guests/image 44.png",
-  "/images/Guests/image 45.png",
-  "/images/Guests/image 46.png",
-  "/images/Guests/image 47.png",
-  "/images/Guests/image 48.png",
-  "/images/Guests/image 49.png",
-  "/images/Guests/Logo-3_1 1.png",
-  "/images/Guests/Rectangle 40292.png",
-  "/images/Guests/Rectangle 40293.png",
+ 
+  "/images/Guests/cureveda.png",
+  "/images/Guests/gap.png",
+  "/images/Guests/jimmys.png",
+  "/images/Guests/mtr.png",
+  "/images/Guests/nua.png",
+  "/images/Guests/peps.png",
+  "/images/Guests/sathi.png",
+  "/images/Guests/sfs.png",
+  "/images/Guests/vahdam.png",
+  "/images/Guests/wingreens.png",
 ];
 
 export default function Guests() {

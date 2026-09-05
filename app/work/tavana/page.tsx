@@ -23,9 +23,9 @@ const tavanaProject: ProjectData = {
     "/images/detailed_page/Tavana/tavana 5.png",
     "/images/detailed_page/Tavana/tavana 6.png",
     "/images/detailed_page/Tavana/tavana 1.png",
-    "/images/detailed_page/Tavana/tavana 3.png",
+    /* "/images/detailed_page/Tavana/tavana 3.png",
     "/images/detailed_page/Tavana/tavana 4.png",
-    "/images/detailed_page/Tavana/tavana 5.png",
+    "/images/detailed_page/Tavana/tavana 5.png", */
   ],
   relatedProjects: [
     {

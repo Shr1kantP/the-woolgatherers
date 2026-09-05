@@ -13,20 +13,16 @@ const motionProject: ProjectData = {
   title: "MOTION DESIGN",
   industry: "Cross-Industry",
   tags: ["Motion Graphics", "Brand Films", "Animation"],
-  heroImage: "/images/detailed_page/MTR/MTR 2.jpg",
+  heroImage: "/images/detailed_page/Santhi/santhi_motion.mp4",
   overview:
     "A curated body of motion work created for brands across textiles, FMCG, food, and lifestyle. Combining animation, typography, transitions, and storytelling to elevate presentations, corporate films, product launches, and digital campaigns.",
   gallery: [
-    "/images/detailed_page/MTR/MTR 2.jpg",
-    "/images/detailed_page/MTR/MTR 3.jpg",
-    "/images/detailed_page/MTR/MTR 4.jpg",
-    "/images/detailed_page/MTR/MTR 6.jpg",
-    "/images/detailed_page/MTR/MTR 7.jpg",
-    "/images/detailed_page/MTR/MTR 8.jpg",
-    "/images/detailed_page/MTR/MTR 9.jpg",
-    "/images/detailed_page/MTR/MTR 10.jpg",
-    "/images/detailed_page/MTR/MTR 2.jpg",
+    "/images/detailed_page/Santhi/santhi_motion.mp4",
+    "/images/detailed_page/Santhi/santhi_motion_2.mp4",
+    "/images/detailed_page/Vahdam/vahdam_vid_1.mp4",
+    "/images/detailed_page/Peps/peps_vid_2.mp4",
   ],
+  galleryLayout: "motion-four",
   relatedProjects: [
     {
       thumbnail: "/images/detailed_page/Kumbaya/DSCF9683.jpg",
@@ -35,7 +31,7 @@ const motionProject: ProjectData = {
       tags: ["Packaging", "Content Production", "Social Media"],
     },
     {
-      thumbnail: "/images/detailed_page/Peps/Peps Dream makers playlist.jpg",
+      thumbnail: "/images/detailed_page/Peps/Peps post 5.jpg",
       title: "PEPS",
       industry: "Mattress & Sleep Products",
       tags: ["Content Marketing", "Social Media"],

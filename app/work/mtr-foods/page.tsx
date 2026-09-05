@@ -29,6 +29,18 @@ const mtrProject: ProjectData = {
   ],
   relatedProjects: [
     {
+      thumbnail: "/images/detailed_page/Cureveda/cureveda_1.jpg",
+      title: "CUREVEDA",
+      industry: "Wellness & Personal Care",
+      tags: ["Content Production", "Brand Communication"],
+    },
+    {
+      thumbnail: "/images/detailed_page/Vahdam/vahdam_1.jpg",
+      title: "VAHDAM",
+      industry: "Food & Beverage (Tea)",
+      tags: ["Content Production", "Brand Communication"],
+    },
+    {
       thumbnail: "/images/detailed_page/Kumbaya/DSCF9683.jpg",
       title: "KUMABAYA",
       industry: "Food & Beverage (Kombucha)",

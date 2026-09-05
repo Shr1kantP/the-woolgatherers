@@ -13,7 +13,7 @@ const pepsProject: ProjectData = {
   title: "PEPS",
   industry: "Mattress & Sleep Products",
   tags: ["Content Marketing", "Social Media"],
-  heroImage: "/images/detailed_page/Peps/Peps Dream makers playlist.jpg",
+  heroImage: "/images/detailed_page/Peps/peps post 5.jpg",
   overview:
     "Crafted engaging content marketing campaigns and styled social media presence for PEPS, bringing the concept of premium sleep and dream-making to life with stunning visuals.",
   gallery: [

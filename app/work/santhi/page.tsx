@@ -9,23 +9,22 @@ export const metadata: Metadata = {
 };
 
 const santhiProject: ProjectData = {
-  logo: "/images/detailed_page/Wingreens/wingreens 3.jpg", // Using main thumbnail/logo placeholder
+  logo: "/images/Guests/sathi.png",
   title: "SANTHI TEXTILES",
   industry: "Textiles & Fabrics",
   tags: ["Brand Communication", "Corporate Films", "Motion Design"],
-  heroImage: "/images/detailed_page/Wingreens/wingreens 3.jpg",
+  heroImage: "/images/detailed_page/Santhi/santhi_motion.mp4",
   overview:
     "Directed custom corporate films, motion design, and brand communication strategies for Santhi Textiles, highlighting their craftsmanship, heritage, and manufacturing prowess in the global fabric markets.",
   gallery: [
-    "/images/detailed_page/Wingreens/wingreens 3.jpg",
-    "/images/detailed_page/Wingreens/wingreens 4.jpg",
-    "/images/detailed_page/Wingreens/wingreen 4.jpg",
-    "/images/detailed_page/MTR/MTR 2.jpg",
-    "/images/detailed_page/MTR/MTR 3.jpg",
-    "/images/detailed_page/MTR/MTR 4.jpg",
-    "/images/detailed_page/Wingreens/wingreens 3.jpg",
-    "/images/detailed_page/Wingreens/wingreens 4.jpg",
-    "/images/detailed_page/Wingreens/wingreen 4.jpg",
+    "/images/detailed_page/Santhi/santhi_1.JPG",
+    "/images/detailed_page/Santhi/santhi_2.JPG",
+    "/images/detailed_page/Santhi/santhi_motion_2.mp4",
+    "/images/detailed_page/Santhi/santhi_3.JPG",
+    "/images/detailed_page/Santhi/santhi_4.JPG",
+    "/images/detailed_page/Santhi/santhi_5.jpg",
+    "/images/detailed_page/Santhi/santhi_6.jpg",
+   /*  "/images/detailed_page/Santhi/santhi_motion.mp4", */
   ],
   relatedProjects: [
     {

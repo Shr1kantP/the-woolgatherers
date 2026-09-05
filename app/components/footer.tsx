@@ -56,7 +56,7 @@ export default function Footer() {
             <div
               className={`relative flex items-center justify-center transition-transform duration-200 ${isPressed ? "scale-[0.98]" : "scale-100"}`}
               style={{
-                width: "min(600px, 90vw)",
+                width: "min(500px, 90vw)",
                 height: "min(400px, 60vw)",
               }}
               onMouseDown={() => setIsPressed(true)}
@@ -139,7 +139,7 @@ export default function Footer() {
               alt="Request A Stay"
               width={440}
               height={136}
-              className="h-auto w-auto object-contain drop-shadow-md"
+              className="h-auto w-[85vw] max-w-[250px] md:max-w-[180px] lg:max-w-[230px] object-contain drop-shadow-md"
             />
           </button>
         </div>

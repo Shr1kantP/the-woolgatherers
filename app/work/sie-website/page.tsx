@@ -8,18 +8,25 @@ export const metadata: Metadata = {
 };
 
 const sieWebsiteProject: ProjectData = {
-  logo: "/images/detailed_page/SIE/SIE LOGO 1.JPG",
+  logo: "/images/detailed_page/SIE/SIELOGO1.JPG",
   title: "SIE WEBSITE",
   industry: "Web Design & Development",
   tags: ["Web Design", "UI/UX", "Digital Experience"],
-  heroImage: "/images/detailed_page/SIE/SIE WEBSITE 4.png",
+  heroImage: "/images/detailed_page/SIE/SIELOGO1.JPG",
   overview:
     "A deep dive into the digital presence crafted for Studio Inside Eye, blending structured aesthetics with immersive web experiences.",
   gallery: [
-    "/images/detailed_page/SIE/SIE WEBSITE 1.png",
-    "/images/detailed_page/SIE/SIE WEBSITE 2.png",
-    "/images/detailed_page/SIE/SIE WEBSITE 3.png",
-    "/images/detailed_page/SIE/SIE 8.png"
+    "/images/detailed_page/SIE/SIEWEBSITE1.png",
+    "/images/detailed_page/SIE/SIEWEBSITE2.png",
+    "/images/detailed_page/SIE/SIEWEBSITE3.png",
+    "/images/detailed_page/SIE/SIEWEBSITE4.png",
+    "/images/detailed_page/SIE/SIEWEBSITE0.png",
+    "/images/detailed_page/SIE/SIEWEBSITE00.png",
+    "/images/detailed_page/SIE/SIE_0.JPG",
+    "/images/detailed_page/SIE/SIE_8.png",
+    "/images/detailed_page/SIE/SIEBUSINESSACRD.JPG",
+    "/images/detailed_page/SIE/SIELOGO1.JPG",
+    "/images/detailed_page/SIE/SIEPATTERNS.JPG"
   ],
   relatedProjects: [
     {

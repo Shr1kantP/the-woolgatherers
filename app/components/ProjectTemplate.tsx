@@ -3,6 +3,51 @@
 import Image from "next/image";
 import Link from "next/link";
 
+/* ─── Media Renderer Helper ─────────────────────────────────────────────── */
+
+function MediaRenderer({
+  src,
+  alt,
+  fill,
+  className,
+  sizes,
+  priority,
+}: {
+  src: string;
+  alt: string;
+  fill?: boolean;
+  className?: string;
+  sizes?: string;
+  priority?: boolean;
+}) {
+  if (!src) return null;
+  const isVideo = /\.(mp4|webm|ogg|mov)$/i.test(src);
+
+  if (isVideo) {
+    return (
+      <video
+        src={src}
+        className={`${className || ""} ${fill ? "absolute inset-0 w-full h-full object-cover" : ""}`}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+    );
+  }
+
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      fill={fill}
+      className={className}
+      sizes={sizes}
+      priority={priority}
+    />
+  );
+}
+
 /* ─── Helper for Related Project Link ───────────────────────────────────── */
 
 const getProjectLink = (title: string) => {
@@ -14,7 +59,8 @@ const getProjectLink = (title: string) => {
   if (cleanTitle.includes("tavana")) return "/work/tavana";
   if (cleanTitle.includes("santhi")) return "/work/santhi";
   if (cleanTitle.includes("motion")) return "/work/motion";
-  if (cleanTitle.includes("sie")) return "/work/sie";
+  if (cleanTitle.includes("studio inside eye") || cleanTitle.includes("sie branding")) return "/work/sie-branding";
+  if (cleanTitle.includes("sie website") || cleanTitle.includes("sie")) return "/work/sie-website";
   return "/work";
 };
 
@@ -34,8 +80,8 @@ export interface ProjectData {
   tags: string[];
   heroImage: string;
   overview: string;
-  gallery: [string, string, string, string, string, string, string, string, string];
-  relatedProjects: [RelatedProject, RelatedProject, RelatedProject];
+  gallery: string[];
+  relatedProjects: RelatedProject[];
 }
 
 interface ProjectTemplateProps {
@@ -132,7 +178,7 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
           }}
         >
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: "3/2" }}>
-            <Image
+            <MediaRenderer
               src={heroImage}
               alt={title}
               fill
@@ -217,48 +263,65 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Left column: short top (img 6) + tall bottom (img 8) */}
             <div className="flex flex-col gap-4">
-              <div className="relative overflow-hidden w-full" style={{ aspectRatio: "4/3" }}>
-                <Image
-                  src={gallery[5]}
-                  alt={`${title} gallery 6`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 767px) 100vw, 50vw"
-                />
-              </div>
-              <div className="relative overflow-hidden w-full" style={{ aspectRatio: "4/5" }}>
-                <Image
-                  src={gallery[7]}
-                  alt={`${title} gallery 8`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 767px) 100vw, 50vw"
-                />
-              </div>
+              {gallery[5] && (
+                <div className="relative overflow-hidden w-full bg-[#2a1a3a]" style={{ aspectRatio: "4/3" }}>
+                  <MediaRenderer
+                    src={gallery[5]}
+                    alt={`${title} gallery 6`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 767px) 100vw, 50vw"
+                  />
+                </div>
+              )}
+              {gallery[7] && (
+                <div className="relative overflow-hidden w-full bg-[#2a1a3a]" style={{ aspectRatio: "4/5" }}>
+                  <MediaRenderer
+                    src={gallery[7]}
+                    alt={`${title} gallery 8`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 767px) 100vw, 50vw"
+                  />
+                </div>
+              )}
             </div>
 
             {/* Right column: tall top (img 7) + short bottom (img 9) */}
             <div className="flex flex-col gap-4">
-              <div className="relative overflow-hidden w-full" style={{ aspectRatio: "4/5" }}>
-                <Image
-                  src={gallery[6]}
-                  alt={`${title} gallery 7`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 767px) 100vw, 50vw"
-                />
-              </div>
-              <div className="relative overflow-hidden w-full" style={{ aspectRatio: "4/3" }}>
-                <Image
-                  src={gallery[8]}
-                  alt={`${title} gallery 9`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 767px) 100vw, 50vw"
-                />
-              </div>
+              {gallery[6] && (
+                <div className="relative overflow-hidden w-full bg-[#2a1a3a]" style={{ aspectRatio: "4/5" }}>
+                  <MediaRenderer
+                    src={gallery[6]}
+                    alt={`${title} gallery 7`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 767px) 100vw, 50vw"
+                  />
+                </div>
+              )}
+              {gallery[8] && (
+                <div className="relative overflow-hidden w-full bg-[#2a1a3a]" style={{ aspectRatio: "4/3" }}>
+                  <MediaRenderer
+                    src={gallery[8]}
+                    alt={`${title} gallery 9`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 767px) 100vw, 50vw"
+                  />
+                </div>
+              )}
             </div>
           </div>
+
+          {/* ── Additional Rows for any extra images beyond 9 ── */}
+          {gallery.length > 9 && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {gallery.slice(9).map((src, index) => (
+                <GalleryImage key={src} src={src} alt={`${title} gallery ${10 + index}`} aspectRatio="4/3" />
+              ))}
+            </div>
+          )}
 
         </div>
       </div>
@@ -291,7 +354,7 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
               <article className="flex flex-col">
                 {/* Thumbnail */}
                 <div className="relative w-full overflow-hidden" style={{ aspectRatio: "4/3" }}>
-                  <Image
+                  <MediaRenderer
                     src={rp.thumbnail}
                     alt={rp.title}
                     fill
@@ -341,9 +404,10 @@ function GalleryImage({
   alt: string;
   aspectRatio: string;
 }) {
+  if (!src) return null; // Safe guard for missing images
   return (
-    <div className="relative overflow-hidden" style={{ aspectRatio }}>
-      <Image
+    <div className="relative overflow-hidden bg-[#2a1a3a]" style={{ aspectRatio }}>
+      <MediaRenderer
         src={src}
         alt={alt}
         fill

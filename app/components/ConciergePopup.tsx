@@ -90,19 +90,42 @@ export default function ConciergePopup({ isOpen, onClose }: ConciergePopupProps)
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-xs transition-opacity duration-300"
       onClick={onClose}
     >
-      {/* 
-        Ticket Container:
-        - Mobile: Increased size to max-w-[450px] and padding to px-8 py-12 for a taller and spaced-out look.
-        - Desktop (md): aspect-[1000/600], max-width 850px, px-14 py-10.
-      */}
-      <div
-        className="relative w-full max-w-[450px] md:max-w-[850px] md:aspect-[1000/600] bg-[url('/images/Pop_up_bg_mobile.png')] md:bg-[url('/images/Pop_up_bg.png')] bg-[length:100%_100%] md:bg-contain bg-center bg-no-repeat px-8 py-12 md:px-14 md:py-10 text-[#FDF3E7] select-text shadow-2xl flex flex-col justify-start md:justify-center max-h-[90vh] md:max-h-none overflow-y-auto md:overflow-visible"
-        style={{
-          fontFamily: "var(--font-inter), sans-serif",
-        }}
-        onClick={(e) => e.stopPropagation()}
-      >
+      {/* Wrapper to hold both ticket and the outside close button */}
+      <div className="relative w-full max-w-[450px] md:max-w-[850px] flex justify-center">
+        {/* Close Button (Outside top right) */}
+        <button
+          onClick={onClose}
+          className="absolute -top-12 right-0 md:-top-10 md:-right-10 text-[#FDF3E7] hover:text-[#C9A84C] transition-colors z-50 p-2 cursor-pointer"
+          aria-label="Close popup"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
 
+        {/* 
+          Ticket Container:
+          - Mobile: Increased size to max-w-[450px] and padding to px-8 py-12 for a taller and spaced-out look.
+          - Desktop (md): aspect-[1000/600], max-width 850px, px-14 py-10.
+        */}
+        <div
+          className="relative w-full md:aspect-[1000/600] bg-[url('/images/Pop_up_bg_mobile.png')] md:bg-[url('/images/Pop_up_bg.png')] bg-[length:100%_100%] md:bg-contain bg-center bg-no-repeat px-8 py-12 md:px-14 md:py-10 text-[#FDF3E7] select-text shadow-2xl flex flex-col justify-start md:justify-center max-h-[85vh] md:max-h-none overflow-y-auto md:overflow-visible"
+          style={{
+            fontFamily: "var(--font-inter), sans-serif",
+          }}
+          onClick={(e) => e.stopPropagation()}
+        >
 
         {submitSuccess ? (
           <div className="flex flex-col items-center justify-center text-center h-full w-full py-8">
@@ -311,6 +334,7 @@ export default function ConciergePopup({ isOpen, onClose }: ConciergePopupProps)
           </form>
         )}
       </div>
+    </div>
     </div>
   );
 }

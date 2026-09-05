@@ -76,7 +76,7 @@ const projects: Project[] = [
     name: "SIE WEBSITE",
     industry: "Web Design & Development",
     tags: ["Web Design", "UI/UX", "Digital Experience"],
-    image: "/images/detailed_page/SIE/SIE 8.png",
+    image: "/images/detailed_page/SIE/SIE_8.png",
   },
 ];
 

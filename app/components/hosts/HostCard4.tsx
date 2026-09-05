@@ -1,19 +1,34 @@
 import Image from "next/image";
 
 export default function HostCard4() {
+  const src = "/images/host_4thslide.jpg";
+  const isVideo = /\.(mp4|webm|ogg|mov)$/i.test(src);
+
   return (
-    <div className="panel host-card w-screen md:w-screen h-screen flex-shrink-0 relative overflow-hidden bg-[#FBCE6E] transition-all duration-300 ease-out">
+    <div className="panel host-card w-screen md:w-screen h-screen flex-shrink-0 relative overflow-hidden bg-[#1F001B] transition-all duration-300 ease-out">
       <div className="absolute inset-x-0 top-0 flex justify-center pt-[6vh] px-4 sm:px-[6vw]">
         <div className="w-full max-w-[1200px]" style={{ maxWidth: "min(90vw, 1200px)" }}>
-          <Image
-            src="/images/host_4thslide.jpg"
-            alt="Geometric host collage"
-            width={1200}
-            height={900}
-            className="w-full object-cover"
-            style={{ height: "clamp(160px, 38vh, 450px)" }}
-            priority
-          />
+          {isVideo ? (
+            <video
+              src={src}
+              className="w-full object-cover"
+              style={{ height: "clamp(160px, 38vh, 450px)" }}
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          ) : (
+            <Image
+              src={src}
+              alt="Geometric host collage"
+              width={1200}
+              height={900}
+              className="w-full object-cover"
+              style={{ height: "clamp(160px, 38vh, 450px)" }}
+              priority
+            />
+          )}
         </div>
       </div>
 
@@ -24,7 +39,7 @@ export default function HostCard4() {
         <p
           className="text-center leading-[0.85] tracking-[-0.06em]"
           style={{
-            color: "#3F022F",
+            color: "#ffc21cff",
             fontFamily: '"Inter", "Segoe UI", sans-serif',
             fontStyle: "italic",
             fontWeight: 300,

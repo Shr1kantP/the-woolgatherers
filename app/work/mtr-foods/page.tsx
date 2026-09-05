@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const mtrProject: ProjectData = {
-  logo: "/images/Guests/image 42.png",
+  logo: "/images/Guests/mtr.png",
   title: "MTR FOODS",
   industry: "Food & Beverage",
   tags: ["Photography & Video Production"],

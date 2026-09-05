@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const wingreensProject: ProjectData = {
-  logo: "/images/detailed_page/Wingreens/wingreens.png",
+  logo: "/images/Guests/wingreens.png",
   title: "WINGREENS",
   industry: "Food & Beverage (Snacks)",
   tags: ["Brand Building", "Brand Identity"],

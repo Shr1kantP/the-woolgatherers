@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const pepsProject: ProjectData = {
-  logo: "/images/detailed_page/Peps/peps post.png", // Using the logo/post image as logo
+  logo: "/images/Guests/peps.png",
   title: "PEPS",
   industry: "Mattress & Sleep Products",
   tags: ["Content Marketing", "Social Media"],
@@ -20,12 +20,12 @@ const pepsProject: ProjectData = {
     "/images/detailed_page/Peps/peps post 2.jpg",
     "/images/detailed_page/Peps/peps post 3.jpg",
     "/images/detailed_page/Peps/peps post 4.1.jpg",
-    "/images/detailed_page/Peps/peps post 4.jpg",
-    "/images/detailed_page/Peps/peps post 5.jpg",
+    "/images/detailed_page/Peps/peps_vid_1.mp4",
     "/images/detailed_page/Peps/peps post.png",
-    "/images/detailed_page/Peps/peps post 2.jpg",
-    "/images/detailed_page/Peps/peps post 3.jpg",
     "/images/detailed_page/Peps/peps post 4.jpg",
+    "/images/detailed_page/Peps/peps_vid_2.mp4",
+    "/images/detailed_page/Peps/peps post 3.jpg",
+    "/images/detailed_page/Peps/peps post 5.jpg",
   ],
   relatedProjects: [
     {

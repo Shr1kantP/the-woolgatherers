@@ -69,7 +69,7 @@ const projects: Project[] = [
     name: "CUREVEDA",
     industry: "Wellness & Personal Care",
     tags: ["Content Production", "Brand Communication"],
-    image: "/images/detailed_page/Cureveda/cureveda_1.jpg",
+    image: "/images/detailed_page/cureveda/cureveda_1.jpg",
   },
   {
     id: "vahdam",

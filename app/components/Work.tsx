@@ -45,7 +45,7 @@ const projects: Project[] = [
     name: "MOTION DESIGN",
     industry: "Cross-Industry",
     tags: ["Motion Graphics", "Brand Films", "Animation"],
-    image: "/images/detailed_page/MTR/MTR 2.jpg",
+    image: "/images/detailed_page/Santhi/santhi_motion.mp4",
     fullWidth: true,
     sideDescription:
       "A curated body of motion work created for brands across textiles, FMCG, food, and lifestyle. Combining animation, typography, transitions, and storytelling to elevate presentations, corporate films, product launches, and digital campaigns.",
@@ -238,14 +238,27 @@ function FullWidthCard({ project }: { project: Project }) {
         {/* Image — full width, shorter aspect ratio */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/7" }}>
           {project.image ? (
-            <Image
-              src={project.image}
-              alt={project.name}
-              fill
-              loading="lazy"
-              className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-              sizes="100vw"
-            />
+            /\.(mp4|webm|ogg|mov)$/i.test(project.image) ? (
+              <video
+                src={project.image}
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                aria-label={project.name}
+              />
+            ) : (
+              <Image
+                src={project.image}
+                alt={project.name}
+                fill
+                loading="lazy"
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                sizes="100vw"
+              />
+            )
           ) : (
             <div className="h-full w-full bg-[#2a1a3a]" />
           )}

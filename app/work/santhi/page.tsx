@@ -5,17 +5,17 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Santhi Textiles | The Woolgatherers",
   description:
-    "Brand communication, corporate films, and motion design for Santhi Textiles.",
+    "Brand communication, corporate films, and motion design for one of South India's largest textile manufacturers.",
 };
 
 const santhiProject: ProjectData = {
   logo: "/images/Guests/sathi.png",
   title: "SANTHI TEXTILES",
-  industry: "Textiles & Fabrics",
+  industry: "Textile Manufacturing",
   tags: ["Brand Communication", "Corporate Films", "Motion Design"],
   heroImage: "/images/detailed_page/Santhi/santhi_motion.mp4",
   overview:
-    "Directed custom corporate films, motion design, and brand communication strategies for Santhi Textiles, highlighting their craftsmanship, heritage, and manufacturing prowess in the global fabric markets.",
+    "Creative partner for one of South India's largest textile manufacturers. Across multiple projects, we've developed corporate films, motion graphics, presentations, and strategic brand communication for collections created for global brands including Gap, Old Navy, Tommy Hilfiger, Banana Republic, and Marks & Spencer.",
   gallery: [
     "/images/detailed_page/Santhi/santhi_1.JPG",
     "/images/detailed_page/Santhi/santhi_2.JPG",
@@ -29,7 +29,7 @@ const santhiProject: ProjectData = {
   relatedProjects: [
     {
       thumbnail: "/images/detailed_page/Kumbaya/DSCF9683.jpg",
-      title: "KUMBAYA",
+      title: "KUMABAYA",
       industry: "Food & Beverage (Kombucha)",
       tags: ["Packaging", "Content Production", "Social Media"],
     },

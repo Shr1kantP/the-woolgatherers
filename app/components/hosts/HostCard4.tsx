@@ -39,7 +39,7 @@ export default function HostCard4() {
         <p
           className="text-center leading-[0.85] tracking-[-0.06em]"
           style={{
-            color: "#ffc21cff",
+            color: "rgb(251, 228, 180)",
             fontFamily: '"Inter", "Segoe UI", sans-serif',
             fontStyle: "italic",
             fontWeight: 300,

@@ -5,27 +5,29 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Kumbaya | The Woolgatherers",
   description:
-    "Packaging design, content production, and social media styling for Kumbaya Kombucha.",
+    "Packaging, content production, and social media for one of Kerala's leading kombucha brands.",
 };
 
 const kumbayaProject: ProjectData = {
-  logo: "/images/Guests/Ellipse 45.png",
-  title: "KUMBAYA",
+  logo: "/images/Guests/kumbayah.png",
+  title: "KUMABAYA",
   industry: "Food & Beverage (Kombucha)",
   tags: ["Packaging", "Content Production", "Social Media"],
-  heroImage: "/images/detailed_page/Kumbaya/DSCF9683.jpg",
+  heroImage: "/images/detailed_page/Kumbaya/kumbayah packaging main.png",
   overview:
-    "Created eye-catching packaging design, styling, and premium content assets for Kumbaya's refreshing range of Kombucha, elevating their presence across social media channels and retail shelves.",
+    "Partnered with one of Kerala's leading kombucha brands to build a cohesive visual presence across multiple touchpoints. The project included packaging design, photography and video production, and ongoing social media management, creating a consistent brand experience from shelf to screen.",
   gallery: [
     "/images/detailed_page/Kumbaya/kumbayah packaging main.png",
     "/images/detailed_page/Kumbaya/kumbayah packaging.png",
-    "/images/detailed_page/Kumbaya/DSCF9683.jpg",
+    "/images/detailed_page/Kumbaya/kumbaya-label-1.jpg",
     "/images/detailed_page/Kumbaya/kumbaya social.png",
     "/images/detailed_page/Kumbaya/kumbaya social 2.jpg",
+    "/images/detailed_page/Kumbaya/kumbaya-festive-2.jpg",
     "/images/detailed_page/Kumbaya/kumbaya social 3.jpg",
-    "/images/detailed_page/Kumbaya/DSCF9683.jpg",
-    "/images/detailed_page/Kumbaya/kumbayah packaging.png",
-    "/images/detailed_page/Kumbaya/kumbaya social 2.jpg",
+    "/images/detailed_page/Kumbaya/kumbaya-festive-1.jpg",
+    "/images/detailed_page/Kumbaya/kumbaya-label-4.jpg",
+   /*  "/images/detailed_page/Kumbaya/kumbayah packaging.png",
+    "/images/detailed_page/Kumbaya/kumbaya social 2.jpg", */
   ],
   relatedProjects: [
     {
@@ -43,8 +45,8 @@ const kumbayaProject: ProjectData = {
     {
       thumbnail: "/images/detailed_page/Wingreens/wingreens 3.jpg",
       title: "WINGREENS",
-      industry: "Food & Beverage (Snacks)",
-      tags: ["Brand Building", "Brand Identity"],
+      industry: "Food & Beverage",
+      tags: ["Content Production"],
     },
   ],
 };

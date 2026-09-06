@@ -74,8 +74,7 @@ export default function Hero() {
       {/* Main heading — kept at the bottom but pushed up slightly on mobile */}
       <div className="absolute bottom-0 left-0 right-0 z-10 flex justify-center px-2 sm:px-6 pb-[3vh] sm:pb-[1.5vh]">
         <h1
-          className="font-heading text-white uppercase leading-[0.85] tracking-tight text-center w-full"
-          style={{ fontSize: "clamp(94px, 48vw, 132px)" }}
+          className="font-heading text-white uppercase leading-[0.85] tracking-tight text-center w-full text-[clamp(64px,20vw,64px)] sm:text-[clamp(94px,48vw,132px)]"
         >
           THE WOOLGATHERERS
         </h1>

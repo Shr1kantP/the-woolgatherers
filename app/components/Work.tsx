@@ -30,7 +30,7 @@ const projects: Project[] = [
     name: "KUMABAYA",
     industry: "Food & Beverage (Kombucha)",
     tags: ["Packaging", "Content Production", "Social Media"],
-    image: "/images/detailed_page/Kumbaya/DSCF9683.jpg",
+    image: "/images/detailed_page/Kumbaya/kumbayah packaging main.png",
     hasTextCard: false,
   },
   {
@@ -90,7 +90,7 @@ const projects: Project[] = [
     name: "SANTHI TEXTILES",
     industry: "Textiles & Fabrics",
     tags: ["Brand Communication", "Corporate Films", "Motion Design"],
-    image: "/images/detailed_page/Wingreens/wingreens 3.jpg",
+    image: "/images/detailed_page/Santhi/santhi_5.jpg",
   },
   {
     id: "sie-branding",

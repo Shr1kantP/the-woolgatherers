@@ -4,17 +4,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "SIE Website | The Woolgatherers",
-  description: "A deep dive into the digital presence crafted for Studio Inside Eye.",
+  description: "Designed an interactive website for Studio Inside Eye featuring a Canvas Moodboard Generator.",
 };
 
 const sieWebsiteProject: ProjectData = {
   logo: "/images/detailed_page/SIE/SIELOGO1.JPG",
   title: "SIE WEBSITE",
-  industry: "Web Design & Development",
-  tags: ["Web Design", "UI/UX", "Digital Experience"],
+  industry: "Interior Design",
+  tags: ["Website Design"],
   heroImage: "/images/detailed_page/SIE/SIELOGO1.JPG",
   overview:
-    "A deep dive into the digital presence crafted for Studio Inside Eye, blending structured aesthetics with immersive web experiences.",
+    "Designed an interactive website that extends the studio's identity into a digital experience. A key feature is the Canvas Moodboard Generator, allowing visitors to create their own moodboards or explore curated design styles to better understand the studio's aesthetic and approach.",
   gallery: [
     "/images/detailed_page/SIE/SIEWEBSITE1.png",
     "/images/detailed_page/SIE/SIEWEBSITE2.png",
@@ -26,20 +26,21 @@ const sieWebsiteProject: ProjectData = {
     "/images/detailed_page/SIE/SIE_8.png",
     "/images/detailed_page/SIE/SIEBUSINESSACRD.JPG",
     "/images/detailed_page/SIE/SIELOGO1.JPG",
-    "/images/detailed_page/SIE/SIEPATTERNS.JPG"
+    "/images/detailed_page/SIE/SIEPATTERNS.JPG",
   ],
+  galleryLayout: "sie-website",
   relatedProjects: [
     {
       thumbnail: "/images/detailed_page/SIE_BRANDING/SIE MOCK 3.JPG",
       title: "SIE BRANDING",
-      industry: "Design & Visual Identity",
-      tags: ["Brand Building", "Brand Identity"],
+      industry: "Interior Design",
+      tags: ["Brand Identity"],
     },
     {
       thumbnail: "/images/detailed_page/Tavana/tavana 1.png",
       title: "TAVANA",
-      industry: "Architecture & Real Estate",
-      tags: ["Brand Building", "Brand Identity"],
+      industry: "Real Estate",
+      tags: ["Brand Building", "Identity"],
     }
   ],
 };

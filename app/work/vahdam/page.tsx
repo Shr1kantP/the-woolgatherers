@@ -5,17 +5,17 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "VAHDAM | The Woolgatherers",
   description:
-    "Content production and brand communication for VAHDAM's tea portfolio.",
+    "Content production and UGC content for VAHDAM's global tea portfolio.",
 };
 
 const vahdamProject: ProjectData = {
   logo: "/images/Guests/vahdam.png",
   title: "VAHDAM",
-  industry: "Food & Beverage (Tea)",
-  tags: ["Content Production", "Brand Communication"],
+  industry: "Food & Beverage",
+  tags: ["Content Production", "UGC Content"],
   heroImage: "/images/detailed_page/Vahdam/vahdam_1.jpg",
   overview:
-    "Produced a polished visual system for VAHDAM's tea portfolio, bringing together product photography and short-form motion assets to make the brand's modern Indian tea story feel vivid and premium.",
+    "Partnered with one of India's leading premium tea brands with a strong presence across North America and global markets. Over 5+ years, we've produced content across multiple product launches, seasonal campaigns, and evergreen marketing initiatives, creating photography, video, and UGC assets that consistently elevated the brand across digital platforms.",
   gallery: [
     "/images/detailed_page/Vahdam/vahdam_1.jpg",
     "/images/detailed_page/Vahdam/vahdam_vid_1.mp4",
@@ -27,8 +27,8 @@ const vahdamProject: ProjectData = {
     {
       thumbnail: "/images/detailed_page/Cureveda/cureveda_1.jpg",
       title: "CUREVEDA",
-      industry: "Wellness & Personal Care",
-      tags: ["Content Production", "Brand Communication"],
+      industry: "Health & Wellness",
+      tags: ["Content Production", "UGC Content"],
     },
     {
       thumbnail: "/images/detailed_page/MTR/MTR COUPLE DINING 1.jpg",
@@ -39,8 +39,8 @@ const vahdamProject: ProjectData = {
     {
       thumbnail: "/images/detailed_page/Wingreens/wingreens 3.jpg",
       title: "WINGREENS",
-      industry: "Food & Beverage (Snacks)",
-      tags: ["Brand Building", "Brand Identity"],
+      industry: "Food & Beverage",
+      tags: ["Content Production"],
     },
   ],
 };

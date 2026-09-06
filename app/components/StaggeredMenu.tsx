@@ -572,7 +572,6 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                         className="sm-socials-link text-[0.8rem] md:text-[0.9rem] font-semibold text-[#F5E9D0] hover:text-[#912A02] no-underline flex items-center gap-1 transition-colors duration-200 font-sans uppercase"
                       >
                         {s.label}
-                        <span className="text-[0.8em]">↗</span>
                       </a>
                     </li>
                   ))}

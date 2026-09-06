@@ -5,17 +5,17 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Tavana | The Woolgatherers",
   description:
-    "Brand building and identity development for Tavana architecture and real estate.",
+    "Developed the brand strategy and visual identity for a contemporary real estate company.",
 };
 
 const tavanaProject: ProjectData = {
   logo: "/images/detailed_page/Tavana/tavana 1.png",
   title: "TAVANA",
-  industry: "Architecture & Real Estate",
-  tags: ["Brand Building", "Brand Identity"],
+  industry: "Real Estate",
+  tags: ["Brand Building", "Identity"],
   heroImage: "/images/detailed_page/Tavana/tavana 1.png",
   overview:
-    "Developed a cohesive brand building strategy and custom brand identity for Tavana, mirroring their architectural sophistication and structural elegance across modern real estate layouts.",
+    "Developed the brand strategy and visual identity for a contemporary real estate company. From defining the brand's positioning to crafting a cohesive visual system, the project established a modern, credible, and distinctive presence across every touchpoint.",
   gallery: [
     "/images/detailed_page/Tavana/tavana 1.png",
     "/images/detailed_page/Tavana/tavana 3.png",
@@ -30,7 +30,7 @@ const tavanaProject: ProjectData = {
   relatedProjects: [
     {
       thumbnail: "/images/detailed_page/Kumbaya/DSCF9683.jpg",
-      title: "KUMBAYA",
+      title: "KUMABAYA",
       industry: "Food & Beverage (Kombucha)",
       tags: ["Packaging", "Content Production", "Social Media"],
     },

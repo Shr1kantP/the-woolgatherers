@@ -15,7 +15,7 @@ const pepsProject: ProjectData = {
   tags: ["Content Marketing", "Social Media"],
   heroImage: "/images/detailed_page/Peps/peps post 5.jpg",
   overview:
-    "Crafted engaging content marketing campaigns and styled social media presence for PEPS, bringing the concept of premium sleep and dream-making to life with stunning visuals.",
+    "Developed and managed social media content that helped distinguish the brand within a highly competitive category. The strategy balanced product communication with culture-first storytelling, introducing recurring content formats such as weekly playlists and other engagement-driven series that extended the brand beyond conventional product marketing.",
   gallery: [
     "/images/detailed_page/Peps/peps post 2.jpg",
     "/images/detailed_page/Peps/peps post 3.jpg",
@@ -29,8 +29,8 @@ const pepsProject: ProjectData = {
   ],
   relatedProjects: [
     {
-      thumbnail: "/images/detailed_page/Kumbaya/DSCF9683.jpg",
-      title: "KUMBAYA",
+      thumbnail: "/images/detailed_page/Kumbaya/kumbayah packaging main.png",
+      title: "KUMABAYA",
       industry: "Food & Beverage (Kombucha)",
       tags: ["Packaging", "Content Production", "Social Media"],
     },
@@ -43,8 +43,8 @@ const pepsProject: ProjectData = {
     {
       thumbnail: "/images/detailed_page/Wingreens/wingreens 3.jpg",
       title: "WINGREENS",
-      industry: "Food & Beverage (Snacks)",
-      tags: ["Brand Building", "Brand Identity"],
+      industry: "Food & Beverage",
+      tags: ["Content Production"],
     },
   ],
 };

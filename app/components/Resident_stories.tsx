@@ -6,8 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const CARDS = [
   { src: "/images/Res_stories/mtr_res_stories.jpg",  alt: "MTR brand work",     rotate: -4, yOffset: 40  },
-  { src: "/images/Res_stories/wing_res_stories.jpg", alt: "Wing brand work",    rotate: 2,  yOffset: 0   },
-  { src: "/images/Res_stories/studio-inside-eye.jpg",  alt: "Sie brand work", rotate: 6,  yOffset: -40 },
+  { src: "/images/Res_stories/studio-inside-eye.jpg",  alt: "Sie brand work", rotate: 0,  yOffset: 0 },
+  { src: "/images/Res_stories/wing_res_stories.jpg", alt: "Wing brand work",    rotate: 6,  yOffset: -40   },
 ];
 
 export default function Resident_stories() {
@@ -164,11 +164,11 @@ export default function Resident_stories() {
               className="m-0 uppercase"
               style={{
                 fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif",
-                fontSize: "clamp(10px, 1vw, 13px)",
+                fontSize: "clamp(14px, 2vw, 16px)",
                 color: "#d1c9d3",
                 letterSpacing: "0.04em",
                 lineHeight: "1.5",
-                maxWidth: "600px",
+                maxWidth: "100%",
               }}
             >
               A selection of brands, ideas, and transformations that have passed through these halls.

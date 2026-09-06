@@ -5,17 +5,17 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Wingreens | The Woolgatherers",
   description:
-    "Brand building and packaging design for Wingreens Food & Beverage portfolio.",
+    "Produced a comprehensive library of photo and video content for Wingreens seasonal campaigns, with a focus on holiday gifting.",
 };
 
 const wingreensProject: ProjectData = {
   logo: "/images/Guests/wingreens.png",
   title: "WINGREENS",
-  industry: "Food & Beverage (Snacks)",
-  tags: ["Brand Building", "Brand Identity"],
+  industry: "Food & Beverage",
+  tags: ["Content Production"],
   heroImage: "/images/detailed_page/Wingreens/wingreens 3.jpg",
   overview:
-    "Evolved and unified Wingreens' brand presence, designing vibrant packaging, marketing material, and digital campaigns that reflect their passion for healthy, flavorful food and snacks.",
+    "Produced a comprehensive library of photo and video content for seasonal campaigns, with a focus on holiday gifting. The shoots showcased curated gift bundles and festive collections through warm, lifestyle-led visuals designed for digital campaigns, social media, and e-commerce.",
   gallery: [
     "/images/detailed_page/Wingreens/wingreens 3.jpg",
     "/images/detailed_page/Wingreens/wingreens 4.jpg",
@@ -28,18 +28,18 @@ const wingreensProject: ProjectData = {
     {
       thumbnail: "/images/detailed_page/Cureveda/cureveda_1.jpg",
       title: "CUREVEDA",
-      industry: "Wellness & Personal Care",
-      tags: ["Content Production", "Brand Communication"],
+      industry: "Health & Wellness",
+      tags: ["Content Production", "UGC Content"],
     },
     {
       thumbnail: "/images/detailed_page/Vahdam/vahdam_1.jpg",
       title: "VAHDAM",
-      industry: "Food & Beverage (Tea)",
-      tags: ["Content Production", "Brand Communication"],
+      industry: "Food & Beverage",
+      tags: ["Content Production", "UGC Content"],
     },
     {
       thumbnail: "/images/detailed_page/Kumbaya/DSCF9683.jpg",
-      title: "KUMBAYA",
+      title: "KUMABAYA",
       industry: "Food & Beverage (Kombucha)",
       tags: ["Packaging", "Content Production", "Social Media"],
     },

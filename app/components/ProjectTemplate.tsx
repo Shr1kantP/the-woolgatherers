@@ -122,7 +122,7 @@ export interface ProjectData {
   heroImage: string;
   overview: string;
   gallery: string[];
-  galleryLayout?: "motion-four";
+  galleryLayout?: "motion-four" | "sie-website";
   relatedProjects: RelatedProject[];
 }
 
@@ -225,7 +225,7 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
               src={heroImage}
               alt={title}
               fill
-              className="object-cover"
+              className={galleryLayout === "sie-website" ? "object-contain" : "object-cover"}
               sizes="(max-width: 767px) 100vw, 60vw"
               priority
             />
@@ -286,13 +286,47 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
         {galleryLayout === "motion-four" ? (
           <div className="flex flex-col gap-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <GalleryImage src={gallery[0]} alt={`${title} horizontal video 1`} aspectRatio="16/9" />
-              <GalleryImage src={gallery[1]} alt={`${title} horizontal video 2`} aspectRatio="16/9" />
+              <GalleryImage src={gallery[0]} alt={`${title} horizontal video 1`} orientation="horizontal" />
+              <GalleryImage src={gallery[1]} alt={`${title} horizontal video 2`} orientation="horizontal" />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[760px] mx-auto w-full">
-              <GalleryImage src={gallery[2]} alt={`${title} vertical video 1`} aspectRatio="9/16" />
-              <GalleryImage src={gallery[3]} alt={`${title} vertical video 2`} aspectRatio="9/16" />
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-[900px] mx-auto w-full">
+              {gallery.slice(2).map((src, index) => (
+                <GalleryImage
+                  key={src}
+                  src={src}
+                  alt={`${title} vertical video ${index + 1}`}
+                  orientation="vertical"
+                />
+              ))}
             </div>
+          </div>
+        ) : galleryLayout === "sie-website" ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-start">
+            {[0, 1].map((column) => (
+              <div key={column} className="flex flex-col gap-4">
+                {gallery.map((src, index) => index % 2 === column ? (
+                  <GalleryImage
+                    key={src}
+                    src={src}
+                    alt={`${title} gallery ${index + 1}`}
+                    aspectRatio={[
+                      "1440/5063",
+                      "1440/5140",
+                      "1440/1958",
+                      "1440/5026",
+                      "1440/770",
+                      "1440/770",
+                      "1280/924",
+                      "1440/1446",
+                      "1266/1600",
+                      "964/1280",
+                      "1024/1280",
+                    ][index]}
+                    fit="contain"
+                  />
+                ) : null)}
+              </div>
+            ))}
           </div>
         ) : (
         <div className="flex flex-col gap-4">
@@ -455,19 +489,29 @@ function GalleryImage({
   src,
   alt,
   aspectRatio,
+  fit,
+  orientation,
 }: {
   src: string;
   alt: string;
-  aspectRatio: string;
+  aspectRatio?: string;
+  fit?: "contain" | "cover";
+  orientation?: "horizontal" | "vertical";
 }) {
   if (!src) return null; // Safe guard for missing images
+  const frameAspectRatio = orientation === "vertical"
+    ? "9/16"
+    : orientation === "horizontal"
+      ? "16/9"
+      : aspectRatio;
+
   return (
-    <div className="relative overflow-hidden bg-[#2a1a3a]" style={{ aspectRatio }}>
+    <div className="relative overflow-hidden bg-[#2a1a3a]" style={{ aspectRatio: frameAspectRatio }}>
       <MediaRenderer
         src={src}
         alt={alt}
         fill
-        className="object-cover"
+        className={fit === "contain" || orientation ? "object-contain" : "object-cover"}
         sizes="(max-width: 767px) 100vw, 50vw"
       />
     </div>

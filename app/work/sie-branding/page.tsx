@@ -4,17 +4,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "SIE Branding | The Woolgatherers",
-  description: "A comprehensive look at the visual identity and brand architecture built for Studio Inside Eye.",
+  description: "Crafted the visual identity for a California-based interior design studio, in collaboration with Siya Golecha.",
 };
 
 const sieBrandingProject: ProjectData = {
   logo: "/images/detailed_page/SIE_BRANDING/SIE LOGO 2.JPG",
   title: "STUDIO INSIDE EYE",
-  industry: "Design & Visual Identity",
-  tags: ["Brand Building", "Brand Identity", "Design"],
+  industry: "Interior Design",
+  tags: ["Brand Identity"],
   heroImage: "/images/detailed_page/SIE_BRANDING/SIE MOCK 3.JPG",
   overview:
-    "A comprehensive look at the visual identity and brand architecture built for Studio Inside Eye.",
+    "Crafted the visual identity for a California-based interior design studio. The identity embraces a contemporary aesthetic while capturing the tactile nature of interior design through thoughtful typography, material-inspired textures, and a refined visual language. Done in collaboration with Siya Golecha.",
   gallery: [
     "/images/detailed_page/SIE_BRANDING/SIE LOGO 2.JPG",
     "/images/detailed_page/SIE_BRANDING/SIE.JPG",
@@ -28,14 +28,14 @@ const sieBrandingProject: ProjectData = {
     {
       thumbnail: "/images/detailed_page/SIE/SIE_0.JPG",
       title: "SIE WEBSITE",
-      industry: "Web Design & Development",
-      tags: ["Web Design", "UI/UX", "Digital Experience"],
+      industry: "Interior Design",
+      tags: ["Website Design"],
     },
     {
       thumbnail: "/images/detailed_page/Tavana/tavana 1.png",
       title: "TAVANA",
-      industry: "Architecture & Real Estate",
-      tags: ["Brand Building", "Brand Identity"],
+      industry: "Real Estate",
+      tags: ["Brand Building", "Identity"],
     }
   ],
 };

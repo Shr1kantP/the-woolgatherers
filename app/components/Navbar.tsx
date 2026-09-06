@@ -17,7 +17,7 @@ export default function Navbar() {
 
   const menuItems = [
     { label: "Home", ariaLabel: "Home Page", link: "/#hero" },
-    { label: "Recidency", ariaLabel: "View Residents", link: "/work", badge: "Work" },
+    { label: "Residency", ariaLabel: "View Residents", link: "/work", badge: "Work" },
     /* { label: "Hosts", ariaLabel: "Hosts Section", link: "/#hosts" , onClick: handleReservationsClick, badge: "Contact" }, */
     { label: "Concierge", ariaLabel: "Make a Reservation", link: "#", onClick: handleReservationsClick, badge: "Contact" },
     { label: "Stories", ariaLabel: "Stories", link: "/blog", badge: "Blog" }

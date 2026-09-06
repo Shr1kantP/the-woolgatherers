@@ -18,22 +18,20 @@ const motionProject: ProjectData = {
     "A curated body of motion work created for brands across textiles, FMCG, food, and lifestyle. Combining animation, typography, transitions, and storytelling to elevate presentations, corporate films, product launches, and digital campaigns.",
   gallery: [
     "/images/detailed_page/Santhi/santhi_motion.mp4",
-    "/images/detailed_page/Motion/motion-5.mp4",
-    "/images/detailed_page/Motion/motion-4.MP4",
-    "/images/detailed_page/Motion/motion-3.MP4",
-    "/images/detailed_page/Motion/motion-6.mp4",
-    
+    "/images/detailed_page/Santhi/santhi_motion_2.mp4",
+    "/images/detailed_page/Vahdam/vahdam_vid_1.mp4",
+    "/images/detailed_page/Peps/peps_vid_2.mp4",
   ],
   galleryLayout: "motion-four",
   relatedProjects: [
     {
-      thumbnail: "/images/detailed_page/Kumbaya/kumbayah packaging main.png",
+      thumbnail: "/images/detailed_page/Kumbaya/DSCF9683.jpg",
       title: "KUMABAYA",
       industry: "Food & Beverage (Kombucha)",
       tags: ["Packaging", "Content Production", "Social Media"],
     },
     {
-      thumbnail: "/images/detailed_page/Peps/peps post 5.jpg",
+      thumbnail: "/images/detailed_page/Peps/Peps post 5.jpg",
       title: "PEPS",
       industry: "Mattress & Sleep Products",
       tags: ["Content Marketing", "Social Media"],

@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 };
 
 const motionProject: ProjectData = {
-  logo: "/images/Guests/image 42.png", // Using a placeholder/available brand logo
   title: "MOTION DESIGN",
   industry: "Cross-Industry",
   tags: ["Motion Graphics", "Brand Films", "Animation"],

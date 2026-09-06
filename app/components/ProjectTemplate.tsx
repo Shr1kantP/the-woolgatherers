@@ -115,7 +115,7 @@ export interface RelatedProject {
 }
 
 export interface ProjectData {
-  logo: string;
+  logo?: string;
   title: string;
   industry: string;
   tags: string[];
@@ -186,15 +186,17 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
             >
               {title}
             </h1>
-            <div className="relative w-18 h-18 sm:w-22 sm:h-22 md:w-24 md:h-24 flex-shrink-0">
-              <Image
-                src={logo}
-                alt={`${title} logo`}
-                fill
-                className="object-contain"
-                sizes="120px"
-              />
-            </div>
+            {logo && (
+              <div className="relative w-18 h-18 sm:w-22 sm:h-22 md:w-24 md:h-24 flex-shrink-0">
+                <Image
+                  src={logo}
+                  alt={`${title} logo`}
+                  fill
+                  className="object-contain"
+                  sizes="120px"
+                />
+              </div>
+            )}
           </div>
 
           {/* Industry subtitle */}

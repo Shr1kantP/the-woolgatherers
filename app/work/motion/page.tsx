@@ -16,7 +16,7 @@ const motionProject: ProjectData = {
   overview:
     "A curated body of motion work created for brands across textiles, FMCG, food, and lifestyle. Combining animation, typography, transitions, and storytelling to elevate presentations, corporate films, product launches, and digital campaigns.",
   gallery: [
-    "/images/detailed_page/Santhi/santhi_motion.mp4",
+    "/images/detailed_page/Motion/motion-7.mp4",
     "/images/detailed_page/Motion/motion-5.mp4",
     "/images/detailed_page/Motion/motion-4.MP4",
     "/images/detailed_page/Motion/motion-3.MP4",

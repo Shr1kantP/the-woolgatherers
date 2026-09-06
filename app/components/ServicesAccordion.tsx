@@ -30,7 +30,7 @@ const serviceData: ServiceItem[] = [
     title: "Social Media & Creative Marketing",
     collapsedColor: "#521006", // deep purple
     expandedColor: "#521006", // lightened mauve
-    image: "/images/service/tab-2-image.jpg",
+    image: "/images/service/tab-3-image.jpg",
     subServices: [
       "Social Media Strategy",
       "Content Creation & Curation",
@@ -43,7 +43,7 @@ const serviceData: ServiceItem[] = [
     title: "Website Design & Build",
     collapsedColor: "#5D1515", // olive
     expandedColor: "#5D1515", // lightened olive
-    image: "/images/service/tab-3-image.jpg",
+    image: "/images/service/tab-2-image.jpg",
     subServices: [
       "UI/UX Design",
       "Responsive Web Development",

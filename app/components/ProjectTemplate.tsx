@@ -207,9 +207,11 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
             Industry: {industry}
           </p>
 
-          {/* Service tag pill */}
-          <div className="mt-5">
-            <PillBadge label={tags[0]} />
+          {/* Service tags */}
+          <div className="mt-5 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <PillBadge key={tag} label={tag} />
+            ))}
           </div>
         </div>
 

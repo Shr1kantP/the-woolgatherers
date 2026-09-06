@@ -39,7 +39,7 @@ export default function Guests() {
             lineHeight: 1.05,
           }}
         >
-          Selected Residents
+        Few Of Our Residents
         </h2>
       </div>
       <div className="absolute inset-0 z-20">

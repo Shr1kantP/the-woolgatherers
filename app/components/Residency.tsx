@@ -105,7 +105,7 @@ export default function Residency() {
               alt="Landscape stamp"
               width={160}
               height={300}
-              className="w-[90%] h-auto object-cover"
+              className="w-[100%] h-auto object-cover"
               style={{ display: "block" }}
             />
           </div>
@@ -129,7 +129,7 @@ export default function Residency() {
 
           {/* Bottom Right Column */}
           <div className="col-span-6 flex justify-end overflow-visible">
-            <div ref={rightImgRef} style={{ transform: "rotate(-18deg)", transformOrigin: "center center" }} className="w-[140%] translate-x-[-15%] origin-center">
+            <div ref={rightImgRef} style={{ transform: "rotate(4deg)", transformOrigin: "center center" }} className="w-[140%] translate-x-[-15%] origin-center">
               <Image
                 src="/images/resident-image-bottomright.png"
                 alt="The Woolgatherers stamp"

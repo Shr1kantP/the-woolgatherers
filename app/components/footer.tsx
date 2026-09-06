@@ -81,6 +81,22 @@ export default function Footer() {
             </div>
           </div>
 
+          <div className="flex md:hidden justify-center -mt-5 -mb-1 w-full">
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent("open-concierge"))}
+              className="transition-transform duration-200 hover:scale-[1.03] focus:outline-none cursor-pointer relative z-10"
+            >
+              <Image
+                src="/images/footer/footer-button.png"
+                alt="Request A Stay"
+                width={440}
+                height={136}
+                className="h-auto w-[52vw] max-w-[180px] object-contain drop-shadow-md"
+              />
+            </button>
+          </div>
+
           <div className="hidden md:flex flex-1 justify-start md:-translate-x-1 lg:-translate-x- 2">
             <div className="flex flex-col items-center gap-6">
               <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noreferrer" className="text-[#F5E9D0] transition-colors hover:text-[#F0C766]">
@@ -128,7 +144,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className={`-mt-6 sm:-mt-10 mb-4 flex justify-center transition-all duration-500 ${buttonVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}>
+        <div className={`hidden md:flex -mt-6 sm:-mt-10 mb-4 justify-center transition-all duration-500 ${buttonVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}>
           <button
             type="button"
             onClick={() => window.dispatchEvent(new CustomEvent("open-concierge"))}

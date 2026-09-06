@@ -13,13 +13,13 @@ const curevedaProject: ProjectData = {
   title: "CUREVEDA",
   industry: "Health & Wellness",
   tags: ["Content Production", "UGC Content"],
-  heroImage: "/images/detailed_page/Cureveda/cureveda_1.jpg",
+  heroImage: "/images/detailed_page/cureveda/cureveda_1.jpg",
   overview:
     "Produced photography, video, and UGC content for Cureveda, the modern wellness brand by Baidyanath. The work spanned product launches and performance-driven creatives, building a versatile content library for social media, paid campaigns, and e-commerce.",
   gallery: [
-    "/images/detailed_page/Cureveda/cureveda_1.jpg",
-    "/images/detailed_page/Cureveda/cureveda_vid.mp4",
-    "/images/detailed_page/Cureveda/cureveda_2.jpg",
+    "/images/detailed_page/cureveda/cureveda_1.jpg",  
+    "/images/detailed_page/cureveda/cureveda_vid.mp4",
+    "/images/detailed_page/cureveda/cureveda_2.jpg",
   ],
   relatedProjects: [
     {

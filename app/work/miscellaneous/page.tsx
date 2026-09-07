@@ -25,7 +25,7 @@ const motionProject: ProjectData = {
   galleryLayout: "motion-four",
   relatedProjects: [
     {
-      thumbnail: "/images/detailed_page/Kumbaya/DSCF9683.jpg",
+      thumbnail: "/images/detailed_page/Kumbaya/kumbayah packaging main.png",
       title: "KUMABAYA",
       industry: "Food & Beverage (Kombucha)",
       tags: ["Packaging", "Content Production", "Social Media"],

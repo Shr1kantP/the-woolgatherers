@@ -14,6 +14,7 @@ const santhiProject: ProjectData = {
   industry: "Textile Manufacturing",
   tags: ["Brand Communication", "Corporate Films", "Motion Design"],
   heroImage: "/images/detailed_page/Santhi/santhi_motion.mp4",
+  galleryLayout: "santhi-horizontal",
   overview:
     "Creative partner for one of South India's largest textile manufacturers. Across multiple projects, we've developed corporate films, motion graphics, presentations, and strategic brand communication for collections created for global brands including Gap, Old Navy, Tommy Hilfiger, Banana Republic, and Marks & Spencer.",
   gallery: [
@@ -28,7 +29,7 @@ const santhiProject: ProjectData = {
   ],
   relatedProjects: [
     {
-      thumbnail: "/images/detailed_page/Kumbaya/DSCF9683.jpg",
+      thumbnail: "/images/detailed_page/Kumbaya/kumbayah packaging main.png",
       title: "KUMABAYA",
       industry: "Food & Beverage (Kombucha)",
       tags: ["Packaging", "Content Production", "Social Media"],

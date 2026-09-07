@@ -122,7 +122,7 @@ export interface ProjectData {
   heroImage: string;
   overview: string;
   gallery: string[];
-  galleryLayout?: "motion-four" | "sie-website";
+  galleryLayout?: "motion-four" | "sie-website" | "santhi-horizontal";
   relatedProjects: RelatedProject[];
 }
 
@@ -337,8 +337,18 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
 
           {/* ── Row 1: 2 equal columns, medium height ── */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <GalleryImage src={gallery[0]} alt={`${title} gallery 1`} aspectRatio="4/3" />
-            <GalleryImage src={gallery[1]} alt={`${title} gallery 2`} aspectRatio="4/3" />
+            <GalleryImage
+              src={gallery[0]}
+              alt={`${title} gallery 1`}
+              aspectRatio={galleryLayout === "santhi-horizontal" ? "16/9" : "4/3"}
+              fit={galleryLayout === "santhi-horizontal" ? "contain" : undefined}
+            />
+            <GalleryImage
+              src={gallery[1]}
+              alt={`${title} gallery 2`}
+              aspectRatio={galleryLayout === "santhi-horizontal" ? "16/9" : "4/3"}
+              fit={galleryLayout === "santhi-horizontal" ? "contain" : undefined}
+            />
           </div>
 
           {/* ── Row 2: full width, larger height ── */}
@@ -348,8 +358,16 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
 
           {/* ── Row 3: 2 equal columns, taller than row 1 ── */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <GalleryImage src={gallery[3]} alt={`${title} gallery 4`} aspectRatio="3/4" />
-            <GalleryImage src={gallery[4]} alt={`${title} gallery 5`} aspectRatio="3/4" />
+            <GalleryImage
+              src={gallery[3]}
+              alt={`${title} gallery 4`}
+              aspectRatio={galleryLayout === "santhi-horizontal" ? "16/9" : "3/4"}
+            />
+            <GalleryImage
+              src={gallery[4]}
+              alt={`${title} gallery 5`}
+              aspectRatio={galleryLayout === "santhi-horizontal" ? "16/9" : "3/4"}
+            />
           </div>
 
           {/* ── Row 4: asymmetric 2×2 mosaic block ── */}

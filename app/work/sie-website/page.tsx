@@ -12,7 +12,7 @@ const sieWebsiteProject: ProjectData = {
   title: "SIE WEBSITE",
   industry: "Interior Design",
   tags: ["Website Design"],
-  heroImage: "/images/detailed_page/SIE/SIELOGO1.JPG",
+  heroImage: "/images/detailed_page/SIE/sie-web-thumbnail.jpeg",
   overview:
     "Designed an interactive website that extends the studio's identity into a digital experience. A key feature is the Canvas Moodboard Generator, allowing visitors to create their own moodboards or explore curated design styles to better understand the studio's aesthetic and approach.",
   gallery: [

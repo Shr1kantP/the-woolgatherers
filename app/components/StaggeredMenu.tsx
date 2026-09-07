@@ -522,7 +522,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                   };
 
                   return (
-                    <li className="sm-panel-itemWrap relative overflow-hidden py-1 border-b border-white/5" key={it.label + idx}>
+                    <li className="sm-panel-itemWrap relative overflow-hidden py-1 border-b border-[#FAF9F6]/5" key={it.label + idx}>
                       <div className="flex items-center justify-between w-full">
                         <a
                           className="sm-panel-item relative text-[#F5E9D0] font-heading font-bold text-[3rem] md:text-[4.5rem] cursor-pointer leading-none tracking-tight uppercase transition-all duration-200 no-underline hover:text-[#912A02] flex items-baseline gap-4"
@@ -557,8 +557,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             </ul>
 
             {displaySocials && socialItems && socialItems.length > 0 && (
-              <div className="sm-socials mt-12 pt-8 border-t border-white/10 flex flex-col gap-4 font-sans" aria-label="Social links">
-                <h3 className="sm-socials-title m-0 text-sm tracking-widest uppercase text-white/40 font-sans">Follow us on.</h3>
+              <div className="sm-socials mt-12 pt-8 border-t border-[#FAF9F6]/10 flex flex-col gap-4 font-sans" aria-label="Social links">
+                <h3 className="sm-socials-title m-0 text-sm tracking-widest uppercase text-[#FAF9F6]/40 font-sans">Follow us on.</h3>
                 <ul
                   className="sm-socials-list list-none m-0 p-0 flex flex-row items-center gap-6 flex-wrap"
                   role="list"
@@ -577,7 +577,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                   ))}
                 </ul>
 
-                <div className="sm-menu-footer mt-6 pt-4 border-t border-white/5 flex flex-wrap items-center gap-x-6 gap-y-2 text-[0.7rem] text-white/40 font-sans uppercase tracking-wider">
+                <div className="sm-menu-footer mt-6 pt-4 border-t border-[#FAF9F6]/5 flex flex-wrap items-center gap-x-6 gap-y-2 text-[0.7rem] text-[#FAF9F6]/40 font-sans uppercase tracking-wider">
                   <a href="#" className="hover:text-[#F5E9D0] transition-colors duration-150">Privacy Policy</a>
                   <a href="#" className="hover:text-[#F5E9D0] transition-colors duration-150">Terms of Service</a>
                   <a href="#" className="hover:text-[#F5E9D0] transition-colors duration-150">Cookies Settings</a>

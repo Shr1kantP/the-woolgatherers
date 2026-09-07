@@ -217,7 +217,7 @@ export default function ServicesAccordion() {
               className="relative w-full h-[90px] md:h-[140px] flex items-center p-6 sm:p-8 md:p-10"
             >
               <h3
-                className="text-white font-normal leading-none"
+                className="text-[#FAF9F6] font-normal leading-none"
                 style={{
                   fontFamily: '"Inter", system-ui, sans-serif',
                   fontSize: "clamp(28px, 5vw, 40px)",
@@ -238,7 +238,7 @@ export default function ServicesAccordion() {
               >
                 {/* Large Title */}
                 <h4
-                  className="w-full text-white font-medium tracking-normal mb-10 sm:mb-16 text-center"
+                  className="w-full text-[#FAF9F6] font-medium tracking-normal mb-10 sm:mb-16 text-center"
                   style={{
                     fontFamily: '"Inter", system-ui, sans-serif',
                     fontSize: "clamp(32px, 5vw, 56px)",
@@ -256,7 +256,7 @@ export default function ServicesAccordion() {
                       {service.subServices.map((sub, i) => (
                         <li
                           key={i}
-                          className="text-white font-medium leading-relaxed"
+                          className="text-[#FAF9F6] font-medium leading-relaxed"
                           style={{
                             fontFamily: '"Inter", system-ui, sans-serif',
                             fontSize: "clamp(16px, 2.5vw, 22px)",

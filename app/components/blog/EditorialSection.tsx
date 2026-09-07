@@ -4,6 +4,7 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { EditorialCard } from './EditorialCard';
+import { editorialPosts } from './BlogPosts';
 
 // Register ScrollTrigger
 if (typeof window !== 'undefined') {
@@ -12,31 +13,6 @@ if (typeof window !== 'undefined') {
 
 import { Oswald } from 'next/font/google';
 const oswald = Oswald({ subsets: ['latin'] });
-
-const DUMMY_EDITORIALS = [
-  {
-    id: '1',
-    title: 'Framing your artwork',
-    description: 'Our guide to hanging and displaying your print perfectly.',
-    imageUrl: 'https://images.unsplash.com/photo-1579547621113-e4bb35220c54?auto=format&fit=crop&q=80&w=800',
-    href: '/blog/1',
-    isFeatured: true,
-  },
-  {
-    id: '2',
-    title: 'Hanging your artwork',
-    description: 'Our simple guide to displaying your print perfectly.',
-    imageUrl: 'https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?auto=format&fit=crop&q=80&w=800',
-    href: '/blog/2',
-  },
-  {
-    id: '3',
-    title: 'What to look out for when you\'re buying a print',
-    description: 'This guide explores what defines a high-quality print, from paper and ink to colour accuracy and resolution.',
-    imageUrl: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=800',
-    href: '/blog/3',
-  },
-];
 
 interface EditorialSectionProps {
   title?: string;
@@ -69,7 +45,7 @@ export default function EditorialSection({ title = 'STORIES', theme = 'dark' }: 
         </h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8 lg:gap-12">
-          {DUMMY_EDITORIALS.map((post, index) => (
+          {editorialPosts.map((post, index) => (
             <div 
               key={post.id} 
               ref={(el) => {

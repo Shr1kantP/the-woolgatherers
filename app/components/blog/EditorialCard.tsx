@@ -41,13 +41,13 @@ export const EditorialCard: React.FC<EditorialCardProps> = ({
         <div className="flex flex-col flex-grow relative">
           {isFeatured && (
             <div className="mb-2 text-xs font-bold uppercase tracking-wider">
-              <ShinyText text="✨ Featured Article" speed={3} color="#a0aec0" shineColor="#ffffff" />
+              <ShinyText text="✨ Featured Article" speed={3} color="#a0aec0" shineColor="#FAF9F6" />
             </div>
           )}
           {/* Title: Inter/sans font, ~16px gap above (mb-4 on image = 1rem = 16px) */}
           <h3
             className={`text-2xl md:text-[clamp(1.25rem,2vw,1.75rem)] leading-tight mb-2 transition-colors duration-300 line-clamp-2 font-sans font-semibold ${
-              isDark ? 'text-[#F5E9D0] group-hover:text-white' : 'text-gray-900 group-hover:text-gray-600'
+              isDark ? 'text-[#F5E9D0] group-hover:text-[#FAF9F6]' : 'text-gray-900 group-hover:text-gray-600'
             }`}
           >
             {title}

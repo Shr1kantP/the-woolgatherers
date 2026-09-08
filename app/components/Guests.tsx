@@ -1,18 +1,18 @@
 "use client";
 
 const logos = [
+  "/images/Guests/vahdam.png",
   "/images/Guests/cureveda.png",
   // "/images/Guests/gap.png",
   "/images/Guests/chrian-tea.png",
   "/images/Guests/country-bean.webp",
-  "/images/Guests/jimmys.png",
   "/images/Guests/mtr.png",
+  "/images/Guests/jimmys.png",
   "/images/Guests/nua.png",
-  "/images/Guests/peps.png",
   "/images/Guests/sathi.png",
-  "/images/Guests/sfs.png",
-  "/images/Guests/vahdam.png",
+  "/images/Guests/peps.png",
   "/images/Guests/wingreens.png",
+  "/images/Guests/sfs.png",
  /*  "/images/Guests/sie-full.PNG", */
 ];
 
@@ -45,7 +45,7 @@ function LogoTrack({ reverse = false }: { reverse?: boolean }) {
             className={`resident-logo ${
               src.includes("cureveda") || src.includes("jimmys")
                 ? `resident-logo--small ${
-                    src.includes("cureveda") || src.includes("jimmys") ? "resident-logo--spaced" : ""
+                    src.includes("cureveda") ? "resident-logo--spaced" : ""
                   }`
                 : src.includes("chrian-tea") ||
                   src.includes("/mtr.") ||
@@ -110,6 +110,7 @@ export default function Guests() {
 
         .resident-logo-row--reverse .resident-logo-track {
           animation-name: residents-right-to-left;
+          animation-delay: -27.5s;
         }
 
         .resident-logo {

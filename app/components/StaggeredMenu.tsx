@@ -27,6 +27,7 @@ export interface StaggeredMenuProps {
   logoUrl?: string;
   logoElement?: React.ReactNode;
   centerLogo?: React.ReactNode;
+  headerColor?: string;
   menuButtonColor?: string;
   openMenuButtonColor?: string;
   accentColor?: string;
@@ -48,6 +49,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   logoUrl,
   logoElement,
   centerLogo,
+  headerColor = '#210026',
   menuButtonColor = '#F5E9D0',
   openMenuButtonColor = '#912A02',
   changeMenuColorOnOpen = true,
@@ -443,7 +445,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         </div>
 
         <header
-          className="staggered-menu-header absolute top-0 left-0 w-full h-[70px] flex items-center justify-between px-2 bg-[#220319] pointer-events-none z-50"
+          className="staggered-menu-header absolute top-0 left-0 w-full h-[70px] flex items-center justify-between px-2 pointer-events-none z-50"
+          style={{ backgroundColor: headerColor }}
           aria-label="Main navigation header"
         >
           <div className="sm-logo flex items-center select-none pointer-events-auto" aria-label="Logo">
@@ -594,7 +597,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
       <style>{`
         .sm-scope .staggered-menu-wrapper { position: relative; width: 100%; height: 100%; z-index: 40; pointer-events: none; }
-        .sm-scope .staggered-menu-header { position: absolute; top: 0; left: 0; width: 100%; height: 70px; display: flex; align-items: center; justify-content: space-between; padding: 0 8px; background: #210026; pointer-events: none; z-index: 50; }
+        .sm-scope .staggered-menu-header { position: absolute; top: 0; left: 0; width: 100%; height: 70px; display: flex; align-items: center; justify-content: space-between; padding: 0 8px; pointer-events: none; z-index: 50; }
         .sm-scope .staggered-menu-header > * { pointer-events: auto; }
         .sm-scope .sm-logo { display: flex; align-items: center; user-select: none; }
         .sm-scope .sm-logo-img { display: block; height: 32px; width: auto; object-fit: contain; }

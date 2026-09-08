@@ -30,6 +30,7 @@ export default function Navbar() {
 
   const isLightPage = pathname.match(/^\/blog(?:\/|$)/);
   const currentMenuColor = isLightPage ? '#120F17' : '#F5E9D0';
+  const currentHeaderColor = isLightPage ? '#f6f2ec' : '#210026';
 
   const logoElement = (
     <Link
@@ -54,7 +55,7 @@ export default function Navbar() {
       <img
         src="/images/hero/woolgatherers-navbar.svg"
         alt="The Woolgatherers"
-        className="h-[38px] w-auto"
+        className={`h-[38px] w-auto ${isLightPage ? 'invert' : ''}`}
       />
     </Link>
   );
@@ -73,6 +74,7 @@ export default function Navbar() {
       accentColor="#D72F2F"
       logoElement={logoElement}
       centerLogo={centerLogo}
+      headerColor={currentHeaderColor}
       isFixed={true}
     />
   );

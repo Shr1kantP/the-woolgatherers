@@ -93,6 +93,10 @@ body {
   font-family: var(--font-heading), system-ui, sans-serif;
 }
 
+.font-inter {
+  font-family: var(--font-inter), Arial, sans-serif;
+}
+
 /* ── Host cards ─────────────────────────────────────────────────────────── */
 
 /* Default (desktop horizontal scroll): each card is a full viewport panel */

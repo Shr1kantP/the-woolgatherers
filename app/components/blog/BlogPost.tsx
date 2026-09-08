@@ -36,13 +36,13 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
   const blocksToShow = body;
 
   return (
-    <article className="max-w-4xl mx-auto px-4 pt-4 pb-12 font-sans">
+    <article className="font-inter max-w-4xl mx-auto px-4 pt-4 pb-12">
       {/* Header Section */}
       <header className="mb-6 text-center flex flex-col items-center">
         <time className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4 block">
           {date}
         </time>
-        <h1 className="text-4xl md:text-6xl font-serif text-gray-900 mb-4 leading-tight max-w-3xl">
+        <h1 className="font-inter text-4xl md:text-6xl text-gray-900 mb-4 leading-tight max-w-3xl">
           {title}
         </h1>
         <p className="text-xl md:text-2xl italic text-gray-600 font-light max-w-2xl mb-4">
@@ -83,7 +83,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
               return (
                 <h2
                   key={index}
-                  className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mt-12 mb-6"
+                  className="font-inter text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6"
                 >
                   {block.content}
                 </h2>

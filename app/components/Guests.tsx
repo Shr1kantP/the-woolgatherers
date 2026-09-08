@@ -13,7 +13,7 @@ const logos = [
   "/images/Guests/sfs.png",
   "/images/Guests/vahdam.png",
   "/images/Guests/wingreens.png",
-  "/images/detailed_page/SIE_BRANDING/SIE-branding-logo.PNG",
+ /*  "/images/Guests/sie-full.PNG", */
 ];
 
 const logoNames = [
@@ -44,14 +44,20 @@ function LogoTrack({ reverse = false }: { reverse?: boolean }) {
             alt={`${logoNames[index % logos.length]} logo`}
             className={`resident-logo ${
               src.includes("cureveda") || src.includes("jimmys")
-                ? "resident-logo--small"
+                ? `resident-logo--small ${
+                    src.includes("cureveda") || src.includes("jimmys") ? "resident-logo--spaced" : ""
+                  }`
                 : src.includes("chrian-tea") ||
                   src.includes("/mtr.") ||
                   src.includes("/sathi.") ||
                   src.includes("/wingreens.")
                   ? "resident-logo--large"
                   : ""
-            }`}
+            } ${
+                  src.includes("chrian-tea") || src.includes("country-bean")
+                    ? "resident-logo--spaced"
+                    : ""
+                } ${src.includes("/sathi.") ? "resident-logo--white" : ""}`}
           />
         ))}
       </div>
@@ -98,8 +104,8 @@ export default function Guests() {
           display: flex;
           width: max-content;
           align-items: center;
-          gap: clamp(3.5rem, 10vw, 11rem);
-          animation: residents-left-to-right 32s linear infinite;
+          gap: 0;
+          animation: residents-left-to-right 55s linear infinite;
         }
 
         .resident-logo-row--reverse .resident-logo-track {
@@ -111,9 +117,18 @@ export default function Guests() {
           height: clamp(3.5rem, 7vw, 6rem);
           flex: 0 0 auto;
           object-fit: contain;
-          filter: grayscale(1);
+          filter: grayscale(0);
+          
           opacity: 0.72;
           transition: filter 300ms ease, opacity 300ms ease, transform 300ms ease;
+        }
+
+        .resident-logo:not(:first-child) {
+          margin-left: clamp(-2rem, -3vw, -0.75rem);
+        }
+
+        .resident-logo--spaced {
+          margin-left: clamp(1rem, 3vw, 3rem) !important;
         }
 
         .resident-logo--large {
@@ -126,9 +141,16 @@ export default function Guests() {
           height: clamp(2.75rem, 5.5vw, 4.5rem);
         }
 
+        .resident-logo--white,
+        .resident-logo--white:hover,
+        .resident-logo--white:focus-visible {
+          filter: brightness(0) invert(1);
+        }
+
         .resident-logo:hover,
         .resident-logo:focus-visible {
           filter: grayscale(0);
+          brightness(6.2);
           opacity: 1;
           transform: scale(1.08);
         }

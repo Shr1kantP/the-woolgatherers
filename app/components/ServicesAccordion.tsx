@@ -15,8 +15,8 @@ interface ServiceItem {
 const serviceData: ServiceItem[] = [
   {
     title: "Brand Building, Design & Management",
-    collapsedColor: "#210026",
-    expandedColor: "#210026",
+    collapsedColor: "#260421",
+    expandedColor: "#260421",
     image: "/images/service/tab-1-image.jpg",
     subServices: [
       "Brand Strategy",
@@ -27,7 +27,7 @@ const serviceData: ServiceItem[] = [
     ],
   },
   {
-    title: "Social Media & Creative Marketing",
+    title: "Social Media",
     collapsedColor: "#2D062A",
     expandedColor: "#2D062A",
     image: "/images/service/tab-3-image.jpg",
@@ -40,7 +40,7 @@ const serviceData: ServiceItem[] = [
     ],
   },
   {
-    title: "Website Design & Build",
+    title: "Websites",
     collapsedColor: "#3A092B",
     expandedColor: "#3A092B",
     image: "/images/service/tab-2-image.jpg",

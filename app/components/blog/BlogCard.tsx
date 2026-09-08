@@ -34,12 +34,12 @@ export default function BlogCard({
         </div>
         <div className="flex flex-1 flex-col pt-3">
           <div className="flex items-baseline justify-between gap-3 text-[#1a0d26]/55">
-            <span className="font-serif text-sm italic">{badge}</span>
+            <span className="font-inter text-sm italic">{badge}</span>
             <time dateTime={date} className="shrink-0 text-[10px] font-medium uppercase tracking-[0.08em]">
               {date}
             </time>
           </div>
-          <h2 className="mt-2 font-serif text-[clamp(1.25rem,1.8vw,1.65rem)] leading-[1.05] text-[#1a0d26] transition-colors group-hover:text-[#5d1515]">
+          <h2 className="font-inter mt-2 text-[clamp(1.25rem,1.8vw,1.65rem)] leading-[1.05] text-[#1a0d26] transition-colors group-hover:text-[#5d1515]">
             {title}
           </h2>
           <p className="mt-2 line-clamp-2 text-sm leading-snug text-[#1a0d26]/80">

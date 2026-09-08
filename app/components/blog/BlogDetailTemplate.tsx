@@ -26,7 +26,7 @@ function ArticleBody({ blocks }: { blocks: ContentBlock[] }) {
         }
 
         if (block.type === "heading") {
-          return <h2 key={`${block.type}-${index}`} className="pt-3 font-sans text-xl font-bold leading-tight sm:text-2xl">{block.content}</h2>;
+          return <h2 key={`${block.type}-${index}`} className="font-inter pt-3 text-xl font-bold leading-tight sm:text-2xl">{block.content}</h2>;
         }
 
         if (block.type === "list") {
@@ -66,14 +66,14 @@ function ArticleBody({ blocks }: { blocks: ContentBlock[] }) {
 
 export default function BlogDetailTemplate({ blog }: { blog: BlogDetailData }) {
   return (
-    <main className="min-h-screen bg-[#f6f2ec] px-6 pb-24 pt-28 text-[#151515] sm:px-10 sm:pt-36 lg:px-[6.5vw]">
+    <main className="font-inter min-h-screen bg-[#f6f2ec] px-6 pb-24 pt-28 text-[#151515] sm:px-10 sm:pt-36 lg:px-[6.5vw]">
       <div className="mx-auto max-w-[1160px]">
         <header className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-[7vw]">
           <div className="pt-1">
             <div className="mb-5 flex flex-wrap items-center gap-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#151515]/75">
               <span>{blog.category}</span><span aria-hidden="true">|</span><time dateTime={blog.date}>{blog.date}</time><span aria-hidden="true">|</span><span>{blog.readTime}</span>
             </div>
-            <h1 className="max-w-[13ch] font-sans text-[clamp(3rem,5.3vw,5.6rem)] font-black leading-[0.88] tracking-[-0.065em]">{blog.title}</h1>
+            <h1 className="font-inter max-w-[13ch] text-[clamp(3rem,5.3vw,5.6rem)] leading-[0.88] tracking-[0] text-[#210026]">{blog.title}</h1>
             <div className="mt-8 flex items-center gap-3">
               <Image src={blog.contributor.avatar} alt={`${blog.contributor.name} profile`} width={36} height={36} className="h-9 w-9 rounded-full object-cover" />
               <div className="leading-tight">

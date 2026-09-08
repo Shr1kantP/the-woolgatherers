@@ -14,10 +14,10 @@ export default function BlogIndexPage({ posts }: BlogIndexPageProps) {
   }
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f6f2ec] px-7 pb-20 pt-24 text-[#1a0d26] sm:px-8 sm:pt-28 lg:px-[2.2vw]">
+    <main className="font-inter min-h-screen overflow-hidden bg-[#f6f2ec] px-7 pb-20 pt-24 text-[#1a0d26] sm:px-8 sm:pt-28 lg:px-[2.2vw]">
       <div className="mx-auto max-w-[1600px]">
         <header aria-labelledby="blog-heading" className="mx-auto mb-7 max-w-[390px] text-center sm:mb-8">
-          <h1 id="blog-heading" className="whitespace-nowrap font-serif text-[clamp(2rem,8vw,4.2rem)] leading-[0.95] tracking-[-0.03em]">
+          <h1 id="blog-heading" className="font-inter whitespace-nowrap text-[clamp(2rem,8vw,4.2rem)] leading-[0.95] tracking-[0] text-[#210026]">
             Stories & Events
           </h1>
           <p className="mt-3 text-sm leading-[1.3] text-[#1a0d26]/85 sm:text-base">

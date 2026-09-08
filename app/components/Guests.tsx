@@ -1,10 +1,10 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
 
 const logos = [
- 
   "/images/Guests/cureveda.png",
-  "/images/Guests/gap.png",
+  // "/images/Guests/gap.png",
+  "/images/Guests/chrian-tea.png",
+  "/images/Guests/country-bean.webp",
   "/images/Guests/jimmys.png",
   "/images/Guests/mtr.png",
   "/images/Guests/nua.png",
@@ -14,88 +14,38 @@ const logos = [
   "/images/Guests/vahdam.png",
   "/images/Guests/wingreens.png",
   "/images/detailed_page/SIE_BRANDING/SIE-branding-logo.PNG",
-  "/images/detailed_page/SIE/SIE-Website-logo.PNG",
 ];
 
-interface ActiveLogo {
-  src: string;
-  x: number;
-  y: number;
-  visible: boolean;
-}
+const logoNames = [
+  "Cureveda",
+  "Chrian Tea",
+  "Country Bean",
+  "Jimmy's",
+  "MTR",
+  "NUA",
+  "PEPS",
+  "Sathi",
+  "SFS",
+  "Vahdam",
+  "Wingreens",
+  "SIE Branding",
+];
 
-function randomPosition(src: string): ActiveLogo {
-  return {
-    src,
-    x: 12 + Math.random() * 76,
-    y: 25 + Math.random() * 55,
-    visible: false,
-  };
-}
-
-function RandomResidentLogo() {
-  const logoQueue = useRef<string[]>([]);
-  const lastLogo = useRef<string | null>(null);
-
-  const getNextLogo = () => {
-    if (logoQueue.current.length === 0) {
-      logoQueue.current = [...logos].sort(() => Math.random() - 0.5);
-
-      if (logoQueue.current[0] === lastLogo.current && logoQueue.current.length > 1) {
-        [logoQueue.current[0], logoQueue.current[1]] = [logoQueue.current[1], logoQueue.current[0]];
-      }
-    }
-
-    const nextLogo = logoQueue.current.shift() as string;
-    lastLogo.current = nextLogo;
-    return nextLogo;
-  };
-
-  const [activeLogo, setActiveLogo] = useState<ActiveLogo>({
-    src: logos[0],
-    x: 50,
-    y: 50,
-    visible: false,
-  });
-
-  useEffect(() => {
-    let fadeTimer: number | undefined;
-    let showTimer: number | undefined;
-    let cycleTimer: number | undefined;
-
-    const cycleLogo = () => {
-      setActiveLogo((current) => ({ ...current, visible: false }));
-      showTimer = window.setTimeout(() => {
-        setActiveLogo({ ...randomPosition(getNextLogo()), visible: true });
-        cycleTimer = window.setTimeout(cycleLogo, 2400);
-      }, 900);
-    };
-
-    fadeTimer = window.setTimeout(() => {
-      setActiveLogo((current) => ({ ...current, visible: true }));
-      cycleTimer = window.setTimeout(cycleLogo, 2400);
-    }, 350);
-
-    return () => {
-      if (fadeTimer) window.clearTimeout(fadeTimer);
-      if (showTimer) window.clearTimeout(showTimer);
-      if (cycleTimer) window.clearTimeout(cycleTimer);
-    };
-  }, []);
+function LogoTrack({ reverse = false }: { reverse?: boolean }) {
+  const trackLogos = [...logos, ...logos];
 
   return (
-    <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-      <img
-        src={activeLogo.src}
-        alt=""
-        className="absolute h-24 w-32 object-contain transition-[opacity,transform] duration-[900ms] ease-in-out md:h-36 md:w-52"
-        style={{
-          left: `${activeLogo.x}%`,
-          top: `${activeLogo.y}%`,
-          opacity: activeLogo.visible ? 0.9 : 0,
-          transform: `translate(-50%, -50%) scale(${activeLogo.visible ? 1 : 0.86})`,
-        }}
-      />
+    <div className={`resident-logo-row ${reverse ? "resident-logo-row--reverse" : ""}`}>
+      <div className="resident-logo-track">
+        {trackLogos.map((src, index) => (
+          <img
+            key={`${src}-${index}`}
+            src={src}
+            alt={`${logoNames[index % logos.length]} logo`}
+            className="resident-logo"
+          />
+        ))}
+      </div>
     </div>
   );
 }
@@ -118,9 +68,61 @@ export default function Guests() {
         Few Of Our Residents
         </h2>
       </div>
-      <div className="absolute inset-0 z-10">
-        <RandomResidentLogo />
+      <div className="absolute inset-0 z-10 flex flex-col justify-between py-[12vh] md:py-[15vh]">
+        <LogoTrack />
+        <LogoTrack reverse />
       </div>
+
+      <style>{`
+        .resident-logo-row {
+          width: 100%;
+          overflow: hidden;
+          pointer-events: auto;
+        }
+
+        .resident-logo-track {
+          display: flex;
+          width: max-content;
+          align-items: center;
+          gap: clamp(3.5rem, 10vw, 11rem);
+          animation: residents-left-to-right 32s linear infinite;
+        }
+
+        .resident-logo-row--reverse .resident-logo-track {
+          animation-name: residents-right-to-left;
+        }
+
+        .resident-logo {
+          width: clamp(7rem, 15vw, 13rem);
+          height: clamp(3.5rem, 7vw, 6rem);
+          flex: 0 0 auto;
+          object-fit: contain;
+          filter: grayscale(1);
+          opacity: 0.72;
+          transition: filter 300ms ease, opacity 300ms ease, transform 300ms ease;
+        }
+
+        .resident-logo:hover,
+        .resident-logo:focus-visible {
+          filter: grayscale(0);
+          opacity: 1;
+          transform: scale(1.08);
+        }
+
+        @keyframes residents-left-to-right {
+          from { transform: translateX(-50%); }
+          to { transform: translateX(0); }
+        }
+
+        @keyframes residents-right-to-left {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .resident-logo-track { animation-play-state: paused; }
+        }
+      `}</style>
     </section>
   );
 }

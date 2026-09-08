@@ -416,7 +416,7 @@ export const detailedBlogPosts: DetailedBlogPost[] = [
       initials: "TW",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=96&q=80",
     },
-    heroImage: "/images/blogs/blog-6.png",
+    heroImage: "/images/blogs/blog-6.jpeg",
     heroImageAlt: "A digital marketing team working together",
     body: [
       { type: "heading", content: "What does a digital marketing agency in Bangalore charge?" },

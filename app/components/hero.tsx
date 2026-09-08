@@ -4,27 +4,17 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Desktop background */}
-      <div className="hidden sm:block absolute inset-0">
-        <Image
-          src="/images/hero/hero-bg-desktop.png"
-          alt="Meadow with tree and mountains"
-          fill
-          priority
-          className="object-cover"
-        />
-      </div>
-
-      {/* Mobile background */}
-      <div className="block sm:hidden absolute inset-0">
-        <Image
-          src="/images/hero/mobile-bg.png"
-          alt="Meadow with tree and mountains"
-          fill
-          priority
-          className="object-cover"
-        />
-      </div>
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/images/hero/hero-bg-desktop.png"
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src="/images/hero/hero-vid.mp4" type="video/mp4" />
+      </video>
 
       {/* Stacked frame cards */}
       <div className="absolute z-[25] left-1/2 -translate-x-1/2 top-[10%] w-[min(94vw,560px)] sm:left-[4vw] sm:translate-x-0 sm:top-[14%] sm:w-[clamp(280px,32vw,380px)]">
@@ -43,7 +33,7 @@ export default function Hero() {
         type="button"
         aria-label="Open concierge check-in form"
         onClick={() => window.dispatchEvent(new CustomEvent("open-concierge"))}
-        className="absolute z-[26] left-1/2 -translate-x-1/2 top-[39%] w-[min(94vw,560px)] cursor-pointer transition-transform duration-300 hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FAF9F6] focus-visible:ring-offset-4 focus-visible:ring-offset-black sm:left-[4vw] sm:translate-x-0 sm:top-[42%] sm:w-[clamp(280px,32vw,380px)]"
+        className="absolute z-[26] left-1/2 -translate-x-1/2 top-[84%] w-[min(94vw,560px)] cursor-pointer transition-transform duration-300 hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FAF9F6] focus-visible:ring-offset-4 focus-visible:ring-offset-black sm:left-[4vw] sm:translate-x-0 sm:top-[46%] sm:w-[clamp(280px,32vw,380px)]"
       >
         <Image
           src="/images/hero/lower-frame-1.png"
@@ -72,13 +62,13 @@ export default function Hero() {
       </div> */}
 
       {/* Main heading — kept at the bottom but pushed up slightly on mobile */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 flex justify-center px-2 sm:px-6 pb-[3vh] sm:pb-[1.5vh]">
+      {/* <div className="absolute bottom-0 left-0 right-0 z-10 flex justify-center px-2 sm:px-6 pb-[3vh] sm:pb-[1.5vh]">
         <h1
           className="font-heading text-[#FAF9F6] uppercase leading-[0.85] tracking-tight text-center w-full text-[clamp(64px,20vw,64px)] sm:text-[clamp(94px,48vw,132px)]"
         >
           THE WOOLGATHERERS
         </h1>
-      </div>
+      </div> */}
     </section>
   );
 }

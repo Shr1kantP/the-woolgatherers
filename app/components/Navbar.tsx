@@ -35,12 +35,26 @@ export default function Navbar() {
     <Link
       href="/"
       aria-label="Home"
-      className=" hover:opacity-85 transition-opacity flex items-center justify-center"
+      className="hover:opacity-85 transition-opacity flex items-center justify-center"
     >
       <img 
         src="/images/logo/keyhole-white.svg" 
         alt="The Woolgatherers Logo" 
-        className={`w-10 h-10 ${isLightPage ? 'invert' : ''}`} 
+        className={`w-10 h-10 ${isLightPage ? 'invert' : ''}`}
+      />
+    </Link>
+  );
+
+  const centerLogo = (
+    <Link
+      href="/"
+      aria-label="The Woolgatherers home"
+      className="absolute left-1/2 flex -translate-x-1/2 items-center justify-center transition-opacity hover:opacity-85"
+    >
+      <img
+        src="/images/hero/woolgatherers-navbar.svg"
+        alt="The Woolgatherers"
+        className="h-[38px] w-auto"
       />
     </Link>
   );
@@ -55,9 +69,10 @@ export default function Navbar() {
       menuButtonColor={currentMenuColor}
       openMenuButtonColor="#D72F2F"
       changeMenuColorOnOpen={true}
-      colors={['#D72F2F', '#F5E9D0', '#120F17']}
+      colors={['#D72F2F', '#F5E9D0', '#210026']}
       accentColor="#D72F2F"
       logoElement={logoElement}
+      centerLogo={centerLogo}
       isFixed={true}
     />
   );

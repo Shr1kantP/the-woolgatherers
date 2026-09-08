@@ -26,6 +26,7 @@ export interface StaggeredMenuProps {
   className?: string;
   logoUrl?: string;
   logoElement?: React.ReactNode;
+  centerLogo?: React.ReactNode;
   menuButtonColor?: string;
   openMenuButtonColor?: string;
   accentColor?: string;
@@ -38,7 +39,7 @@ export interface StaggeredMenuProps {
 
 export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   position = 'right',
-  colors = ['#912A02', '#F5E9D0', '#120F17'],
+  colors = ['#912A02', '#F5E9D0', '#210026'],
   items = [],
   socialItems = [],
   displaySocials = true,
@@ -46,6 +47,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   className = '',
   logoUrl,
   logoElement,
+  centerLogo,
   menuButtonColor = '#F5E9D0',
   openMenuButtonColor = '#912A02',
   changeMenuColorOnOpen = true,
@@ -441,7 +443,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         </div>
 
         <header
-          className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between p-[2em] bg-transparent pointer-events-none z-50"
+          className="staggered-menu-header absolute top-0 left-0 w-full h-[70px] flex items-center justify-between px-2 bg-[#220319] pointer-events-none z-50"
           aria-label="Main navigation header"
         >
           <div className="sm-logo flex items-center select-none pointer-events-auto" aria-label="Logo">
@@ -459,9 +461,11 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             )}
           </div>
 
+          {centerLogo}
+
           <button
             ref={toggleBtnRef}
-            className="sm-toggle relative inline-flex items-center gap-[0.5rem] bg-transparent border-0 cursor-pointer font-bold leading-none overflow-visible pointer-events-auto font-heading uppercase text-[1.2rem] transition-all duration-300"
+            className="sm-toggle relative inline-flex items-center gap-1 bg-transparent border-0 cursor-pointer font-bold leading-none overflow-visible pointer-events-auto font-heading uppercase text-[1.1rem] transition-all duration-300"
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
             aria-controls="staggered-menu-panel"
@@ -470,7 +474,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
           >
             <span
               ref={textWrapRef}
-              className="sm-toggle-textWrap relative inline-block h-[1em] overflow-hidden whitespace-nowrap min-w-[50px] text-right"
+              className="sm-toggle-textWrap relative inline-block h-[1em] overflow-hidden whitespace-nowrap min-w-[58px] text-left"
               aria-hidden="true"
             >
               <span ref={textInnerRef} className="sm-toggle-textInner flex flex-col leading-none">
@@ -484,7 +488,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
             <span
               ref={iconRef}
-              className="sm-icon relative w-[16px] h-[16px] shrink-0 inline-flex items-center justify-center [will-change:transform]"
+              className="sm-icon relative w-[15px] h-[15px] shrink-0 inline-flex items-center justify-center [will-change:transform]"
               aria-hidden="true"
             >
               <span
@@ -502,7 +506,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         <aside
           id="staggered-menu-panel"
           ref={panelRef}
-          className="staggered-menu-panel absolute top-0 right-0 h-full bg-[#120F17] flex flex-col p-[7em_2em_6em_2em] overflow-y-auto z-10 pointer-events-auto w-full md:w-[650px] shadow-[0_0_50px_rgba(0,0,0,0.8)]"
+          className="staggered-menu-panel absolute top-0 right-0 h-full bg-[#210026] flex flex-col p-[7em_2em_6em_2em] overflow-y-auto z-10 pointer-events-auto w-full md:w-[650px] shadow-[0_0_50px_rgba(0,0,0,0.8)]"
           aria-hidden={!open}
         >
           <div className="sm-panel-inner flex-1 flex flex-col justify-between">
@@ -590,7 +594,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
       <style>{`
         .sm-scope .staggered-menu-wrapper { position: relative; width: 100%; height: 100%; z-index: 40; pointer-events: none; }
-        .sm-scope .staggered-menu-header { position: absolute; top: 0; left: 0; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 2em; background: transparent; pointer-events: none; z-index: 50; }
+        .sm-scope .staggered-menu-header { position: absolute; top: 0; left: 0; width: 100%; height: 70px; display: flex; align-items: center; justify-content: space-between; padding: 0 8px; background: #210026; pointer-events: none; z-index: 50; }
         .sm-scope .staggered-menu-header > * { pointer-events: auto; }
         .sm-scope .sm-logo { display: flex; align-items: center; user-select: none; }
         .sm-scope .sm-logo-img { display: block; height: 32px; width: auto; object-fit: contain; }

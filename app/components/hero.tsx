@@ -33,7 +33,7 @@ export default function Hero() {
         type="button"
         aria-label="Open concierge check-in form"
         onClick={() => window.dispatchEvent(new CustomEvent("open-concierge"))}
-        className="absolute z-[26] left-1/2 -translate-x-1/2 top-[84%] w-[min(94vw,560px)] cursor-pointer transition-transform duration-300 hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FAF9F6] focus-visible:ring-offset-4 focus-visible:ring-offset-black sm:left-[4vw] sm:translate-x-0 sm:top-[46%] sm:w-[clamp(280px,32vw,380px)]"
+        className="absolute z-[26] left-1/2 -translate-x-1/2 top-[38%] w-[min(94vw,560px)] cursor-pointer transition-transform duration-300 hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FAF9F6] focus-visible:ring-offset-4 focus-visible:ring-offset-black sm:left-[4vw] sm:translate-x-0 sm:top-[46%] sm:w-[clamp(280px,32vw,380px)]"
       >
         <Image
           src="/images/hero/lower-frame-1.png"

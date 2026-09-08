@@ -11,8 +11,8 @@ export default function Home() {
     <main className="relative z-0">
       <Hero />
       <Residency />
-      <Guests />
       <Services />
+      <Guests />
       <Resident_stories />
       <HostsSection />
       <Footer />

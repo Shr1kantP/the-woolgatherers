@@ -42,7 +42,16 @@ function LogoTrack({ reverse = false }: { reverse?: boolean }) {
             key={`${src}-${index}`}
             src={src}
             alt={`${logoNames[index % logos.length]} logo`}
-            className="resident-logo"
+            className={`resident-logo ${
+              src.includes("cureveda") || src.includes("jimmys")
+                ? "resident-logo--small"
+                : src.includes("chrian-tea") ||
+                  src.includes("/mtr.") ||
+                  src.includes("/sathi.") ||
+                  src.includes("/wingreens.")
+                  ? "resident-logo--large"
+                  : ""
+            }`}
           />
         ))}
       </div>
@@ -52,7 +61,12 @@ function LogoTrack({ reverse = false }: { reverse?: boolean }) {
 
 export default function Guests() {
   return (
-    <section className="relative w-full h-[70vh] md:h-[90vh] bg-[#220319] overflow-hidden select-none">
+    <section
+      className="relative w-full h-[70vh] md:h-[90vh] overflow-hidden select-none"
+      style={{
+        background: "linear-gradient(to bottom, #210026 0%, #210026 8%, #220319 28%, #220319 100%)",
+      }}
+    >
       {/* Top right "Drag to Explore" tag */}
     
       <div className="absolute inset-0 z-10 pointer-events-none">
@@ -100,6 +114,16 @@ export default function Guests() {
           filter: grayscale(1);
           opacity: 0.72;
           transition: filter 300ms ease, opacity 300ms ease, transform 300ms ease;
+        }
+
+        .resident-logo--large {
+          width: clamp(9rem, 19vw, 16rem);
+          height: clamp(4.5rem, 9vw, 7.5rem);
+        }
+
+        .resident-logo--small {
+          width: clamp(5.5rem, 11vw, 9.5rem);
+          height: clamp(2.75rem, 5.5vw, 4.5rem);
         }
 
         .resident-logo:hover,

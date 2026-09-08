@@ -15,8 +15,8 @@ interface ServiceItem {
 const serviceData: ServiceItem[] = [
   {
     title: "Brand Building, Design & Management",
-    collapsedColor: "#471303", // burnt orange
-    expandedColor: "#471303", // lightened burnt orange (~25-30%)
+    collapsedColor: "#210026",
+    expandedColor: "#210026",
     image: "/images/service/tab-1-image.jpg",
     subServices: [
       "Brand Strategy",
@@ -28,8 +28,8 @@ const serviceData: ServiceItem[] = [
   },
   {
     title: "Social Media & Creative Marketing",
-    collapsedColor: "#521006", // deep purple
-    expandedColor: "#521006", // lightened mauve
+    collapsedColor: "#2D062A",
+    expandedColor: "#2D062A",
     image: "/images/service/tab-3-image.jpg",
     subServices: [
       "Social Media Strategy",
@@ -41,8 +41,8 @@ const serviceData: ServiceItem[] = [
   },
   {
     title: "Website Design & Build",
-    collapsedColor: "#5D1515", // olive
-    expandedColor: "#5D1515", // lightened olive
+    collapsedColor: "#3A092B",
+    expandedColor: "#3A092B",
     image: "/images/service/tab-2-image.jpg",
     subServices: [
       "UI/UX Design",
@@ -55,8 +55,8 @@ const serviceData: ServiceItem[] = [
   },
   {
     title: "Photography & Videography",
-    collapsedColor: "#6B1A1A", // maroon
-    expandedColor: "#6B1A1A", // lightened maroon
+    collapsedColor: "#47102D",
+    expandedColor: "#47102D",
     image: "/images/service/tab-4-image.png",
     subServices: [
       "Commercial Photography",

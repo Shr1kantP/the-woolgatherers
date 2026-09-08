@@ -4,7 +4,7 @@ import ServicesAccordion from "./ServicesAccordion";
 
 export default function Services() {
   return (
-    <section id="services" className="relative bg-[#1A0D26] text-[#F5F0E8] overflow-hidden w-full">
+    <section id="services" className="relative bg-[#210026] text-[#F5F0E8] w-full">
       <ServicesAccordion />
     </section>
   );

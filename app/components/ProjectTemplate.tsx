@@ -159,7 +159,7 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
   } = project;
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-[#1A0D26] text-[#F5F0E8]">
+    <section className="relative min-h-screen w-full bg-[#210026] text-[#F5F0E8]">
 
       {/* ════════════════════════════════════════════════════════════════════
           HEADER SECTION — 2-column grid ~40/60

@@ -19,7 +19,7 @@ export interface BlogDetailData {
 
 function ArticleBody({ blocks }: { blocks: ContentBlock[] }) {
   return (
-    <div className="space-y-5 text-[13px] leading-[1.48] text-[#151515] sm:text-sm">
+    <div className="space-y-5 text-[13px] leading-[1.48] text-[#F5E9D0] sm:text-sm">
       {blocks.map((block, index) => {
         if (block.type === "paragraph") {
           return <p key={`${block.type}-${index}`}>{block.content}</p>;
@@ -40,16 +40,16 @@ function ArticleBody({ blocks }: { blocks: ContentBlock[] }) {
         if (block.type === "table") {
           return (
             <div key={`${block.type}-${index}`} className="overflow-x-auto">
-              <table className="w-full min-w-[520px] border-collapse border border-[#151515]/35 text-left text-xs">
+              <table className="w-full min-w-[520px] border-collapse border border-[#F5E9D0]/35 text-left text-xs">
                 <thead>
                   <tr>
-                    {block.headers.map((header) => <th key={header} className="border border-[#151515]/35 px-3 py-2 font-bold">{header}</th>)}
+                    {block.headers.map((header) => <th key={header} className="border border-[#F5E9D0]/35 px-3 py-2 font-bold">{header}</th>)}
                   </tr>
                 </thead>
                 <tbody>
                   {block.rows.map((row, rowIndex) => (
                     <tr key={rowIndex}>
-                      {row.map((cell, cellIndex) => <td key={cellIndex} className="border border-[#151515]/35 px-3 py-2 align-top">{cell}</td>)}
+                      {row.map((cell, cellIndex) => <td key={cellIndex} className="border border-[#F5E9D0]/35 px-3 py-2 align-top">{cell}</td>)}
                     </tr>
                   ))}
                 </tbody>
@@ -66,18 +66,18 @@ function ArticleBody({ blocks }: { blocks: ContentBlock[] }) {
 
 export default function BlogDetailTemplate({ blog }: { blog: BlogDetailData }) {
   return (
-    <main className="font-inter min-h-screen bg-[#f6f2ec] px-6 pb-24 pt-28 text-[#151515] sm:px-10 sm:pt-36 lg:px-[6.5vw]">
+    <main className="font-inter min-h-screen bg-[#210026] px-6 pb-24 pt-28 text-[#F5E9D0] sm:px-10 sm:pt-36 lg:px-[6.5vw]">
       <div className="mx-auto max-w-[1160px]">
         <header className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-[7vw]">
           <div className="pt-1">
-            <div className="mb-5 flex flex-wrap items-center gap-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#151515]/75">
+            <div className="mb-5 flex flex-wrap items-center gap-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#F5E9D0]/75">
               <span>{blog.category}</span><span aria-hidden="true">|</span><time dateTime={blog.date}>{blog.date}</time><span aria-hidden="true">|</span><span>{blog.readTime}</span>
             </div>
-            <h1 className="font-inter max-w-[13ch] text-[clamp(3rem,5.3vw,5.6rem)] leading-[0.88] tracking-[0] text-[#210026]">{blog.title}</h1>
+            <h1 className="font-inter max-w-[13ch] text-[clamp(3rem,5.3vw,5.6rem)] leading-[0.88] tracking-[0] text-[#F5E9D0]">{blog.title}</h1>
             <div className="mt-8 flex items-center gap-3">
               <Image src={blog.contributor.avatar} alt={`${blog.contributor.name} profile`} width={36} height={36} className="h-9 w-9 rounded-full object-cover" />
               <div className="leading-tight">
-                <p className="text-[10px] text-[#151515]/55">Contributor</p>
+                <p className="text-[10px] text-[#F5E9D0]/55">Contributor</p>
                 <p className="mt-1 text-xs font-bold">{blog.contributor.name}</p>
               </div>
             </div>

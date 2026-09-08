@@ -20,7 +20,7 @@ export default function BlogCard({
   return (
     <Link
       href={href}
-      className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5d1515] focus-visible:ring-offset-4 focus-visible:ring-offset-[#f6f2ec]"
+      className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5d1515] focus-visible:ring-offset-4 focus-visible:ring-offset-[#210026]"
     >
       <article className="flex h-full flex-col">
         <div className={`relative isolate overflow-hidden ${featured ? "aspect-[16/9]" : "aspect-[0.78/1]"} ${gradientClass}`}>
@@ -33,16 +33,16 @@ export default function BlogCard({
           )}
         </div>
         <div className="flex flex-1 flex-col pt-3">
-          <div className="flex items-baseline justify-between gap-3 text-[#1a0d26]/55">
+          <div className="flex items-baseline justify-between gap-3 text-[#F5E9D0]/70">
             <span className="font-inter text-sm italic">{badge}</span>
             <time dateTime={date} className="shrink-0 text-[10px] font-medium uppercase tracking-[0.08em]">
               {date}
             </time>
           </div>
-          <h2 className="font-inter mt-2 text-[clamp(1.25rem,1.8vw,1.65rem)] leading-[1.05] text-[#1a0d26] transition-colors group-hover:text-[#5d1515]">
+          <h2 className="font-inter mt-2 text-[clamp(1.25rem,1.8vw,1.65rem)] leading-[1.05] text-[#F5E9D0] transition-colors group-hover:text-[#C9A84C]">
             {title}
           </h2>
-          <p className="mt-2 line-clamp-2 text-sm leading-snug text-[#1a0d26]/80">
+          <p className="mt-2 line-clamp-2 text-sm leading-snug text-[#F5E9D0]/80">
             {excerpt}
           </p>
         </div>

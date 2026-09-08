@@ -39,13 +39,13 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
     <article className="font-inter max-w-4xl mx-auto px-4 pt-4 pb-12">
       {/* Header Section */}
       <header className="mb-6 text-center flex flex-col items-center">
-        <time className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4 block">
+           <time className="text-xs font-semibold tracking-widest uppercase text-[#F5E9D0]/70 mb-4 block">
           {date}
         </time>
-        <h1 className="font-inter text-4xl md:text-6xl text-gray-900 mb-4 leading-tight max-w-3xl">
+           <h1 className="font-inter text-4xl md:text-6xl text-[#F5E9D0] mb-4 leading-tight max-w-3xl">
           {title}
         </h1>
-        <p className="text-xl md:text-2xl italic text-gray-600 font-light max-w-2xl mb-4">
+           <p className="text-xl md:text-2xl italic text-[#F5E9D0]/85 font-light max-w-2xl mb-4">
           {subtitle}
         </p>
       </header>
@@ -62,7 +62,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
       {/* Credits & Share */}
       <div className="w-full flex items-center justify-between text-sm font-medium text-gray-500 uppercase tracking-widest mb-12">
         <div>{author && <span>By {author}</span>}</div>
-        <button aria-label="Share this post" className="hover:text-gray-900 transition-colors flex items-center" title="Share">
+           <button aria-label="Share this post" className="hover:text-[#F5E9D0] transition-colors flex items-center" title="Share">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256">
             <path d="M237.66,106.34l-80-80A8,8,0,0,0,144,32V72C66.21,73.18,22.45,123.63,11.26,177.34a8,8,0,0,0,13,7.91c29-23.71,62.38-34.87,119.78-37.16V192a8,8,0,0,0,13.66,5.66l80-80A8,8,0,0,0,237.66,106.34ZM160,172.69V136a8,8,0,0,0-8-8c-52,0-85.34,10.66-112.59,28.84,9.2-34.42,39-65.43,103.88-68.74a8,8,0,0,0,7.66-7.16l.05-1V43.31L218.69,112Z"></path>
           </svg>
@@ -103,7 +103,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
                   {block.leadIn && (
                     <p className="font-bold mb-4">{block.leadIn}</p>
                   )}
-                  <ul className="list-disc pl-6 space-y-2 marker:text-gray-400">
+                     <ul className="list-disc pl-6 space-y-2 marker:text-[#F5E9D0]/60">
                     {block.items.map((item, i) => (
                       <li key={i}>{item}</li>
                     ))}

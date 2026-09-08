@@ -72,7 +72,7 @@ export default function Residency() {
 
   return (
     <section
-      className="relative bg-[#210026] text-[#F5F0E8] overflow-hidden"
+      className="relative bg-[#210026] text-[#F5F0E8]"
       style={{ paddingTop: "clamp(3rem, 8vw, 6rem)", paddingBottom: "clamp(3rem, 8vw, 6rem)" }}
     >
 

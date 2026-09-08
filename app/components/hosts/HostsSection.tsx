@@ -107,7 +107,7 @@ export default function HostsSection() {
     <section
       ref={sectionRef}
       id="hosts"
-      className="hosts-section relative z-10 w-full overflow-hidden bg-[#3F022F]"
+      className="hosts-section relative z-10 w-full bg-[#3F022F]"
       style={{
         // Mobile/tablet: tall enough for all 4 pin slots
         // Desktop (lg+) overridden to h-screen via the class below
@@ -140,7 +140,7 @@ export default function HostsSection() {
       {/* ── DESKTOP (lg+): pinned horizontal scroll — untouched ──────────── */}
       <div
         ref={containerRef}
-        className="hidden lg:flex sticky top-0 h-screen w-full overflow-hidden bg-[#3F022F]"
+        className="hidden lg:flex sticky top-0 h-screen w-full bg-[#3F022F]"
       >
         <div
           ref={trackRef}

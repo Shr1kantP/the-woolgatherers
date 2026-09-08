@@ -15,7 +15,7 @@ export default function Footer() {
   const [buttonVisible, setButtonVisible] = useState(false);
 
   return (
-    <footer id="footer" className="relative z-30 min-h-screen w-full overflow-x-hidden text-[#F5E9D0] flex flex-col" style={{ background: "linear-gradient(160deg, #210026 0%, #3A092B 52%, #47102D 100%)" }}>
+    <footer id="footer" className="relative z-30 min-h-screen w-full overflow-x-hidden text-[#F5E9D0] flex flex-col" style={{ background: "linear-gradient(160deg, #1F001B 0%, #210000 100%)" }}>
       <div className="mx-auto w-full max-w-[2600px] px-4 sm:px-8 lg:px-10 pb-8 pt-10 sm:pt-12 flex-grow flex flex-col justify-center">
 
         <div className="flex justify-center mb-2 md:mb-4">

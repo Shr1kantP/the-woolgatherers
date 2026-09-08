@@ -2,14 +2,11 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import StaggeredMenu from './StaggeredMenu';
 
 
 
 export default function Navbar() {
-  const pathname = usePathname();
-
   const handleReservationsClick = (e: React.MouseEvent) => {
     e.preventDefault();
     window.dispatchEvent(new CustomEvent("open-concierge"));
@@ -28,9 +25,8 @@ export default function Navbar() {
     { label: "[LinkedIn]", link: "https://linkedin.com/company/thewoolgatherers" }
   ];
 
-  const isLightPage = pathname.match(/^\/blog(?:\/|$)/);
-  const currentMenuColor = isLightPage ? '#120F17' : '#F5E9D0';
-  const currentHeaderColor = isLightPage ? '#f6f2ec' : '#210026';
+  const currentMenuColor = '#F5E9D0';
+  const currentHeaderColor = '#210026';
 
   const logoElement = (
     <Link
@@ -41,7 +37,7 @@ export default function Navbar() {
       <img 
         src="/images/logo/keyhole-white.svg" 
         alt="The Woolgatherers Logo" 
-        className={`w-10 h-10 ${isLightPage ? 'invert' : ''}`}
+        className="w-10 h-10"
       />
     </Link>
   );
@@ -55,7 +51,7 @@ export default function Navbar() {
       <img
         src="/images/hero/woolgatherers-navbar.svg"
         alt="The Woolgatherers"
-        className={`h-[38px] w-auto ${isLightPage ? 'invert' : ''}`}
+        className="h-[38px] w-auto"
       />
     </Link>
   );

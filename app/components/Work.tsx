@@ -196,7 +196,7 @@ function TextCard({ project }: { project: Project }) {
           )}
           {project.description && (
             <div
-              className="text-[#1A0D26] text-center"
+              className="text-[#210026] text-center"
               style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(11px, 2.2vw, 13px)", lineHeight: 1.65 }}
             >
               <p>{project.description}</p>
@@ -308,7 +308,7 @@ export default function Work() {
 
   return (
     <section
-      className="relative bg-[#1A0D26] text-[#F5F0E8]"
+      className="relative bg-[#210026] text-[#F5F0E8]"
       style={{
         paddingTop: "clamp(3rem, 7vw, 5.5rem)",
         paddingBottom: "clamp(3rem, 7vw, 5.5rem)",

@@ -68,7 +68,7 @@ function LogoTrack({ reverse = false }: { reverse?: boolean }) {
 export default function Guests() {
   return (
     <section
-      className="relative w-full h-[70vh] md:h-[90vh] overflow-hidden select-none"
+      className="relative w-full h-[70vh] md:h-[90vh] select-none"
       style={{
         background: "linear-gradient(to bottom, #210026 0%, #210026 8%, #220319 28%, #220319 100%)",
       }}
@@ -88,7 +88,7 @@ export default function Guests() {
         Few Of Our Residents
         </h2>
       </div>
-      <div className="absolute inset-0 z-10 flex flex-col justify-between py-[12vh] md:py-[15vh]">
+      <div className="absolute inset-0 z-10 flex flex-col justify-between py-[12vh] md:py-[15vh] pointer-events-none">
         <LogoTrack />
         <LogoTrack reverse />
       </div>

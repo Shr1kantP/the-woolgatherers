@@ -89,7 +89,7 @@ export default function Resident_stories() {
     <section
       ref={sectionRef}
       style={{ backgroundColor: "#220319" }}
-      className="relative w-full min-h-screen text-[#f5f3f6] flex flex-col overflow-hidden"
+      className="relative w-full min-h-screen text-[#f5f3f6] flex flex-col"
     >
       
       <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-12 pt-32 pb-12 flex-1 flex flex-col justify-center h-full relative">

@@ -82,8 +82,8 @@ export default function BlogDetailTemplate({ blog }: { blog: BlogDetailData }) {
               </div>
             </div>
           </div>
-          <div className="relative aspect-[1.22/1] overflow-hidden bg-[#202020]">
-            <Image src={blog.heroImage} alt={blog.heroImageAlt} fill priority className="object-cover grayscale contrast-125" sizes="(max-width: 1023px) 100vw, 50vw" />
+          <div className="flex items-start justify-center overflow-hidden bg-[#202020]">
+            <Image src={blog.heroImage} alt={blog.heroImageAlt} width={1200} height={1600} priority className="h-auto w-full object-contain" sizes="(max-width: 1023px) 100vw, 50vw" />
           </div>
         </header>
 

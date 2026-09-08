@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const sieWebsiteProject: ProjectData = {
-  logo: "/images/detailed_page/SIE/SIELOGO1.JPG",
+  logo: "/images/detailed_page/SIE/SIE-Website-logo.PNG",
   title: "SIE WEBSITE",
   industry: "Interior Design",
   tags: ["Website Design"],

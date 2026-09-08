@@ -13,6 +13,8 @@ const logos = [
   "/images/Guests/sfs.png",
   "/images/Guests/vahdam.png",
   "/images/Guests/wingreens.png",
+  "/images/detailed_page/SIE_BRANDING/SIE-branding-logo.PNG",
+  "/images/detailed_page/SIE/SIE-Website-logo.PNG",
 ];
 
 interface ActiveLogo {
@@ -49,7 +51,12 @@ function RandomResidentLogo() {
     return nextLogo;
   };
 
-  const [activeLogo, setActiveLogo] = useState<ActiveLogo>(() => randomPosition(getNextLogo()));
+  const [activeLogo, setActiveLogo] = useState<ActiveLogo>({
+    src: logos[0],
+    x: 50,
+    y: 50,
+    visible: false,
+  });
 
   useEffect(() => {
     let fadeTimer: number | undefined;

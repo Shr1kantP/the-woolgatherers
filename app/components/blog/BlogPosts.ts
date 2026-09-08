@@ -73,4 +73,16 @@ export const blogIndexPosts: BlogIndexPost[] = [
     imageAlt: 'A temple and waterside scene in South India',
     href: '/blog/top-creative-marketing-agencies-in-chennai',
   },
+  {
+    id: 'digital-agency-pricing-bangalore',
+    slug: 'how-much-does-a-digital-marketing-agency-in-bangalore-charge',
+    badge: 'The Woolgatherers',
+    date: 'April 30, 2026',
+    title: 'How Much Does a Digital Marketing Agency in Bangalore Charge?',
+    excerpt: 'A practical way to think about digital marketing retainers, expertise, production scope, and what you should actually compare.',
+    gradientClass: 'bg-gradient-to-br from-[#dbe7ef] via-[#8bb1c1] to-[#344955]',
+    image: '/images/blogs/blog-6.png',
+    imageAlt: 'A digital marketing team working together',
+    href: '/blog/how-much-does-a-digital-marketing-agency-in-bangalore-charge',
+  },
 ];

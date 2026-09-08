@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const sieBrandingProject: ProjectData = {
-  logo: "/images/detailed_page/SIE_BRANDING/SIE LOGO 2.JPG",
+  logo: "/images/detailed_page/SIE_BRANDING/SIE-branding-logo.PNG",
   title: "STUDIO INSIDE EYE",
   industry: "Interior Design",
   tags: ["Brand Identity"],

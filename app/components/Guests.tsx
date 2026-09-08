@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import ImageTrail from "./ImageTrail";
+import React, { useEffect, useRef, useState } from "react";
 
 const logos = [
  
@@ -16,19 +15,89 @@ const logos = [
   "/images/Guests/wingreens.png",
 ];
 
+interface ActiveLogo {
+  src: string;
+  x: number;
+  y: number;
+  visible: boolean;
+}
+
+function randomPosition(src: string): ActiveLogo {
+  return {
+    src,
+    x: 12 + Math.random() * 76,
+    y: 25 + Math.random() * 55,
+    visible: false,
+  };
+}
+
+function RandomResidentLogo() {
+  const logoQueue = useRef<string[]>([]);
+  const lastLogo = useRef<string | null>(null);
+
+  const getNextLogo = () => {
+    if (logoQueue.current.length === 0) {
+      logoQueue.current = [...logos].sort(() => Math.random() - 0.5);
+
+      if (logoQueue.current[0] === lastLogo.current && logoQueue.current.length > 1) {
+        [logoQueue.current[0], logoQueue.current[1]] = [logoQueue.current[1], logoQueue.current[0]];
+      }
+    }
+
+    const nextLogo = logoQueue.current.shift() as string;
+    lastLogo.current = nextLogo;
+    return nextLogo;
+  };
+
+  const [activeLogo, setActiveLogo] = useState<ActiveLogo>(() => randomPosition(getNextLogo()));
+
+  useEffect(() => {
+    let fadeTimer: number | undefined;
+    let showTimer: number | undefined;
+    let cycleTimer: number | undefined;
+
+    const cycleLogo = () => {
+      setActiveLogo((current) => ({ ...current, visible: false }));
+      showTimer = window.setTimeout(() => {
+        setActiveLogo({ ...randomPosition(getNextLogo()), visible: true });
+        cycleTimer = window.setTimeout(cycleLogo, 2400);
+      }, 900);
+    };
+
+    fadeTimer = window.setTimeout(() => {
+      setActiveLogo((current) => ({ ...current, visible: true }));
+      cycleTimer = window.setTimeout(cycleLogo, 2400);
+    }, 350);
+
+    return () => {
+      if (fadeTimer) window.clearTimeout(fadeTimer);
+      if (showTimer) window.clearTimeout(showTimer);
+      if (cycleTimer) window.clearTimeout(cycleTimer);
+    };
+  }, []);
+
+  return (
+    <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <img
+        src={activeLogo.src}
+        alt=""
+        className="absolute h-24 w-32 object-contain transition-[opacity,transform] duration-[900ms] ease-in-out md:h-36 md:w-52"
+        style={{
+          left: `${activeLogo.x}%`,
+          top: `${activeLogo.y}%`,
+          opacity: activeLogo.visible ? 0.9 : 0,
+          transform: `translate(-50%, -50%) scale(${activeLogo.visible ? 1 : 0.86})`,
+        }}
+      />
+    </div>
+  );
+}
+
 export default function Guests() {
   return (
     <section className="relative w-full h-[70vh] md:h-[90vh] bg-[#220319] overflow-hidden select-none">
       {/* Top right "Drag to Explore" tag */}
-      <div className="absolute top-6 right-6 md:top-10 md:right-12 z-30 text-right pointer-events-none flex flex-col items-end">
-        <span className="font-semibold uppercase tracking-wider text-[#F5F0E8]/80 text-[12px] md:text-[14px] leading-none mb-1.5" style={{ fontFamily: "var(--font-inter), sans-serif" }}>
-          DRAG TO EXPLORE
-        </span>
-        <span className="font-light text-[#F5F0E8]/60 text-[13px] md:text-[15px] max-w-[160px] md:max-w-[200px] leading-snug" style={{ fontFamily: "var(--font-inter), sans-serif" }}>
-          Our growing wall of incredible partners.
-        </span>
-      </div>
-
+    
       <div className="absolute inset-0 z-10 pointer-events-none">
         <h2
           className="font-semibold uppercase text-[#FAF9F6] text-center flex items-center justify-center h-full w-full mx-auto max-w-7xl px-4 py-8 md:px-10 md:py-20"
@@ -42,8 +111,8 @@ export default function Guests() {
         Few Of Our Residents
         </h2>
       </div>
-      <div className="absolute inset-0 z-20">
-        <ImageTrail items={logos} variant={1} />
+      <div className="absolute inset-0 z-10">
+        <RandomResidentLogo />
       </div>
     </section>
   );

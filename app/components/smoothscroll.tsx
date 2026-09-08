@@ -4,9 +4,15 @@ import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+declare global {
+  interface Window {
+    __lenis?: Lenis;
+  }
+}
+
 export default function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
-    const existingLenis = (window as any).__lenis as Lenis | undefined;
+    const existingLenis = window.__lenis;
 
     if (existingLenis) {
       existingLenis.on("scroll", ScrollTrigger.update);
@@ -14,7 +20,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     }
 
     const lenis = new Lenis({ duration: 1.2, smoothWheel: true });
-    (window as any).__lenis = lenis;
+    window.__lenis = lenis;
 
     lenis.on("scroll", ScrollTrigger.update);
 
@@ -28,7 +34,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     return () => {
       gsap.ticker.remove(raf);
       lenis.destroy();
-      delete (window as any).__lenis;
+      delete window.__lenis;
     };
   }, []);
 

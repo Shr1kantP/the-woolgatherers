@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import ConciergeModalWrapper from "./components/ConciergeModalWrapper";
 import CustomCursor from "./components/CustomCursor";
+import SmoothScroll from "./components/smoothscroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,7 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <CustomCursor />
         <Navbar />
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
         <ConciergeModalWrapper />
       </body>
     </html>

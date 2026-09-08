@@ -5,7 +5,8 @@ export type ContentBlock =
   | { type: 'paragraph'; content: React.ReactNode }
   | { type: 'heading'; content: string }
   | { type: 'image'; url: string; alt: string; caption?: string }
-  | { type: 'list'; leadIn?: string; items: React.ReactNode[] };
+  | { type: 'list'; leadIn?: string; items: React.ReactNode[] }
+  | { type: 'table'; headers: [string, string]; rows: [string, string][] };
 
 export interface BlogPostData {
   date: string;

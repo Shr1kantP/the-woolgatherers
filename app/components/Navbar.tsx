@@ -28,7 +28,7 @@ export default function Navbar() {
     { label: "[LinkedIn]", link: "https://linkedin.com/company/thewoolgatherers" }
   ];
 
-  const isLightPage = pathname.match(/^\/blog\/.+/);
+  const isLightPage = pathname.match(/^\/blog(?:\/|$)/);
   const currentMenuColor = isLightPage ? '#120F17' : '#F5E9D0';
 
   const logoElement = (

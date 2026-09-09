@@ -13,7 +13,7 @@ const logos = [
   "/images/Guests/peps.png",
   "/images/Guests/wingreens.png",
   "/images/Guests/sfs.png",
- /*  "/images/Guests/sie-full.PNG", */
+  /*  "/images/Guests/sie-full.PNG", */
 ];
 
 const logoNames = [
@@ -42,22 +42,19 @@ function LogoTrack({ reverse = false }: { reverse?: boolean }) {
             key={`${src}-${index}`}
             src={src}
             alt={`${logoNames[index % logos.length]} logo`}
-            className={`resident-logo ${
-              src.includes("cureveda") || src.includes("jimmys")
-                ? `resident-logo--small ${
-                    src.includes("cureveda") ? "resident-logo--spaced" : ""
-                  }`
+            className={`resident-logo ${src.includes("cureveda") || src.includes("jimmys")
+                ? `resident-logo--small ${src.includes("cureveda") ? "resident-logo--spaced" : ""
+                }`
                 : src.includes("chrian-tea") ||
                   src.includes("/mtr.") ||
                   src.includes("/sathi.") ||
                   src.includes("/wingreens.")
                   ? "resident-logo--large"
                   : ""
-            } ${
-                  src.includes("chrian-tea") || src.includes("country-bean")
-                    ? "resident-logo--spaced"
-                    : ""
-                } ${src.includes("/sathi.") || src.includes("country-bean") || src.includes("vahdam") ? "resident-logo--white" : ""}`}
+              } ${src.includes("chrian-tea") || src.includes("country-bean")
+                ? "resident-logo--spaced"
+                : ""
+              } ${src.includes("/sathi.") || src.includes("country-bean") || src.includes("vahdam") ? "resident-logo--white" : ""}`}
           />
         ))}
       </div>
@@ -70,11 +67,11 @@ export default function Guests() {
     <section
       className="relative w-full h-[70vh] md:h-[90vh] select-none"
       style={{
-        background: "linear-gradient(to bottom, #210026 0%, #210026 8%, #220319 28%, #220319 100%)",
+        background: "linear-gradient(to bottom, #1D0121 0%, #1D0121 8%, #220319 28%, #220319 100%)",
       }}
     >
       {/* Top right "Drag to Explore" tag */}
-    
+
       <div className="absolute inset-0 z-10 pointer-events-none">
         <h2
           className="font-semibold uppercase text-[#F5E9D0] text-center flex items-center justify-center h-full w-full mx-auto max-w-7xl px-4 py-8 md:px-10 md:py-20"
@@ -85,7 +82,7 @@ export default function Guests() {
             lineHeight: 1.05,
           }}
         >
-        Few Of Our Residents
+          Few Of Our Residents
         </h2>
       </div>
       <div className="absolute inset-0 z-10 flex flex-col justify-between py-[12vh] md:py-[15vh] pointer-events-none">

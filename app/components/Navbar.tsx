@@ -26,7 +26,7 @@ export default function Navbar() {
   ];
 
   const currentMenuColor = '#F5E9D0';
-  const currentHeaderColor = '#210026';
+  const currentHeaderColor = '#1D0121';
 
   const logoElement = (
     <Link
@@ -76,7 +76,7 @@ export default function Navbar() {
       menuButtonColor={currentMenuColor}
       openMenuButtonColor="#D72F2F"
       changeMenuColorOnOpen={true}
-      colors={['#D72F2F', '#F5E9D0', '#210026']}
+      colors={['#D72F2F', '#F5E9D0', '#1D0121']}
       accentColor="#D72F2F"
       logoElement={logoElement}
       centerLogo={centerLogo}

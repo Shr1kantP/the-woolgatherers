@@ -20,7 +20,7 @@ export default function BlogCard({
   return (
     <Link
       href={href}
-      className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5d1515] focus-visible:ring-offset-4 focus-visible:ring-offset-[#210026]"
+      className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5d1515] focus-visible:ring-offset-4 focus-visible:ring-offset-[#1D0121]"
     >
       <article className="flex h-full flex-col">
         <div className={`relative isolate overflow-hidden ${featured ? "aspect-[16/9]" : "aspect-[0.78/1]"} ${gradientClass}`}>

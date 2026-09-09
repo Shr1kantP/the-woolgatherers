@@ -201,7 +201,7 @@ export default function ServicesAccordion() {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative w-full flex flex-col bg-[#210026]">
+    <div ref={containerRef} className="relative w-full flex flex-col bg-[#1D0121]">
       {serviceData.map((service, index) => {
         return (
           <div

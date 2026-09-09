@@ -40,7 +40,7 @@ export interface StaggeredMenuProps {
 
 export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   position = 'right',
-  colors = ['#912A02', '#F5E9D0', '#210026'],
+  colors = ['#912A02', '#F5E9D0', '#1D0121'],
   items = [],
   socialItems = [],
   displaySocials = true,
@@ -49,7 +49,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   logoUrl,
   logoElement,
   centerLogo,
-  headerColor = '#210026',
+  headerColor = '#1D0121',
   menuButtonColor = '#F5E9D0',
   openMenuButtonColor = '#912A02',
   changeMenuColorOnOpen = true,
@@ -509,7 +509,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         <aside
           id="staggered-menu-panel"
           ref={panelRef}
-          className="staggered-menu-panel absolute top-0 right-0 h-full bg-[#210026] flex flex-col p-[7em_2em_6em_2em] overflow-y-auto z-10 pointer-events-auto w-full md:w-[650px] shadow-[0_0_50px_rgba(0,0,0,0.8)]"
+          className="staggered-menu-panel absolute top-0 right-0 h-full bg-[#1D0121] flex flex-col p-[7em_2em_6em_2em] overflow-y-auto z-10 pointer-events-auto w-full md:w-[650px] shadow-[0_0_50px_rgba(0,0,0,0.8)]"
           aria-hidden={!open}
         >
           <div className="sm-panel-inner flex-1 flex flex-col justify-between">
@@ -520,7 +520,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
               {items && items.length ? (
                 items.map((it, idx) => {
                   const numStr = it.badge || (idx + 1).toString().padStart(2, '0');
-                  
+
                   const handleClick = (e: React.MouseEvent) => {
                     if (it.onClick) {
                       it.onClick(e);
@@ -540,7 +540,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                           <span className="sm-panel-itemLabel inline-block [transform-origin:50%_100%] will-change-transform">
                             {it.label}
                           </span>
-                          
+
                           {displayItemNumbering && (
                             <span className="sm-panel-item-num text-[1.2rem] md:text-[1.5rem] font-sans font-medium text-[#912A02] opacity-0 self-center">
                               ({numStr})

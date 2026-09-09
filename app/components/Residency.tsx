@@ -5,10 +5,10 @@ import gsap from "../lib/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Residency() {
-  const headingRef  = useRef<HTMLHeadingElement | null>(null);
-  const para1Ref    = useRef<HTMLDivElement | null>(null);
-  const para2Ref    = useRef<HTMLDivElement | null>(null);
-  const leftImgRef  = useRef<HTMLDivElement | null>(null);
+  const headingRef = useRef<HTMLHeadingElement | null>(null);
+  const para1Ref = useRef<HTMLDivElement | null>(null);
+  const para2Ref = useRef<HTMLDivElement | null>(null);
+  const leftImgRef = useRef<HTMLDivElement | null>(null);
   const rightImgRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -72,7 +72,7 @@ export default function Residency() {
 
   return (
     <section
-      className="relative bg-[#210026] text-[#F5E9D0]"
+      className="relative bg-[#1D0121] text-[#F5E9D0]"
       style={{ paddingTop: "clamp(3rem, 8vw, 6rem)", paddingBottom: "clamp(3rem, 8vw, 6rem)" }}
     >
 
@@ -133,8 +133,8 @@ export default function Residency() {
               <Image
                 src="/images/resident-image-bottomright.png"
                 alt="The Woolgatherers stamp"
-               width={160}
-              height={300}
+                width={160}
+                height={300}
                 className="w-full h-auto object-cover"
                 style={{ display: "block" }}
               />
@@ -165,7 +165,7 @@ export default function Residency() {
       ══════════════════════════════════════════════════════════════════════ */}
       <div className="hidden lg:block px-10">
         <div className="max-w-7xl mx-auto flex flex-col gap-16 py-12">
-          
+
           {/* 1. Top Row: Landscape stamp on the left, paragraph 1 on the right */}
           <div className="grid grid-cols-12 gap-8 items-center">
             <div ref={leftImgRef} className="col-span-4 col-start-2">

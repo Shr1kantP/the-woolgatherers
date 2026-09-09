@@ -14,7 +14,7 @@ export default function BlogIndexPage({ posts }: BlogIndexPageProps) {
   }
 
   return (
-    <main className="font-inter min-h-screen overflow-x-hidden bg-[#210026] px-7 pb-20 pt-24 text-[#F5E9D0] sm:px-8 sm:pt-28 lg:px-[2.2vw]">
+    <main className="font-inter min-h-screen overflow-x-hidden bg-[#1D0121] px-7 pb-20 pt-24 text-[#F5E9D0] sm:px-8 sm:pt-28 lg:px-[2.2vw]">
       <div className="mx-auto max-w-[1600px]">
         <header aria-labelledby="blog-heading" className="mb-8 sm:mb-12">
           <h1 id="blog-heading" className="font-heading font-bold uppercase leading-none text-[clamp(42px,10vw,100px)] text-[#F5E9D0]">

@@ -57,7 +57,7 @@ function LogoTrack({ reverse = false }: { reverse?: boolean }) {
                   src.includes("chrian-tea") || src.includes("country-bean")
                     ? "resident-logo--spaced"
                     : ""
-                } ${src.includes("/sathi.") || src.includes("country-bean") ? "resident-logo--white" : ""}`}
+                } ${src.includes("/sathi.") || src.includes("country-bean") || src.includes("vahdam") ? "resident-logo--white" : ""}`}
           />
         ))}
       </div>

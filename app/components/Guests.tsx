@@ -1,7 +1,7 @@
 "use client";
 
 const logos = [
-  "/images/Guests/vahdam.png",
+  "/images/Guests/vahdam-white.webp",
   "/images/Guests/cureveda.png",
   // "/images/Guests/gap.png",
   "/images/Guests/chrian-tea.png",
@@ -57,7 +57,7 @@ function LogoTrack({ reverse = false }: { reverse?: boolean }) {
                   src.includes("chrian-tea") || src.includes("country-bean")
                     ? "resident-logo--spaced"
                     : ""
-                } ${src.includes("/sathi.") ? "resident-logo--white" : ""}`}
+                } ${src.includes("/sathi.") || src.includes("country-bean") ? "resident-logo--white" : ""}`}
           />
         ))}
       </div>
@@ -77,7 +77,7 @@ export default function Guests() {
     
       <div className="absolute inset-0 z-10 pointer-events-none">
         <h2
-          className="font-semibold uppercase text-[#FAF9F6] text-center flex items-center justify-center h-full w-full mx-auto max-w-7xl px-4 py-8 md:px-10 md:py-20"
+          className="font-semibold uppercase text-[#F5E9D0] text-center flex items-center justify-center h-full w-full mx-auto max-w-7xl px-4 py-8 md:px-10 md:py-20"
           style={{
             letterSpacing: "0.02em",
             fontFamily: '"Jersey 15", serif',
@@ -150,10 +150,15 @@ export default function Guests() {
 
         .resident-logo:hover,
         .resident-logo:focus-visible {
-          filter: grayscale(0);
+          filter: grayscale(0) brightness(6.2);
           brightness(6.2);
           opacity: 1;
           transform: scale(1.08);
+        }
+
+        .resident-logo--white:hover,
+        .resident-logo--white:focus-visible {
+          filter: brightness(0) invert(1);
         }
 
         @keyframes residents-left-to-right {

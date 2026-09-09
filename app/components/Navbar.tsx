@@ -34,10 +34,20 @@ export default function Navbar() {
       aria-label="Home"
       className="hover:opacity-85 transition-opacity flex items-center justify-center"
     >
-      <img 
-        src="/images/logo/keyhole-white.svg" 
-        alt="The Woolgatherers Logo" 
-        className="w-10 h-10"
+      <span
+        role="img"
+        aria-label="The Woolgatherers Logo"
+        className="h-10 w-10 bg-[#F5E9D0]"
+        style={{
+          maskImage: 'url("/images/logo/keyhole-white.svg")',
+          maskPosition: 'center',
+          maskRepeat: 'no-repeat',
+          maskSize: 'contain',
+          WebkitMaskImage: 'url("/images/logo/keyhole-white.svg")',
+          WebkitMaskPosition: 'center',
+          WebkitMaskRepeat: 'no-repeat',
+          WebkitMaskSize: 'contain',
+        }}
       />
     </Link>
   );

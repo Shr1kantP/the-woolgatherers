@@ -27,7 +27,7 @@ export default function BlogCard({
           {image ? (
             <Image src={image} alt={imageAlt || title} fill className="object-cover transition duration-700 group-hover:scale-105" sizes={featured ? "(max-width: 1024px) 100vw, 56vw" : "(max-width: 639px) 82vw, (max-width: 1024px) 45vw, 25vw"} />
           ) : (
-            <span aria-hidden="true" className="absolute inset-0 flex items-center justify-center font-heading text-[clamp(3rem,9vw,7rem)] leading-none text-white/90 drop-shadow-sm">
+            <span aria-hidden="true" className="absolute inset-0 flex items-center justify-center font-heading text-[clamp(3rem,9vw,7rem)] leading-none text-[#F5E9D0]/90 drop-shadow-sm">
               {featured ? "+" : "W"}
             </span>
           )}

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const vahdamProject: ProjectData = {
-  logo: "/images/Guests/vahdam.png",
+  logo: "/images/Guests/vahdam-white.webp",
   title: "VAHDAM",
   industry: "Food & Beverage",
   tags: ["Content Production", "UGC Content"],

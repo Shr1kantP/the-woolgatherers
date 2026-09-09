@@ -75,7 +75,6 @@ export default function BlogDetailTemplate({ blog }: { blog: BlogDetailData }) {
             </div>
             <h1 className="font-inter max-w-[13ch] text-[clamp(3rem,5.3vw,5.6rem)] leading-[0.88] tracking-[0] text-[#F5E9D0]">{blog.title}</h1>
             <div className="mt-8 flex items-center gap-3">
-              <Image src={blog.contributor.avatar} alt={`${blog.contributor.name} profile`} width={36} height={36} className="h-9 w-9 rounded-full object-cover" />
               <div className="leading-tight">
                 <p className="text-[10px] text-[#F5E9D0]/55">Contributor</p>
                 <p className="mt-1 text-xs font-bold">{blog.contributor.name}</p>

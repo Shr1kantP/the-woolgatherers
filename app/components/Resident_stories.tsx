@@ -89,7 +89,7 @@ export default function Resident_stories() {
     <section
       ref={sectionRef}
       style={{ backgroundColor: "#220319" }}
-      className="relative w-full min-h-screen text-[#f5f3f6] flex flex-col"
+      className="relative w-full min-h-screen text-[#F5E9D0] flex flex-col"
     >
       
       <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-12 pt-32 pb-12 flex-1 flex flex-col justify-center h-full relative">
@@ -105,7 +105,7 @@ export default function Resident_stories() {
                 fontFamily: "var(--font-jersey-15), system-ui, sans-serif",
                 fontSize: "clamp(36px, 5vw, 76px)",
                 lineHeight: "1",
-                color: "#f5f3f6",
+                color: "#F5E9D0",
                 letterSpacing: "0.02em"
               }}
             >
@@ -154,7 +154,7 @@ export default function Resident_stories() {
                 fontFamily: "var(--font-jersey-15), system-ui, sans-serif",
                 letterSpacing: "0.04em",
                 fontSize: "clamp(24px, 4vw, 42px)",
-                color: "#f5f3f6",
+                color: "#F5E9D0",
               }}
             >
               RESIDENT STORIES
@@ -165,7 +165,7 @@ export default function Resident_stories() {
               style={{
                 fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif",
                 fontSize: "clamp(14px, 2vw, 16px)",
-                color: "#d1c9d3",
+                color: "#F5E9D0",
                 letterSpacing: "0.04em",
                 lineHeight: "1.5",
                 maxWidth: "100%",

@@ -21,7 +21,7 @@ export default function Navbar() {
   ];
 
   const socialItems = [
-    { label: "[Instagram]", link: "https://instagram.com/thewoolgatherers.co" },
+    { label: "[Instagram]", link: "https://www.instagram.com/thewoolgatherers.co?stkn=MWowdzkxdXdubHBxeg%3D%3D&utm_source=qr" },
     { label: "[LinkedIn]", link: "https://linkedin.com/company/thewoolgatherers" }
   ];
 

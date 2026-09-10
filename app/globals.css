@@ -26,12 +26,6 @@
   box-sizing: border-box;
 }
 
-html {
-  overflow-x: hidden;
-  /* Prevent iOS bounce causing horizontal shift */
-  -webkit-overflow-scrolling: touch;
-}
-
 body, a, button, select, input, textarea {
   cursor: url('/images/floating_key.svg') 16 16, auto;
 }

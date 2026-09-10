@@ -17,7 +17,6 @@ const wingreensProject: ProjectData = {
   overview:
     "Produced a comprehensive library of photo and video content for seasonal campaigns, with a focus on holiday gifting. The shoots showcased curated gift bundles and festive collections through warm, lifestyle-led visuals designed for digital campaigns, social media, and e-commerce.",
   gallery: [
-    "/images/detailed_page/Wingreens/wingreens 3.jpg",
     "/images/detailed_page/Wingreens/wingreens 4.jpg",
     "/images/detailed_page/Wingreens/wingreen 4.jpg",
     "/images/detailed_page/Wingreens/wingreens gluten.png",

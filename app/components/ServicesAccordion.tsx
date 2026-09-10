@@ -238,7 +238,7 @@ export default function ServicesAccordion() {
               >
                 {/* Large Title */}
                 <h4
-                  className="w-full text-[#F5E9D0] font-medium tracking-normal mb-10 sm:mb-16 text-center"
+                  className="w-full text-[#F5E9D0] font-medium tracking-normal mb-10 sm:mb-16 text-left md:text-center"
                   style={{
                     fontFamily: '"Inter", system-ui, sans-serif',
                     fontSize: "clamp(32px, 5vw, 56px)",

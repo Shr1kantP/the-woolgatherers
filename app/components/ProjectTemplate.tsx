@@ -175,8 +175,16 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
             paddingTop: "clamp(3rem, 7vw, 5.5rem)",
           }}
         >
+          <button 
+            onClick={() => window.history.back()}
+            className="mb-6 inline-flex items-center text-[#F5E9D0] hover:text-[#F0C766] transition-colors self-start cursor-pointer border-0 bg-transparent tracking-widest text-lg sm:text-xl"
+            style={{ fontFamily: "Oswald, sans-serif" }}
+            aria-label="Go back"
+          >
+            BACK
+          </button>
           {/* Title & Logo inline */}
-          <div className="flex items-center gap-6 mt-16 sm:mt-20 md:mt-0 flex-wrap">
+          <div className="flex items-center gap-6 mt-4 sm:mt-8 md:mt-0 flex-wrap">
             <h1
               className="font-bold uppercase leading-[0.9] tracking-tight text-[#F5E9D0]"
               style={{
@@ -362,6 +370,7 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
                 src={gallery[3]}
                 alt={`${title} gallery 4`}
                 aspectRatio={galleryLayout === "santhi-horizontal" ? "16/9" : "3/4"}
+                fit={title === "WINGREENS" ? "contain" : undefined}
               />
               <GalleryImage
                 src={gallery[4]}

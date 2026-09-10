@@ -27,7 +27,7 @@ interface Project {
 const projects: Project[] = [
   {
     id: "kumbaya",
-    name: "KUMABAYA",
+    name: "KUMABAYAH",
     industry: "Food & Beverage (Kombucha)",
     tags: ["Packaging", "Content Production", "Social Media"],
     image: "/images/detailed_page/Kumbaya/kumbayah packaging main.png",
@@ -80,7 +80,7 @@ const projects: Project[] = [
   },
   {
     id: "tavana",
-    name: "TAVANA",
+    name: "TAVANAM",
     industry: "Architecture & Real Estate",
     tags: ["Brand Building", "Brand Identity"],
     image: "/images/detailed_page/Tavana/tavana 1.png",

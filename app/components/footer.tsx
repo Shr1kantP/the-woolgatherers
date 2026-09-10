@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <footer 
       id="footer" 
-      className="relative z-30 min-h-screen w-full overflow-x-hidden text-[#F5E9D0] flex flex-col -mt-[15vh] pt-[15vh]" 
+      className="relative z-30 min-h-screen w-full text-[#F5E9D0] flex flex-col -mt-[15vh] pt-[15vh]" 
       style={{ 
         backgroundImage: "url('/images/footer/footer-bg.jpg')", 
         backgroundPosition: "center 18%", 
@@ -91,9 +91,24 @@ export default function Footer() {
                 className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-150 ${isPressed ? "opacity-100" : "opacity-0"}`}
               />
             </div>
+            
+            <div className={`hidden md:flex -mt-6 sm:-mt-10 mb-4 justify-center transition-all duration-500 ${buttonVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}>
+              <button
+                type="button"
+                className="transition-transform duration-200 hover:scale-[1.03] focus:outline-none cursor-pointer relative z-10"
+              >
+                <Image
+                  src="/images/footer/footer-button.png"
+                  alt="Request A Stay"
+                  width={440}
+                  height={136}
+                  className="h-auto w-[85vw] max-w-[250px] md:max-w-[180px] lg:max-w-[230px] object-contain drop-shadow-md"
+                />
+              </button>
+            </div>
           </div>
 
-          <div className="flex md:hidden justify-center -mt-5 -mb-1 w-full">
+          <div className="flex md:hidden justify-center -mt-5 mb-2 w-full">
             <button
               type="button"
               onClick={() => window.dispatchEvent(new CustomEvent("open-concierge"))}
@@ -104,14 +119,14 @@ export default function Footer() {
                 alt="Request A Stay"
                 width={440}
                 height={136}
-                className="h-auto w-[52vw] max-w-[180px] object-contain drop-shadow-md"
+                className="h-auto w-[55vw] max-w-[180px] object-contain drop-shadow-md"
               />
             </button>
           </div>
 
           <div className="hidden md:flex flex-1 justify-start md:-translate-x-1 lg:-translate-x- 2">
             <div className="flex flex-col items-center gap-6">
-              <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noreferrer" className="text-[#F5E9D0] transition-colors hover:text-[#F0C766]">
+              <a href="https://www.instagram.com/thewoolgatherers.co?stkn=MWowdzkxdXdubHBxeg%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank" rel="noreferrer" className="text-[#F5E9D0] transition-colors hover:text-[#F0C766]">
                 <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[27px] w-[27px] lg:h-[31px] lg:w-[31px] fill-none stroke-current stroke-[1.5]">
                   <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
                   <circle cx="12" cy="12" r="4.2" />
@@ -140,7 +155,7 @@ export default function Footer() {
               ))}
             </nav>
             <div className="flex flex-col items-center gap-4">
-              <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noreferrer" className="text-[#F5E9D0]">
+              <a href="https://www.instagram.com/thewoolgatherers.co?stkn=MWowdzkxdXdubHBxeg%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank" rel="noreferrer" className="text-[#F5E9D0]">
                 <svg viewBox="0 0 24 24" aria-hidden="true" className="h-8 w-8 fill-none stroke-current stroke-[1.5]">
                   <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
                   <circle cx="12" cy="12" r="4.2" />
@@ -156,42 +171,26 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className={`hidden md:flex -mt-6 sm:-mt-10 mb-4 justify-center transition-all duration-500 ${buttonVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}>
-          <button
-            type="button"
-            onClick={() => window.dispatchEvent(new CustomEvent("open-concierge"))}
-            className="transition-transform duration-200 hover:scale-[1.03] focus:outline-none cursor-pointer relative z-10"
-          >
-            <Image
-              src="/images/footer/footer-button.png"
-              alt="Request A Stay"
-              width={440}
-              height={136}
-              className="h-auto w-[85vw] max-w-[250px] md:max-w-[180px] lg:max-w-[230px] object-contain drop-shadow-md"
-            />
-          </button>
-        </div>
       </div>
 
       {/* Full-bleed decorative ribbon */}
-      <div className="relative w-full overflow-hidden shrink-0 mt-auto" aria-hidden="true">
+      <div className="relative w-full overflow-hidden shrink-0 mt-auto flex justify-center py-4 md:py-8" aria-hidden="true">
         <Image
           src="/images/footer/bottom_x.svg"
           alt=""
           width={1920}
           height={100}
-          className="w-full h-auto object-cover opacity-95"
-          style={{ minWidth: "100%" }}
+          className="h-auto object-cover opacity-95 max-w-none w-[250%] sm:w-[250%] md:w-[180%] lg:w-[120%] lg:-translate-x-[-10px]"
         />
       </div>
 
       {/* Bottom bar */}
       <div className="border-t border-[#F5E9D0]/20 shrink-0">
-        <div className="mx-auto flex max-w-[1600px] flex-col gap-3 px-4 sm:px-8 lg:px-10 pb-6 pt-4 text-[#F5E9D0]/80 sm:flex-row sm:items-center sm:justify-between"
+        <div className="mx-auto flex max-w-[1600px] flex-col gap-3 px-4 sm:px-8 lg:px-10 pb-24 md:pb-6 pt-4 text-[#F5E9D0]/80 sm:flex-row sm:items-center sm:justify-center text-center"
              style={{ fontSize: "clamp(0.65rem, 1.6vw, 0.75rem)" }}>
-          <div>© 2026 The Woolgatherers. All rights reserved.</div>
+          <div className="sm:mr-4">© 2026 The Woolgatherers. All rights reserved.</div>
 
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <a href="#" className="transition-opacity hover:opacity-100 hover:text-[#F0C766]">
               Privacy Policy
             </a>

@@ -139,22 +139,7 @@ export default function Guests() {
           height: clamp(2.75rem, 5.5vw, 4.5rem);
         }
 
-        .resident-logo--white,
-        .resident-logo--white:hover,
-        .resident-logo--white:focus-visible {
-          filter: brightness(0) invert(1);
-        }
-
-        .resident-logo:hover,
-        .resident-logo:focus-visible {
-          filter: grayscale(0) brightness(6.2);
-          brightness(6.2);
-          opacity: 1;
-          transform: scale(1.08);
-        }
-
-        .resident-logo--white:hover,
-        .resident-logo--white:focus-visible {
+        .resident-logo--white {
           filter: brightness(0) invert(1);
         }
 

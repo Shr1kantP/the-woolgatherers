@@ -89,7 +89,7 @@ export default function Resident_stories() {
     <section
       ref={sectionRef}
       style={{ backgroundColor: "#220319" }}
-      className="relative w-full min-h-screen text-[#F5E9D0] flex flex-col"
+      className="relative w-full min-h-screen text-[#F5E9D0] flex flex-col overflow-x-hidden"
     >
       
       <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-12 pt-32 pb-12 flex-1 flex flex-col justify-center h-full relative">
@@ -123,11 +123,11 @@ export default function Resident_stories() {
                 ref={(el) => { cardsRef.current[i] = el; }}
                 className="relative rounded-[6px] shadow-[0_15px_35px_rgba(0,0,0,0.6)]"
                 style={{
-                  width: "clamp(120px, 20vw, 260px)",
+                  width: "clamp(160px, 40vw, 260px)",
                   aspectRatio: "1/1",
                   transform: `rotate(${card.rotate}deg)`,
                   // Stagger horizontally: negative margin to overlap
-                  marginLeft: i === 0 ? "0" : "clamp(-20px, -3vw, -40px)",
+                  marginLeft: i === 0 ? "0" : "clamp(-60px, -10vw, -40px)",
                   zIndex: i + 1,
                   willChange: "transform, opacity",
                 }}

@@ -148,7 +148,7 @@ export default function Residency() {
             className="leading-snug"
             style={{
               ...bodyFont,
-              fontSize: "clamp(18px, 5vw, 24px)",
+              fontSize: "clamp(14px, 4vw, 24px)",
               textAlign: "center",
             }}
           >

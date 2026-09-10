@@ -509,7 +509,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         <aside
           id="staggered-menu-panel"
           ref={panelRef}
-          className="staggered-menu-panel absolute top-0 right-0 h-full bg-[#1D0121] flex flex-col p-[7em_2em_6em_2em] overflow-y-auto z-10 pointer-events-auto w-full md:w-[650px] shadow-[0_0_50px_rgba(0,0,0,0.8)]"
+          className="staggered-menu-panel absolute top-0 right-0 h-full bg-[#1D0121] flex flex-col p-[7em_2em_6em_2em] overflow-y-auto z-10 pointer-events-auto w-full md:w-[650px] shadow-none md:shadow-[0_0_50px_rgba(0,0,0,0.8)]"
           aria-hidden={!open}
         >
           <div className="sm-panel-inner flex-1 flex flex-col justify-between">

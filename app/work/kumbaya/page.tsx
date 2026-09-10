@@ -10,22 +10,20 @@ export const metadata: Metadata = {
 
 const kumbayaProject: ProjectData = {
   logo: "/images/Guests/kumbayah.png",
-  title: "KUMABAYA",
+  title: "KUMBAYAH",
   industry: "Food & Beverage (Kombucha)",
   tags: ["Packaging", "Content Production", "Social Media"],
   heroImage: "/images/detailed_page/Kumbaya/kumbayah packaging main.png",
   overview:
     "Partnered with one of Kerala's leading kombucha brands to build a cohesive visual presence across multiple touchpoints. The project included packaging design, photography and video production, and ongoing social media management, creating a consistent brand experience from shelf to screen.",
   gallery: [
-    "/images/detailed_page/Kumbaya/kumbayah packaging main.png",
     "/images/detailed_page/Kumbaya/kumbayah packaging.png",
     "/images/detailed_page/Kumbaya/kumbaya-label-1.jpg",
     "/images/detailed_page/Kumbaya/kumbaya social.png",
     "/images/detailed_page/Kumbaya/kumbaya social 2.jpg",
     "/images/detailed_page/Kumbaya/kumbaya-festive-2.jpg",
     "/images/detailed_page/Kumbaya/kumbaya social 3.jpg",
-    "/images/detailed_page/Kumbaya/kumbaya-festive-1.jpg",
-    "/images/detailed_page/Kumbaya/kumbaya-label-4.jpg",
+    "/images/detailed_page/Kumbaya/kumbaya-label-1.jpg",
    /*  "/images/detailed_page/Kumbaya/kumbayah packaging.png",
     "/images/detailed_page/Kumbaya/kumbaya social 2.jpg", */
   ],

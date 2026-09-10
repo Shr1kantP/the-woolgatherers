@@ -56,12 +56,12 @@ export default function Navbar() {
     <Link
       href="/"
       aria-label="The Woolgatherers home"
-      className="absolute left-1/2 flex -translate-x-1/2 items-center justify-center transition-opacity hover:opacity-85"
+      className="absolute left-4 md:left-1/2 flex md:-translate-x-1/2 items-center justify-center transition-opacity hover:opacity-85"
     >
       <img
         src="/images/hero/woolgatherers-navbar.svg"
         alt="The Woolgatherers"
-        className="h-[38px] w-auto"
+        className="h-[22px] md:h-[38px] w-auto"
       />
     </Link>
   );

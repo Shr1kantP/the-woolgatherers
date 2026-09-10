@@ -24,13 +24,13 @@ export default function Footer() {
         backgroundPosition: "center top", 
         backgroundSize: "cover", 
         backgroundRepeat: "no-repeat",
-        WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 15%)",
+      
        /*  maskImage: "linear-gradient(to bottom, transparent 0%, black 15%)" */
       }}
     >
-      <div className="relative z-10 mx-auto w-full max-w-[2600px] px-4 sm:px-8 lg:px-10 pb-8 pt-10 sm:pt-12 flex-grow flex flex-col justify-center">
+      <div className="relative z-10 mx-auto w-full max-w-[2600px] px-4 sm:px-8 lg:px-10 pb-0 pt-10 sm:pt-12 flex flex-col justify-center">
 
-        <div className="flex justify-center mb-2 md:mb-4">
+        <div className="flex justify-center mb-[10px] md:mb-4">
           <Image
             src="/images/footer/readytext.svg"
             alt="Ready to Check in"
@@ -69,7 +69,7 @@ export default function Footer() {
               className={`relative flex items-center justify-center transition-transform duration-200 ${isPressed ? "scale-[0.98]" : "scale-100"}`}
               style={{
                 width: "min(500px, 90vw)",
-                height: "min(400px, 60vw)",
+                height: "min(280px, 60vw)",
               }}
               onMouseDown={() => setIsPressed(true)}
               onMouseUp={() => setIsPressed(false)}
@@ -92,7 +92,7 @@ export default function Footer() {
               />
             </div>
             
-            <div className={`hidden md:flex -mt-6 sm:-mt-10 mb-4 justify-center transition-all duration-500 ${buttonVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}>
+            <div className={`hidden md:flex mt-4 mb-4 justify-center transition-all duration-500 ${buttonVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}>
               <button
                 type="button"
                 className="transition-transform duration-200 hover:scale-[1.03] focus:outline-none cursor-pointer relative z-10"
@@ -102,13 +102,13 @@ export default function Footer() {
                   alt="Request A Stay"
                   width={440}
                   height={136}
-                  className="h-auto w-[85vw] max-w-[250px] md:max-w-[180px] lg:max-w-[230px] object-contain drop-shadow-md"
+                  className="h-auto w-[85vw] max-w-[250px] md:max-w-[180px] lg:max-w-[230px] object-contain drop-shadow-md top-10%"
                 />
               </button>
             </div>
           </div>
 
-          <div className="flex md:hidden justify-center -mt-5 mb-2 w-full">
+          <div className="flex md:hidden justify-center mb-2 w-full">
             <button
               type="button"
               onClick={() => window.dispatchEvent(new CustomEvent("open-concierge"))}
@@ -142,7 +142,7 @@ export default function Footer() {
           </div>
 
           {/* Mobile only: Nav and Social links (below bell on small screens) */}
-          <div className="flex md:hidden w-full justify-between items-start px-4 ">
+          <div className="flex md:hidden w-full justify-center items-center gap-12 px-4">
             <nav
               aria-label="Footer services"
               className="flex flex-col gap-0 text-left font-medium text-[#F5E9D0] whitespace-nowrap"
@@ -174,18 +174,18 @@ export default function Footer() {
       </div>
 
       {/* Full-bleed decorative ribbon */}
-      <div className="relative w-full overflow-hidden shrink-0 mt-auto flex justify-center py-4 md:py-8" aria-hidden="true">
+      <div className="relative w-full overflow-hidden shrink-0 flex justify-center pb-4 md:pb-8" aria-hidden="true">
         <Image
           src="/images/footer/bottom_x.svg"
           alt=""
           width={1920}
           height={100}
-          className="h-auto object-cover opacity-95 max-w-none w-[250%] sm:w-[250%] md:w-[180%] lg:w-[120%] lg:-translate-x-[-10px]"
+          className="h-auto object-cover opacity-95 max-w-none w-[250%] sm:w-[250%] md:w-[180%] lg:w-[120%] lg:translate-x-[30px]"
         />
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-[#F5E9D0]/20 shrink-0">
+      <div className="shrink-0">
         <div className="mx-auto flex max-w-[1600px] flex-col gap-3 px-4 sm:px-8 lg:px-10 pb-24 md:pb-6 pt-4 text-[#F5E9D0]/80 sm:flex-row sm:items-center sm:justify-center text-center"
              style={{ fontSize: "clamp(0.65rem, 1.6vw, 0.75rem)" }}>
           <div className="sm:mr-4">© 2026 The Woolgatherers. All rights reserved.</div>

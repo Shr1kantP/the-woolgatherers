@@ -24,6 +24,7 @@ const kumbayaProject: ProjectData = {
     "/images/detailed_page/Kumbaya/kumbaya-festive-2.jpg",
     "/images/detailed_page/Kumbaya/kumbaya social 3.jpg",
     "/images/detailed_page/Kumbaya/kumbaya-label-4.jpg",
+    "/images/detailed_page/Kumbaya/kumbayah-vid.mp4",
    /*  "/images/detailed_page/Kumbaya/kumbayah packaging.png",
     "/images/detailed_page/Kumbaya/kumbaya social 2.jpg", */
   ],

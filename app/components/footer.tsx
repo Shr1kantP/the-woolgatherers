@@ -180,7 +180,7 @@ export default function Footer() {
           alt=""
           width={1920}
           height={100}
-          className="h-auto object-cover opacity-95 max-w-none w-[250%] sm:w-[250%] md:w-[180%] lg:w-[120%] lg:translate-x-[30px]"
+          className="h-auto object-cover opacity-95 max-w-none w-[270%] sm:w-[270%] translate-x-[2%] md:w-[180%] lg:w-[120%] lg:translate-x-[30px]"
         />
       </div>
 

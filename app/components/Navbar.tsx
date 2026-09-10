@@ -32,7 +32,7 @@ export default function Navbar() {
     <Link
       href="/"
       aria-label="Home"
-      className="hover:opacity-85 transition-opacity flex items-center justify-center"
+      className="hover:opacity-85 transition-opacity hidden md:flex items-center justify-center"
     >
       <span
         role="img"
@@ -74,10 +74,10 @@ export default function Navbar() {
       displaySocials={true}
       displayItemNumbering={true}
       menuButtonColor={currentMenuColor}
-      openMenuButtonColor="#D72F2F"
+      openMenuButtonColor="#400000"
       changeMenuColorOnOpen={true}
-      colors={['#D72F2F', '#F5E9D0', '#1D0121']}
-      accentColor="#D72F2F"
+      colors={['#400000', '#F5E9D0', '#1D0121']}
+      accentColor="#400000"
       logoElement={logoElement}
       centerLogo={centerLogo}
       headerColor={currentHeaderColor}

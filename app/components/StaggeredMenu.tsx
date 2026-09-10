@@ -40,7 +40,7 @@ export interface StaggeredMenuProps {
 
 export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   position = 'right',
-  colors = ['#912A02', '#F5E9D0', '#1D0121'],
+  colors = ['#400000', '#F5E9D0', '#1D0121'],
   items = [],
   socialItems = [],
   displaySocials = true,
@@ -51,9 +51,9 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   centerLogo,
   headerColor = '#1D0121',
   menuButtonColor = '#F5E9D0',
-  openMenuButtonColor = '#912A02',
+  openMenuButtonColor = '#400000',
   changeMenuColorOnOpen = true,
-  accentColor = '#912A02',
+  accentColor = '#400000',
   isFixed = true,
   closeOnClickAway = true,
   onMenuOpen,
@@ -428,7 +428,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
           aria-hidden="true"
         >
           {(() => {
-            const raw = colors && colors.length ? colors.slice(0, 4) : ['#912A02', '#F5E9D0'];
+            const raw = colors && colors.length ? colors.slice(0, 4) : ['#400000', '#F5E9D0'];
             let arr = [...raw];
             if (arr.length >= 3) {
               const mid = Math.floor(arr.length / 2);
@@ -532,7 +532,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                     <li className="sm-panel-itemWrap relative overflow-hidden py-1 border-b border-[#F5E9D0]/5" key={it.label + idx}>
                       <div className="flex items-center justify-between w-full">
                         <a
-                          className="sm-panel-item relative text-[#F5E9D0] font-heading font-bold text-[3rem] md:text-[4.5rem] cursor-pointer leading-none tracking-tight uppercase transition-all duration-200 no-underline hover:text-[#912A02] flex items-baseline gap-4"
+                          className="sm-panel-item relative text-[#F5E9D0] font-heading font-bold text-[3rem] md:text-[4.5rem] cursor-pointer leading-none tracking-tight uppercase transition-all duration-200 no-underline hover:text-[#400000] flex items-baseline gap-4"
                           href={it.onClick ? undefined : it.link}
                           onClick={it.onClick ? handleClick : closeMenu}
                           aria-label={it.ariaLabel}
@@ -542,7 +542,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                           </span>
 
                           {displayItemNumbering && (
-                            <span className="sm-panel-item-num text-[1.2rem] md:text-[1.5rem] font-sans font-medium text-[#912A02] opacity-0 self-center">
+                            <span className="sm-panel-item-num text-[1.2rem] md:text-[1.5rem] font-sans font-medium text-[#400000] opacity-0 self-center">
                               ({numStr})
                             </span>
                           )}
@@ -576,7 +576,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                         href={s.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="sm-socials-link text-[0.8rem] md:text-[0.9rem] font-semibold text-[#F5E9D0] hover:text-[#912A02] no-underline flex items-center gap-1 transition-colors duration-200 font-sans uppercase"
+                        className="sm-socials-link text-[0.8rem] md:text-[0.9rem] font-semibold text-[#F5E9D0] hover:text-[#400000] no-underline flex items-center gap-1 transition-colors duration-200 font-sans uppercase"
                       >
                         {s.label}
                       </a>

@@ -81,7 +81,7 @@ export default function Residency() {
       ══════════════════════════════════════════════════════════════════════ */}
       <div className="lg:hidden px-5 sm:px-8 md:px-10 flex flex-col gap-6">
 
-        {/* 1. Top Header: THE RESIDENTS */}
+        {/* 1. Top Header: THE RESIDENCY */}
         <div className="w-full pt-2 pb-4">
           <h2
             ref={headingRef}
@@ -93,7 +93,7 @@ export default function Residency() {
             }}
           >
             <span className="block text-[clamp(24px,6vw,32px)] leading-none mb-1">THE</span>
-            <span className="block text-[clamp(48px,11vw,64px)] leading-none">RESIDENTS</span>
+            <span className="block text-[clamp(48px,11vw,64px)] leading-none">RESIDENCY</span>
           </h2>
         </div>
 
@@ -143,13 +143,13 @@ export default function Residency() {
         </div>
 
         {/* 4. Bottom Full-Width Quote */}
-        <div className="w-full text-center pt-8 pb-4">
+        <div className="w-full text-right pt-8 pb-4 pr-1">
           <p
             className="leading-snug"
             style={{
               ...bodyFont,
               fontSize: "clamp(14px, 4vw, 24px)",
-              textAlign: "center",
+              textAlign: "right",
             }}
           >
             Every brand&apos;s journey is different.

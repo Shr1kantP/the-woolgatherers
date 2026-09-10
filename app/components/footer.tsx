@@ -19,13 +19,13 @@ export default function Footer() {
       id="footer" 
       className="relative z-30 min-h-screen w-full text-[#F5E9D0] flex flex-col -mt-[15vh] pt-[15vh]" 
       style={{ 
-        backgroundImage: "url('/images/footer/footer-bg.jpg')", 
-        backgroundPosition: "center 18%", 
+        backgroundImage: "url('/images/footer/footer-bg.png')", 
+        backgroundColor: "#1F001B",
+        backgroundPosition: "center top", 
         backgroundSize: "cover", 
-        backgroundColor: "#400000", 
-        backgroundBlendMode: "overlay",
-        WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 15vh)",
-        maskImage: "linear-gradient(to bottom, transparent 0%, black 15vh)"
+        backgroundRepeat: "no-repeat",
+        WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 15%)",
+       /*  maskImage: "linear-gradient(to bottom, transparent 0%, black 15%)" */
       }}
     >
       <div className="relative z-10 mx-auto w-full max-w-[2600px] px-4 sm:px-8 lg:px-10 pb-8 pt-10 sm:pt-12 flex-grow flex flex-col justify-center">

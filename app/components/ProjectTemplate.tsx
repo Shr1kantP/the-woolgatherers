@@ -122,7 +122,7 @@ export interface ProjectData {
   heroImage: string;
   overview: string;
   gallery: string[];
-  galleryLayout?: "motion-four" | "sie-website" | "santhi-horizontal";
+  galleryLayout?: "motion-four" | "sie-website" | "santhi-horizontal" | "masonry";
   relatedProjects: RelatedProject[];
 }
 
@@ -295,7 +295,19 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
           paddingTop: "clamp(2rem, 5vw, 4rem)",
         }}
       >
-        {galleryLayout === "motion-four" ? (
+        {galleryLayout === "masonry" ? (
+          <div className="columns-1 sm:columns-2 gap-4 space-y-4">
+            {gallery.map((src, index) => (
+              <div key={`${src}-${index}`} className="break-inside-avoid">
+                <GalleryImage
+                  src={src}
+                  alt={`${title} gallery ${index + 1}`}
+                  aspectRatio="auto"
+                />
+              </div>
+            ))}
+          </div>
+        ) : galleryLayout === "motion-four" ? (
           <div className="flex flex-col gap-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <GalleryImage src={gallery[0]} alt={`${title} horizontal video 1`} orientation="horizontal" />
@@ -341,108 +353,16 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
             ))}
           </div>
         ) : (
-          <div className="flex flex-col gap-4">
-
-            {/* ── Row 1: 2 equal columns, medium height ── */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <GalleryImage
-                src={gallery[0]}
-                alt={`${title} gallery 1`}
-                aspectRatio={galleryLayout === "santhi-horizontal" ? "16/9" : "4/3"}
-                fit={galleryLayout === "santhi-horizontal" ? "contain" : undefined}
-              />
-              <GalleryImage
-                src={gallery[1]}
-                alt={`${title} gallery 2`}
-                aspectRatio={galleryLayout === "santhi-horizontal" ? "16/9" : "4/3"}
-                fit={galleryLayout === "santhi-horizontal" ? "contain" : undefined}
-              />
-            </div>
-
-            {/* ── Row 2: full width, larger height ── */}
-            <div className="grid grid-cols-1 gap-4">
-              <GalleryImage src={gallery[2]} alt={`${title} gallery 3`} aspectRatio="16/9" />
-            </div>
-
-            {/* ── Row 3: 2 equal columns, taller than row 1 ── */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <GalleryImage
-                src={gallery[3]}
-                alt={`${title} gallery 4`}
-                aspectRatio={galleryLayout === "santhi-horizontal" ? "16/9" : "3/4"}
-                fit={title === "WINGREENS" ? "contain" : undefined}
-              />
-              <GalleryImage
-                src={gallery[4]}
-                alt={`${title} gallery 5`}
-                aspectRatio={galleryLayout === "santhi-horizontal" ? "16/9" : "3/4"}
-              />
-            </div>
-
-            {/* ── Row 4: asymmetric 2×2 mosaic block ── */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Left column: short top (img 6) + tall bottom (img 8) */}
-              <div className="flex flex-col gap-4">
-                {gallery[5] && (
-                  <div className="relative overflow-hidden w-full bg-[#2a1a3a]" style={{ aspectRatio: "4/3" }}>
-                    <MediaRenderer
-                      src={gallery[5]}
-                      alt={`${title} gallery 6`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 767px) 100vw, 50vw"
-                    />
-                  </div>
-                )}
-                {gallery[7] && (
-                  <div className="relative overflow-hidden w-full bg-[#2a1a3a]" style={{ aspectRatio: "4/5" }}>
-                    <MediaRenderer
-                      src={gallery[7]}
-                      alt={`${title} gallery 8`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 767px) 100vw, 50vw"
-                    />
-                  </div>
-                )}
+          <div className="columns-1 sm:columns-2 gap-4 space-y-4">
+            {gallery.map((src, index) => (
+              <div key={`${src}-${index}`} className="break-inside-avoid">
+                <GalleryImage
+                  src={src}
+                  alt={`${title} gallery ${index + 1}`}
+                  aspectRatio="auto"
+                />
               </div>
-
-              {/* Right column: tall top (img 7) + short bottom (img 9) */}
-              <div className="flex flex-col gap-4">
-                {gallery[6] && (
-                  <div className="relative overflow-hidden w-full bg-[#2a1a3a]" style={{ aspectRatio: "4/5" }}>
-                    <MediaRenderer
-                      src={gallery[6]}
-                      alt={`${title} gallery 7`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 767px) 100vw, 50vw"
-                    />
-                  </div>
-                )}
-                {gallery[8] && (
-                  <div className="relative overflow-hidden w-full bg-[#2a1a3a]" style={{ aspectRatio: "4/3" }}>
-                    <MediaRenderer
-                      src={gallery[8]}
-                      alt={`${title} gallery 9`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 767px) 100vw, 50vw"
-                    />
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* ── Additional Rows for any extra images beyond 9 ── */}
-            {gallery.length > 9 && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {gallery.slice(9).map((src, index) => (
-                  <GalleryImage key={src} src={src} alt={`${title} gallery ${10 + index}`} aspectRatio="4/3" />
-                ))}
-              </div>
-            )}
-
+            ))}
           </div>
         )}
       </div>
@@ -530,6 +450,30 @@ function GalleryImage({
   orientation?: "horizontal" | "vertical";
 }) {
   if (!src) return null; // Safe guard for missing images
+
+  if (aspectRatio === "auto" || fit === "contain") {
+    const isVideo = /\.(mp4|webm|ogg|mov)$/i.test(src);
+    if (isVideo) {
+      return (
+        <div className="w-full relative bg-[#1D0121]">
+          <LazyVideo src={src} className="w-full h-auto" />
+        </div>
+      );
+    }
+    return (
+      <div className="w-full relative bg-[#1D0121]">
+        <Image
+          src={src}
+          alt={alt}
+          width={1920}
+          height={1080}
+          className="w-full h-auto object-contain"
+          sizes="(max-width: 767px) 100vw, 90vw"
+        />
+      </div>
+    );
+  }
+
   const frameAspectRatio = orientation === "vertical"
     ? "9/16"
     : orientation === "horizontal"
@@ -537,12 +481,12 @@ function GalleryImage({
       : aspectRatio;
 
   return (
-    <div className="relative overflow-hidden bg-[#2a1a3a]" style={{ aspectRatio: frameAspectRatio }}>
+    <div className="relative overflow-hidden bg-[#1D0121]" style={{ aspectRatio: frameAspectRatio }}>
       <MediaRenderer
         src={src}
         alt={alt}
         fill
-        className={fit === "contain" || orientation ? "object-contain" : "object-cover"}
+        className="object-cover"
         sizes="(max-width: 767px) 100vw, 50vw"
       />
     </div>

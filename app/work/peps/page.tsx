@@ -27,6 +27,7 @@ const pepsProject: ProjectData = {
     "/images/detailed_page/Peps/peps post 3.jpg",
     "/images/detailed_page/Peps/peps post 5.jpg",
   ],
+  galleryLayout: "masonry" as any,
   relatedProjects: [
     {
       thumbnail: "/images/detailed_page/Kumbaya/kumbayah packaging main.png",

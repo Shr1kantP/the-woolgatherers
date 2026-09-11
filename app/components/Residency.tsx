@@ -88,12 +88,12 @@ export default function Residency() {
             className="uppercase font-bold leading-none text-left"
             style={{
               fontFamily: '"Jersey 15", system-ui, serif',
-              letterSpacing: "-0.02em",
+              letterSpacing: "0.02em",
               color: "#F5E9D0",
             }}
           >
-            <span className="block text-[clamp(24px,6vw,32px)] leading-none mb-1">THE</span>
-            <span className="block text-[clamp(48px,11vw,64px)] leading-none">RESIDENCY</span>
+            {/* <span className="block text-[clamp(24px,6vw         6999998899999999999999999,32px)] leading-none mb-1">THE</span> */}
+            <span className="block text-[clamp(48px,11vw,64px)] leading-none">THE RESIDENCY</span>
           </h2>
         </div>
 

@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://www.thewoolgatherers.co";
+const BASE_URL = "https://www.thewoolgatherers.com";
 
 const blogSlugs = [
   "top-creative-marketing-agencies-in-bangalore",

@@ -135,11 +135,11 @@ export default function Footer() {
           </div>
 
           {/* Mobile: nav + socials row */}
-          <div className="flex md:hidden w-full justify-center items-center gap-12 px-4">
+          <div className="flex md:hidden w-full justify-center items-center gap-12 px-4 py-3">
             <nav
               aria-label="Footer services"
               className="flex flex-col gap-0 text-left font-medium text-[#F5E9D0] whitespace-nowrap"
-              style={{ fontSize: "clamp(0.8rem, 4vw, 1rem)" }}
+              style={{ fontSize: "clamp(0.65rem, 3vw, 0.8rem)" }}
             >
               {navItems.map((item) => (
                 <div key={item} className="py-[1px]">{item}</div>
@@ -147,14 +147,14 @@ export default function Footer() {
             </nav>
             <div className="flex flex-col items-center gap-4">
               <a href="https://www.instagram.com/thewoolgatherers.co?stkn=MWowdzkxdXdubHBxeg%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank" rel="noreferrer" className="text-[#F5E9D0]">
-                <svg viewBox="0 0 24 24" aria-hidden="true" className="h-8 w-8 fill-none stroke-current stroke-[1.5]">
+                <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 fill-none stroke-current stroke-[1.5]">
                   <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
                   <circle cx="12" cy="12" r="4.2" />
                   <circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none" />
                 </svg>
               </a>
               <a href="https://linkedin.com/company/thewoolgatherers" aria-label="LinkedIn" target="_blank" rel="noreferrer" className="text-[#F5E9D0]">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" aria-hidden="true" className="h-8 w-8 fill-current">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" aria-hidden="true" className="h-6 w-6 fill-current">
                   <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z" />
                 </svg>
               </a>

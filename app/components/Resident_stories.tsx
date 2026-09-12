@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import gsap from "../lib/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const CARDS = [
-  { src: "/images/Res_stories/mtr_res_stories.jpg",  alt: "MTR brand work",     rotate: -4, yOffset: 40  },
-  { src: "/images/Res_stories/studio-inside-eye.jpg",  alt: "Sie brand work", rotate: 0,  yOffset: 0 },
-  { src: "/images/Res_stories/wing_res_stories.jpg", alt: "Wing brand work",    rotate: 6,  yOffset: -40   },
+  { src: "/images/Res_stories/mtr_res_stories.jpg",  alt: "MTR brand work",         rotate: -4, yOffset: 40,  href: "/work/mtr-foods"    },
+  { src: "/images/Res_stories/studio-inside-eye.jpg", alt: "Sie brand work",         rotate: 0,  yOffset: 0,   href: "/work/sie-branding" },
+  { src: "/images/Res_stories/wing_res_stories.jpg", alt: "Wingreens brand work",    rotate: 6,  yOffset: -40, href: "/work/wingreens"    },
 ];
 
 export default function Resident_stories() {
@@ -89,7 +90,7 @@ export default function Resident_stories() {
     <section
       ref={sectionRef}
       style={{ backgroundColor: "#220319" }}
-      className="relative w-full min-h-screen text-[#F5E9D0] flex flex-col overflow-x-hidden"
+      className="relative z-[1] w-full min-h-screen text-[#F5E9D0] flex flex-col overflow-x-hidden"
     >
       
       <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-12 pt-32 pb-12 flex-1 flex flex-col justify-center h-full relative">
@@ -118,15 +119,15 @@ export default function Resident_stories() {
           {/* Right Column (Cards) */}
           <div className="w-full lg:w-[50%] flex flex-row items-center justify-center lg:justify-end z-10 pb-12">
             {CARDS.map((card, i) => (
-              <div
+              <Link
                 key={card.src}
-                ref={(el) => { cardsRef.current[i] = el; }}
-                className="relative rounded-[6px] shadow-[0_15px_35px_rgba(0,0,0,0.6)]"
+                href={card.href}
+                className="relative rounded-[6px] shadow-[0_15px_35px_rgba(0,0,0,0.6)] block"
+                ref={(el) => { cardsRef.current[i] = el as HTMLDivElement | null; }}
                 style={{
                   width: "clamp(160px, 40vw, 260px)",
                   aspectRatio: "1/1",
                   transform: `rotate(${card.rotate}deg)`,
-                  // Stagger horizontally: negative margin to overlap
                   marginLeft: i === 0 ? "0" : "clamp(-60px, -10vw, -40px)",
                   zIndex: i + 1,
                   willChange: "transform, opacity",
@@ -135,9 +136,9 @@ export default function Resident_stories() {
                 <img
                   src={card.src}
                   alt={card.alt}
-                  className="block w-full h-full object-cover rounded-[6px]"
+                  className="block w-full h-full object-cover rounded-[6px] transition-opacity duration-300 hover:opacity-85"
                 />
-              </div>
+              </Link>
             ))}
           </div>
         </div>

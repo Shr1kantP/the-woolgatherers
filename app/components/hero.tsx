@@ -15,6 +15,7 @@ export default function Hero() {
           poster="/images/hero/hero-bg-desktop.png"
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover hidden sm:block"
+          style={{ filter: "blur(6px)", transform: "scale(1.05)" }}
         >
           <source src="/images/hero/hero-vid.mp4" type="video/mp4" />
         </video>
@@ -28,12 +29,12 @@ export default function Hero() {
           poster="/images/hero/mobile-bg.png"
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover block sm:hidden"
+          style={{ filter: "blur(6px)", transform: "scale(1.05)" }}
         >
           <source src="/images/hero/hero-vid-mob.mp4" type="video/mp4" />
         </video>
 
-        {/* Subtle overlay */}
-        <div className="absolute inset-0 z-[1] bg-black/5 pointer-events-none" />
+        {/* No dark overlay — blur filter on video handles it */}
 
         {/* Inner edge feather — lighter blur on mobile, same on desktop */}
         <div

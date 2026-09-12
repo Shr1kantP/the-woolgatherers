@@ -61,7 +61,7 @@ export default function Navbar() {
       <img
         src="/images/hero/woolgatherers-navbar.svg"
         alt="The Woolgatherers"
-        className="h-[22px] md:h-[38px] w-auto"
+        className="h-[18px] md:h-[38px] w-auto"
       />
     </Link>
   );

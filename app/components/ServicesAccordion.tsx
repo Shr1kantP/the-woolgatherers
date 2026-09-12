@@ -220,7 +220,7 @@ export default function ServicesAccordion() {
                 className="text-[#F5E9D0] font-normal leading-none"
                 style={{
                   fontFamily: '"Inter", system-ui, sans-serif',
-                  fontSize: "clamp(28px, 5vw, 40px)",
+                  fontSize: "clamp(22px, 4vw, 34px)",
                 }}
               >
                 {service.title}
@@ -241,7 +241,7 @@ export default function ServicesAccordion() {
                   className="w-full text-[#F5E9D0] font-medium tracking-normal mb-10 sm:mb-16 text-left md:text-center"
                   style={{
                     fontFamily: '"Inter", system-ui, sans-serif',
-                    fontSize: "clamp(32px, 5vw, 56px)",
+                    fontSize: "clamp(26px, 4vw, 48px)",
                     lineHeight: 1.1,
                   }}
                 >

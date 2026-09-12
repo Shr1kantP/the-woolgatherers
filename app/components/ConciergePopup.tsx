@@ -41,91 +41,60 @@ export default function ConciergePopup({ isOpen, onClose }: ConciergePopupProps)
     );
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
     setIsSubmitting(true);
 
-    const endpoint = process.env.NEXT_PUBLIC_APPS_SCRIPT_URL || "";
-    console.log("Submitting to endpoint:", endpoint);
-    console.log("Payload:", {
-      interests,
-      email,
-      phone,
-      message,
-    });
+    const subject = encodeURIComponent("New Guest Request — The Woolgatherers");
+    const interestsList = interests.length ? interests.join(", ") : "None selected";
+    const body = encodeURIComponent(
+      `Interests: ${interestsList}\nEmail: ${email}\nPhone: ${phone || "—"}\n\n${message || "No message provided."}`
+    );
 
-    try {
-      if (endpoint) {
-        const response = await fetch(endpoint, {
-          method: "POST",
-          mode: "no-cors",
-          headers: {
-            "Content-Type": "text/plain",
-          },
-          body: JSON.stringify({
-            interests,
-            email,
-            phone,
-            message,
-          }),
-        });
-        console.log("Fetch response (opaque in no-cors):", response);
-      } else {
-        console.warn("No Apps Script URL configured, simulating success...");
-        await new Promise((resolve) => setTimeout(resolve, 800));
-      }
-      setSubmitSuccess(true);
-    } catch (error) {
-      console.error("Submission error:", error);
-      setSubmitSuccess(true);
-    } finally {
-      setIsSubmitting(false);
-    }
+    window.location.href = `mailto:hello@thewoolgatherers.co?subject=${subject}&body=${body}`;
+
+    setIsSubmitting(false);
+    setSubmitSuccess(true);
   };
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-xs transition-opacity duration-300"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-xs transition-opacity duration-300 overflow-y-auto"
       onClick={onClose}
     >
-      {/* Wrapper to hold both ticket and the outside close button */}
+      {/* Wrapper to hold the ticket */}
       <div className="relative w-full max-w-[450px] md:max-w-[850px] flex justify-center">
-        {/* Close Button (Outside top right) */}
-        <button
-          onClick={onClose}
-          className="absolute -top-12 right-0 md:-top-10 md:-right-10 text-[#FDF3E7] hover:text-[#C9A84C] transition-colors z-50 p-2 cursor-pointer"
-          aria-label="Close popup"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
 
-        {/* 
-          Ticket Container:
-          - Mobile: Increased size to max-w-[450px] and padding to px-8 py-12 for a taller and spaced-out look.
-          - Desktop (md): aspect-[1000/600], max-width 850px, px-14 py-10.
-        */}
         <div
-          className="relative w-full md:aspect-[1000/600] bg-[url('/images/Pop_up_bg_mobile.png')] md:bg-[url('/images/Pop_up_bg.png')] bg-[length:100%_100%] md:bg-contain bg-center bg-no-repeat px-8 py-12 md:px-14 md:py-10 text-[#FDF3E7] select-text shadow-2xl flex flex-col justify-start md:justify-center max-h-[85vh] md:max-h-none overflow-y-auto md:overflow-visible"
+          className="relative w-full md:aspect-[1000/600] bg-[url('/images/Pop_up_bg_mobile.png')] md:bg-[url('/images/Pop_up_bg.png')] bg-[length:100%_100%] md:bg-contain bg-center bg-no-repeat px-8 py-12 md:px-14 md:py-10 text-[#FDF3E7] select-text shadow-2xl flex flex-col justify-center max-h-[85vh] md:max-h-none overflow-y-auto md:overflow-visible"
           style={{
             fontFamily: "var(--font-inter), sans-serif",
           }}
           onClick={(e) => e.stopPropagation()}
         >
+          {/* Close Button — inside ticket, top-right */}
+          <button
+            onClick={onClose}
+            className="absolute top-8 right-8 text-[#FDF3E7] hover:opacity-70 transition-opacity z-50 p-1 cursor-pointer"
+            aria-label="Close popup"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
 
         {submitSuccess ? (
           <div className="flex flex-col items-center justify-center text-center h-full w-full py-8">

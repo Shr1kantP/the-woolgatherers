@@ -1,3 +1,4 @@
+import { blob } from "@/app/lib/blob";
 export interface BlogIndexPost {
   id: string;
   slug: string;
@@ -21,7 +22,7 @@ export const blogIndexPosts: BlogIndexPost[] = [
     title: 'Top Creative Marketing Agencies in Bangalore',
     excerpt: 'A shortlist of creative marketing agencies in Bangalore, and what to look for when choosing a partner for your next chapter.',
     gradientClass: 'bg-gradient-to-br from-[#9edcf0] via-[#52c9d7] to-[#23a9c1]',
-    image: '/images/blogs/blog-1.webp',
+    image: blob("/images/blogs/blog-1.webp"),
     imageAlt: 'A painted city advertising scene',
     href: '/blog/top-creative-marketing-agencies-in-bangalore',
   },
@@ -33,7 +34,7 @@ export const blogIndexPosts: BlogIndexPost[] = [
     title: 'Best Digital Agencies in Bangalore for F&B Brands',
     excerpt: 'What to look for before hiring a digital agency for food and beverage work, from production capability to content strategy.',
     gradientClass: 'bg-gradient-to-br from-[#f1c7a4] via-[#c56f4b] to-[#71382d]',
-    image: '/images/blogs/blog-2.webp',
+    image: blob("/images/blogs/blog-2.webp"),
     imageAlt: 'A warmly lit restaurant interior',
     href: '/blog/best-digital-agencies-in-bangalore-for-f-and-b-brands',
   },
@@ -45,7 +46,7 @@ export const blogIndexPosts: BlogIndexPost[] = [
     title: 'The Complete Brand Identity Checklist for D2C/F&B Startups',
     excerpt: 'The strategic, legal, visual, packaging, content, and technical systems a D2C or F&B brand needs before it scales.',
     gradientClass: 'bg-gradient-to-br from-[#f5d7c5] via-[#d68762] to-[#252525]',
-    image: '/images/blogs/blog-3.webp',
+    image: blob("/images/blogs/blog-3.webp"),
     imageAlt: 'Illustrated packaged coffee products',
     href: '/blog/complete-brand-identity-checklist-for-d2c-f-and-b-startups',
   },
@@ -57,7 +58,7 @@ export const blogIndexPosts: BlogIndexPost[] = [
     title: '7 Small Digital Agencies in Bangalore That Are Worth Knowing About',
     excerpt: 'A practical shortlist of smaller Bangalore agencies for branding, content, websites, social media, and performance marketing.',
     gradientClass: 'bg-gradient-to-br from-[#d7e6ee] via-[#77a8bd] to-[#315767]',
-    image: '/images/blogs/blog-5.webp',
+    image: blob("/images/blogs/blog-5.webp"),
     imageAlt: 'A creative team working together in a studio',
     href: '/blog/small-digital-agencies-in-bangalore-worth-knowing',
   },
@@ -69,7 +70,7 @@ export const blogIndexPosts: BlogIndexPost[] = [
     title: 'Top Creative Marketing Agencies in Chennai',
     excerpt: 'A shortlist of creative marketing agencies in Chennai, and what to look for when choosing the right partner for your next chapter.',
     gradientClass: 'bg-gradient-to-br from-[#f4d39d] via-[#e69561] to-[#9d4f45]',
-    image: '/images/blogs/blog-4.webp',
+    image: blob("/images/blogs/blog-4.webp"),
     imageAlt: 'A temple and waterside scene in South India',
     href: '/blog/top-creative-marketing-agencies-in-chennai',
   },
@@ -81,7 +82,7 @@ export const blogIndexPosts: BlogIndexPost[] = [
     title: 'How Much Does a Digital Marketing Agency in Bangalore Charge?',
     excerpt: 'A practical way to think about digital marketing retainers, expertise, production scope, and what you should actually compare.',
     gradientClass: 'bg-gradient-to-br from-[#dbe7ef] via-[#8bb1c1] to-[#344955]',
-    image: '/images/blogs/blog-6.jpeg',
+    image: blob("/images/blogs/blog-6.jpeg"),
     imageAlt: 'A digital marketing team working together',
     href: '/blog/how-much-does-a-digital-marketing-agency-in-bangalore-charge',
   },

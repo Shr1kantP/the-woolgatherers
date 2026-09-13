@@ -1,7 +1,8 @@
 import Image from "next/image";
+import { blob } from "@/app/lib/blob";
 
 export default function HostCard4() {
-  const src = "/images/host_4thslide.jpg";
+  const src = blob("/images/host_4thslide.jpg");
   const isVideo = /\.(mp4|webm|ogg|mov)$/i.test(src);
 
   return (

@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import gsap from "../lib/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { blob } from "@/app/lib/blob";
 
 interface ServiceItem {
   title: string;
@@ -17,7 +18,7 @@ const serviceData: ServiceItem[] = [
     title: "Brand Building, Design & Management",
     collapsedColor: "#260421",
     expandedColor: "#260421",
-    image: "/images/service/tab-1-image.jpg",
+    image: blob("/images/service/tab-1-image.jpg"),
     subServices: [
       "Brand Strategy",
       "Visual Identity & Packaging",
@@ -30,7 +31,7 @@ const serviceData: ServiceItem[] = [
     title: "Social Media",
     collapsedColor: "#2D062A",
     expandedColor: "#2D062A",
-    image: "/images/service/tab-3-image.jpg",
+    image: blob("/images/service/tab-3-image.jpg"),
     subServices: [
       "Social Media Strategy",
       "Content Creation & Curation",
@@ -43,7 +44,7 @@ const serviceData: ServiceItem[] = [
     title: "Websites",
     collapsedColor: "#3A092B",
     expandedColor: "#3A092B",
-    image: "/images/service/tab-2-image.jpg",
+    image: blob("/images/service/tab-2-image.jpg"),
     subServices: [
       "UI/UX Design",
       "Responsive Web Development",
@@ -57,7 +58,7 @@ const serviceData: ServiceItem[] = [
     title: "Photography & Videography",
     collapsedColor: "#47102D",
     expandedColor: "#47102D",
-    image: "/images/service/tab-4-image.webp",
+    image: blob("/images/service/tab-4-image.webp"),
     subServices: [
       "Commercial Photography",
       "Brand Films & Video Production",

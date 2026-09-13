@@ -1,4 +1,5 @@
 import type { ContentBlock } from "./BlogPost";
+import { blob } from "@/app/lib/blob";
 
 export interface DetailedBlogPost {
   slug: string;
@@ -28,7 +29,7 @@ export const detailedBlogPosts: DetailedBlogPost[] = [
       initials: "TW",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=96&q=80",
     },
-    heroImage: "/images/blogs/blog-1.webp",
+    heroImage: blob("/images/blogs/blog-1.webp"),
     heroImageAlt: "A painted city advertising scene",
     body: [
       { type: "paragraph", content: "Bangalore has no shortage of marketing agencies. But if you're specifically looking for a creative marketing agency in Bangalore, the shortlist gets more interesting." },
@@ -102,7 +103,7 @@ export const detailedBlogPosts: DetailedBlogPost[] = [
       initials: "TW",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=96&q=80",
     },
-    heroImage: "/images/blogs/blog-2.webp",
+    heroImage: blob("/images/blogs/blog-2.webp"),
     heroImageAlt: "A warmly lit restaurant interior",
     body: [
       { type: "paragraph", content: "A search for \"best digital agency in Bangalore\" returns dozens of generalist results, several of them paid placements, with almost none addressing the specific requirements of a food and beverage business." },
@@ -154,7 +155,7 @@ export const detailedBlogPosts: DetailedBlogPost[] = [
       initials: "TW",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=96&q=80",
     },
-    heroImage: "/images/blogs/blog-3.webp",
+    heroImage: blob("/images/blogs/blog-3.webp"),
     heroImageAlt: "Illustrated packaged coffee products",
     body: [
       { type: "paragraph", content: "Most brand checklists stop at logo and colors. That's the surface. What actually determines whether a brand holds up under scale, retail negotiations, and three rounds of packaging redesign is the system underneath it. This is that system, broken into the technical specs founders usually only learn after getting burned once." },
@@ -244,7 +245,7 @@ export const detailedBlogPosts: DetailedBlogPost[] = [
       initials: "TW",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=96&q=80",
     },
-    heroImage: "/images/blogs/blog-5.jpg",
+    heroImage: blob("/images/blogs/blog-5.jpg"),
     heroImageAlt: "A creative team working together in a studio",
     body: [
       { type: "paragraph", content: "You don't always need a big agency." },
@@ -333,7 +334,7 @@ export const detailedBlogPosts: DetailedBlogPost[] = [
       initials: "TW",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=96&q=80",
     },
-    heroImage: "/images/blogs/blog-4.webp",
+    heroImage: blob("/images/blogs/blog-4.webp"),
     heroImageAlt: "A temple and waterside scene in South India",
     body: [
       { type: "paragraph", content: "Chennai has no shortage of marketing agencies. But if you're specifically looking for a creative marketing agency in Chennai, the shortlist gets more interesting." },
@@ -416,7 +417,7 @@ export const detailedBlogPosts: DetailedBlogPost[] = [
       initials: "TW",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=96&q=80",
     },
-    heroImage: "/images/blogs/blog-6.jpeg",
+    heroImage: blob("/images/blogs/blog-6.jpeg"),
     heroImageAlt: "A digital marketing team working together",
     body: [
       { type: "heading", content: "What does a digital marketing agency in Bangalore charge?" },

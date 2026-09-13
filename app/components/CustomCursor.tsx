@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { blob } from "@/app/lib/blob";
 
 export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement | null>(null);
@@ -81,7 +82,7 @@ export default function CustomCursor() {
       style={{ willChange: "transform" }}
     >
       <img
-        src="/images/floating_key.svg"
+        src={blob("/images/floating_key.svg")
         alt="Cursor Key"
         className="w-15 h-auto select-none" // Reduced size for comfortable mouse cursor usage (24px width)
       />

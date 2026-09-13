@@ -4,11 +4,12 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import gsap from "../lib/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { blob } from "@/app/lib/blob";
 
 const CARDS = [
-  { src: "/images/Res_stories/mtr_res_stories.jpg",  alt: "MTR brand work",         rotate: -4, yOffset: 40,  href: "/work/mtr-foods"    },
-  { src: "/images/Res_stories/studio-inside-eye.jpg", alt: "Sie brand work",         rotate: 0,  yOffset: 0,   href: "/work/sie-branding" },
-  { src: "/images/Res_stories/wing_res_stories.jpg", alt: "Wingreens brand work",    rotate: 6,  yOffset: -40, href: "/work/wingreens"    },
+  { src: blob("/images/Res_stories/mtr_res_stories.jpg"),  alt: "MTR brand work",         rotate: -4, yOffset: 40,  href: "/work/mtr-foods"    },
+  { src: blob("/images/Res_stories/studio-inside-eye.jpg"), alt: "Sie brand work",         rotate: 0,  yOffset: 0,   href: "/work/sie-branding" },
+  { src: blob("/images/Res_stories/wing_res_stories.jpg"), alt: "Wingreens brand work",    rotate: 6,  yOffset: -40, href: "/work/wingreens"    },
 ];
 
 export default function Resident_stories() {

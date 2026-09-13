@@ -1,6 +1,7 @@
 import ProjectTemplate from "../../components/ProjectTemplate";
 import type { ProjectData } from "../../components/ProjectTemplate";
 import type { Metadata } from "next";
+import { blob } from "@/app/lib/blob";
 
 export const metadata: Metadata = {
   title: "Santhi Textiles | The Woolgatherers",
@@ -9,39 +10,39 @@ export const metadata: Metadata = {
 };
 
 const santhiProject: ProjectData = {
-  logo: "/images/Guests/sathi.webp",
+  logo: blob("/images/Guests/sathi.webp"),
   title: "SANTHI TEXTILES",
   industry: "Textile Manufacturing",
   tags: ["Brand Communication", "Corporate Films", "Motion Design"],
-  heroImage: "/images/detailed_page/Santhi/santhi_motion.mp4",
+  heroImage: blob("/images/detailed_page/Santhi/santhi_motion.mp4"),
   galleryLayout: "santhi-horizontal",
   overview:
     "Creative partner for one of South India's largest textile manufacturers. Across multiple projects, we've developed corporate films, motion graphics, presentations, and strategic brand communication for collections created for global brands including Gap, Old Navy, Tommy Hilfiger, Banana Republic, and Marks & Spencer.",
   gallery: [
-    "/images/detailed_page/Santhi/santhi_1.JPG",
-    "/images/detailed_page/Santhi/santhi_2.JPG",
-    "/images/detailed_page/Santhi/santhi_motion_2.mp4",
-    "/images/detailed_page/Santhi/santhi_3.JPG",
-    "/images/detailed_page/Santhi/santhi_4.JPG",
-    "/images/detailed_page/Santhi/santhi_5.jpg",
-    "/images/detailed_page/Santhi/santhi_6.jpg",
-   /*  "/images/detailed_page/Santhi/santhi_motion.mp4", */
+    blob("/images/detailed_page/Santhi/santhi_1.JPG"),
+    blob("/images/detailed_page/Santhi/santhi_2.JPG"),
+    blob("/images/detailed_page/Santhi/santhi_motion_2.mp4"),
+    blob("/images/detailed_page/Santhi/santhi_3.JPG"),
+    blob("/images/detailed_page/Santhi/santhi_4.JPG"),
+    blob("/images/detailed_page/Santhi/santhi_5.jpg"),
+    blob("/images/detailed_page/Santhi/santhi_6.jpg"),
+   /*  blob("/images/detailed_page/Santhi/santhi_motion.mp4"), */
   ],
   relatedProjects: [
     {
-      thumbnail: "/images/detailed_page/Kumbaya/kumbayah packaging main.webp",
+      thumbnail: blob("/images/detailed_page/Kumbaya/kumbayah packaging main.webp"),
       title: "KUMABAYA",
       industry: "Food & Beverage (Kombucha)",
       tags: ["Packaging", "Content Production", "Social Media"],
     },
     {
-      thumbnail: "/images/detailed_page/Peps/Peps Dream makers playlist.jpg",
+      thumbnail: blob("/images/detailed_page/Peps/Peps Dream makers playlist.jpg"),
       title: "PEPS",
       industry: "Mattress & Sleep Products",
       tags: ["Content Marketing", "Social Media"],
     },
     {
-      thumbnail: "/images/detailed_page/MTR/MTR COUPLE DINING 1.jpg",
+      thumbnail: blob("/images/detailed_page/MTR/MTR COUPLE DINING 1.jpg"),
       title: "MTR FOODS",
       industry: "Food & Beverage",
       tags: ["Photography & Video Production"],

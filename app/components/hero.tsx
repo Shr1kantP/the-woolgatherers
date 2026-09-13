@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { blob } from "@/app/lib/blob";
 
 export default function Hero() {
   return (
@@ -12,12 +13,12 @@ export default function Hero() {
           muted
           loop
           playsInline
-          /* poster="/images/hero/hero-bg-desktop.webp" */
+          /* poster={blob("/images/hero/hero-bg-desktop.webp") */
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover hidden sm:block"
           style={{ filter: "blur(6px)", transform: "scale(1.05)" }}
         >
-          <source src="/images/hero/hero-vid.mp4" type="video/mp4" />
+          <source src={blob("/images/hero/hero-vid.mp4") type="video/mp4" />
         </video>
 
 
@@ -27,12 +28,12 @@ export default function Hero() {
           muted
           loop
           playsInline
-      /*     poster="/images/hero/mobile-bg.webp" */
+      /*     poster={blob("/images/hero/mobile-bg.webp") */
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover block sm:hidden"
           style={{ filter: "blur(6px)", transform: "scale(1.05)" }}
         >
-          <source src="/images/hero/hero-vid-mob.mp4" type="video/mp4" />
+          <source src={blob("/images/hero/hero-vid-mob.mp4") type="video/mp4" />
         </video>
 
         {/* No dark overlay — blur filter on video handles it */}
@@ -49,7 +50,7 @@ export default function Hero() {
       {/* Stacked frame cards */}
       <div className="absolute z-[25] left-1/2 -translate-x-1/2 top-[10%] w-[min(78vw,380px)] sm:left-[4vw] sm:translate-x-0 sm:top-[20%] sm:w-[clamp(200px,22vw,280px)]">
         <Image
-          src="/images/hero/upper-frame-1.webp"
+          src={blob("/images/hero/upper-frame-1.webp")
           alt="A residency for brands"
           width={320}
           height={178}
@@ -66,7 +67,7 @@ export default function Hero() {
         className="absolute z-[26] left-1/2 -translate-x-1/2 top-[38%] w-[min(78vw,380px)] cursor-pointer transition-transform duration-300 hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5E9D0] focus-visible:ring-offset-4 focus-visible:ring-offset-black sm:left-[4vw] sm:translate-x-0 sm:top-[50%] sm:w-[clamp(200px,22vw,280px)]"
       >
         <Image
-          src="/images/hero/lower-frame-1.webp"
+          src={blob("/images/hero/lower-frame-1.webp")
           alt="Your room is ready. Check in below."
           width={520}
           height={278}

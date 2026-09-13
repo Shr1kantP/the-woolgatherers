@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import { blob } from "@/app/lib/blob";
 
 /* ─── Lazy video — only loads + plays when near viewport ─────────────────── */
 
@@ -68,7 +69,7 @@ const projects: Project[] = [
     name: "KUMABAYAH",
     industry: "Food & Beverage (Kombucha)",
     tags: ["Packaging", "Content Production", "Social Media"],
-    image: "/images/detailed_page/Kumbaya/kumbayah packaging main.webp",
+    image: blob("/images/detailed_page/Kumbaya/kumbayah packaging main.webp"),
     hasTextCard: false,
   },
   {
@@ -76,14 +77,14 @@ const projects: Project[] = [
     name: "PEPS",
     industry: "Mattress & Sleep Products",
     tags: ["Content Marketing", "Social Media"],
-    image: "/images/detailed_page/Peps/peps post 5.jpg",
+    image: blob("/images/detailed_page/Peps/peps post 5.jpg"),
   },
   {
     id: "motion",
     name: "MOTION DESIGN",
     industry: "Cross-Industry",
     tags: ["Motion Graphics", "Brand Films", "Animation"],
-    image: "/images/detailed_page/Santhi/santhi_motion.mp4",
+    image: blob("/images/detailed_page/Santhi/santhi_motion.mp4"),
     fullWidth: true,
     sideDescription:
       "A curated body of motion work created for brands across textiles, FMCG, food, and lifestyle. Combining animation, typography, transitions, and storytelling to elevate presentations, corporate films, product launches, and digital campaigns.",
@@ -93,56 +94,56 @@ const projects: Project[] = [
     name: "MTR FOODS",
     industry: "Food & Beverage",
     tags: ["Photography & Video Production"],
-    image: "/images/detailed_page/MTR/MTR COUPLE DINING 1.jpg",
+    image: blob("/images/detailed_page/MTR/MTR COUPLE DINING 1.jpg"),
   },
   {
     id: "wingreens",
     name: "WINGREENS",
     industry: "Food & Beverage (Snacks)",
     tags: ["Brand Building", "Brand Identity"],
-    image: "/images/detailed_page/Wingreens/wingreens 3.jpg",
+    image: blob("/images/detailed_page/Wingreens/wingreens 3.jpg"),
   },
   {
     id: "cureveda",
     name: "CUREVEDA",
     industry: "Wellness & Personal Care",
     tags: ["Content Production", "Brand Communication"],
-    image: "/images/detailed_page/cureveda/cureveda_1.jpg",
+    image: blob("/images/detailed_page/cureveda/cureveda_1.jpg"),
   },
   {
     id: "vahdam",
     name: "VAHDAM",
     industry: "Food & Beverage (Tea)",
     tags: ["Content Production", "Brand Communication"],
-    image: "/images/detailed_page/Vahdam/vahdam_1.jpg",
+    image: blob("/images/detailed_page/Vahdam/vahdam_1.jpg"),
   },
   {
     id: "tavana",
     name: "TAVANAM",
     industry: "Architecture & Real Estate",
     tags: ["Brand Building", "Brand Identity"],
-    image: "/images/detailed_page/Tavana/tavana 1.webp",
+    image: blob("/images/detailed_page/Tavana/tavana 1.webp"),
   },
   {
     id: "santhi",
     name: "SANTHI TEXTILES",
     industry: "Textiles & Fabrics",
     tags: ["Brand Communication", "Corporate Films", "Motion Design"],
-    image: "/images/detailed_page/Santhi/santhi_5.jpg",
+    image: blob("/images/detailed_page/Santhi/santhi_5.jpg"),
   },
   {
     id: "sie-branding",
     name: "SIE BRANDING",
     industry: "Design & Visual Identity",
     tags: ["Brand Building", "Brand Identity", "Design"],
-    image: "/images/detailed_page/SIE_BRANDING/SIE MOCK 3.JPG",
+    image: blob("/images/detailed_page/SIE_BRANDING/SIE MOCK 3.JPG"),
   },
   {
     id: "sie-website",
     name: "SIE WEBSITE",
     industry: "Web Design & Development",
     tags: ["Web Design", "UI/UX", "Digital Experience"],
-    image: "/images/detailed_page/SIE/SIE_8.webp",
+    image: blob("/images/detailed_page/SIE/SIE_8.webp"),
   },
 ];
 

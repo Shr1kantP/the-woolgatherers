@@ -1,6 +1,7 @@
 import ProjectTemplate from "../../components/ProjectTemplate";
 import type { ProjectData } from "../../components/ProjectTemplate";
 import type { Metadata } from "next";
+import { blob } from "@/app/lib/blob";
 
 export const metadata: Metadata = {
   title: "Kumbaya | The Woolgatherers",
@@ -9,40 +10,40 @@ export const metadata: Metadata = {
 };
 
 const kumbayaProject: ProjectData = {
-  logo: "/images/Guests/kumbayah.webp",
+  logo: blob("/images/Guests/kumbayah.webp"),
   title: "KUMBAYAH",
   industry: "Food & Beverage (Kombucha)",
   tags: ["Packaging", "Content Production", "Social Media"],
-  heroImage: "/images/detailed_page/Kumbaya/kumbayah packaging main.webp",
+  heroImage: blob("/images/detailed_page/Kumbaya/kumbayah packaging main.webp"),
   overview:
     "Partnered with one of Kerala's leading kombucha brands to build a cohesive visual presence across multiple touchpoints. The project included packaging design, photography and video production, and ongoing social media management, creating a consistent brand experience from shelf to screen.",
   gallery: [
-    "/images/detailed_page/Kumbaya/kumbayah packaging.webp",
-    "/images/detailed_page/Kumbaya/kumbaya-label-1.jpg",
-    "/images/detailed_page/Kumbaya/kumbaya social.webp",
-    "/images/detailed_page/Kumbaya/kumbaya social 2.jpg",
-    "/images/detailed_page/Kumbaya/kumbaya-festive-2.jpg",
-    "/images/detailed_page/Kumbaya/kumbaya social 3.jpg",
-    "/images/detailed_page/Kumbaya/kumbaya-label-4.jpg",
-    "/images/detailed_page/Kumbaya/kumbayah-vid.mp4",
-   /*  "/images/detailed_page/Kumbaya/kumbayah packaging.webp",
-    "/images/detailed_page/Kumbaya/kumbaya social 2.jpg", */
+    blob("/images/detailed_page/Kumbaya/kumbayah packaging.webp"),
+    blob("/images/detailed_page/Kumbaya/kumbaya-label-1.jpg"),
+    blob("/images/detailed_page/Kumbaya/kumbaya social.webp"),
+    blob("/images/detailed_page/Kumbaya/kumbaya social 2.jpg"),
+    blob("/images/detailed_page/Kumbaya/kumbaya-festive-2.jpg"),
+    blob("/images/detailed_page/Kumbaya/kumbaya social 3.jpg"),
+    blob("/images/detailed_page/Kumbaya/kumbaya-label-4.jpg"),
+    blob("/images/detailed_page/Kumbaya/kumbayah-vid.mp4"),
+   /*  blob("/images/detailed_page/Kumbaya/kumbayah packaging.webp"),
+    blob("/images/detailed_page/Kumbaya/kumbaya social 2.jpg"), */
   ],
   relatedProjects: [
     {
-      thumbnail: "/images/detailed_page/MTR/MTR COUPLE DINING 1.jpg",
+      thumbnail: blob("/images/detailed_page/MTR/MTR COUPLE DINING 1.jpg"),
       title: "MTR FOODS",
       industry: "Food & Beverage",
       tags: ["Photography & Video Production"],
     },
     {
-      thumbnail: "/images/detailed_page/Peps/Peps Dream makers playlist.jpg",
+      thumbnail: blob("/images/detailed_page/Peps/Peps Dream makers playlist.jpg"),
       title: "PEPS",
       industry: "Mattress & Sleep Products",
       tags: ["Content Marketing", "Social Media"],
     },
     {
-      thumbnail: "/images/detailed_page/Wingreens/wingreens 3.jpg",
+      thumbnail: blob("/images/detailed_page/Wingreens/wingreens 3.jpg"),
       title: "WINGREENS",
       industry: "Food & Beverage",
       tags: ["Content Production"],

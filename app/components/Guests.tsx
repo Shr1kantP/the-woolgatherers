@@ -1,19 +1,20 @@
+import { blob } from "@/app/lib/blob";
 "use client";
 
 const logos = [
-  "/images/Guests/vahdam-white.webp",
-  "/images/Guests/cureveda.webp",
-  // "/images/Guests/gap.webp",
-  "/images/Guests/chrian-tea.webp",
-  "/images/Guests/country-bean.webp",
-  "/images/Guests/mtr.webp",
-  "/images/Guests/jimmys.webp",
-  "/images/Guests/nua.webp",
-  "/images/Guests/sathi.webp",
-  "/images/Guests/peps.webp",
-  "/images/Guests/wingreens.webp",
-  "/images/Guests/sfs.webp",
-  /*  "/images/Guests/sie-full.webp", */
+  blob("/images/Guests/vahdam-white.webp"),
+  blob("/images/Guests/cureveda.webp"),
+  // blob("/images/Guests/gap.webp"),
+  blob("/images/Guests/chrian-tea.webp"),
+  blob("/images/Guests/country-bean.webp"),
+  blob("/images/Guests/mtr.webp"),
+  blob("/images/Guests/jimmys.webp"),
+  blob("/images/Guests/nua.webp"),
+  blob("/images/Guests/sathi.webp"),
+  blob("/images/Guests/peps.webp"),
+  blob("/images/Guests/wingreens.webp"),
+  blob("/images/Guests/sfs.webp"),
+  /*  blob("/images/Guests/sie-full.webp"), */
 ];
 
 const logoNames = [

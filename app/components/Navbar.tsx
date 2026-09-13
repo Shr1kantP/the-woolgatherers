@@ -60,7 +60,7 @@ export default function Navbar() {
       className="absolute left-4 md:left-1/2 flex md:-translate-x-1/2 items-center justify-center transition-opacity hover:opacity-85"
     >
       <img
-        src={blob("/images/hero/woolgatherers-navbar.svg")
+        src={blob("/images/hero/woolgatherers-navbar.svg")}
         alt="The Woolgatherers"
         className="h-[18px] md:h-[38px] w-auto"
       />

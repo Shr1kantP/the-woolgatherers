@@ -35,7 +35,7 @@ export default function Footer() {
         {/* Ready to Check in */}
         <div className="flex justify-center mb-[10px] md:mb-4">
           <Image
-            src={blob("/images/footer/readytext.svg")
+            src={blob("/images/footer/readytext.svg")}
             alt="Ready to Check in"
             width={350}
             height={154}
@@ -85,14 +85,14 @@ export default function Footer() {
                 onTouchEnd={() => setIsPressed(false)}
               >
                 <Image
-                  src={blob("/images/footer/bell/bell_not_clicked.webp")
+                  src={blob("/images/footer/bell/bell_not_clicked.webp")}
                   alt="Concierge bell"
                   width={400}
                   height={400}
                   className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-150 ${isPressed ? "opacity-0" : "opacity-100"}`}
                 />
                 <Image
-                  src={blob("/images/footer/bell/bell_pressed.webp")
+                  src={blob("/images/footer/bell/bell_pressed.webp")}
                   alt="Concierge bell pressed"
                   width={400}
                   height={400}
@@ -108,7 +108,7 @@ export default function Footer() {
               className="-mt-6 md:mt-3 transition-transform duration-200 hover:scale-[1.03] focus:outline-none cursor-pointer"
             >
               <Image
-                src={blob("/images/footer/footer-button.webp")
+                src={blob("/images/footer/footer-button.webp")}
                 alt="Request A Stay"
                 width={440}
                 height={136}
@@ -167,7 +167,7 @@ export default function Footer() {
       {/* Full-bleed decorative ribbon */}
       <div className="relative w-full overflow-hidden shrink-0 flex justify-center pb-4 md:pb-8 mt-6 md:mt-8" aria-hidden="true">
         <Image
-          src={blob("/images/footer/bottom_x.svg")
+          src={blob("/images/footer/bottom_x.svg")}
           alt=""
           width={1920}
           height={100}

@@ -82,7 +82,7 @@ export default function CustomCursor() {
       style={{ willChange: "transform" }}
     >
       <img
-        src={blob("/images/floating_key.svg")
+        src={blob("/images/floating_key.svg")}
         alt="Cursor Key"
         className="w-15 h-auto select-none" // Reduced size for comfortable mouse cursor usage (24px width)
       />

@@ -26,7 +26,7 @@ export default function Hero() {
           muted
           loop
           playsInline
-          poster="/images/hero/mobile-bg.webp"
+      /*     poster="/images/hero/mobile-bg.webp" */
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover block sm:hidden"
           style={{ filter: "blur(6px)", transform: "scale(1.05)" }}

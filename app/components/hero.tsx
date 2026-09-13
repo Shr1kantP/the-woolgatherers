@@ -20,6 +20,7 @@ export default function Hero() {
           <source src="/images/hero/hero-vid.mp4" type="video/mp4" />
         </video>
 
+
         {/* Mobile Video */}
         <video
           autoPlay

@@ -1,5 +1,6 @@
-import { blob } from "@/app/lib/blob";
 "use client";
+
+import { blob } from "@/app/lib/blob";
 
 const logos = [
   blob("/images/Guests/vahdam-white.webp"),

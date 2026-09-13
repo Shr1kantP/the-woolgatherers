@@ -69,8 +69,10 @@ export default function ConciergePopup({ isOpen, onClose }: ConciergePopupProps)
       <div className="relative w-full max-w-[450px] md:max-w-[850px] flex justify-center">
 
         <div
-          className="relative w-full md:aspect-[1000/600] bg-[url(blob("/images/Pop_up_bg_mobile.webp"))] md:bg-[url(blob("/images/Pop_up_bg.webp"))] bg-[length:100%_100%] md:bg-contain bg-center bg-no-repeat px-8 py-12 md:px-14 md:py-10 text-[#FDF3E7] select-text shadow-2xl flex flex-col justify-center max-h-[85vh] md:max-h-none overflow-y-auto md:overflow-visible"
+          className="relative w-full md:aspect-[1000/600] bg-[image:var(--bg-mobile)] md:bg-[image:var(--bg-desktop)] bg-[length:100%_100%] md:bg-contain bg-center bg-no-repeat px-8 py-12 md:px-14 md:py-10 text-[#FDF3E7] select-text shadow-2xl flex flex-col justify-center max-h-[85vh] md:max-h-none overflow-y-auto md:overflow-visible"
           style={{
+            ["--bg-mobile" as string]: `url(${blob("/images/Pop_up_bg_mobile.webp")})`,
+            ["--bg-desktop" as string]: `url(${blob("/images/Pop_up_bg.webp")})`,
             fontFamily: "var(--font-inter), sans-serif",
           }}
           onClick={(e) => e.stopPropagation()}

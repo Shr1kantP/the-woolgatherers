@@ -19,7 +19,7 @@ const vahdamProject: ProjectData = {
   gallery: [
     "/images/detailed_page/Vahdam/vahdam_1.jpg",
     "/images/detailed_page/Vahdam/vahdam_vid_1.mp4",
-    "/images/detailed_page/Vahdam/vadham_2.png",
+    "/images/detailed_page/Vahdam/vadham_2.webp",
     "/images/detailed_page/Vahdam/vahdam_vid_2.mp4",
     "/images/detailed_page/Vahdam/vahdam_vid_3.mp4",
   ],

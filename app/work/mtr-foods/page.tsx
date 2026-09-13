@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const mtrProject: ProjectData = {
-  logo: "/images/Guests/mtr.png",
+  logo: "/images/Guests/mtr.webp",
   title: "MTR FOODS",
   industry: "Food & Beverage",
   tags: ["Photography & Video Production"],
@@ -41,7 +41,7 @@ const mtrProject: ProjectData = {
       tags: ["Content Production", "UGC Content"],
     },
     {
-      thumbnail: "/images/detailed_page/Kumbaya/kumbayah packaging main.png",
+      thumbnail: "/images/detailed_page/Kumbaya/kumbayah packaging main.webp",
       title: "KUMABAYA",
       industry: "Food & Beverage (Kombucha)",
       tags: ["Packaging", "Content Production", "Social Media"],

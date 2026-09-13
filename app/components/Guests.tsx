@@ -2,18 +2,18 @@
 
 const logos = [
   "/images/Guests/vahdam-white.webp",
-  "/images/Guests/cureveda.png",
-  // "/images/Guests/gap.png",
-  "/images/Guests/chrian-tea.png",
+  "/images/Guests/cureveda.webp",
+  // "/images/Guests/gap.webp",
+  "/images/Guests/chrian-tea.webp",
   "/images/Guests/country-bean.webp",
-  "/images/Guests/mtr.png",
-  "/images/Guests/jimmys.png",
-  "/images/Guests/nua.png",
-  "/images/Guests/sathi.png",
-  "/images/Guests/peps.png",
-  "/images/Guests/wingreens.png",
-  "/images/Guests/sfs.png",
-  /*  "/images/Guests/sie-full.PNG", */
+  "/images/Guests/mtr.webp",
+  "/images/Guests/jimmys.webp",
+  "/images/Guests/nua.webp",
+  "/images/Guests/sathi.webp",
+  "/images/Guests/peps.webp",
+  "/images/Guests/wingreens.webp",
+  "/images/Guests/sfs.webp",
+  /*  "/images/Guests/sie-full.webp", */
 ];
 
 const logoNames = [

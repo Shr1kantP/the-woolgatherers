@@ -9,26 +9,26 @@ export const metadata: Metadata = {
 };
 
 const tavanaProject: ProjectData = {
-  logo: "/images/detailed_page/Tavana/tavana 1.png",
+  logo: "/images/detailed_page/Tavana/tavana 1.webp",
   title: "TAVANAM",
   industry: "Real Estate",
   tags: ["Brand Building", "Identity"],
-  heroImage: "/images/detailed_page/Tavana/tavana 1.png",
+  heroImage: "/images/detailed_page/Tavana/tavana 1.webp",
   overview:
     "Developed the brand strategy and visual identity for a contemporary real estate company. From defining the brand's positioning to crafting a cohesive visual system, the project established a modern, credible, and distinctive presence across every touchpoint.",
   gallery: [
-    "/images/detailed_page/Tavana/tavana 3.png",
-    "/images/detailed_page/Tavana/tavana 4.png",
-    "/images/detailed_page/Tavana/tavana 5.png",
-    "/images/detailed_page/Tavana/tavana 6.png",
-    "/images/detailed_page/Tavana/tavana 1.png",
-    /* "/images/detailed_page/Tavana/tavana 3.png",
-    "/images/detailed_page/Tavana/tavana 4.png",
-    "/images/detailed_page/Tavana/tavana 5.png", */
+    "/images/detailed_page/Tavana/tavana 3.webp",
+    "/images/detailed_page/Tavana/tavana 4.webp",
+    "/images/detailed_page/Tavana/tavana 5.webp",
+    "/images/detailed_page/Tavana/tavana 6.webp",
+    "/images/detailed_page/Tavana/tavana 1.webp",
+    /* "/images/detailed_page/Tavana/tavana 3.webp",
+    "/images/detailed_page/Tavana/tavana 4.webp",
+    "/images/detailed_page/Tavana/tavana 5.webp", */
   ],
   relatedProjects: [
     {
-      thumbnail: "/images/detailed_page/Kumbaya/kumbayah packaging main.png",
+      thumbnail: "/images/detailed_page/Kumbaya/kumbayah packaging main.webp",
       title: "KUMABAYA",
       industry: "Food & Beverage (Kombucha)",
       tags: ["Packaging", "Content Production", "Social Media"],

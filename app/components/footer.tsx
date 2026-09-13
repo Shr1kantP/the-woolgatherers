@@ -22,7 +22,7 @@ export default function Footer() {
       id="footer"
       className="relative z-30 min-h-screen w-full text-[#F5E9D0] flex flex-col -mt-[15vh] pt-[15vh]"
       style={{
-        backgroundImage: "url('/images/footer/footer-bg.png')",
+        backgroundImage: "url('/images/footer/footer-bg.webp')",
         backgroundColor: "#1F001B",
         backgroundPosition: "center top",
         backgroundSize: "cover",
@@ -84,14 +84,14 @@ export default function Footer() {
                 onTouchEnd={() => setIsPressed(false)}
               >
                 <Image
-                  src="/images/footer/bell/bell_not_clicked.png"
+                  src="/images/footer/bell/bell_not_clicked.webp"
                   alt="Concierge bell"
                   width={400}
                   height={400}
                   className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-150 ${isPressed ? "opacity-0" : "opacity-100"}`}
                 />
                 <Image
-                  src="/images/footer/bell/bell_pressed.png"
+                  src="/images/footer/bell/bell_pressed.webp"
                   alt="Concierge bell pressed"
                   width={400}
                   height={400}
@@ -107,7 +107,7 @@ export default function Footer() {
               className="-mt-6 md:mt-3 transition-transform duration-200 hover:scale-[1.03] focus:outline-none cursor-pointer"
             >
               <Image
-                src="/images/footer/footer-button.png"
+                src="/images/footer/footer-button.webp"
                 alt="Request A Stay"
                 width={440}
                 height={136}

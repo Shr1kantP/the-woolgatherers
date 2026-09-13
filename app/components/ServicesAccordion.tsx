@@ -57,7 +57,7 @@ const serviceData: ServiceItem[] = [
     title: "Photography & Videography",
     collapsedColor: "#47102D",
     expandedColor: "#47102D",
-    image: "/images/service/tab-4-image.png",
+    image: "/images/service/tab-4-image.webp",
     subServices: [
       "Commercial Photography",
       "Brand Films & Video Production",

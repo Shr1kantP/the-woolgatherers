@@ -2,7 +2,45 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+
+/* ─── Lazy video — only loads + plays when near viewport ─────────────────── */
+
+function LazyVideo({ src, className }: { src: string; className?: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setActive(true);
+          void el.play().catch(() => undefined);
+          obs.disconnect();
+        }
+      },
+      { rootMargin: "400px 0px" }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  return (
+    <video
+      ref={videoRef}
+      src={active ? src : undefined}
+      className={className}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="none"
+      aria-label="Project video"
+    />
+  );
+}
 
 /* ─── Types ──────────────────────────────────────────────────────────────── */
 
@@ -30,7 +68,7 @@ const projects: Project[] = [
     name: "KUMABAYAH",
     industry: "Food & Beverage (Kombucha)",
     tags: ["Packaging", "Content Production", "Social Media"],
-    image: "/images/detailed_page/Kumbaya/kumbayah packaging main.png",
+    image: "/images/detailed_page/Kumbaya/kumbayah packaging main.webp",
     hasTextCard: false,
   },
   {
@@ -83,7 +121,7 @@ const projects: Project[] = [
     name: "TAVANAM",
     industry: "Architecture & Real Estate",
     tags: ["Brand Building", "Brand Identity"],
-    image: "/images/detailed_page/Tavana/tavana 1.png",
+    image: "/images/detailed_page/Tavana/tavana 1.webp",
   },
   {
     id: "santhi",
@@ -104,7 +142,7 @@ const projects: Project[] = [
     name: "SIE WEBSITE",
     industry: "Web Design & Development",
     tags: ["Web Design", "UI/UX", "Digital Experience"],
-    image: "/images/detailed_page/SIE/SIE_8.png",
+    image: "/images/detailed_page/SIE/SIE_8.webp",
   },
 ];
 
@@ -177,7 +215,7 @@ function StandardCard({ project }: { project: Project }) {
 function TextCard({ project }: { project: Project }) {
   return (
     <Link href={`/work/${project.id}`} className="group block">
-      <article className="flex flex-col">
+      <article className="flex flex-col" style={{ contentVisibility: "auto", containIntrinsicSize: "0 420px" }}>
         {/* Cream box mimicking the design screenshot */}
         <div
           className="relative w-full flex flex-col justify-between p-6 sm:p-8"
@@ -239,15 +277,9 @@ function FullWidthCard({ project }: { project: Project }) {
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/7" }}>
           {project.image ? (
             /\.(mp4|webm|ogg|mov)$/i.test(project.image) ? (
-              <video
+              <LazyVideo
                 src={project.image}
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="metadata"
-                aria-label={project.name}
               />
             ) : (
               <Image

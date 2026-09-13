@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const santhiProject: ProjectData = {
-  logo: "/images/Guests/sathi.png",
+  logo: "/images/Guests/sathi.webp",
   title: "SANTHI TEXTILES",
   industry: "Textile Manufacturing",
   tags: ["Brand Communication", "Corporate Films", "Motion Design"],
@@ -29,7 +29,7 @@ const santhiProject: ProjectData = {
   ],
   relatedProjects: [
     {
-      thumbnail: "/images/detailed_page/Kumbaya/kumbayah packaging main.png",
+      thumbnail: "/images/detailed_page/Kumbaya/kumbayah packaging main.webp",
       title: "KUMABAYA",
       industry: "Food & Beverage (Kombucha)",
       tags: ["Packaging", "Content Production", "Social Media"],

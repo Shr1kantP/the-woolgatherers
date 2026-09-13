@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const curevedaProject: ProjectData = {
-  logo: "/images/Guests/cureveda.png",
+  logo: "/images/Guests/cureveda.webp",
   title: "CUREVEDA",
   industry: "Health & Wellness",
   tags: ["Content Production", "UGC Content"],

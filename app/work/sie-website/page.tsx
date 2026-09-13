@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const sieWebsiteProject: ProjectData = {
-  logo: "/images/detailed_page/SIE/SIE-Website-logo.PNG",
+  logo: "/images/detailed_page/SIE/SIE-Website-logo.webp",
   title: "SIE WEBSITE",
   industry: "Interior Design",
   tags: ["Website Design"],
@@ -16,14 +16,14 @@ const sieWebsiteProject: ProjectData = {
   overview:
     "Designed an interactive website that extends the studio's identity into a digital experience. A key feature is the Canvas Moodboard Generator, allowing visitors to create their own moodboards or explore curated design styles to better understand the studio's aesthetic and approach.",
   gallery: [
-    "/images/detailed_page/SIE/SIEWEBSITE1.png",
-    "/images/detailed_page/SIE/SIEWEBSITE2.png",
-    "/images/detailed_page/SIE/SIEWEBSITE3.png",
-    "/images/detailed_page/SIE/SIEWEBSITE4.png",
-    "/images/detailed_page/SIE/SIEWEBSITE0.png",
-    "/images/detailed_page/SIE/SIEWEBSITE00.png",
+    "/images/detailed_page/SIE/SIEWEBSITE1.webp",
+    "/images/detailed_page/SIE/SIEWEBSITE2.webp",
+    "/images/detailed_page/SIE/SIEWEBSITE3.webp",
+    "/images/detailed_page/SIE/SIEWEBSITE4.webp",
+    "/images/detailed_page/SIE/SIEWEBSITE0.webp",
+    "/images/detailed_page/SIE/SIEWEBSITE00.webp",
     "/images/detailed_page/SIE/SIE_0.JPG",
-    "/images/detailed_page/SIE/SIE_8.png",
+    "/images/detailed_page/SIE/SIE_8.webp",
     "/images/detailed_page/SIE/SIEBUSINESSACRD.JPG",
     "/images/detailed_page/SIE/SIELOGO1.JPG",
     "/images/detailed_page/SIE/SIEPATTERNS.JPG",
@@ -37,7 +37,7 @@ const sieWebsiteProject: ProjectData = {
       tags: ["Brand Identity"],
     },
     {
-      thumbnail: "/images/detailed_page/Tavana/tavana 1.png",
+      thumbnail: "/images/detailed_page/Tavana/tavana 1.webp",
       title: "TAVANA",
       industry: "Real Estate",
       tags: ["Brand Building", "Identity"],

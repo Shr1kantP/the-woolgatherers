@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const wingreensProject: ProjectData = {
-  logo: "/images/Guests/wingreens.png",
+  logo: "/images/Guests/wingreens.webp",
   title: "WINGREENS",
   industry: "Food & Beverage",
   tags: ["Content Production"],
@@ -19,8 +19,8 @@ const wingreensProject: ProjectData = {
   gallery: [
     "/images/detailed_page/Wingreens/wingreens 4.jpg",
     "/images/detailed_page/Wingreens/wingreen 4.jpg",
-    "/images/detailed_page/Wingreens/wingreens gluten.png",
-    "/images/detailed_page/Wingreens/wingreens.png",
+    "/images/detailed_page/Wingreens/wingreens gluten.webp",
+    "/images/detailed_page/Wingreens/wingreens.webp",
     "/images/detailed_page/Wingreens/wingrrens.jpg",
   ],
   relatedProjects: [
@@ -37,7 +37,7 @@ const wingreensProject: ProjectData = {
       tags: ["Content Production", "UGC Content"],
     },
     {
-      thumbnail: "/images/detailed_page/Kumbaya/kumbayah packaging main.png",
+      thumbnail: "/images/detailed_page/Kumbaya/kumbayah packaging main.webp",
       title: "KUMABAYA",
       industry: "Food & Beverage (Kombucha)",
       tags: ["Packaging", "Content Production", "Social Media"],

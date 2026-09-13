@@ -101,7 +101,7 @@ export default function Residency() {
         <div className="grid grid-cols-12 gap-4 items-center">
           <div ref={leftImgRef} className="col-span-5">
             <Image
-              src="/images/resident-image-topleft.png"
+              src="/images/resident-image-topleft.webp"
               alt="Landscape stamp"
               width={160}
               height={300}
@@ -131,7 +131,7 @@ export default function Residency() {
           <div className="col-span-6 flex justify-end overflow-visible">
             <div ref={rightImgRef} style={{ transform: "rotate(4deg)", transformOrigin: "center center" }} className="w-[140%] translate-x-[-15%] origin-center">
               <Image
-                src="/images/resident-image-bottomright.png"
+                src="/images/resident-image-bottomright.webp"
                 alt="The Woolgatherers stamp"
                 width={160}
                 height={300}
@@ -170,7 +170,7 @@ export default function Residency() {
           <div className="grid grid-cols-12 gap-8 items-center">
             <div ref={leftImgRef} className="col-span-4 col-start-2">
               <Image
-                src="/images/resident-image-topleft.png"
+                src="/images/resident-image-topleft.webp"
                 alt="Landscape stamp"
                 width={160}
                 height={300}
@@ -217,7 +217,7 @@ export default function Residency() {
             <div className="col-span-4 col-start-8 flex flex-col gap-6 items-end text-right overflow-visible">
               <div ref={rightImgRef} style={{ transform: "rotate(4deg)", transformOrigin: "center center" }} className="w-[90%] translate-x-0 origin-center">
                 <Image
-                  src="/images/resident-image-bottomright.png"
+                  src="/images/resident-image-bottomright.webp"
                   alt="The Woolgatherers stamp"
                   width={160}
                   height={300}

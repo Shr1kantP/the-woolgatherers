@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const motionProject: ProjectData = {
-  logo: "/images/Guests/image 42.png", // Using a placeholder/available brand logo
+  logo: "/images/Guests/image 42.webp", // Using a placeholder/available brand logo
   title: "MOTION DESIGN",
   industry: "Cross-Industry",
   tags: ["Motion Graphics", "Brand Films", "Animation"],
@@ -25,7 +25,7 @@ const motionProject: ProjectData = {
   galleryLayout: "motion-four",
   relatedProjects: [
     {
-      thumbnail: "/images/detailed_page/Kumbaya/kumbayah packaging main.png",
+      thumbnail: "/images/detailed_page/Kumbaya/kumbayah packaging main.webp",
       title: "KUMABAYA",
       industry: "Food & Beverage (Kombucha)",
       tags: ["Packaging", "Content Production", "Social Media"],

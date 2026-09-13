@@ -36,6 +36,7 @@ function MediaRenderer({
       className={className}
       sizes={sizes}
       priority={priority}
+      loading={priority ? undefined : "lazy"}
     />
   );
 }
@@ -200,6 +201,7 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
                   src={logo}
                   alt={`${title} logo`}
                   fill
+                  loading="lazy"
                   className="object-contain"
                   sizes="120px"
                 />
@@ -392,7 +394,7 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
         <div className="flex flex-row overflow-x-auto gap-6 sm:gap-8 pb-6 snap-x snap-mandatory scrollbar-none">
           {relatedProjects.map((rp) => (
             <Link key={rp.title} href={getProjectLink(rp.title)} className="group block flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] snap-start">
-              <article className="flex flex-col">
+              <article className="flex flex-col" style={{ contentVisibility: "auto", containIntrinsicSize: "0 320px" }}>
                 {/* Thumbnail */}
                 <div className="relative w-full overflow-hidden" style={{ aspectRatio: "4/3" }}>
                   <MediaRenderer
@@ -449,24 +451,25 @@ function GalleryImage({
   fit?: "contain" | "cover";
   orientation?: "horizontal" | "vertical";
 }) {
-  if (!src) return null; // Safe guard for missing images
+  if (!src) return null;
 
   if (aspectRatio === "auto" || fit === "contain") {
     const isVideo = /\.(mp4|webm|ogg|mov)$/i.test(src);
     if (isVideo) {
       return (
-        <div className="w-full relative bg-[#1D0121]">
+        <div className="w-full relative bg-[#1D0121]" style={{ contentVisibility: "auto", containIntrinsicSize: "0 400px" }}>
           <LazyVideo src={src} className="w-full h-auto" />
         </div>
       );
     }
     return (
-      <div className="w-full relative bg-[#1D0121]">
+      <div className="w-full relative bg-[#1D0121]" style={{ contentVisibility: "auto", containIntrinsicSize: "0 400px" }}>
         <Image
           src={src}
           alt={alt}
           width={1920}
           height={1080}
+          loading="lazy"
           className="w-full h-auto object-contain"
           sizes="(max-width: 767px) 100vw, 90vw"
         />
@@ -481,7 +484,10 @@ function GalleryImage({
       : aspectRatio;
 
   return (
-    <div className="relative overflow-hidden bg-[#1D0121]" style={{ aspectRatio: frameAspectRatio }}>
+    <div
+      className="relative overflow-hidden bg-[#1D0121]"
+      style={{ aspectRatio: frameAspectRatio, contentVisibility: "auto", containIntrinsicSize: "0 400px" }}
+    >
       <MediaRenderer
         src={src}
         alt={alt}

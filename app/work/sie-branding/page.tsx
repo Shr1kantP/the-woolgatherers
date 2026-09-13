@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const sieBrandingProject: ProjectData = {
-  logo: "/images/detailed_page/SIE_BRANDING/SIE-branding-logo.PNG",
+  logo: "/images/detailed_page/SIE_BRANDING/SIE-branding-logo.webp",
   title: "STUDIO INSIDE EYE",
   industry: "Interior Design",
   tags: ["Brand Identity"],
@@ -32,7 +32,7 @@ const sieBrandingProject: ProjectData = {
       tags: ["Website Design"],
     },
     {
-      thumbnail: "/images/detailed_page/Tavana/tavana 1.png",
+      thumbnail: "/images/detailed_page/Tavana/tavana 1.webp",
       title: "TAVANA",
       industry: "Real Estate",
       tags: ["Brand Building", "Identity"],

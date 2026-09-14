@@ -48,7 +48,7 @@ export default function Hero() {
       </div>
 
       {/* Stacked frame cards */}
-      <div className="absolute z-[25] -left-4 top-[10%] w-[min(77vw,374px)] sm:left-2 sm:translate-x-0 sm:top-[20%] sm:w-[clamp(250px,27.5vw,350px)]">
+      <div className="absolute z-[25] left-1/2 -translate-x-1/2 top-[10%] w-[min(77vw,374px)] sm:left-2 sm:translate-x-0 sm:top-[20%] sm:w-[clamp(250px,27.5vw,350px)]">
         <Image
           src={blob("/images/hero/upper-frame-1.webp")}
           alt="A residency for brands"
@@ -64,7 +64,7 @@ export default function Hero() {
         type="button"
         aria-label="Open concierge check-in form"
         onClick={() => window.dispatchEvent(new CustomEvent("open-concierge"))}
-        className="absolute z-[26] -left-4 top-[31%] w-[min(77vw,374px)] cursor-pointer transition-transform duration-300 hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5E9D0] focus-visible:ring-offset-4 focus-visible:ring-offset-black sm:left-2 sm:translate-x-0 sm:top-[49.5%] sm:w-[clamp(250px,27.5vw,350px)]"
+        className="absolute z-[26] left-1/2 -translate-x-1/2 top-[31%] w-[min(77vw,374px)] cursor-pointer transition-transform duration-300 hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5E9D0] focus-visible:ring-offset-4 focus-visible:ring-offset-black sm:left-2 sm:translate-x-0 sm:top-[49.5%] sm:w-[clamp(250px,27.5vw,350px)]"
       >
         <Image
           src={blob("/images/hero/lower-frame-1.webp")}

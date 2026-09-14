@@ -208,7 +208,7 @@ export default function Residency() {
           <div className="grid grid-cols-12 gap-8 items-start">
             {/* Bottom Left Column */}
             <div ref={para2Ref} className="col-span-4 col-start-2 pt-8">
-              <p style={{ fontFamily: "Inter, sans-serif", fontSize: 26, lineHeight: 1.5, color: "#F5E9D0" }}>
+              <p style={{ fontFamily: "Inter, sans-serif", fontSize: 21, lineHeight: 1.5, color: "#F5E9D0" }}>
                 Over the years, we&apos;ve worked with startups, family businesses, challenger brands,
                 and category leaders alike.
               </p>
@@ -227,7 +227,7 @@ export default function Residency() {
                 />
               </div>
               <div className="w-[90%] translate-x-[-120%] -translate-y-[200px]">
-                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 26, lineHeight: 1.5, color: "#F5E9D0" }}>
+                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 21, lineHeight: 1.5, color: "#F5E9D0" }}>
                   Every brand&apos;s journey is different. Every stay is thoughtfully designed.
                 </p>
               </div>

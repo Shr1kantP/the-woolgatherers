@@ -15,56 +15,56 @@ interface ServiceItem {
 
 const serviceData: ServiceItem[] = [
   {
-    title: "Brand Building, Design & Management",
+    title: "BRAND BUILDING, DESIGN & STRATEGY",
     collapsedColor: "#260421",
     expandedColor: "#260421",
     image: blob("/images/service/tab-1-image.jpg"),
     subServices: [
-      "Brand Strategy",
-      "Visual Identity & Packaging",
-      "Communication Design",
-      "ATL & BTL Campaigns",
-      "New Product Development",
+      "BRAND STRATEGY",
+      "VISUAL IDENTITY & PACKAGING",
+      "COMMUNICATION DESIGN",
+      "ATL & BTL CAMPAIGNS",
+      "NEW PRODUCT DEVELOPMENT",
     ],
   },
   {
-    title: "Social Media",
+    title: "SOCIAL MEDIA",
     collapsedColor: "#2D062A",
     expandedColor: "#2D062A",
     image: blob("/images/service/tab-3-image.jpg"),
     subServices: [
-      "Social Media Strategy",
-      "Content Creation & Curation",
-      "Community Management",
-      /* "Influencer Campaigns",
-      "Performance Marketing", */
+      "SOCIAL MEDIA STRATEGY",
+      "CONTENT CREATION & CURATION",
+      "COMMUNITY MANAGEMENT",
+      /* "INFLUENCER CAMPAIGNS",
+      "PERFORMANCE MARKETING", */
     ],
   },
   {
-    title: "Websites",
+    title: "WEBSITES",
     collapsedColor: "#3A092B",
     expandedColor: "#3A092B",
     image: blob("/images/service/tab-2-image.jpg"),
     subServices: [
-      "UI/UX Design",
-      "Responsive Web Development",
-      "Digital Experiences",
-      /*"Webflow & Custom CMS",
-      "Website Optimization & SEO", */
+      "UI/UX DESIGN",
+      "RESPONSIVE WEB DEVELOPMENT",
+      "DIGITAL EXPERIENCES",
+      /*"WEBFLOW & CUSTOM CMS",
+      "WEBSITE OPTIMIZATION & SEO", */
 
     ],
   },
   {
-    title: "Photography & Videography",
+    title: "PHOTOGRAPHY & VIDEOGRAPHY",
     collapsedColor: "#47102D",
     expandedColor: "#47102D",
     image: blob("/images/service/tab-4-image.webp"),
     subServices: [
-      "Commercial Photography",
-      "Brand Films & Video Production",
-      "Product & Editorial Shoots",
-      "Post-Production & Grading",
-      "Art Direction",
+      "COMMERCIAL PHOTOGRAPHY",
+      "BRAND FILMS & VIDEO PRODUCTION",
+      "PRODUCT & EDITORIAL SHOOTS",
+      "POST-PRODUCTION & GRADING",
+      "ART DIRECTION",
     ],
   },
 ];
@@ -203,29 +203,42 @@ export default function ServicesAccordion() {
 
   return (
     <div ref={containerRef} className="relative w-full flex flex-col bg-[#1D0121]">
+      <div className="w-full px-6 pt-12 pb-2 sm:px-8 sm:pt-16 sm:pb-4 md:px-10 md:pt-20 md:pb-4">
+        <h2
+          className="text-[#F5E9D0] font-normal text-left leading-none"
+          style={{ fontFamily: '"Jersey 15", system-ui, sans-serif', fontSize: "70px" }}
+        >
+          What We Do
+        </h2>
+      </div>
       {serviceData.map((service, index) => {
         return (
           <div
             key={service.title}
             ref={(el) => { bandsRef.current[index] = el; }}
             style={{ backgroundColor: service.collapsedColor }}
-            className="w-full flex flex-col transition-colors duration-500 shadow-[0_0_0_1px_rgba(255,255,255,0.05)] cursor-pointer select-none overflow-hidden"
+            className="group w-full flex flex-col transition-colors duration-500 shadow-[0_0_0_1px_rgba(255,255,255,0.05)] cursor-pointer select-none overflow-hidden"
             onClick={() => handleToggle(index)}
           >
             {/* Collapsed Header / Label */}
             <div
               ref={(el) => { headerRefs.current[index] = el; }}
-              className="relative w-full h-[90px] md:h-[140px] flex items-center p-6 sm:p-8 md:p-10"
+              className="relative w-full h-[90px] md:h-[140px] flex items-center justify-between p-4 sm:p-6 md:p-10 gap-2 sm:gap-4"
             >
               <h3
-                className="text-[#F5E9D0] font-normal leading-none"
+                className="text-[#F5E9D0] font-normal leading-none whitespace-nowrap sm:whitespace-normal overflow-hidden text-ellipsis"
                 style={{
                   fontFamily: '"Inter", system-ui, sans-serif',
-                  fontSize: "clamp(22px, 4vw, 34px)",
+                  fontSize: "clamp(18px, 3.5vw, 34px)",
                 }}
               >
                 {service.title}
               </h3>
+              <div className="w-8 h-8 md:w-10 md:h-10 text-[#F5E9D0] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
             </div>
 
             {/* Expanded Content Area */}
@@ -239,7 +252,7 @@ export default function ServicesAccordion() {
               >
                 {/* Large Title */}
                 <h4
-                  className="w-full text-[#F5E9D0] font-medium tracking-normal mb-10 sm:mb-16 text-left md:text-center"
+                  className="w-full text-[#F5E9D0] font-medium tracking-normal mb-10 sm:mb-16 text-left"
                   style={{
                     fontFamily: '"Inter", system-ui, sans-serif',
                     fontSize: "clamp(26px, 4vw, 48px)",
@@ -252,7 +265,7 @@ export default function ServicesAccordion() {
                 {/* Sub-services and Image Layout */}
                 <div className="w-full flex flex-col md:flex-row gap-8 items-center justify-between">
                   {/* Left Column: Sub-services List */}
-                  <div className="w-full md:w-[40%] flex flex-col justify-center pb-2 pl-6 sm:pl-16 md:pl-24">
+                  <div className="w-full md:w-[40%] flex flex-col justify-center pb-2">
                     <ul className="list-none p-0 m-0 text-left flex flex-col gap-1">
                       {service.subServices.map((sub, i) => (
                         <li

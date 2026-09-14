@@ -136,7 +136,7 @@ interface ProjectTemplateProps {
 function PillBadge({ label }: { label: string }) {
   return (
     <span
-      className="inline-flex items-center rounded-full border border-[#F5E9D0]/40 px-4 py-[5px] text-[#F5E9D0]"
+      className="inline-flex items-center rounded-full border border-[#d6dee9]/40 px-4 py-[5px] text-[#d6dee9]"
       style={{ fontFamily: "Inter-Medium, sans-serif", fontSize: "clamp(10px, 1.8vw, 13px)" }}
     >
       {label}
@@ -160,7 +160,7 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
   } = project;
 
   return (
-    <section className="relative min-h-screen w-full bg-[#1D0121] text-[#F5E9D0]">
+    <section className="relative min-h-screen w-full bg-[#1D0121] text-[#d6dee9]">
 
       {/* ════════════════════════════════════════════════════════════════════
           HEADER SECTION — 2-column grid ~40/60
@@ -176,9 +176,9 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
             paddingTop: "clamp(3rem, 7vw, 5.5rem)",
           }}
         >
-          <button 
+          <button
             onClick={() => window.history.back()}
-            className="mb-6 inline-flex items-center text-[#F5E9D0] hover:text-[#F0C766] transition-colors self-start cursor-pointer border-0 bg-transparent tracking-widest text-lg sm:text-xl"
+            className="mb-6 inline-flex items-center text-[#d6dee9] hover:text-[#F0C766] transition-colors self-start cursor-pointer border-0 bg-transparent tracking-widest text-lg sm:text-xl"
             style={{ fontFamily: "Oswald, sans-serif" }}
             aria-label="Go back"
           >
@@ -187,7 +187,7 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
           {/* Title & Logo inline */}
           <div className="flex items-center gap-6 mt-4 sm:mt-8 md:mt-0 flex-wrap">
             <h1
-              className="font-bold uppercase leading-[0.9] tracking-tight text-[#F5E9D0]"
+              className="font-bold uppercase leading-[0.9] tracking-tight text-[#d6dee9]"
               style={{
                 fontFamily: "Oswald, sans-serif",
                 fontSize: "clamp(36px, 6vw, 64px)",
@@ -211,7 +211,7 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
 
           {/* Industry subtitle */}
           <p
-            className="mt-3 text-[#F5E9D0]/70"
+            className="mt-3 text-[#d6dee9]/70"
             style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(13px, 2.2vw, 17px)" }}
           >
             Industry: {industry}
@@ -260,13 +260,13 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
         }}
       >
         <h2
-          className="font-bold text-[#F5E9D0]"
+          className="font-bold text-[#d6dee9]"
           style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(14px, 2.2vw, 18px)" }}
         >
           Project Overview
         </h2>
         <p
-          className="italic text-[#F5E9D0]/70 leading-relaxed"
+          className="italic text-[#d6dee9]/70 leading-relaxed"
           style={{
             fontFamily: "Instrument Serif, serif",
             fontSize: "clamp(14px, 2.4vw, 20px)",
@@ -279,7 +279,7 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
 
       {/* Thin full-width divider */}
       <div
-        className="w-full h-px bg-[#F5E9D0]/15"
+        className="w-full h-px bg-[#d6dee9]/15"
         style={{
           marginLeft: "clamp(1.25rem, 5vw, 4rem)",
           marginRight: "clamp(1.25rem, 5vw, 4rem)",
@@ -382,7 +382,7 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
         }}
       >
         <h2
-          className="font-bold text-[#F5E9D0] mb-8"
+          className="font-bold text-[#d6dee9] mb-8"
           style={{
             fontFamily: "Futura, sans-serif",
             fontSize: "clamp(18px, 3vw, 28px)",
@@ -409,13 +409,13 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
                 {/* Meta */}
                 <div className="pt-4 pb-2">
                   <h3
-                    className="font-bold uppercase leading-none text-[#F5E9D0] mb-1 transition-colors group-hover:text-[#C9A84C]"
+                    className="font-bold uppercase leading-none text-[#d6dee9] mb-1 transition-colors group-hover:text-[#C9A84C]"
                     style={{ fontFamily: "Oswald, sans-serif", fontSize: "clamp(14px, 2.5vw, 18px)" }}
                   >
                     {rp.title}
                   </h3>
                   <p
-                    className="text-[#F5E9D0]/60 mb-3"
+                    className="text-[#d6dee9]/60 mb-3"
                     style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(10px, 1.8vw, 12px)" }}
                   >
                     Industry: {rp.industry}

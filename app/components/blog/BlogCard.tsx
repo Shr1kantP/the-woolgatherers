@@ -27,22 +27,22 @@ export default function BlogCard({
           {image ? (
             <Image src={image} alt={imageAlt || title} fill className="object-cover transition duration-700 group-hover:scale-105" sizes={featured ? "(max-width: 1024px) 100vw, 56vw" : "(max-width: 639px) 82vw, (max-width: 1024px) 45vw, 25vw"} />
           ) : (
-            <span aria-hidden="true" className="absolute inset-0 flex items-center justify-center font-heading text-[clamp(3rem,9vw,7rem)] leading-none text-[#F5E9D0]/90 drop-shadow-sm">
+            <span aria-hidden="true" className="absolute inset-0 flex items-center justify-center font-heading text-[clamp(3rem,9vw,7rem)] leading-none text-[#d6dee9]/90 drop-shadow-sm">
               {featured ? "+" : "W"}
             </span>
           )}
         </div>
         <div className="flex flex-1 flex-col pt-3">
-          <div className="flex items-baseline justify-between gap-3 text-[#F5E9D0]/70">
+          <div className="flex items-baseline justify-between gap-3 text-[#d6dee9]/70">
             <span className="font-inter text-sm italic">{badge}</span>
             <time dateTime={date} className="shrink-0 text-[10px] font-medium uppercase tracking-[0.08em]">
               {date}
             </time>
           </div>
-          <h2 className="font-inter mt-2 text-[clamp(1.25rem,1.8vw,1.65rem)] leading-[1.05] text-[#F5E9D0] transition-colors group-hover:text-[#C9A84C]">
+          <h2 className="font-inter mt-2 text-[clamp(1.25rem,1.8vw,1.65rem)] leading-[1.05] text-[#d6dee9] transition-colors group-hover:text-[#C9A84C]">
             {title}
           </h2>
-          <p className="mt-2 line-clamp-2 text-sm leading-snug text-[#F5E9D0]/80">
+          <p className="mt-2 line-clamp-2 text-sm leading-snug text-[#d6dee9]/80">
             {excerpt}
           </p>
         </div>

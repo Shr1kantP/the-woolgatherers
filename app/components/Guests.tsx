@@ -45,14 +45,14 @@ function LogoTrack({ reverse = false }: { reverse?: boolean }) {
             src={src}
             alt={`${logoNames[index % logos.length]} logo`}
             className={`resident-logo ${src.includes("cureveda") || src.includes("jimmys")
-                ? `resident-logo--small ${src.includes("cureveda") ? "resident-logo--spaced" : ""
-                }`
-                : src.includes("chrian-tea") ||
-                  src.includes("/mtr.") ||
-                  src.includes("/sathi.") ||
-                  src.includes("/wingreens.")
-                  ? "resident-logo--large"
-                  : ""
+              ? `resident-logo--small ${src.includes("cureveda") ? "resident-logo--spaced" : ""
+              }`
+              : src.includes("chrian-tea") ||
+                src.includes("/mtr.") ||
+                src.includes("/sathi.") ||
+                src.includes("/wingreens.")
+                ? "resident-logo--large"
+                : ""
               } ${src.includes("chrian-tea") || src.includes("country-bean")
                 ? "resident-logo--spaced"
                 : ""
@@ -76,7 +76,7 @@ export default function Guests() {
 
       <div className="absolute inset-0 z-10 pointer-events-none">
         <h2
-          className="font-semibold uppercase text-[#F5E9D0] text-center flex items-center justify-center h-full w-full mx-auto max-w-7xl px-4 py-8 md:px-10 md:py-20"
+          className="font-semibold uppercase text-[#d6dee9] text-center flex items-center justify-center h-full w-full mx-auto max-w-7xl px-4 py-8 md:px-10 md:py-20"
           style={{
             letterSpacing: "0.02em",
             fontFamily: '"Jersey 15", serif',

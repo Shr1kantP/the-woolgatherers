@@ -7,14 +7,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { blob } from "@/app/lib/blob";
 
 const CARDS = [
-  { src: blob("/images/Res_stories/mtr_res_stories.jpg"),  alt: "MTR brand work",         rotate: -4, yOffset: 40,  href: "/work/mtr-foods"    },
-  { src: blob("/images/Res_stories/studio-inside-eye.jpg"), alt: "Sie brand work",         rotate: 0,  yOffset: 0,   href: "/work/sie-branding" },
-  { src: blob("/images/Res_stories/wing_res_stories.jpg"), alt: "Wingreens brand work",    rotate: 6,  yOffset: -40, href: "/work/wingreens"    },
+  { src: blob("/images/Res_stories/mtr_res_stories.jpg"), alt: "MTR brand work", rotate: -4, yOffset: 40, href: "/work/mtr-foods" },
+  { src: blob("/images/Res_stories/studio-inside-eye.jpg"), alt: "Sie brand work", rotate: 0, yOffset: 0, href: "/work/sie-branding" },
+  { src: blob("/images/Res_stories/wing_res_stories.jpg"), alt: "Wingreens brand work", rotate: 6, yOffset: -40, href: "/work/wingreens" },
 ];
 
 export default function Resident_stories() {
   const sectionRef = useRef<HTMLElement | null>(null);
-  const cardsRef   = useRef<Array<HTMLDivElement | null>>([]);
+  const cardsRef = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -22,12 +22,12 @@ export default function Resident_stories() {
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduceMotion) {
-       cardsRef.current.forEach(c => {
-         if (c) {
-           gsap.set(c, { y: 0, opacity: 1, scale: 1 });
-         }
-       });
-       return;
+      cardsRef.current.forEach(c => {
+        if (c) {
+          gsap.set(c, { y: 0, opacity: 1, scale: 1 });
+        }
+      });
+      return;
     }
 
     const cards = cardsRef.current.filter(Boolean) as HTMLDivElement[];
@@ -78,7 +78,7 @@ export default function Resident_stories() {
 
     Array.from(section.querySelectorAll("img")).forEach((img) => {
       if ((img as HTMLImageElement).complete) return;
-      img.addEventListener("load",  tryRefresh, { once: true });
+      img.addEventListener("load", tryRefresh, { once: true });
       img.addEventListener("error", tryRefresh, { once: true });
     });
 
@@ -91,14 +91,14 @@ export default function Resident_stories() {
     <section
       ref={sectionRef}
       style={{ backgroundColor: "#220319" }}
-      className="relative z-[1] w-full min-h-screen text-[#F5E9D0] flex flex-col overflow-x-hidden"
+      className="relative z-[1] w-full min-h-screen text-[#d6dee9] flex flex-col overflow-x-hidden"
     >
-      
+
       <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-12 pt-32 pb-12 flex-1 flex flex-col justify-center h-full relative">
-        
+
         {/* Main Content Area (Two Columns on Desktop) */}
         <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between w-full relative z-10 flex-1 gap-12 lg:gap-8">
-          
+
           {/* Left Column (Headline) */}
           <div className="w-full lg:w-[45%] flex flex-col justify-center z-20">
             <h2
@@ -107,7 +107,7 @@ export default function Resident_stories() {
                 fontFamily: "var(--font-jersey-15), system-ui, sans-serif",
                 fontSize: "clamp(36px, 5vw, 76px)",
                 lineHeight: "1",
-                color: "#F5E9D0",
+                color: "#d6dee9",
                 letterSpacing: "0.02em"
               }}
             >
@@ -148,7 +148,7 @@ export default function Resident_stories() {
         {/* We give this a background and z-20 so cards can animate from behind it. */}
         <div className="w-full mt-8 lg:mt-auto pt-8 z-20 relative bg-[#220319]">
           <hr className="border-t border-[#D4A24E] opacity-40 mb-6 sm:mb-8" />
-          
+
           <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 pb-8">
             <h3
               className="uppercase font-bold m-0 shrink-0"
@@ -156,7 +156,7 @@ export default function Resident_stories() {
                 fontFamily: "var(--font-jersey-15), system-ui, sans-serif",
                 letterSpacing: "0.04em",
                 fontSize: "clamp(24px, 4vw, 42px)",
-                color: "#F5E9D0",
+                color: "#d6dee9",
               }}
             >
               RESIDENT STORIES
@@ -167,7 +167,7 @@ export default function Resident_stories() {
               style={{
                 fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif",
                 fontSize: "clamp(14px, 2vw, 16px)",
-                color: "#F5E9D0",
+                color: "#d6dee9",
                 letterSpacing: "0.04em",
                 lineHeight: "1.5",
                 maxWidth: "100%",

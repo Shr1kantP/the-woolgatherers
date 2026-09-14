@@ -20,7 +20,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="relative z-30 min-h-screen w-full text-[#F5E9D0] flex flex-col -mt-[15vh] pt-[15vh]"
+      className="relative z-30 min-h-screen w-full text-[#d6dee9] flex flex-col -mt-[15vh] pt-[15vh]"
       style={{
         backgroundImage: `url("/images/footer/footer-bg.webp")`,
         backgroundColor: "#1F001B",
@@ -51,7 +51,7 @@ export default function Footer() {
           <div className="hidden md:flex flex-1 justify-end">
             <nav
               aria-label="Footer services"
-              className="flex flex-col gap-1 font-medium text-left text-[#F5E9D0] whitespace-nowrap"
+              className="flex flex-col gap-1 font-medium text-left text-[#d6dee9] whitespace-nowrap"
               style={{ fontSize: "clamp(0.9rem, 1.5vw, 1.25rem)" }}
             >
               {navItems.map((item) => (
@@ -119,14 +119,14 @@ export default function Footer() {
           {/* Desktop: socials right */}
           <div className="hidden md:flex flex-1 justify-start">
             <div className="flex flex-col items-center gap-6">
-              <a href="https://www.instagram.com/thewoolgatherers.co?stkn=MWowdzkxdXdubHBxeg%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank" rel="noreferrer" className="text-[#F5E9D0] transition-colors hover:text-[#F0C766]">
+              <a href="https://www.instagram.com/thewoolgatherers.co?stkn=MWowdzkxdXdubHBxeg%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank" rel="noreferrer" className="text-[#d6dee9] transition-colors hover:text-[#F0C766]">
                 <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[27px] w-[27px] lg:h-[31px] lg:w-[31px] fill-none stroke-current stroke-[1.5]">
                   <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
                   <circle cx="12" cy="12" r="4.2" />
                   <circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none" />
                 </svg>
               </a>
-              <a href="https://linkedin.com/company/thewoolgatherers" aria-label="LinkedIn" target="_blank" rel="noreferrer" className="text-[#F5E9D0] transition-colors hover:text-[#F0C766]">
+              <a href="https://linkedin.com/company/thewoolgatherers" aria-label="LinkedIn" target="_blank" rel="noreferrer" className="text-[#d6dee9] transition-colors hover:text-[#F0C766]">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" aria-hidden="true" className="h-[27px] w-[27px] lg:h-[31px] lg:w-[31px] fill-current">
                   <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z" />
                 </svg>
@@ -138,7 +138,7 @@ export default function Footer() {
           <div className="flex md:hidden w-full justify-center items-center gap-12 px-4 py-3">
             <nav
               aria-label="Footer services"
-              className="flex flex-col gap-0 text-left font-medium text-[#F5E9D0] whitespace-nowrap"
+              className="flex flex-col gap-0 text-left font-medium text-[#d6dee9] whitespace-nowrap"
               style={{ fontSize: "clamp(0.65rem, 3vw, 0.8rem)" }}
             >
               {navItems.map((item) => (
@@ -146,14 +146,14 @@ export default function Footer() {
               ))}
             </nav>
             <div className="flex flex-col items-center gap-4">
-              <a href="https://www.instagram.com/thewoolgatherers.co?stkn=MWowdzkxdXdubHBxeg%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank" rel="noreferrer" className="text-[#F5E9D0]">
+              <a href="https://www.instagram.com/thewoolgatherers.co?stkn=MWowdzkxdXdubHBxeg%3D%3D&utm_source=qr" aria-label="Instagram" target="_blank" rel="noreferrer" className="text-[#d6dee9]">
                 <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 fill-none stroke-current stroke-[1.5]">
                   <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
                   <circle cx="12" cy="12" r="4.2" />
                   <circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none" />
                 </svg>
               </a>
-              <a href="https://linkedin.com/company/thewoolgatherers" aria-label="LinkedIn" target="_blank" rel="noreferrer" className="text-[#F5E9D0]">
+              <a href="https://linkedin.com/company/thewoolgatherers" aria-label="LinkedIn" target="_blank" rel="noreferrer" className="text-[#d6dee9]">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" aria-hidden="true" className="h-6 w-6 fill-current">
                   <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z" />
                 </svg>
@@ -177,7 +177,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="shrink-0">
         <div
-          className="mx-auto flex max-w-[1600px] flex-col gap-3 px-4 sm:px-8 lg:px-10 pb-24 md:pb-6 pt-4 text-[#F5E9D0]/80 sm:flex-row sm:items-center sm:justify-center text-center"
+          className="mx-auto flex max-w-[1600px] flex-col gap-3 px-4 sm:px-8 lg:px-10 pb-24 md:pb-6 pt-4 text-[#d6dee9]/80 sm:flex-row sm:items-center sm:justify-center text-center"
           style={{ fontSize: "clamp(0.65rem, 1.6vw, 0.75rem)" }}
         >
           <div className="sm:mr-4">© 2026 The Woolgatherers. All rights reserved.</div>

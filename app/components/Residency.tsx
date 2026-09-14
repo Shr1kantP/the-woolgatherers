@@ -68,12 +68,12 @@ export default function Residency() {
     fontFamily: "Inter, ui-sans-serif, sans-serif",
     fontSize: "clamp(13px, 3.5vw, 16px)",
     lineHeight: 1.6,
-    color: "#F5E9D0",
+    color: "#d6dee9",
   };
 
   return (
     <section
-      className="relative bg-[#1D0121] text-[#F5E9D0]"
+      className="relative bg-[#1D0121] text-[#d6dee9]"
       style={{ paddingTop: "clamp(3rem, 8vw, 6rem)", paddingBottom: "clamp(3rem, 8vw, 6rem)" }}
     >
 
@@ -90,7 +90,7 @@ export default function Residency() {
             style={{
               fontFamily: '"Jersey 15", system-ui, serif',
               letterSpacing: "0.02em",
-              color: "#F5E9D0",
+              color: "#d6dee9",
             }}
           >
             {/* <span className="block text-[clamp(24px,6vw         6999998899999999999999999,32px)] leading-none mb-1">THE</span> */}
@@ -144,7 +144,7 @@ export default function Residency() {
         </div>
 
         {/* 4. Bottom Full-Width Quote */}
-        <div className="w-full text-right pt-8 pb-4 pr-1">
+        <div className="w-full text-right pt-8 pb-12 pr-1">
           <p
             className="leading-snug"
             style={{
@@ -180,7 +180,7 @@ export default function Residency() {
               />
             </div>
             <div ref={para1Ref} className="col-span-6 col-start-6 -ml-4">
-              <p style={{ fontFamily: "Inter, sans-serif", fontSize: 21, lineHeight: 1.5, color: "#F5E9D0" }}>
+              <p style={{ fontFamily: "Inter, sans-serif", fontSize: 21, lineHeight: 1.5, color: "#d6dee9" }}>
                 We help brands find clarity, build distinct<br />
                 identities, and grow through thoughtful<br />
                 strategy, design, content, and digital<br />
@@ -197,7 +197,7 @@ export default function Residency() {
               style={{
                 fontSize: "clamp(64px, 8vw, 120px)",
                 fontFamily: '"Jersey 15", serif',
-                color: "#F5E9D0",
+                color: "#d6dee9",
               }}
             >
               THE RESIDENCY
@@ -208,7 +208,7 @@ export default function Residency() {
           <div className="grid grid-cols-12 gap-8 items-start">
             {/* Bottom Left Column */}
             <div ref={para2Ref} className="col-span-4 col-start-2 pt-8">
-              <p style={{ fontFamily: "Inter, sans-serif", fontSize: 21, lineHeight: 1.5, color: "#F5E9D0" }}>
+              <p style={{ fontFamily: "Inter, sans-serif", fontSize: 21, lineHeight: 1.5, color: "#d6dee9" }}>
                 Over the years, we&apos;ve worked with startups, family businesses, challenger brands,
                 and category leaders alike.
               </p>
@@ -227,7 +227,7 @@ export default function Residency() {
                 />
               </div>
               <div className="w-[90%] translate-x-[-120%] -translate-y-[200px]">
-                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 21, lineHeight: 1.5, color: "#F5E9D0" }}>
+                <p style={{ fontFamily: "Inter, sans-serif", fontSize: 21, lineHeight: 1.5, color: "#d6dee9" }}>
                   Every brand&apos;s journey is different. Every stay is thoughtfully designed.
                 </p>
               </div>

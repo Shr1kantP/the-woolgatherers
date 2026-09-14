@@ -40,7 +40,7 @@ export interface StaggeredMenuProps {
 
 export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   position = 'right',
-  colors = ['1D0121', '#F5E9D0', '#1D0121'],
+  colors = ['1D0121', '#d6dee9', '#1D0121'],
   items = [],
   socialItems = [],
   displaySocials = true,
@@ -50,7 +50,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   logoElement,
   centerLogo,
   headerColor = '#1D0121',
-  menuButtonColor = '#F5E9D0',
+  menuButtonColor = '#d6dee9',
   openMenuButtonColor = '#1D0121',
   changeMenuColorOnOpen = true,
   accentColor = '#1D0121',
@@ -435,7 +435,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
           aria-hidden="true"
         >
           {(() => {
-            const raw = colors && colors.length ? colors.slice(0, 4) : ['#400000', '#F5E9D0'];
+            const raw = colors && colors.length ? colors.slice(0, 4) : ['#400000', '#d6dee9'];
             let arr = [...raw];
             if (arr.length >= 3) {
               const mid = Math.floor(arr.length / 2);
@@ -536,10 +536,10 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                   };
 
                   return (
-                    <li className="sm-panel-itemWrap relative overflow-hidden py-1 border-b border-[#F5E9D0]/5" key={it.label + idx}>
+                    <li className="sm-panel-itemWrap relative overflow-hidden py-1 border-b border-[#d6dee9]/5" key={it.label + idx}>
                       <div className="flex items-center justify-between w-full">
                         <a
-                          className="sm-panel-item relative text-[#F5E9D0] font-heading font-bold text-[3rem] md:text-[4.5rem] cursor-pointer leading-none tracking-tight uppercase transition-transform duration-200 no-underline hover:scale-[1.04] flex items-baseline gap-4"
+                          className="sm-panel-item relative text-[#d6dee9] font-heading font-bold text-[3rem] md:text-[4.5rem] cursor-pointer leading-none tracking-tight uppercase transition-transform duration-200 no-underline hover:scale-[1.04] flex items-baseline gap-4"
                           href={it.onClick ? undefined : it.link}
                           onClick={it.onClick ? handleClick : closeMenu}
                           aria-label={it.ariaLabel}
@@ -549,7 +549,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                           </span>
 
                           {displayItemNumbering && (
-                            <span className="sm-panel-item-num text-[1.2rem] md:text-[1.5rem] font-sans font-medium text-[#F5E9D0] opacity-0 self-center">
+                            <span className="sm-panel-item-num text-[1.2rem] md:text-[1.5rem] font-sans font-medium text-[#d6dee9] opacity-0 self-center">
                               ({numStr})
                             </span>
                           )}
@@ -561,7 +561,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                 })
               ) : (
                 <li className="sm-panel-itemWrap relative overflow-hidden leading-none" aria-hidden="true">
-                  <span className="sm-panel-item relative text-[#F5E9D0] font-bold text-[4rem] uppercase">
+                  <span className="sm-panel-item relative text-[#d6dee9] font-bold text-[4rem] uppercase">
                     <span className="sm-panel-itemLabel inline-block">
                       No items
                     </span>
@@ -571,8 +571,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             </ul>
 
             {displaySocials && socialItems && socialItems.length > 0 && (
-              <div className="sm-socials mt-12 pt-8 border-t border-[#F5E9D0]/10 flex flex-col gap-4 font-sans" aria-label="Social links">
-                <h3 className="sm-socials-title m-0 text-sm tracking-widest uppercase text-[#F5E9D0]/40 font-sans">Follow us on.</h3>
+              <div className="sm-socials mt-12 pt-8 border-t border-[#d6dee9]/10 flex flex-col gap-4 font-sans" aria-label="Social links">
+                <h3 className="sm-socials-title m-0 text-sm tracking-widest uppercase text-[#d6dee9]/40 font-sans">Follow us on.</h3>
                 <ul
                   className="sm-socials-list list-none m-0 p-0 flex flex-row items-center gap-6 flex-wrap"
                   role="list"
@@ -583,7 +583,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                         href={s.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="sm-socials-link text-[0.8rem] md:text-[0.9rem] font-semibold text-[#F5E9D0] hover:text-[#F5E9D0] no-underline flex items-center gap-1 transition-colors duration-200 font-sans uppercase"
+                        className="sm-socials-link text-[0.8rem] md:text-[0.9rem] font-semibold text-[#d6dee9] hover:text-[#d6dee9] no-underline flex items-center gap-1 transition-colors duration-200 font-sans uppercase"
                       >
                         {s.label}
                       </a>
@@ -591,10 +591,10 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                   ))}
                 </ul>
 
-                <div className="sm-menu-footer mt-6 pt-4 border-t border-[#F5E9D0]/5 flex flex-wrap items-center gap-x-6 gap-y-2 text-[0.7rem] text-[#F5E9D0]/40 font-sans uppercase tracking-wider">
-                  <a href="#" className="hover:text-[#F5E9D0] transition-colors duration-150">Privacy Policy</a>
-                  <a href="#" className="hover:text-[#F5E9D0] transition-colors duration-150">Terms of Service</a>
-                  <a href="#" className="hover:text-[#F5E9D0] transition-colors duration-150">Cookies Settings</a>
+                <div className="sm-menu-footer mt-6 pt-4 border-t border-[#d6dee9]/5 flex flex-wrap items-center gap-x-6 gap-y-2 text-[0.7rem] text-[#d6dee9]/40 font-sans uppercase tracking-wider">
+                  <a href="#" className="hover:text-[#d6dee9] transition-colors duration-150">Privacy Policy</a>
+                  <a href="#" className="hover:text-[#d6dee9] transition-colors duration-150">Terms of Service</a>
+                  <a href="#" className="hover:text-[#d6dee9] transition-colors duration-150">Cookies Settings</a>
                 </div>
               </div>
             )}

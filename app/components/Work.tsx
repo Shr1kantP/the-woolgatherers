@@ -152,7 +152,7 @@ const projects: Project[] = [
 function Tag({ label }: { label: string }) {
   return (
     <span
-      className="inline-flex items-center rounded-full border border-[#d6dee9]/40 px-3 py-[3px] text-[#d6dee9]"
+      className="inline-flex items-center rounded-full border border-[#F5E9D0]/40 px-3 py-[3px] text-[#F5E9D0]"
       style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(9px, 1.8vw, 11px)" }}
     >
       {label}
@@ -184,13 +184,13 @@ function StandardCard({ project }: { project: Project }) {
       {/* Meta */}
       <div className="pt-4 pb-2">
         <h3
-          className="font-bold uppercase leading-none text-[#d6dee9] mb-1 transition-colors group-hover:text-[#C9A84C]"
+          className="font-bold uppercase leading-none text-[#F5E9D0] mb-1 transition-colors group-hover:text-[#C9A84C]"
           style={{ fontFamily: "Oswald, sans-serif", fontSize: "clamp(16px, 3.5vw, 22px)" }}
         >
           {project.name}
         </h3>
         <p
-          className="text-[#d6dee9]/60 mb-3"
+          className="text-[#F5E9D0]/60 mb-3"
           style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(10px, 2vw, 13px)" }}
         >
           Industry: {project.industry}
@@ -220,7 +220,7 @@ function TextCard({ project }: { project: Project }) {
         {/* Cream box mimicking the design screenshot */}
         <div
           className="relative w-full flex flex-col justify-between p-6 sm:p-8"
-          style={{ aspectRatio: "4/3", background: "#d6dee9" }}
+          style={{ aspectRatio: "4/3", background: "#F5E9D0" }}
         >
           {project.logo && (
             <div className="flex justify-center items-start pt-2">
@@ -246,13 +246,13 @@ function TextCard({ project }: { project: Project }) {
         {/* Meta */}
         <div className="pt-4 pb-2">
           <h3
-            className="font-bold uppercase leading-none text-[#d6dee9] mb-1 transition-colors group-hover:text-[#C9A84C]"
+            className="font-bold uppercase leading-none text-[#F5E9D0] mb-1 transition-colors group-hover:text-[#C9A84C]"
             style={{ fontFamily: "Oswald, sans-serif", fontSize: "clamp(16px, 3.5vw, 22px)" }}
           >
             {project.name}
           </h3>
           <p
-            className="text-[#d6dee9]/60 mb-3"
+            className="text-[#F5E9D0]/60 mb-3"
             style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(10px, 2vw, 13px)" }}
           >
             Industry: {project.industry}
@@ -301,13 +301,13 @@ function FullWidthCard({ project }: { project: Project }) {
         <div className="pt-4 pb-2 flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-10">
           <div className="flex-shrink-0">
             <h3
-              className="font-bold uppercase leading-none text-[#d6dee9] mb-1 transition-colors group-hover:text-[#C9A84C]"
+              className="font-bold uppercase leading-none text-[#F5E9D0] mb-1 transition-colors group-hover:text-[#C9A84C]"
               style={{ fontFamily: "Oswald, sans-serif", fontSize: "clamp(16px, 3.5vw, 22px)" }}
             >
               {project.name}
             </h3>
             <p
-              className="text-[#d6dee9]/60 mb-3"
+              className="text-[#F5E9D0]/60 mb-3"
               style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(10px, 2vw, 13px)" }}
             >
               Industry: {project.industry}
@@ -321,7 +321,7 @@ function FullWidthCard({ project }: { project: Project }) {
 
           {project.sideDescription && (
             <p
-              className="text-[#d6dee9]/70 max-w-xl transition-colors group-hover:text-[#d6dee9]"
+              className="text-[#F5E9D0]/70 max-w-xl transition-colors group-hover:text-[#F5E9D0]"
               style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(11px, 2vw, 13px)", lineHeight: 1.65 }}
             >
               {project.sideDescription}
@@ -341,7 +341,7 @@ export default function Work() {
 
   return (
     <section
-      className="relative bg-[#1D0121] text-[#d6dee9]"
+      className="relative bg-[#1D0121] text-[#F5E9D0]"
       style={{
         paddingTop: "clamp(3rem, 7vw, 5.5rem)",
         paddingBottom: "clamp(3rem, 7vw, 5.5rem)",

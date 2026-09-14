@@ -26,7 +26,7 @@ export default function Navbar() {
     { label: "[LinkedIn]", link: "https://linkedin.com/company/thewoolgatherers" }
   ];
 
-  const currentMenuColor = '#d6dee9';
+  const currentMenuColor = '#F5E9D0';
   const currentHeaderColor = '#1D0121';
 
   const logoElement = (
@@ -38,7 +38,7 @@ export default function Navbar() {
       <span
         role="img"
         aria-label="The Woolgatherers Logo"
-        className="h-10 w-10 bg-[#d6dee9]"
+        className="h-10 w-10 bg-[#F5E9D0]"
         style={{
           maskImage: 'url("/images/logo/keyhole-white.svg")',
           maskPosition: 'center',
@@ -77,7 +77,7 @@ export default function Navbar() {
       menuButtonColor={currentMenuColor}
       openMenuButtonColor="#400000"
       changeMenuColorOnOpen={true}
-      colors={['#400000', '#d6dee9', '#1D0121']}
+      colors={['#400000', '#F5E9D0', '#1D0121']}
       accentColor="#400000"
       logoElement={logoElement}
       centerLogo={centerLogo}

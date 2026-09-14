@@ -205,7 +205,7 @@ export default function ServicesAccordion() {
     <div ref={containerRef} className="relative w-full flex flex-col bg-[#1D0121]">
       <div className="w-full px-6 pt-32 pb-2 sm:px-8 sm:pt-16 sm:pb-4 md:px-10 md:pt-20 md:pb-4">
         <h2
-          className="text-[#d6dee9] font-normal text-left leading-none"
+          className="text-[#F5E9D0] font-normal text-left leading-none md:-mt-[5px]"
           style={{ fontFamily: '"Jersey 15", system-ui, sans-serif', fontSize: "70px" }}
         >
           OUR SERVICES
@@ -226,7 +226,7 @@ export default function ServicesAccordion() {
               className="relative w-full h-[90px] md:h-[140px] flex items-center justify-between p-4 sm:p-6 md:p-10 gap-2 sm:gap-4"
             >
               <h3
-                className="text-[#d6dee9] font-normal leading-tight whitespace-normal break-words sm:whitespace-normal overflow-hidden text-ellipsis"
+                className="text-[#F5E9D0] font-normal leading-tight whitespace-normal break-words sm:whitespace-normal overflow-hidden text-ellipsis"
                 style={{
                   fontFamily: '"Inter", system-ui, sans-serif',
                   fontSize: "clamp(18px, 3.5vw, 34px)",
@@ -234,9 +234,9 @@ export default function ServicesAccordion() {
               >
                 {service.title}
               </h3>
-              <div className="w-8 h-8 md:w-10 md:h-10 text-[#d6dee9] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="w-8 h-8 md:w-10 md:h-10 text-[#F5E9D0] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
             </div>
@@ -252,7 +252,7 @@ export default function ServicesAccordion() {
               >
                 {/* Large Title */}
                 <h4
-                  className="w-full text-[#d6dee9] font-medium tracking-normal mb-10 sm:mb-16 text-left"
+                  className="w-full text-[#F5E9D0] font-medium tracking-normal mb-10 sm:mb-16 text-left"
                   style={{
                     fontFamily: '"Inter", system-ui, sans-serif',
                     fontSize: "clamp(26px, 4vw, 48px)",
@@ -270,7 +270,7 @@ export default function ServicesAccordion() {
                       {service.subServices.map((sub, i) => (
                         <li
                           key={i}
-                          className="text-[#d6dee9] font-medium leading-relaxed"
+                          className="text-[#F5E9D0] font-medium leading-relaxed"
                           style={{
                             fontFamily: '"Inter", system-ui, sans-serif',
                             fontSize: "clamp(16px, 2.5vw, 22px)",

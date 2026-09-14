@@ -30,7 +30,7 @@ const mtrProject: ProjectData = {
   ],
   relatedProjects: [
     {
-      thumbnail: blob("/images/detailed_page/Cureveda/cureveda_1.jpg"),
+      thumbnail: blob("/images/detailed_page/cureveda/cureveda_1.jpg"),
       title: "CUREVEDA",
       industry: "Health & Wellness",
       tags: ["Content Production", "UGC Content"],

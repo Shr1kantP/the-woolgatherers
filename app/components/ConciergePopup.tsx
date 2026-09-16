@@ -302,8 +302,9 @@ export default function ConciergePopup({ isOpen, onClose }: ConciergePopupProps)
             </div>
           </form>
         )}
+          </div>
+        </div>
       </div>
-    </div>
     </div>
   );
 }

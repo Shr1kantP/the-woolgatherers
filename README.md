@@ -1,0 +1,100 @@
+# The Woolgatherers
+
+Website for [The Woolgatherers](https://www.thewoolgatherers.co) — a creative residency for brands based in Bangalore.
+
+Built with Next.js 15 (App Router), Tailwind CSS, and GSAP.
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** Tailwind CSS v4
+- **Animations:** GSAP + ScrollTrigger, Lenis smooth scroll
+- **Fonts:** Jersey 15 (local), Inter, Geist (Google)
+- **Deployment:** Vercel
+
+---
+
+## Project Structure
+
+```
+app/
+├── page.tsx                  # Home page
+├── layout.tsx                # Root layout (Navbar, ConciergeModal, Cursor)
+├── sitemap.ts                # Auto-generated sitemap at /sitemap.xml
+├── robots.ts                 # Auto-generated robots.txt
+├── blog/                     # Blog index + dynamic [slug] pages
+├── work/                     # Work index + individual case study pages
+│   ├── cureveda/
+│   ├── kumbaya/
+│   ├── mtr-foods/
+│   ├── peps/
+│   ├── santhi/
+│   ├── sie-branding/
+│   ├── sie-website/
+│   ├── tavana/
+│   ├── vahdam/
+│   ├── wingreens/
+│   └── ...
+└── components/
+    ├── hero.tsx
+    ├── Navbar.tsx
+    ├── StaggeredMenu.tsx
+    ├── footer.tsx
+    ├── ServicesAccordion.tsx
+    ├── Residency.tsx
+    ├── Resident_stories.tsx
+    ├── ConciergePopup.tsx
+    └── ...
+```
+
+---
+
+## Getting Started
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## Environment Variables
+
+Create a `.env.local` file in the `woolgatherers/` directory:
+
+```env
+NEXT_PUBLIC_APPS_SCRIPT_URL=   # Optional: Google Apps Script endpoint for form submissions
+```
+
+---
+
+## Key Features
+
+- **Hero** — Framed video background with blur filter, animated frame cards, seamless gradient transition
+- **Services Accordion** — GSAP-animated expandable service panels
+- **Work Grid** — Case study cards linking to individual project pages
+- **Resident Stories** — GSAP ScrollTrigger pinned section with stacked card animation
+- **Concierge Popup** — Guest register form that opens via mailto
+- **Blog** — Static blog with SEO-optimised individual post pages
+- **SEO** — `sitemap.xml` and `robots.txt` auto-generated via Next.js App Router conventions
+
+---
+
+## Deployment
+
+Deployed on [Vercel](https://vercel.com). Push to `main` to trigger a production build.
+
+```bash
+npm run build   # verify build locally before pushing
+```

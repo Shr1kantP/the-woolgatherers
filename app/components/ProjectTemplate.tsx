@@ -266,9 +266,9 @@ export default function ProjectTemplate({ project }: ProjectTemplateProps) {
           Project Overview
         </h2>
         <p
-          className="italic text-[#F5E9D0]/70 leading-relaxed"
+          className="text-[#F5E9D0]/70 leading-relaxed"
           style={{
-            fontFamily: "Instrument Serif, serif",
+            fontFamily: "Inter, sans-serif",
             fontSize: "clamp(14px, 2.4vw, 20px)",
             lineHeight: 1.65,
           }}

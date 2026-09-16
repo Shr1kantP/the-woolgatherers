@@ -60,7 +60,7 @@ export default function ConciergePopup({ isOpen, onClose }: ConciergePopupProps)
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-xs transition-opacity duration-300 overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-start md:items-center justify-center bg-black/60 p-4 pt-10 pb-10 md:pt-4 md:pb-4 backdrop-blur-xs transition-opacity duration-300 overflow-y-auto"
       onClick={onClose}
     >
       {/* Wrapper to hold the ticket */}

@@ -202,7 +202,7 @@ export default function ServicesAccordion() {
   
   return (
     <div ref={containerRef} className="relative w-full flex flex-col bg-[#1D0121]">
-      <div className="w-full px-6 pt-32 pb-2 sm:px-8 sm:pt-16 sm:pb-4 md:px-10 md:pt-20 md:pb-4">
+      <div className="w-full px-6 pt-32 pb-2 sm:px-8 sm:pt-16 sm:pb-4 md:px-10 md:pt-8 md:pb-4">
         <h2
           className="text-[#F5E9D0] font-normal text-left leading-none md:-mt-[5px]"
           style={{ fontFamily: '"Jersey 15", system-ui, sans-serif', fontSize: "70px" }}
@@ -222,13 +222,13 @@ export default function ServicesAccordion() {
             {/* Collapsed Header / Label */}
             <div
               ref={(el) => { headerRefs.current[index] = el; }}
-              className="relative w-full h-[90px] md:h-[140px] flex items-center justify-between p-4 sm:p-6 md:p-10 gap-2 sm:gap-4"
+              className="relative w-full min-h-[110px] md:min-h-[140px] flex items-center justify-between p-4 sm:p-6 md:p-10 gap-2 sm:gap-4"
             >
               <h3
                 className="text-[#F5E9D0] font-normal leading-tight whitespace-normal break-words sm:whitespace-normal overflow-hidden text-ellipsis"
                 style={{
                   fontFamily: '"Inter", system-ui, sans-serif',
-                  fontSize: "clamp(18px, 3.5vw, 34px)",
+                  fontSize: "clamp(24px, 4.5vw, 36px)",
                 }}
               >
                 {service.title}

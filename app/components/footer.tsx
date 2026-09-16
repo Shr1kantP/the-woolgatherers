@@ -72,7 +72,7 @@ export default function Footer() {
               className="focus:outline-none cursor-pointer translate-x-[3px] md:translate-x-0"
             >
               <div
-                className={`relative flex items-center justify-center transition-transform duration-200 ${isPressed ? "scale-[0.98]" : "scale-100"}`}
+                className={`relative flex items-center justify-center transition-transform duration-100 ease-out ${isPressed ? "scale-[0.94]" : "scale-100"}`}
                 style={{
                   width: "min(440px, 80vw)",
                   height: "min(280px, 55vw)",
@@ -88,14 +88,14 @@ export default function Footer() {
                   alt="Concierge bell"
                   width={400}
                   height={400}
-                  className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-150 ${isPressed ? "opacity-0" : "opacity-100"}`}
+                  className={`absolute inset-0 h-full w-full object-contain ${isPressed ? "hidden" : "block"}`}
                 />
                 <Image
                   src="/images/footer/bell/bell_pressed.webp"
                   alt="Concierge bell pressed"
                   width={400}
                   height={400}
-                  className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-150 ${isPressed ? "opacity-100" : "opacity-0"}`}
+                  className={`absolute inset-0 h-full w-full object-contain ${isPressed ? "block" : "hidden"}`}
                 />
               </div>
             </button>

@@ -204,8 +204,8 @@ export default function ServicesAccordion() {
     <div ref={containerRef} className="relative w-full flex flex-col bg-[#1D0121]">
       <div className="w-full px-6 pt-32 pb-2 sm:px-8 sm:pt-16 sm:pb-4 md:px-10 md:pt-8 md:pb-4">
         <h2
-          className="text-[#F5E9D0] font-normal text-left leading-none md:-mt-[5px]"
-          style={{ fontFamily: '"Jersey 15", system-ui, sans-serif', fontSize: "70px" }}
+          className="text-[#F5E9D0] font-normal text-left leading-none -mt-[10%]"
+          style={{ fontFamily: '"Jersey 15", system-ui, sans-serif', fontSize: "clamp(64px, 11vw, 120px)" }}
         >
           OUR SERVICES
         </h2>

@@ -91,7 +91,7 @@ export default function Residency() {
               color: "#F5E9D0",
             }}
           >
-            {/* <span className="block text-[clamp(24px,6vw         6999998899999999999999999,32px)] leading-none mb-1">THE</span> */}
+            {/* <span className="block text-[clamp(24px,6vw,32px)] leading-none mb-1">THE</span> */}
             <span className="block text-[clamp(48px,11vw,64px)] leading-none">THE RESIDENCY</span>
           </h2>
         </div>
@@ -191,7 +191,7 @@ export default function Residency() {
           <div className="py-6 text-center">
             <h2
               ref={headingRef}
-              className="uppercase font-bold leading-none tracking-tight"
+              className="uppercase leading-none tracking-tight"
               style={{
                 fontSize: "clamp(64px, 8vw, 120px)",
                 fontFamily: '"Jersey 15", serif',

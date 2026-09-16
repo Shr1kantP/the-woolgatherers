@@ -1,0 +1,500 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+
+/* ─── Media Renderer Helper ─────────────────────────────────────────────── */
+
+function MediaRenderer({
+  src,
+  alt,
+  fill,
+  className,
+  sizes,
+  priority,
+}: {
+  src: string;
+  alt: string;
+  fill?: boolean;
+  className?: string;
+  sizes?: string;
+  priority?: boolean;
+}) {
+  if (!src) return null;
+  const isVideo = /\.(mp4|webm|ogg|mov)$/i.test(src);
+
+  if (isVideo) {
+    return <LazyVideo src={src} className={className} fill={fill} />;
+  }
+
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      fill={fill}
+      className={className}
+      sizes={sizes}
+      priority={priority}
+      loading={priority ? undefined : "lazy"}
+    />
+  );
+}
+
+function LazyVideo({
+  src,
+  className,
+  fill,
+}: {
+  src: string;
+  className?: string;
+  fill?: boolean;
+}) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isNearViewport, setIsNearViewport] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsNearViewport(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          void video.play().catch(() => undefined);
+        } else {
+          video.pause();
+        }
+      },
+      { rootMargin: "300px 0px" }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <video
+      ref={videoRef}
+      src={isNearViewport ? src : undefined}
+      className={`${className || ""} ${fill ? "absolute inset-0 w-full h-full object-cover" : ""}`}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="none"
+      aria-label="Project video"
+    />
+  );
+}
+
+/* ─── Helper for Related Project Link ───────────────────────────────────── */
+
+const getProjectLink = (title: string) => {
+  const cleanTitle = title.toLowerCase().replace(/[^a-z0-9\s-]/g, "").trim();
+  if (cleanTitle.includes("kumbaya") || cleanTitle.includes("kumabaya")) return "/work/kumbaya";
+  if (cleanTitle.includes("mtr") || cleanTitle.includes("foods")) return "/work/mtr-foods";
+  if (cleanTitle.includes("peps")) return "/work/peps";
+  if (cleanTitle.includes("wingreens")) return "/work/wingreens";
+  if (cleanTitle.includes("cureveda")) return "/work/cureveda";
+  if (cleanTitle.includes("vahdam")) return "/work/vahdam";
+  if (cleanTitle.includes("tavana")) return "/work/tavana";
+  if (cleanTitle.includes("santhi")) return "/work/santhi";
+  if (cleanTitle.includes("motion")) return "/work/motion";
+  if (cleanTitle.includes("studio inside eye") || cleanTitle.includes("sie branding")) return "/work/sie-branding";
+  if (cleanTitle.includes("sie website") || cleanTitle.includes("sie")) return "/work/sie-website";
+  return "/work";
+};
+
+/* ─── Types ──────────────────────────────────────────────────────────────── */
+
+export interface RelatedProject {
+  thumbnail: string;
+  title: string;
+  industry: string;
+  tags: string[];
+}
+
+export interface ProjectData {
+  logo?: string;
+  title: string;
+  industry: string;
+  tags: string[];
+  heroImage: string;
+  overview: string;
+  gallery: string[];
+  galleryLayout?: "motion-four" | "sie-website" | "santhi-horizontal" | "masonry";
+  relatedProjects: RelatedProject[];
+}
+
+interface ProjectTemplateProps {
+  project: ProjectData;
+}
+
+/* ─── Pill Badge ─────────────────────────────────────────────────────────── */
+
+function PillBadge({ label }: { label: string }) {
+  return (
+    <span
+      className="inline-flex items-center rounded-full border border-[#F5E9D0]/40 px-4 py-[5px] text-[#F5E9D0]"
+      style={{ fontFamily: "Inter-Medium, sans-serif", fontSize: "clamp(10px, 1.8vw, 13px)" }}
+    >
+      {label}
+    </span>
+  );
+}
+
+/* ─── Main Component ─────────────────────────────────────────────────────── */
+
+export default function ProjectTemplate({ project }: ProjectTemplateProps) {
+  const {
+    logo,
+    title,
+    industry,
+    tags,
+    heroImage,
+    overview,
+    gallery,
+    galleryLayout,
+    relatedProjects,
+  } = project;
+
+  return (
+    <section className="relative min-h-screen w-full bg-[#1D0121] text-[#F5E9D0]">
+
+      {/* ════════════════════════════════════════════════════════════════════
+          HEADER SECTION — 2-column grid ~40/60
+          ════════════════════════════════════════════════════════════════════ */}
+      <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] min-h-[70vh] md:min-h-[85vh]">
+
+        {/* ── Left column: text content ── */}
+        <div
+          className="relative flex flex-col justify-start"
+          style={{
+            paddingLeft: "clamp(1.25rem, 5vw, 4rem)",
+            paddingRight: "clamp(1.25rem, 3vw, 3rem)",
+            paddingTop: "clamp(3rem, 7vw, 5.5rem)",
+          }}
+        >
+          <button
+            onClick={() => window.history.back()}
+            className="mb-6 inline-flex items-center text-[#F5E9D0] hover:text-[#F0C766] transition-colors self-start cursor-pointer border-0 bg-transparent tracking-widest text-lg sm:text-xl"
+            style={{ fontFamily: "Oswald, sans-serif" }}
+            aria-label="Go back"
+          >
+            BACK
+          </button>
+          {/* Title & Logo inline */}
+          <div className="flex items-center gap-6 mt-4 sm:mt-8 md:mt-0 flex-wrap">
+            <h1
+              className="font-bold uppercase leading-[0.9] tracking-tight text-[#F5E9D0]"
+              style={{
+                fontFamily: "Oswald, sans-serif",
+                fontSize: "clamp(36px, 6vw, 64px)",
+              }}
+            >
+              {title}
+            </h1>
+            {logo && (
+              <div className="relative w-18 h-18 sm:w-22 sm:h-22 md:w-24 md:h-24 flex-shrink-0">
+                <Image
+                  src={logo}
+                  alt={`${title} logo`}
+                  fill
+                  loading="lazy"
+                  className="object-contain"
+                  sizes="120px"
+                />
+              </div>
+            )}
+          </div>
+
+          {/* Industry subtitle */}
+          <p
+            className="mt-3 text-[#F5E9D0]/70"
+            style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(13px, 2.2vw, 17px)" }}
+          >
+            Industry: {industry}
+          </p>
+
+          {/* Service tags */}
+          <div className="mt-5 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <PillBadge key={tag} label={tag} />
+            ))}
+          </div>
+        </div>
+
+        {/* ── Right column: hero image ── */}
+        <div
+          className="relative w-full flex flex-col justify-start"
+          style={{
+            paddingTop: "clamp(3rem, 7vw, 5.5rem)",
+            paddingRight: "clamp(1.25rem, 5vw, 4rem)",
+            paddingLeft: "clamp(1.25rem, 3vw, 3rem)",
+          }}
+        >
+          <div className="relative w-full overflow-hidden" style={{ aspectRatio: "3/2" }}>
+            <MediaRenderer
+              src={heroImage}
+              alt={title}
+              fill
+              className={galleryLayout === "sie-website" ? "object-contain" : "object-cover"}
+              sizes="(max-width: 767px) 100vw, 60vw"
+              priority
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* ════════════════════════════════════════════════════════════════════
+          PROJECT OVERVIEW ROW — 2-column ~20/80
+          ════════════════════════════════════════════════════════════════════ */}
+      <div
+        className="grid grid-cols-1 md:grid-cols-[1fr_4fr] gap-4 md:gap-8"
+        style={{
+          paddingLeft: "clamp(1.25rem, 5vw, 4rem)",
+          paddingRight: "clamp(1.25rem, 5vw, 4rem)",
+          paddingTop: "clamp(2rem, 5vw, 4rem)",
+          paddingBottom: "clamp(2rem, 5vw, 4rem)",
+        }}
+      >
+        <h2
+          className="font-bold text-[#F5E9D0]"
+          style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(14px, 2.2vw, 18px)" }}
+        >
+          Project Overview
+        </h2>
+        <p
+          className="italic text-[#F5E9D0]/70 leading-relaxed"
+          style={{
+            fontFamily: "Instrument Serif, serif",
+            fontSize: "clamp(14px, 2.4vw, 20px)",
+            lineHeight: 1.65,
+          }}
+        >
+          {overview}
+        </p>
+      </div>
+
+      {/* Thin full-width divider */}
+      <div
+        className="w-full h-px bg-[#F5E9D0]/15"
+        style={{
+          marginLeft: "clamp(1.25rem, 5vw, 4rem)",
+          marginRight: "clamp(1.25rem, 5vw, 4rem)",
+        }}
+      />
+
+      {/* ════════════════════════════════════════════════════════════════════
+          GALLERY SECTION — 9-image mosaic grid
+          ════════════════════════════════════════════════════════════════════ */}
+      <div
+        className="max-w-[1200px] mx-auto w-full"
+        style={{
+          paddingLeft: "clamp(2rem, 10vw, 8rem)",
+          paddingRight: "clamp(2rem, 10vw, 8rem)",
+          paddingTop: "clamp(2rem, 5vw, 4rem)",
+        }}
+      >
+        {galleryLayout === "masonry" ? (
+          <div className="columns-1 sm:columns-2 gap-4 space-y-4">
+            {gallery.map((src, index) => (
+              <div key={`${src}-${index}`} className="break-inside-avoid">
+                <GalleryImage
+                  src={src}
+                  alt={`${title} gallery ${index + 1}`}
+                  aspectRatio="auto"
+                />
+              </div>
+            ))}
+          </div>
+        ) : galleryLayout === "motion-four" ? (
+          <div className="flex flex-col gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <GalleryImage src={gallery[0]} alt={`${title} horizontal video 1`} orientation="horizontal" />
+              <GalleryImage src={gallery[1]} alt={`${title} horizontal video 2`} orientation="horizontal" />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-[900px] mx-auto w-full">
+              {gallery.slice(2).map((src, index) => (
+                <GalleryImage
+                  key={src}
+                  src={src}
+                  alt={`${title} vertical video ${index + 1}`}
+                  orientation="vertical"
+                />
+              ))}
+            </div>
+          </div>
+        ) : galleryLayout === "sie-website" ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-start">
+            {[0, 1].map((column) => (
+              <div key={column} className="flex flex-col gap-4">
+                {gallery.map((src, index) => index % 2 === column ? (
+                  <GalleryImage
+                    key={src}
+                    src={src}
+                    alt={`${title} gallery ${index + 1}`}
+                    aspectRatio={[
+                      "1440/5063",
+                      "1440/5140",
+                      "1440/1958",
+                      "1440/5026",
+                      "1440/770",
+                      "1440/770",
+                      "1280/924",
+                      "1440/1446",
+                      "1266/1600",
+                      "964/1280",
+                      "1024/1280",
+                    ][index]}
+                    fit="contain"
+                  />
+                ) : null)}
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="columns-1 sm:columns-2 gap-4 space-y-4">
+            {gallery.map((src, index) => (
+              <div key={`${src}-${index}`} className="break-inside-avoid">
+                <GalleryImage
+                  src={src}
+                  alt={`${title} gallery ${index + 1}`}
+                  aspectRatio="auto"
+                />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* ════════════════════════════════════════════════════════════════════
+          RELATED PROJECTS SECTION
+          ════════════════════════════════════════════════════════════════════ */}
+      <div
+        className="max-w-[1200px] mx-auto w-full"
+        style={{
+          paddingLeft: "clamp(2rem, 10vw, 8rem)",
+          paddingRight: "clamp(2rem, 10vw, 8rem)",
+          paddingTop: "clamp(3rem, 7vw, 5.5rem)",
+          paddingBottom: "clamp(3rem, 7vw, 5.5rem)",
+        }}
+      >
+        <h2
+          className="font-bold text-[#F5E9D0] mb-8"
+          style={{
+            fontFamily: "Futura, sans-serif",
+            fontSize: "clamp(18px, 3vw, 28px)",
+          }}
+        >
+          Related Projects
+        </h2>
+
+        <div className="flex flex-row overflow-x-auto gap-6 sm:gap-8 pb-6 snap-x snap-mandatory scrollbar-none">
+          {relatedProjects.map((rp) => (
+            <Link key={rp.title} href={getProjectLink(rp.title)} className="group block flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] snap-start">
+              <article className="flex flex-col" style={{ contentVisibility: "auto", containIntrinsicSize: "0 320px" }}>
+                {/* Thumbnail */}
+                <div className="relative w-full overflow-hidden" style={{ aspectRatio: "4/3" }}>
+                  <MediaRenderer
+                    src={rp.thumbnail}
+                    alt={rp.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 767px) 280px, 340px"
+                  />
+                </div>
+
+                {/* Meta */}
+                <div className="pt-4 pb-2">
+                  <h3
+                    className="font-bold uppercase leading-none text-[#F5E9D0] mb-1 transition-colors group-hover:text-[#C9A84C]"
+                    style={{ fontFamily: "Oswald, sans-serif", fontSize: "clamp(14px, 2.5vw, 18px)" }}
+                  >
+                    {rp.title}
+                  </h3>
+                  <p
+                    className="text-[#F5E9D0]/60 mb-3"
+                    style={{ fontFamily: "Futura, sans-serif", fontSize: "clamp(10px, 1.8vw, 12px)" }}
+                  >
+                    Industry: {rp.industry}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {rp.tags.map((t) => (
+                      <PillBadge key={t} label={t} />
+                    ))}
+                  </div>
+                </div>
+              </article>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+    </section>
+  );
+}
+
+/* ─── Gallery Image helper ───────────────────────────────────────────────── */
+
+function GalleryImage({
+  src,
+  alt,
+  aspectRatio,
+  fit,
+  orientation,
+}: {
+  src: string;
+  alt: string;
+  aspectRatio?: string;
+  fit?: "contain" | "cover";
+  orientation?: "horizontal" | "vertical";
+}) {
+  if (!src) return null;
+
+  if (aspectRatio === "auto" || fit === "contain") {
+    const isVideo = /\.(mp4|webm|ogg|mov)$/i.test(src);
+    if (isVideo) {
+      return (
+        <div className="w-full relative bg-[#1D0121]" style={{ contentVisibility: "auto", containIntrinsicSize: "0 400px" }}>
+          <LazyVideo src={src} className="w-full h-auto" />
+        </div>
+      );
+    }
+    return (
+      <div className="w-full relative bg-[#1D0121]" style={{ contentVisibility: "auto", containIntrinsicSize: "0 400px" }}>
+        <Image
+          src={src}
+          alt={alt}
+          width={1920}
+          height={1080}
+          loading="lazy"
+          className="w-full h-auto object-contain"
+          sizes="(max-width: 767px) 100vw, 90vw"
+        />
+      </div>
+    );
+  }
+
+  const frameAspectRatio = orientation === "vertical"
+    ? "9/16"
+    : orientation === "horizontal"
+      ? "16/9"
+      : aspectRatio;
+
+  return (
+    <div
+      className="relative overflow-hidden bg-[#1D0121]"
+      style={{ aspectRatio: frameAspectRatio, contentVisibility: "auto", containIntrinsicSize: "0 400px" }}
+    >
+      <MediaRenderer
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover"
+        sizes="(max-width: 767px) 100vw, 50vw"
+      />
+    </div>
+  );
+}

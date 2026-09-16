@@ -1,0 +1,61 @@
+import ProjectTemplate from "../../components/ProjectTemplate";
+import type { ProjectData } from "../../components/ProjectTemplate";
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Wingreens | The Woolgatherers",
+  description:
+    "Produced a comprehensive library of photo and video content for Wingreens seasonal campaigns, with a focus on holiday gifting.",
+};
+
+const wingreensProject: ProjectData = {
+  logo: "/images/guests/wingreens.webp",
+  title: "WINGREENS",
+  industry: "Food & Beverage",
+  tags: ["Content Production"],
+  heroImage: "/images/detailed_page/wingreens/wingreens-3.jpg",
+  overview:
+    "Produced a comprehensive library of photo and video content for seasonal campaigns, with a focus on holiday gifting. The shoots showcased curated gift bundles and festive collections through warm, lifestyle-led visuals designed for digital campaigns, social media, and e-commerce.",
+  gallery: [
+    "/images/detailed_page/wingreens/wingreens-4.jpg",
+    "/images/detailed_page/wingreens/wingreen-4.jpg",
+    "/images/detailed_page/wingreens/wingreens-gluten.webp",
+    "/images/detailed_page/wingreens/wingreens.webp",
+    "/images/detailed_page/wingreens/wingrrens.jpg",
+  ],
+  relatedProjects: [
+    {
+      thumbnail: "/images/detailed_page/cureveda/cureveda_1.jpg",
+      title: "CUREVEDA",
+      industry: "Health & Wellness",
+      tags: ["Content Production", "UGC Content"],
+    },
+    {
+      thumbnail: "/images/detailed_page/vahdam/vahdam_1.jpg",
+      title: "VAHDAM",
+      industry: "Food & Beverage",
+      tags: ["Content Production", "UGC Content"],
+    },
+    {
+      thumbnail: "/images/detailed_page/kumbaya/kumbayah-packaging-main.webp",
+      title: "KUMABAYA",
+      industry: "Food & Beverage (Kombucha)",
+      tags: ["Packaging", "Content Production", "Social Media"],
+    },
+    {
+      thumbnail: "/images/detailed_page/peps/peps-dream-makers-playlist.jpg",
+      title: "PEPS",
+      industry: "Mattress & Sleep Products",
+      tags: ["Content Marketing", "Social Media"],
+    },
+    {
+      thumbnail: "/images/detailed_page/mtr/mtr-couple-dining-1.jpg",
+      title: "MTR FOODS",
+      industry: "Food & Beverage",
+      tags: ["Photography & Video Production"],
+    },
+  ],
+};
+
+export default function WingreensPage() {
+  return <ProjectTemplate project={wingreensProject} />;
+}

@@ -1,0 +1,61 @@
+import type { Metadata } from "next";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
+import localFont from "next/font/local";
+import "./globals.css";
+import Navbar from "./components/Navbar";
+import ConciergeModalWrapper from "./components/ConciergeModalWrapper";
+import CustomCursor from "./components/CustomCursor";
+import SmoothScroll from "./components/smoothscroll";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const jersey15 = localFont({
+  src: "../public/fonts/jersey15-regular.ttf",
+  variable: "--font-jersey-15",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "The Woolgatherers",
+  description: "A creative agency working across social media, design, web development, motion design, art direction, and content production.",
+  icons: {
+    icon: "/images/logo/keyhole-black.svg",
+    shortcut: "/images/logo/keyhole-black.svg",
+    apple: "/images/logo/keyhole-black.svg",
+  },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
+export default function RootLayout({ children }: LayoutProps<"/">) {
+  return (
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${jersey15.variable} antialiased`}
+    >
+      <body className="min-h-screen flex flex-col">
+        <CustomCursor />
+        <Navbar />
+        <SmoothScroll>{children}</SmoothScroll>
+        <ConciergeModalWrapper />
+      </body>
+    </html>
+  );
+}

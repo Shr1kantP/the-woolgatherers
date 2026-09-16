@@ -1,0 +1,333 @@
+Starting master script execution...
+Running: npm install -D sharp svgo fluent-ffmpeg
+
+added 20 packages, changed 4 packages, and audited 394 packages in 10s
+
+155 packages are looking for funding
+  run `npm fund` for details
+
+2 vulnerabilities (1 high, 1 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues, run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+npm warn deprecated fluent-ffmpeg@2.1.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+
+Finished: npm install -D sharp svgo fluent-ffmpeg
+-----------------------
+Running: node scripts/compress.mjs
+Starting image optimization in C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-1.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-2.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-3.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-4.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-5.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-6.jpeg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\cureveda\cureveda_1.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\cureveda\cureveda_2.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-festive-1.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-festive-2.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-label-1.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-label-4.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-social-2.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-social-3.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-social.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbayah-packaging-2.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbayah-packaging-main.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbayah-packaging.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-10.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-2.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-3.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-4.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-6.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-7.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-8.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-9.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-couple-dining-1.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr5-.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-dream-makers-playlist.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post-2.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post-3.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post-4.1.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post-4.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post-5.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_1.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_2.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_3.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_4.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_5.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_6.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\sie-web-thumbnail.jpeg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\sie-website-logo.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siebusinessacrd.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\sielogo1.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siepatterns.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siewebsite0.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siewebsite00.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siewebsite1.webp
+Successfully optimized: siewebsite1.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siewebsite2.webp
+Successfully optimized: siewebsite2.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siewebsite3.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siewebsite4.webp
+Successfully optimized: siewebsite4.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\sie_0.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\sie_8.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-branding-logo.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-business-acrd-1.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-logo-2.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-mock-2.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-mock-3.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-mock-4.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-mock.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\tavana\tavana-1.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\tavana\tavana-3.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\tavana\tavana-4.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\tavana\tavana-5.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\tavana\tavana-6.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\vahdam\vadham_2.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\vahdam\vahdam-3.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\vahdam\vahdam_1.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingreen-4.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingreens-3.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingreens-4.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingreens-gluten.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingreens.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingrrens.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\footer\bell\bell_not_clicked.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\footer\bell\bell_pressed.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\footer\footer-bg.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\footer\footer-button.png
+Successfully optimized: footer-button.png
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\footer\top-text.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\chrian-tea.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\country-bean.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\cureveda.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\gap.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\jimmys.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\kumbayah.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\mtr.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\nua.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\peps.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\sathi.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\sfs.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\sie-full.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\vahdam-white.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\vahdam.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\wingreens.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests-white\cureveda.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\hero\back-for-req.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\hero\hero-bg-desktop.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\hero\lower-frame-1.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\hero\mobile-bg.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\hero\upper-frame-1.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\hero-bg.jpg
+Successfully optimized: hero-bg.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\host_2ndslide.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\host_4thslide.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\pop_up_bg.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\pop_up_bg_mobile.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\resident-image-bottomright.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\resident-image-topleft.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\res_stories\mtr_res_stories.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\res_stories\sie-logo-1.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\res_stories\studio-inside-eye.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\res_stories\tavana-1.webp
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\res_stories\wing_res_stories.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\service\tab-1-image.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\service\tab-2-image.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\service\tab-3-image.jpg
+Processing: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\service\tab-4-image.webp
+Finished image optimization.
+
+Error processing blog-1.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-1.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-1.webp'
+Error processing blog-2.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-2.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-2.webp'
+Error processing blog-3.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-3.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-3.webp'
+Error processing blog-4.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-4.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-4.webp'
+Error processing blog-5.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-5.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-5.webp'
+Error processing blog-6.jpeg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-6.jpeg.temp.jpeg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\blogs\blog-6.jpeg'
+Error processing cureveda_1.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\cureveda\cureveda_1.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\cureveda\cureveda_1.jpg'
+Error processing cureveda_2.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\cureveda\cureveda_2.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\cureveda\cureveda_2.jpg'
+Error processing kumbaya-festive-1.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-festive-1.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-festive-1.jpg'
+Error processing kumbaya-festive-2.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-festive-2.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-festive-2.jpg'
+Error processing kumbaya-label-1.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-label-1.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-label-1.jpg'
+Error processing kumbaya-label-4.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-label-4.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-label-4.jpg'
+Error processing kumbaya-social-2.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-social-2.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-social-2.jpg'
+Error processing kumbaya-social-3.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-social-3.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-social-3.jpg'
+Error processing kumbaya-social.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-social.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbaya-social.webp'
+Error processing kumbayah-packaging-2.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbayah-packaging-2.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbayah-packaging-2.webp'
+Error processing kumbayah-packaging-main.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbayah-packaging-main.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbayah-packaging-main.webp'
+Error processing kumbayah-packaging.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbayah-packaging.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\kumbaya\kumbayah-packaging.webp'
+Error processing mtr-10.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-10.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-10.jpg'
+Error processing mtr-2.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-2.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-2.jpg'
+Error processing mtr-3.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-3.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-3.jpg'
+Error processing mtr-4.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-4.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-4.jpg'
+Error processing mtr-6.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-6.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-6.jpg'
+Error processing mtr-7.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-7.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-7.jpg'
+Error processing mtr-8.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-8.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-8.jpg'
+Error processing mtr-9.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-9.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-9.jpg'
+Error processing mtr-couple-dining-1.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-couple-dining-1.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr-couple-dining-1.jpg'
+Error processing mtr5-.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr5-.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\mtr\mtr5-.jpg'
+Error processing peps-dream-makers-playlist.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-dream-makers-playlist.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-dream-makers-playlist.jpg'
+Error processing peps-post-2.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post-2.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post-2.jpg'
+Error processing peps-post-3.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post-3.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post-3.jpg'
+Error processing peps-post-4.1.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post-4.1.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post-4.1.jpg'
+Error processing peps-post-4.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post-4.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post-4.jpg'
+Error processing peps-post-5.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post-5.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post-5.jpg'
+Error processing peps-post.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\peps\peps-post.webp'
+Error processing santhi_1.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_1.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_1.jpg'
+Error processing santhi_2.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_2.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_2.jpg'
+Error processing santhi_3.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_3.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_3.jpg'
+Error processing santhi_4.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_4.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_4.jpg'
+Error processing santhi_5.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_5.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_5.jpg'
+Error processing santhi_6.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_6.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\santhi\santhi_6.jpg'
+Error processing sie-web-thumbnail.jpeg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\sie-web-thumbnail.jpeg.temp.jpeg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\sie-web-thumbnail.jpeg'
+Error processing sie-website-logo.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\sie-website-logo.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\sie-website-logo.webp'
+Error processing siebusinessacrd.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siebusinessacrd.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siebusinessacrd.jpg'
+Error processing sielogo1.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\sielogo1.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\sielogo1.jpg'
+Error processing siepatterns.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siepatterns.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siepatterns.jpg'
+Error processing siewebsite0.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siewebsite0.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siewebsite0.webp'
+Error processing siewebsite00.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siewebsite00.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siewebsite00.webp'
+Error processing siewebsite3.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siewebsite3.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\siewebsite3.webp'
+Error processing sie_0.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\sie_0.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\sie_0.jpg'
+Error processing sie_8.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\sie_8.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie\sie_8.webp'
+Error processing sie-branding-logo.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-branding-logo.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-branding-logo.webp'
+Error processing sie-business-acrd-1.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-business-acrd-1.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-business-acrd-1.jpg'
+Error processing sie-logo-2.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-logo-2.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-logo-2.jpg'
+Error processing sie-mock-2.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-mock-2.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-mock-2.jpg'
+Error processing sie-mock-3.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-mock-3.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-mock-3.jpg'
+Error processing sie-mock-4.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-mock-4.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-mock-4.jpg'
+Error processing sie-mock.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-mock.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie-mock.jpg'
+Error processing sie.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\sie_branding\sie.jpg'
+Error processing tavana-1.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\tavana\tavana-1.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\tavana\tavana-1.webp'
+Error processing tavana-3.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\tavana\tavana-3.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\tavana\tavana-3.webp'
+Error processing tavana-4.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\tavana\tavana-4.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\tavana\tavana-4.webp'
+Error processing tavana-5.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\tavana\tavana-5.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\tavana\tavana-5.webp'
+Error processing tavana-6.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\tavana\tavana-6.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\tavana\tavana-6.webp'
+Error processing vadham_2.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\vahdam\vadham_2.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\vahdam\vadham_2.webp'
+Error processing vahdam-3.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\vahdam\vahdam-3.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\vahdam\vahdam-3.jpg'
+Error processing vahdam_1.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\vahdam\vahdam_1.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\vahdam\vahdam_1.jpg'
+Error processing wingreen-4.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingreen-4.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingreen-4.jpg'
+Error processing wingreens-3.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingreens-3.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingreens-3.jpg'
+Error processing wingreens-4.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingreens-4.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingreens-4.jpg'
+Error processing wingreens-gluten.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingreens-gluten.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingreens-gluten.webp'
+Error processing wingreens.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingreens.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingreens.webp'
+Error processing wingrrens.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingrrens.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\wingreens\wingrrens.jpg'
+Error processing bell_not_clicked.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\footer\bell\bell_not_clicked.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\footer\bell\bell_not_clicked.webp'
+Error processing bell_pressed.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\footer\bell\bell_pressed.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\footer\bell\bell_pressed.webp'
+Error processing footer-bg.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\footer\footer-bg.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\footer\footer-bg.webp'
+Error processing top-text.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\footer\top-text.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\footer\top-text.webp'
+Error processing chrian-tea.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\chrian-tea.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\chrian-tea.webp'
+Error processing country-bean.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\country-bean.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\country-bean.webp'
+Error processing cureveda.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\cureveda.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\cureveda.webp'
+Error processing gap.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\gap.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\gap.webp'
+Error processing jimmys.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\jimmys.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\jimmys.webp'
+Error processing kumbayah.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\kumbayah.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\kumbayah.webp'
+Error processing mtr.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\mtr.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\mtr.webp'
+Error processing nua.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\nua.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\nua.webp'
+Error processing peps.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\peps.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\peps.webp'
+Error processing sathi.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\sathi.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\sathi.webp'
+Error processing sfs.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\sfs.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\sfs.webp'
+Error processing sie-full.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\sie-full.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\sie-full.webp'
+Error processing vahdam-white.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\vahdam-white.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\vahdam-white.webp'
+Error processing vahdam.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\vahdam.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\vahdam.webp'
+Error processing wingreens.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\wingreens.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests\wingreens.webp'
+Error processing cureveda.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests-white\cureveda.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\guests-white\cureveda.webp'
+Error processing back-for-req.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\hero\back-for-req.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\hero\back-for-req.webp'
+Error processing hero-bg-desktop.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\hero\hero-bg-desktop.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\hero\hero-bg-desktop.webp'
+Error processing lower-frame-1.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\hero\lower-frame-1.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\hero\lower-frame-1.webp'
+Error processing mobile-bg.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\hero\mobile-bg.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\hero\mobile-bg.webp'
+Error processing upper-frame-1.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\hero\upper-frame-1.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\hero\upper-frame-1.webp'
+Error processing host_2ndslide.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\host_2ndslide.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\host_2ndslide.webp'
+Error processing host_4thslide.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\host_4thslide.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\host_4thslide.jpg'
+Error processing pop_up_bg.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\pop_up_bg.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\pop_up_bg.webp'
+Error processing pop_up_bg_mobile.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\pop_up_bg_mobile.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\pop_up_bg_mobile.webp'
+Error processing resident-image-bottomright.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\resident-image-bottomright.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\resident-image-bottomright.webp'
+Error processing resident-image-topleft.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\resident-image-topleft.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\resident-image-topleft.webp'
+Error processing mtr_res_stories.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\res_stories\mtr_res_stories.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\res_stories\mtr_res_stories.jpg'
+Error processing sie-logo-1.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\res_stories\sie-logo-1.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\res_stories\sie-logo-1.webp'
+Error processing studio-inside-eye.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\res_stories\studio-inside-eye.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\res_stories\studio-inside-eye.jpg'
+Error processing tavana-1.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\res_stories\tavana-1.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\res_stories\tavana-1.webp'
+Error processing wing_res_stories.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\res_stories\wing_res_stories.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\res_stories\wing_res_stories.jpg'
+Error processing tab-1-image.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\service\tab-1-image.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\service\tab-1-image.jpg'
+Error processing tab-2-image.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\service\tab-2-image.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\service\tab-2-image.jpg'
+Error processing tab-3-image.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\service\tab-3-image.jpg.temp.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\service\tab-3-image.jpg'
+Error processing tab-4-image.webp: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\service\tab-4-image.webp.temp.webp' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\service\tab-4-image.webp'
+
+Finished: node scripts/compress.mjs
+-----------------------
+Running: node scripts/compress-specific.mjs
+Compressing video: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Vahdam\vahdam_vid_2.mp4...
+Compressing video: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Santhi\santhi_motion_2.mp4...
+Compressing video: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Santhi\santhi_motion.mp4...
+Compressing image: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Vahdam\vahdam_1.jpg...
+Could not find or process file: detailed_page/Wingreens/wingreens.jpg (searched at C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Wingreens\wingreens.jpg)
+Compressing SVG: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\floating_key.svg...
+✓ Compressed SVG: C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\floating_key.svg
+
+Failed to compress C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Vahdam\vahdam_vid_2.mp4. Is ffmpeg installed? Command failed: ffmpeg -i "C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Vahdam\vahdam_vid_2.mp4" -vcodec libx264 -crf 28 -preset fast "C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Vahdam\vahdam_vid_2_compressed.mp4" -y
+'ffmpeg' is not recognized as an internal or external command,
+operable program or batch file.
+
+Failed to compress C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Santhi\santhi_motion_2.mp4. Is ffmpeg installed? Command failed: ffmpeg -i "C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Santhi\santhi_motion_2.mp4" -vcodec libx264 -crf 28 -preset fast "C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Santhi\santhi_motion_2_compressed.mp4" -y
+'ffmpeg' is not recognized as an internal or external command,
+operable program or batch file.
+
+Failed to compress C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Santhi\santhi_motion.mp4. Is ffmpeg installed? Command failed: ffmpeg -i "C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Santhi\santhi_motion.mp4" -vcodec libx264 -crf 28 -preset fast "C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Santhi\santhi_motion_compressed.mp4" -y
+'ffmpeg' is not recognized as an internal or external command,
+operable program or batch file.
+
+Failed to compress C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Vahdam\vahdam_1.jpg: UNKNOWN: unknown error, copyfile 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Vahdam\vahdam_1_compressed.jpg' -> 'C:\Users\Shrikant\Downloads\the-woolgatherers\woolgatherers\public\images\detailed_page\Vahdam\vahdam_1.jpg'
+
+Finished: node scripts/compress-specific.mjs
+-----------------------
+Running: node scripts/remove-blob.mjs
+Removing blob storage usage from codebase...
+✓ Fixed app\components\blog\blogDetailPosts.ts
+✓ Fixed app\components\blog\BlogPosts.ts
+✓ Fixed app\components\ConciergePopup.tsx
+✓ Fixed app\components\CustomCursor.tsx
+✓ Fixed app\components\Guests.tsx
+✓ Fixed app\components\hero.tsx
+✓ Fixed app\components\hosts\HostCard2.tsx
+✓ Fixed app\components\hosts\HostCard4.tsx
+✓ Fixed app\components\Navbar.tsx
+✓ Fixed app\components\Residency.tsx
+✓ Fixed app\components\Resident_stories.tsx
+✓ Fixed app\components\ServicesAccordion.tsx
+✓ Fixed app\components\Work.tsx
+✓ Fixed app\lib\blob.ts
+✓ Fixed app\work\cureveda\page.tsx
+✓ Fixed app\work\kumbaya\page.tsx
+✓ Fixed app\work\miscellaneous\page.tsx
+✓ Fixed app\work\motion\page.tsx
+✓ Fixed app\work\mtr-foods\page.tsx
+✓ Fixed app\work\peps\page.tsx
+✓ Fixed app\work\santhi\page.tsx
+✓ Fixed app\work\sie-branding\page.tsx
+✓ Fixed app\work\sie-website\page.tsx
+✓ Fixed app\work\tavana\page.tsx
+✓ Fixed app\work\vahdam\page.tsx
+✓ Fixed app\work\wingreens\page.tsx
+
+Done. 26 files fixed.
+
+Finished: node scripts/remove-blob.mjs
+-----------------------
+Running: node scripts/fix-filenames.mjs
+Removing unused fonts...
+
+Normalizing filenames in public directory (images and fonts)...
+
+No files needed renaming.
+
+Finished: node scripts/fix-filenames.mjs
+-----------------------
+All scripts completed successfully.

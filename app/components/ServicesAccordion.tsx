@@ -107,7 +107,7 @@ export default function ServicesAccordion() {
             ease: "power2.inOut",
           });
         } else {
-          const targetHeight = window.innerWidth < 768 ? 90 : 140;
+          const targetHeight = window.innerWidth < 768 ? 75 : 110;
           gsap.to(header, {
             height: targetHeight,
             opacity: 1,
@@ -222,13 +222,13 @@ export default function ServicesAccordion() {
             {/* Collapsed Header / Label */}
             <div
               ref={(el) => { headerRefs.current[index] = el; }}
-              className="relative w-full min-h-[110px] md:min-h-[140px] flex items-center justify-between p-4 sm:p-6 md:p-10 gap-2 sm:gap-4"
+              className="relative w-full h-[75px] md:h-[110px] flex items-center justify-between p-4 sm:p-6 md:p-10 gap-2 sm:gap-4"
             >
               <h3
-                className="text-[#F5E9D0] font-normal leading-tight whitespace-normal break-words sm:whitespace-normal overflow-hidden text-ellipsis"
+                className="text-[#F5E9D0] font-normal leading-tight line-clamp-2 whitespace-normal break-words pr-2"
                 style={{
                   fontFamily: '"Inter", system-ui, sans-serif',
-                  fontSize: "clamp(24px, 4.5vw, 36px)",
+                  fontSize: "clamp(18px, 4.5vw, 36px)",
                 }}
               >
                 {service.title}

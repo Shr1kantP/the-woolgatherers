@@ -60,21 +60,20 @@ export default function ConciergePopup({ isOpen, onClose }: ConciergePopupProps)
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-start md:items-center justify-center bg-black/60 p-4 pt-10 pb-10 md:pt-4 md:pb-4 backdrop-blur-xs transition-opacity duration-300 overflow-y-auto"
+      className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs transition-opacity duration-300 overflow-y-auto"
       onClick={onClose}
     >
-      {/* Wrapper to hold the ticket */}
-      <div className="relative w-full max-w-[450px] md:max-w-[850px] flex justify-center">
-
-        <div
-          className="relative w-full md:aspect-[1000/600] bg-[image:var(--bg-mobile)] md:bg-[image:var(--bg-desktop)] bg-[length:100%_100%] md:bg-contain bg-center bg-no-repeat px-8 py-12 md:px-14 md:py-10 text-[#FDF3E7] select-text shadow-2xl flex flex-col justify-start md:justify-center max-h-[85vh] md:max-h-none overflow-y-auto md:overflow-visible"
-          style={{
-            ["--bg-mobile" as string]: `url(${"/images/pop_up_bg_mobile.webp"})`,
-            ["--bg-desktop" as string]: `url(${"/images/pop_up_bg.webp"})`,
-            fontFamily: "var(--font-inter), sans-serif",
-          }}
-          onClick={(e) => e.stopPropagation()}
-        >
+      <div className="flex min-h-full w-full items-center justify-center p-4 py-12 md:py-8">
+        {/* Wrapper to hold the ticket */}
+        <div className="relative w-full max-w-[450px] md:max-w-[850px] flex justify-center" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="relative w-full md:aspect-[1000/600] bg-[image:var(--bg-mobile)] md:bg-[image:var(--bg-desktop)] bg-[length:100%_100%] md:bg-contain bg-center bg-no-repeat px-8 py-12 md:px-14 md:py-10 text-[#FDF3E7] select-text shadow-2xl flex flex-col justify-start md:justify-center"
+            style={{
+              ["--bg-mobile" as string]: `url(${"/images/pop_up_bg_mobile.webp"})`,
+              ["--bg-desktop" as string]: `url(${"/images/pop_up_bg.webp"})`,
+              fontFamily: "var(--font-inter), sans-serif",
+            }}
+          >
           {/* Close Button — inside ticket, top-right */}
           <button
             onClick={onClose}
